@@ -1,16 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react'; // 📌 useEffect 추가
+import React, { useState, useEffect } from 'react';
 import s from './Header.module.scss';
 import Link from 'next/link';
-import Container from '@/components/layout/Container';
+import { usePathname } from 'next/navigation';
 import Logo from '/public/svg/clip0_169_521.svg';
 import MobileMenu from '/public/svg/mobile-menu.svg';
 import MobileMenuClose from '/public/svg/mobile-menu-close.svg';
 
-// 📌 메뉴 데이터 배열
 const NAV_ITEMS = [
-  { label: '내차사기', href: '/buy-car' },
+  { label: '내차사기', href: '/' },
   { label: '내차팔기', href: '/sell-car' },
   { label: '폐차 견적받기', href: '/scrap-car' },
   { label: '중고차 숨은 이력', href: '/car-history' },
@@ -36,10 +35,9 @@ const MOBILE_NAV_GROUPS = [
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-  // 📌 960px 이상일 때 모바일 메뉴를 자동으로 닫는 Effect 추가
   useEffect(() => {
-    // 960px 이상인지 감시하는 미디어 쿼리 생성
     const mediaQuery = window.matchMedia('(min-width: 961px)');
 
     const handleMediaChange = (e: MediaQueryListEvent) => {
@@ -48,7 +46,6 @@ export default function Header() {
       }
     };
 
-    // 컴포넌트 마운트 시 초기 체크 (처음 켰을 때 이미 960px 이상이라면 닫기)
     if (mediaQuery.matches) {
       setIsMobileMenuOpen(false);
     }
@@ -72,11 +69,20 @@ export default function Header() {
         </Link>
 
         <nav className={s['pc-nav']}>
-          {NAV_ITEMS.map((item, index) => (
-            <Link key={index} href={item.href} className={s['nav-link']}>
-              <button className={s['nav-button']}>{item.label}</button>
-            </Link>
-          ))}
+          {NAV_ITEMS.map((item, index) => {
+            // 현재 주소(pathname)와 메뉴의 href가 일치하는지 확인
+            const isActive = pathname === item.href;
+
+            return (
+              <Link key={index} href={item.href} className={s['nav-link']}>
+                <button
+                  className={`${s['nav-button']} ${isActive ? s['is-active'] : ''}`}
+                >
+                  {item.label}
+                </button>
+              </Link>
+            );
+          })}
         </nav>
 
         <button

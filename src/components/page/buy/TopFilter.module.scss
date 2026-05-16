@@ -1,11 +1,16 @@
 @use '@/styles/mixins/index' as *;
 @import '@/styles/rem';
 
+.top-filter {
+  position: relative;
+  z-index: 100;
+}
+
 .option-filter-container {
   @include flexBox(flex, start, center, row, rem(8));
   flex-wrap: wrap;
 
-  > button {
+  .filter-btn-main {
     @include flexBox(flex, start, center, row, rem(4));
     padding: rem(8) rem(12);
     border: rem(1) solid var(--color-line-normal);
@@ -13,9 +18,61 @@
     box-sizing: border-box;
     @include font-style(13, 400, rem(18));
     min-height: rem(36);
+    transition: background-color 0.25s ease;
+
+    &:hover {
+      background-color: var(--color-line-divider);
+    }
+
+    &.is-checked {
+      border-color: var(--color-label-normal);
+      font-weight: bold;
+      background-color: var(--color-line-divider);
+    }
 
     .svg-box {
       @include svgBox(rem(16));
+    }
+  }
+  .filter-btn-sub {
+    @include flexBox(flex, start, center, row, rem(4));
+    padding: rem(8) rem(12);
+    border: rem(1) solid var(--color-line-normal);
+    border-radius: rem(4);
+    box-sizing: border-box;
+    @include font-style(13, 400, rem(18));
+    min-height: rem(36);
+    transition: background-color 0.25s ease;
+    color: var(--color-token-gray-30);
+
+    &:hover {
+      background-color: var(--color-line-divider);
+    }
+  }
+
+  .modal-trigger-wrapper {
+    display: flex;
+    gap: rem(8);
+  }
+
+  .filter-pill {
+    @include flexBox(flex, start, center, row, rem(4));
+    padding: rem(8) rem(12);
+    border: rem(1) solid var(--color-line-normal);
+    border-radius: rem(4);
+    box-sizing: border-box;
+    @include font-style(13, 400, rem(18));
+    min-height: rem(36);
+    transition: background-color 0.25s ease;
+
+    &:hover {
+      background-color: var(--color-line-divider);
+    }
+
+    &.has-value {
+      border-color: var(--color-label-normal);
+      font-weight: bold;
+      background-color: var(--color-line-divider);
     }
   }
 
@@ -37,8 +94,279 @@
     @include flexBox(flex, start, center);
   }
 
-  select {
-    height: rem(30);
-    overflow: hidden;
+  .filter-end {
+    @include flexBox(flex, end, center, row, rem(16));
+
+    .line {
+      width: rem(1);
+      height: rem(30);
+      background-color: var(--color-line-normal);
+    }
+  }
+
+  // 🌟 커스텀 셀렉트 박스 컨테이너
+  .custom-select-container {
+    position: relative;
+
+    .select-trigger {
+      @include flexBox(flex, start, center, row, rem(4));
+      padding: rem(8);
+      margin: rem(-4);
+      border-radius: rem(4);
+      box-sizing: border-box;
+      @include font-style(15, 700, rem(22));
+      min-height: rem(36);
+      transition: background-color 0.25s ease;
+
+      &:hover {
+        border-color: var(--color-label-normal);
+        font-weight: bold;
+        background-color: var(--color-line-divider);
+      }
+
+      &.is-open {
+        border-color: #0d0d0e;
+      }
+
+      .arrow-icon {
+        font-size: rem(10);
+
+        .svg-box {
+          @include svgBox(rem(20));
+        }
+      }
+
+      &.is-open {
+        .arrow-icon {
+          transform: rotate(180deg); // 열렸을 때 화살표 뒤집기
+        }
+      }
+    }
+
+    // 🌟 드롭다운 리스트 옵션 목록 박스
+    .select-options-list {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      transform: translateY(rem(12));
+      width: 100vw;
+      max-width: rem(240);
+      background-color: var(--color-token-white);
+      border: rem(1) solid var(--color-line-normal);
+      border-radius: rem(4);
+      box-shadow: var(--shadow-strong);
+      z-index: 50;
+      margin: 0;
+      list-style: none;
+      overflow: hidden;
+
+      li {
+        width: 100%;
+      }
+
+      .option-btn {
+        width: 100%;
+        @include font-style(15, 700, rem(22));
+        padding: rem(8) rem(12);
+        text-align: left;
+        background: none;
+        border: none;
+        cursor: pointer;
+        height: rem(54);
+        color: var(--color-token-gray-90);
+        transition:
+          background 0.15s ease,
+          color 0.15s ease;
+
+        &:hover {
+          background-color: var(--color-line-divider);
+        }
+
+        &.is-selected {
+          color: var(--color-label-normal);
+        }
+      }
+    }
+  }
+}
+
+.layout-switcher-group {
+  @include flexBox(flex, end, center, row, rem(8));
+
+  .switch-btn {
+    cursor: pointer;
+    color: var(--color-label-weak);
+    padding: rem(2);
+    margin: rem(-2);
+    transition: background-color 0.25s ease;
+    border-radius: rem(4);
+
+    &:hover {
+      background-color: var(--color-line-divider);
+    }
+
+    .svg-box {
+      @include svgBox(rem(24));
+      min-width: rem(24);
+    }
+
+    &.is-active {
+      color: var(--color-label-normal);
+    }
+  }
+}
+
+.modal-anchor {
+  position: relative; // 팝업 기준점 생성
+  display: inline-block;
+}
+
+.filter-modal-window {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(rem(6));
+  width: 100vw;
+  max-width: rem(416);
+  border-radius: rem(4);
+  border: rem(1) solid var(--color-line-normal);
+  box-sizing: border-box;
+  background-color: var(--color-token-white);
+  box-shadow: 0 rem(2) rem(8) 0 rgb(0 0 0 / 12%);
+  z-index: 100;
+}
+
+.modal-body {
+  padding: rem(24);
+  box-sizing: border-box;
+}
+
+.modal-footer {
+  @include flexBox(flex, end, center, row, rem(8));
+  padding: 0 rem(16) rem(16);
+
+  .reset-btn {
+    @include flexBox(flex, start, center, row, rem(4));
+    padding: rem(8) rem(12);
+    border: rem(1) solid var(--color-line-normal);
+    border-radius: rem(4);
+    box-sizing: border-box;
+    @include font-style(13, 400, rem(18));
+  }
+  .submit-btn {
+    @include flexBox(flex, start, center, row, rem(4));
+    padding: rem(8) rem(12);
+    color: var(--color-token-white);
+    background-color: var(--color-label-normal);
+    border-radius: rem(4);
+    box-sizing: border-box;
+    @include font-style(13, 700, rem(18));
+  }
+}
+
+.grid-modal-container {
+  display: grid;
+  gap: rem(16);
+}
+
+.grid-selector-box {
+  @include flexBox(flex, start, start, row, rem(8));
+  flex-wrap: wrap;
+}
+
+.select-tile {
+  @include flexBox(flex, start, center, row, rem(4));
+  padding: rem(8) rem(12);
+  border: rem(1) solid var(--color-line-normal);
+  border-radius: rem(4);
+  box-sizing: border-box;
+  @include font-style(13, 400, rem(18));
+  min-height: rem(36);
+  transition: background-color 0.25s ease;
+
+  &:hover {
+    background-color: var(--color-line-divider);
+  }
+
+  &.is-checked {
+    border-color: var(--color-label-normal);
+    font-weight: bold;
+    background-color: var(--color-line-divider);
+  }
+}
+
+.slider-container {
+  width: 100%;
+  padding: rem(4) 0;
+
+  .modal-row {
+    @include flexBox(flex, start, start, column, rem(16));
+    margin-bottom: rem(20);
+  }
+}
+
+.range-title {
+  @include font-style(15, 500, rem(22));
+}
+
+.range-display-text {
+  @include font-style(15, 500, rem(22));
+  color: var(--color-point-heydealer);
+}
+
+// 🌟 더블 핸들 슬라이더 겹침 및 포인터 이벤트를 조율하는 가로 트랙 코어 스타일
+.range-slider-box {
+  position: relative;
+  width: 100%;
+  height: rem(24);
+  @include flexBox(flex, center, center);
+
+  .slider-track-bar {
+    position: absolute;
+    width: 100%;
+    height: rem(4);
+    background-color: var(--color-label-normal);
+    border-radius: rem(50);
+    z-index: 1;
+  }
+
+  .range-input {
+    position: absolute;
+    width: 100%;
+    height: rem(6);
+    background: none;
+    pointer-events: none; // 배경 트랙 클릭 관통 방지
+    appearance: none;
+    margin: 0;
+    z-index: 2;
+    padding: rem(4) 0;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      pointer-events: auto; // 동그라미 서클만 클릭 이벤트 활성화
+      width: rem(24);
+      height: rem(24);
+      border-radius: 50%;
+      background-color: var(--color-token-white);
+      border: rem(1) solid var(--color-line-normal);
+      box-shadow: var(--shadow-strong);
+      cursor: pointer;
+      transition: transform 0.1s ease;
+
+      &:active {
+        transform: scale(1.2);
+      }
+    }
+
+    &::-moz-range-thumb {
+      pointer-events: auto;
+      width: rem(20);
+      height: rem(20);
+      border-radius: 50%;
+      background-color: #3b82f6;
+      border: rem(2) solid #fff;
+      box-shadow: 0 rem(2) rem(6) rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
   }
 }

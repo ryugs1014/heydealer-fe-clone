@@ -72,6 +72,10 @@
       opacity: 0;
       transition: 0.1s ease-in-out;
     }
+
+    &.is-active {
+      color: var(--color-label-strong);
+    }
   }
 
   &:hover {

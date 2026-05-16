@@ -6,8 +6,9 @@ import BuySection from '@/components/page/buy/BuySection';
 import Marquee from '@/components/page/buy/Marquee';
 
 export const metadata: Metadata = {
-  title: '내차사기 검색',
-  description: '다양한 필터로 원하는 중고차를 검색해보세요.',
+  title: '헤이딜러 – 인증중고차, 내차팔기, [번호판]시세',
+  description:
+    '헤이딜러 인증중고차 출시! 내차팔기는 헤이딜러 zero, 중고차 숨은이력 조회, 폐차 비교견적',
 };
 
 export default async function Home() {

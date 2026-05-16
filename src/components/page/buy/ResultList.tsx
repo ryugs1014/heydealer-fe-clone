@@ -1,96 +1,86 @@
+// src/components/page/buy/ResultList.tsx
 'use client';
 
 import React from 'react';
 import s from './ResultList.module.scss';
 import Image from 'next/image';
-import SubDisabled from '/public/svg/sub-disabled.svg';
-import SubActive from '/public/svg/sub-active.svg';
+import FavoriteButton from '@/components/atoms/buttons/FavoriteButton';
 
 interface ResultListProps {
   cars: any[];
+  viewType: 'grid' | 'list' | 'simple'; // 🌟 상위 뷰 타입 주입 수신
 }
 
-export default function ResultList({ cars }: ResultListProps) {
+export default function ResultList({ cars, viewType }: ResultListProps) {
   if (cars.length === 0) {
     return (
       <div className={s['empty-message']}>
-        조건에 맞는 매물 차량이 존재하지 않습니다.
+        <div className={`${s['img-wrap']} img-wrap`}>
+          <Image
+            src={'/img/ui/noitem-DW77nzIj.png'}
+            alt="Image"
+            fill
+            priority
+          />
+        </div>
+        찾으시는 차가 없어요.
       </div>
     );
   }
 
   return (
-    <div className={s['result-list-container']}>
+    // 뷰타입 클래스를 동적으로 주입하여 컨테이너 레이아웃 구조 변경
+    <div className={`${s['result-list-container']} ${s[`view-${viewType}`]}`}>
       <div className={s['grid-layout']}>
         {cars.map((item) => {
           const info = item.detail_info;
-
-          // 최초 등록일 가공 (예: "2016-12-15 00:00:00" -> "16/12")
           const regDate = info?.initial_registration_date;
           const formattedRegDate =
             regDate && regDate.length >= 7
               ? `${regDate.substring(2, 4)}/${regDate.substring(5, 7)}`
               : '';
-
-          // 주행거리 가공 (예: 94561 -> "9.5만km")
           const mileageValue = info?.mileage;
           const formattedMileage = mileageValue
             ? `${(mileageValue / 10000).toFixed(1)}만km`
             : '0만km';
 
           return (
-            <article key={item.hash_id} className={s['product-card']}>
-              {/* [이미지 상위 컨테이너] */}
-              <div className={s['thumbnail-area']}>
-                {/* 1. 이미지 배열 1번 (기본 베이스 바닥에 깔림) */}
-                <div className={`${s['img-wrap']} img-wrap`}>
-                  {info?.image_urls?.[0] ? (
-                    <Image
-                      src={info.image_urls[0]}
-                      alt={info.model_name}
-                      fill
-                      sizes="(max-width: 768px) 50vw, 33vw"
-                    />
-                  ) : (
-                    <div className={s['dummy-img']}>이미지 준비중</div>
-                  )}
-                </div>
-
-                {/* 2. 이미지 배열 1번 위에 공중 부양할 즐겨찾기 버튼 */}
-                <div className={s['button-wrap']}>
-                  <button
-                    type="button"
-                    className={s['favorite-btn']}
-                    aria-label="즐겨찾기 등록"
-                  >
-                    <div className={s['svg-box']}>
-                      <SubDisabled
-                        width="100%"
-                        height="100%"
-                        viewBox="0 0 24 24"
-                      />
-                    </div>
-                  </button>
-                </div>
-
-                {/* 3. 이미지 배열 1번 위에 공중 부양할 이미지 배열 2번 */}
-                <div className={`${s['sub-img-wrap']} img-wrap`}>
-                  {info?.image_urls?.[1] && (
-                    <div className={s['secondary-thumb']}>
+            <article
+              key={item.hash_id}
+              className={`${s['product-card']} ${s[`card-${viewType}`]}`}
+            >
+              {/* 단순형(simple) 뷰어일 때는 썸네일 노출 제거 */}
+              {viewType !== 'simple' && (
+                <div className={s['thumbnail-area']}>
+                  <div className={`${s['img-wrap']} img-wrap`}>
+                    {info?.image_urls?.[0] ? (
                       <Image
-                        src={info.image_urls[1]}
-                        alt={`${info.model_name} 서브 이미지`}
+                        src={info.image_urls[0]}
+                        alt={info.model_name}
                         fill
-                        sizes="(max-width: 768px) 25vw, 15vw"
+                        sizes="(max-width: 768px) 50vw, 33vw"
                       />
+                    ) : (
+                      <div className={s['dummy-img']}>이미지 준비중</div>
+                    )}
+                  </div>
+                  <FavoriteButton hashId={item.hash_id} />
+                  {viewType === 'grid' && info?.image_urls?.[1] && (
+                    <div className={`${s['sub-img-wrap']} img-wrap`}>
+                      <div className={s['secondary-thumb']}>
+                        <Image
+                          src={info.image_urls[1]}
+                          alt="서브"
+                          fill
+                          sizes="15vw"
+                        />
+                      </div>
                     </div>
                   )}
                 </div>
-              </div>
+              )}
 
-              {/* [큰 컨테이너] */}
               <div className={s['info-container']}>
-                {/* 작은 컨테이너 1번째 줄 */}
                 <div className={s['info-row-top']}>
                   <h3 className={s['item-title']}>
                     {info?.model_name} {info?.grade_part_name}{' '}
@@ -101,15 +91,11 @@ export default function ResultList({ cars }: ResultListProps) {
                   </p>
                 </div>
 
-                {/* 작은 컨테이너 2번째 줄 */}
                 <div className={s['info-row-bottom']}>
-                  {/* 왼쪽: 가격 그룹 */}
                   <div className={s['price-block']}>
                     <span className={s['item-price']}>
                       {item.price?.toLocaleString()}만원
                     </span>
-
-                    {/* 오른쪽: 반대편 태그 배열 */}
                     {info?.tags && info.tags.length > 0 && (
                       <div className={s['tags-container']}>
                         {info.tags.map((tag: any, idx: number) => (
@@ -123,7 +109,6 @@ export default function ResultList({ cars }: ResultListProps) {
                       </div>
                     )}
                   </div>
-
                   <span className={s['factory-price']}>
                     신차 {info?.factory_price?.toLocaleString()}
                   </span>

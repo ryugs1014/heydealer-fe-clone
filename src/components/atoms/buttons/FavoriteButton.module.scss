@@ -1,0 +1,56 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.button-wrap {
+  position: absolute;
+  top: rem(12);
+  right: rem(12);
+  width: rem(28);
+  height: rem(28);
+  @include flexBox(flex, center, center);
+  z-index: 2;
+
+  &:hover {
+    .favorite-btn {
+      &::after {
+        opacity: 0.05;
+      }
+    }
+  }
+
+  .favorite-btn {
+    padding: rem(4);
+    color: var(--color-token-white);
+    position: relative;
+
+    &.is-active {
+      .svg-box {
+        @include svgBox(rem(28));
+
+        path {
+          fill: rgb(255, 77, 82);
+        }
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: var(--color-label-normal);
+      opacity: 0;
+      transition: opacity 0.1s ease;
+      z-index: 3;
+      border-radius: rem(4);
+      overflow: hidden;
+    }
+
+    .svg-box {
+      @include svgBox(rem(28));
+
+      path {
+        fill: var(--color-line-normal);
+      }
+    }
+  }
+}
