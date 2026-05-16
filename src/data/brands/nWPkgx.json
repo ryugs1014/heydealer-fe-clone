@@ -1,0 +1,82 @@
+{
+  "hash_id": "nWPkgx",
+  "name": "링컨",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/22_164e9a86-ddb9-45fc-a444-b42e968af405.PNG",
+  "count": 12,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "9kzxxy",
+      "name": "LS",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "2k35vy",
+      "name": "MKC",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RMaJWy",
+      "name": "MKS",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RyWQ6k",
+      "name": "MKT",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zyxr8k",
+      "name": "MKX",
+      "count": 2,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yRb4y",
+      "name": "MKZ",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VeJzZe",
+      "name": "네비게이터",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "gMDE1y",
+      "name": "노틸러스",
+      "count": 3,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ne83vy",
+      "name": "에비에이터",
+      "count": 5,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "rk0YXM",
+      "name": "컨티넨탈",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "aMKP2y",
+      "name": "코세어",
+      "count": 2,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XevzZe",
+      "name": "타운카",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}

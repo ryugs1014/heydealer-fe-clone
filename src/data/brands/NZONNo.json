@@ -1,0 +1,184 @@
+{
+  "hash_id": "NZONNo",
+  "name": "혼다",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/45_2c166a1c-40e5-43ae-b7ff-041eacd6481c.PNG",
+  "count": 6,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "VerOmk",
+      "name": "CR-V",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "qM7nmk",
+      "name": "CR-Z",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMbbWM",
+      "name": "Fit",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "OyZNay",
+      "name": "Fit Aria",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "OyZ0Xk",
+      "name": "HR-V",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "2k3ROe",
+      "name": "N-BOX",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "JyVN2y",
+      "name": "N-ONE",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "DydpXy",
+      "name": "S2000",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "rk0nwy",
+      "name": "S660",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "7MEQ1M",
+      "name": "댓츠",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yOJqM",
+      "name": "델솔",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yArbe",
+      "name": "라이프",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RyW4Ke",
+      "name": "레전드",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yRWme",
+      "name": "리지라인",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "aMK6lk",
+      "name": "비트",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMb88e",
+      "name": "스텝웨건",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "9kzPEy",
+      "name": "스트림",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zyxAAe",
+      "name": "시빅",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ae1N9k",
+      "name": "어코드",
+      "count": 4,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XyQnBe",
+      "name": "엘리멘트",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VeJP1M",
+      "name": "오딧세이",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yAYBy",
+      "name": "인사이트",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "dM95VM",
+      "name": "인스파이어",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RMa1KM",
+      "name": "인테그라",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XMwEYe",
+      "name": "크로스로드",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMjjaM",
+      "name": "크로스투어",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XevjRe",
+      "name": "파일럿",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "relA7k",
+      "name": "패스포트",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "EMpp7M",
+      "name": "프렐류드",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}

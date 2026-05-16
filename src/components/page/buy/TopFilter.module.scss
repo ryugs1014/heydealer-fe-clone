@@ -1,0 +1,44 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.option-filter-container {
+  @include flexBox(flex, start, center, row, rem(8));
+  flex-wrap: wrap;
+
+  > button {
+    @include flexBox(flex, start, center, row, rem(4));
+    padding: rem(8) rem(12);
+    border: rem(1) solid var(--color-line-normal);
+    border-radius: rem(4);
+    box-sizing: border-box;
+    @include font-style(13, 400, rem(18));
+    min-height: rem(36);
+
+    .svg-box {
+      @include svgBox(rem(16));
+    }
+  }
+
+  .line {
+    width: rem(1);
+    height: rem(16);
+    background-color: var(--color-line-normal);
+    margin: 0 rem(8);
+  }
+}
+
+.table-filter {
+  padding: rem(24) 0;
+  box-sizing: border-box;
+  @include flexBox(flex, space-between, center, row, rem(8));
+
+  .count {
+    @include font-style(15, 400, rem(22));
+    @include flexBox(flex, start, center);
+  }
+
+  select {
+    height: rem(30);
+    overflow: hidden;
+  }
+}

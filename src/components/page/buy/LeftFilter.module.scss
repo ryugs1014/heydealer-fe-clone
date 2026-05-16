@@ -1,0 +1,143 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.left-filter {
+  display: grid;
+  align-content: flex-start;
+  gap: rem(20);
+
+  .filter-header {
+    .title-header-container {
+      @include flexBox(flex, space-between, center);
+
+      .title {
+        @include font-style(18, 700, rem(26));
+      }
+
+      .radio-button {
+        @include font-style(11, 400, rem(22));
+        color: var(--color-label-weak);
+      }
+    }
+  }
+}
+
+.scroll-container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  padding: rem(4) 0 0 rem(8);
+  margin: rem(-4) 0 0 rem(-8);
+  border-radius: rem(4);
+  scrollbar-width: auto;
+  display: grid;
+  gap: rem(8);
+
+  ::-webkit-scrollbar {
+    width: rem(4);
+    height: auto;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-token-gray-20);
+  }
+
+  .brand-title-item {
+    @include flexBox(flex, space-between, center, row, rem(8));
+    height: rem(40);
+    padding: rem(4) 0 rem(4) rem(8);
+    box-sizing: border-box;
+
+    .brand-name {
+      @include font-style(15, 500, rem(22));
+    }
+
+    .close-btn {
+      width: rem(32);
+      min-width: rem(32);
+      height: rem(32);
+      @include flexBox(flex, center, center);
+    }
+    .svg-box {
+      @include svgBox(rem(16));
+      color: var(--color-semantic-label-disable-light);
+    }
+  }
+
+  .line {
+    width: 100%;
+    height: rem(1);
+    background-color: var(--color-line-normal);
+    display: block;
+  }
+}
+
+.filter-body {
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: rem(4) 0 0 rem(8);
+  margin: rem(-4) 0 0 rem(-8);
+  border-radius: rem(4);
+  max-height: calc(#{rem(-352)} + 100vh);
+  box-sizing: border-box;
+}
+
+.list {
+  display: grid;
+  gap: rem(8);
+
+  &.model {
+    padding-inline-end: rem(4);
+
+    .item {
+      height: rem(40);
+      @include flexBox(flex, center, center);
+
+      .item-button {
+        height: rem(40);
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .item {
+    width: 100%;
+
+    .item-button {
+      width: 100%;
+      @include flexBox(flex, space-between, center, row, rem(8));
+      padding: rem(4) rem(8) rem(4) rem(8);
+      margin: rem(-4) rem(-8);
+      border-radius: rem(4);
+      height: rem(48);
+      box-sizing: border-box;
+      overflow: hidden;
+
+      &:hover {
+        background-color: rgba(55, 56, 61, 0.05);
+        transition: 0.1s ease-in-out;
+      }
+
+      .name-box {
+        @include flexBox(flex, start, center, row, rem(16));
+
+        .img-wrap {
+          max-width: rem(28);
+          aspect-ratio: 1 / 1;
+          overflow: hidden;
+          @include flexBox(flex, center, center);
+        }
+
+        .name {
+          @include font-style(15, 500, rem(22));
+        }
+      }
+
+      .count {
+        @include font-style(12, 400, rem(12));
+        color: var(--color-point-heydealer);
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@use '../rem' as *;
+
+// ===============================
+// ✅ typo 사용 예시
+// ===============================
+
+// * 기본 사용 font-weight: 400; line-height: 1.4;
+//@include font-style(14);
+
+// * font-size: rem(16); font-weight: 500; line-height: 1.4;
+//@include font-style(16, 500, 1.4);
+
+// * font-size: rem(32); font-weight: 700; line-height: 1.2;
+//@include font-style(32, 700, 1.2);
+
+// ===============================
+// ✅ typo mixin 설정
+// ===============================
+@mixin font-style($size, $weight: 400, $lh: null, $ls: -0.014em) {
+  font-size: rem($size);
+  font-weight: $weight;
+
+  // line-height == null 기본값 1.4
+  @if $lh == null {
+    line-height: rem(22);
+  } @else {
+    line-height: $lh;
+  }
+
+  letter-spacing: $ls;
+}

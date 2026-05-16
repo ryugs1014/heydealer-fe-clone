@@ -1,0 +1,82 @@
+{
+  "hash_id": "qoA2Zr",
+  "name": "포르쉐",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/42_5493ee20-c6ce-4248-b776-6219cedb5495.PNG",
+  "count": 5,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "1yOx1e",
+      "name": "718",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "9kzp8y",
+      "name": "911",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zeXREM",
+      "name": "928",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "rk0qZM",
+      "name": "944",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "gMDany",
+      "name": "968",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Vy25rM",
+      "name": "마칸",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "BkBv1k",
+      "name": "박스터",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "YyGGKy",
+      "name": "카레라 GT",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ne8dge",
+      "name": "카이맨",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8enR4e",
+      "name": "카이엔",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "0yNDLk",
+      "name": "타이칸",
+      "count": 3,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lMg7PM",
+      "name": "파나메라",
+      "count": 1,
+      "is_subscribed": false
+    }
+  ]
+}

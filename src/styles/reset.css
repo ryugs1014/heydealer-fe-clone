@@ -1,0 +1,512 @@
+/* ! Using CSS custom  */
+
+:root {
+  --vh: 100svh;
+
+  /* DEFAULT FONT */
+  --default-font-size: 16px;
+  --default-font: 'Spoqa Han Sans Neo';
+
+  /* FONT-ANTI-ALIASED*/
+  -webkit-font-smooting: antialiased;
+
+  /* Main color */
+  --color-main: #396eff; /* * Site Main Color */
+}
+
+/* ==========================================================================
+   1. 라이트 모드 (기본값)
+   ========================================================================== */
+:root,
+[data-color-scheme='light'] {
+  /* --- [원색 팔레트] 필요할 때 직접 꺼내 쓰는 기본 토큰 --- */
+  --color-token-black: #000000;
+  --color-token-white: #ffffff;
+
+  --color-token-gray-10: #f8f8f9;
+  --color-token-gray-20: #f5f5f6;
+  --color-token-gray-30: #e9eaec;
+  --color-token-gray-40: #e0e1e1;
+  --color-token-gray-50: #dadbde;
+  --color-token-gray-60: #c1c3c9;
+  --color-token-gray-70: #adafb7;
+  --color-token-gray-80: #989aa2;
+  --color-token-gray-90: #858892;
+  --color-token-gray-100: #70727c;
+  --color-token-gray-110: #5a5b63;
+  --color-token-gray-120: #4b4c54;
+  --color-token-gray-130: #37383d;
+  --color-token-gray-140: #323337;
+  --color-token-gray-150: #2d2e32;
+  --color-token-gray-160: #28282c;
+  --color-token-gray-170: #202124;
+  --color-token-gray-180: #1b1c1f;
+  --color-token-gray-190: #18181a;
+  --color-token-gray-200: #131314;
+  --color-token-gray-210: #0d0d0e;
+
+  --color-token-green-60: #00c364; /* 브랜드 초록 */
+  --color-token-blue-60: #396eff; /* 브랜드 파랑 */
+  --color-token-red-60: #ff4d52; /* 에러 빨강 */
+
+  /* --- [의미 기반 토큰] 라이트 모드 전용 컬러 정의 --- */
+
+  /* 📌 브랜드 포인트 컬러 */
+  --color-point-heydealer: #396effff; /* 헤이딜러 파랑 */
+  --color-point-revolt: #00c364ff; /* 볼트 초록 */
+
+  /* 📌 글자 색상 (Text) */
+  --color-label-strong: #000000ff; /* 대제목, 강조 글씨 */
+  --color-label-normal: #0d0d0eff; /* 본문 일반 글씨 */
+  --color-label-weak: #37383d99; /* 부가 설명, 흐린 회색 글씨 */
+  --color-semantic-label-middle-light: #2d2e32e0;
+
+  /* 📌 배경 색상 (Background) */
+  --color-bg-normal: #ffffffff; /* 메인 흰색 배경 */
+  --color-bg-alternative: #f8f8f9ff; /* 섹션 분리용 연한 회색 배경 */
+
+  /* 📌 선/테두리 색상 (Line/Border) */
+  --color-line-normal: #70727c29; /* 일반적인 박스 테두리 */
+  --color-line-divider: #70727c14; /* 리스트 사이의 아주 얇은 구분선 */
+  --color-semantic-label-disable-light: #37383d47;
+
+  /* 📌 그림자 효과 (Shadow) */
+  --shadow-normal: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 3%);
+  --shadow-strong: 0 0.125rem 0.5rem 0 rgb(0 0 0 / 12%);
+}
+
+/* ==========================================================================
+   2. 다크 모드 (HTML 태그에 data-color-scheme="dark"가 붙을 때 발동)
+   ========================================================================== */
+[data-color-scheme='dark'] {
+  /* --- [의미 기반 토큰] 다크 모드 전용 컬러로 덮어쓰기 --- */
+
+  /* 📌 브랜드 포인트 컬러 */
+  --color-point-heydealer: #577bffff; /* 다크모드용 조금 더 밝은 파랑 */
+  --color-point-revolt: #33cf83ff; /* 다크모드용 조금 더 밝은 초록 */
+
+  /* 📌 글자 색상 (Text) */
+  --color-label-strong: #ffffffff; /* 다크모드 흰색 강조 글씨 */
+  --color-label-normal: #f8f8f9ff; /* 다크모드 밝은 본문 글씨 */
+  --color-label-weak: #adafb799; /* 다크모드 흐린 회색 글씨 */
+
+  /* 📌 배경 색상 (Background) */
+  --color-bg-normal: #28282cff; /* 다크모드 메인 어두운 배경 */
+  --color-bg-alternative: #202124ff; /* 다크모드 카드/섹션용 더 어두운 배경 */
+
+  /* 📌 선/테두리 색상 (Line/Border) */
+  --color-line-normal: #70727c29; /* 다크모드 테두리 */
+  --color-line-divider: #00000029; /* 다크모드 구분선 */
+
+  /* 📌 그림자 효과 (Shadow) - 다크모드에서는 그림자가 더 짙어야 보입니다 */
+  --shadow-normal: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 24%);
+  --shadow-strong: 0rem 0.125rem 0.5rem 0rem rgb(0 0 0 / 48%);
+}
+
+/* Selected area Color with mouse */
+/*::selection {*/
+/*  background-color: var(--color-gray-1000);*/
+/*  color: var(--color-main);*/
+/*}*/
+
+/* 여백 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 모든 요소 공간 0, 서체 크기 100%, 세로정렬 baseline, 배경색 투명 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td select,
+textarea,
+button,
+input,
+form,
+figure,
+figcaption {
+  outline: 0;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+}
+
+/*폰트 초기화*/
+body,
+form,
+select,
+textarea,
+select,
+button,
+table,
+input {
+  font-family:
+    'Spoqa Han Sans Neo',
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    helvetica,
+    'Helvetica Neue',
+    'Apple SD Gothic Neo',
+    'Malgun Gothic',
+    '맑은 고딕',
+    sans-serif !important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--default-font-size);
+  line-height: 1.6;
+  letter-spacing: 0rem;
+  /* -webkit-font-smoothing: antialiased; */
+  /*font-smoothing: 글자를 얇고 명료하게 처리*/
+}
+
+/*a링크 초기화*/
+a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+/* 테이블 설정 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+/* 텍스트박스 초기화 */
+textarea {
+  display: inline-block;
+  overflow: hidden;
+  -webkit-appearance: none;
+  resize: none;
+  -webkit-box-sizing: border-box;
+}
+
+/* insert, delete */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+/*폰트 스타일 초기화*/
+em,
+address,
+i {
+  font-style: normal;
+}
+
+/* 제목 글꼴 크기 설정 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+h1 {
+  font-size: 28px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 16px;
+}
+h5 {
+  font-size: 15px;
+}
+h6 {
+  font-size: 14px;
+}
+
+/*블릿기호 초기화*/
+ul,
+li,
+ol {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+
+/* select 박스 초기화 */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 15px);
+  background-position-y: center;
+  min-width: 160px;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  color: #4d4d4d;
+  outline: none;
+}
+select:focus {
+  border-color: var(--color-gray-900);
+}
+
+/* 버튼 초기화 */
+button {
+  cursor: pointer;
+  display: inline-block;
+  line-height: normal;
+}
+button {
+  border: 0;
+  display: inline-block;
+  background: none;
+  color: inherit;
+}
+
+/* input박스 초기화 */
+input {
+  border: 0;
+  display: inline-block;
+  background: none;
+  color: inherit;
+  border-radius: 0;
+}
+input:not([type='checkbox'], [type='file'], [type='radio']):focus {
+  outline: 0;
+  box-shadow: none;
+  border: 1px solid var(--color-gray-900) !important;
+}
+textarea:focus {
+  border: 1px solid var(--color-gray-900) !important;
+}
+input[type='date'],
+input[type='time'] {
+  font-size: 14px;
+  cursor: pointer;
+}
+input[type='date']::-webkit-datetime-edit {
+  font-size: var(--default-font-size);
+  cursor: pointer;
+}
+input[type='date']::-webkit-datetime-edit-fields-wrapper {
+  font-size: 14px;
+}
+input[type='date']::-webkit-datetime-edit-text {
+}
+input[type='date']::-webkit-datetime-edit-month-field {
+}
+input[type='date']::-webkit-datetime-edit-day-field {
+}
+input[type='date']::-webkit-datetime-edit-year-field {
+}
+input[type='date']::-webkit-inner-spin-button {
+}
+input[type='date']::-webkit-calendar-picker-indicator {
+  opacity: 0.8;
+  cursor: pointer;
+}
+input::placeholder {
+  color: var(--normal-color-font);
+  font-size: 16px;
+}
+input:not([type='checkbox']) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+textarea,
+input:not([type='checkbox'], [type='file'], [type='radio']) {
+  border: 1px solid var(--color-gray-200);
+  background-color: var(--color-gray-0);
+  padding: 4px 20px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  min-height: 50px;
+}
+
+/* input, select, textarea 자동완성css - 초기화 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-transition: background-color 9999s ease-out;
+  box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+/* 폼 초기화 */
+fieldset {
+  border: 0;
+}
+input[type='radio'] {
+  outline: 0;
+}
+form {
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/*반응형*/
+img:not(.ql-container img, .ql-editor img) {
+  width: 100%;
+  display: block;
+}
+
+/* C L E A R - F I X */
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.init-next-image {
+  position: relative !important;
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.init-next-image span,
+.init-next-image img {
+  overflow: initial !important;
+  position: relative !important;
+  max-height: initial !important;
+  max-width: initial !important;
+  width: initial !important;
+  height: initial !important;
+}
+
+/* 숨기기 */
+.hide {
+  position: absolute;
+  display: none;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  opacity: 0;
+  text-indent: -9999px;
+}
+
+/*IR효과*/
+.ir_pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+} /*의미있는 이미지의 대체 텍스트를 제공하는경우*/
+.ir_wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+} /*의미있는 이미지의 대체 텍스트로 이미지가 없어도 텍스트를 보여주고자 할때*/
+.ir_su {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+} /*대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를제공할때*/
+
+/* RESPONSIVE */
+/*@media (max-width: 1200px) {*/
+/*}*/
+/*@media (max-width:1080px){*/
+/*}*/
+@media (max-width: 991px) {
+  input::placeholder {
+    color: var(--normal-color-font);
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  input:not([type='checkbox']) {
+    font-size: 16px !important;
+  }
+}
+/*@media (max-width:768px){*/
+/*}*/
+/*@media (max-width: 600px) {*/
+/*}*/
+/*@media (max-width: 320px) {*/
+/*}*/

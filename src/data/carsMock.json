@@ -1,0 +1,162 @@
+[
+  {
+    "hash_id": "zlD8Dalx",
+    "brand_id": "xoKegB",
+    "model_id": "relYKk",
+    "price": 420,
+    "previous_price": null,
+    "savings_total": 63,
+    "sale_status": "listed",
+    "detail_info": {
+      "model_name": "더 넥스트 스파크",
+      "model_part_name": "더 넥스트 스파크",
+      "grade_part_name": "LT 플러스",
+      "grade_name": "LT",
+      "detail_name": "플러스",
+      "initial_registration_date": "2016-12-15 00:00:00",
+      "year": 2017,
+      "mileage": 90644,
+      "factory_price": 1369,
+      "recommendation_comment": "・ 1인 소유 차량이에요.\n・ 앞좌석 열선 시트 탑재.",
+      "offered_at": "2026-05-15 19:19:34",
+      "image_urls": [
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/9eb7911a-388f-486c-a5c0-cd8c37acf216.png", "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
+      ],
+      "tags": [
+        {
+          "text": "단순교환 무사고",
+          "style": "gray"
+        },
+        {
+          "text": "1년 보증",
+          "style": "gray"
+        },
+        {
+          "text": "eye 인증",
+          "style": "gray"
+        }
+      ]
+    },
+    "location": "인천"
+  },
+    {
+      "hash_id": "rnY1ManP",
+      "brand_id": null,
+      "model_id": null,
+      "price": 1850,
+      "previous_price": null,
+      "savings_total": 63,
+      "sale_status": "listed",
+      "detail_info": {
+        "model_name": "올 뉴 아반떼 (CN7)",
+        "model_part_name": "올 뉴 아반떼 (CN7)",
+        "grade_part_name": "1.6 가솔린 인스퍼레이션",
+        "grade_name": "1.6 가솔린",
+        "detail_name": "인스퍼레이션",
+        "initial_registration_date": "2021-08-02 00:00:00",
+        "year": 2021,
+        "mileage": 94561,
+        "factory_price": 2499,
+        "recommendation_comment": "・ 신차 출고 후 소유자 변경과 대여 이력이 없는 1인 소유 차량이에요.\n\n・ 스마트 크루즈 컨트롤과 차로 유지 보조 등 다양한 주행 보조 기능으로 운전 편의성을 높였어요.\n\n・ 에어컨 내부 습기를 제거해 공조기 관리를 도와주는 애프터 블로우가 장착되어 있어요.",
+        "offered_at": "2026-05-15 19:18:48",
+        "image_urls": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/ca0a72af-3f22-4c2a-b87a-77528e8c8bad.png", "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/bccb666b-3658-44b3-aae1-ba72a5bb4d4c.jpeg"
+        ],
+        "tags": [
+          {
+            "text": "완전무사고",
+            "style": "gray"
+          },
+          {
+            "text": "1년 보증",
+            "style": "gray"
+          },
+          {
+            "text": "eye 인증",
+            "style": "gray"
+          }
+        ]
+      },
+      "location": null
+    },
+    {
+      "hash_id": "Oyo53DQD",
+      "brand_id": null,
+      "model_id": null,
+      "price": 780,
+      "previous_price": null,
+      "savings_total": 63,
+      "sale_status": "listed",
+      "detail_info": {
+        "model_name": "그랜저 HG",
+        "model_part_name": "그랜저 HG",
+        "grade_part_name": "HG240 모던",
+        "grade_name": "HG240 모던",
+        "detail_name": null,
+        "initial_registration_date": "2015-05-20 00:00:00",
+        "year": 2016,
+        "mileage": 115710,
+        "factory_price": 3195,
+        "recommendation_comment": "・ 군더더기 없이 기본기에 충실한 차량입니다. 덜어낸 만큼 가격은 훨씬 더 합리적이에요.\n\n・ 입고 후 엔진 오일을 교환하여 소모품 교체 비용을 절감할 수 있어요.\n\n・ 주행 편의성을 더해주는 내비게이션과 후방 카메라가 추가되어 있어요.",
+        "offered_at": "2026-05-15 19:15:48",
+        "image_urls": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/eee8ae71-d40a-46c9-ad33-15de9ed71b89.png", "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/d50bd370-9a98-4ce6-b8f6-d4e5b3b68640.jpeg"
+        ],
+        "tags": [
+          {
+            "text": "단순교환 무사고",
+            "style": "gray"
+          },
+          {
+            "text": "1년 보증",
+            "style": "gray"
+          },
+          {
+            "text": "eye 인증",
+            "style": "gray"
+          }
+        ]
+      },
+      "location": null
+    },
+    {
+      "hash_id": "Vym1K7y6",
+      "brand_id": null,
+      "model_id": null,
+      "price": 630,
+      "previous_price": 670,
+      "savings_total": 63,
+      "sale_status": "listed",
+      "detail_info": {
+        "model_name": "더 넥스트 스파크",
+        "model_part_name": "더 넥스트 스파크",
+        "grade_part_name": "LT 플러스",
+        "grade_name": "LT",
+        "detail_name": "플러스",
+        "initial_registration_date": "2016-04-08 00:00:00",
+        "year": 2016,
+        "mileage": 49111,
+        "factory_price": 1370,
+        "recommendation_comment": "・ 입고 후 정기 검사를 완료한 차량이에요.\n\n・ 운전자의 주행 편의성을 더해주는 애프터마켓 내비게이션과 후방 카메라가 장착되어 있어요.\n\n・ 앞좌석 열선 시트 탑재로 겨울철 탑승 편의성을 높였어요.",
+        "offered_at": "2026-03-04 14:19:14",
+        "image_urls": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/03/04/2b5ea235-bad8-4d31-8a28-47d43af8b974.png", "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
+        ],
+        "tags": [
+          {
+            "text": "완전무사고",
+            "style": "gray"
+          },
+          {
+            "text": "1년 보증",
+            "style": "gray"
+          },
+          {
+            "text": "eye 인증",
+            "style": "gray"
+          }
+        ]
+      },
+      "location": null
+    }
+  ]

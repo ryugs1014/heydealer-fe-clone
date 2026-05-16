@@ -1,0 +1,286 @@
+{
+  "hash_id": "RgMAjg",
+  "name": "아우디",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/56_cae46ff2-7b49-486e-b4a2-107c7a4a81c4.PNG",
+  "count": 74,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "qM7jYk",
+      "name": "100",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "2k3m9y",
+      "name": "80",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ok4ZPy",
+      "name": "90",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XkoWak",
+      "name": "A1",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "7MEgne",
+      "name": "A3",
+      "count": 7,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "peqW1M",
+      "name": "A4",
+      "count": 13,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RyWgPy",
+      "name": "A5",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yOgby",
+      "name": "A6",
+      "count": 24,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "DydZQk",
+      "name": "A7",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yAl7M",
+      "name": "A8",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "relQ9k",
+      "name": "Q2",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "We6KZk",
+      "name": "Q3",
+      "count": 3,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Verm4y",
+      "name": "Q4",
+      "count": 4,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "aMKvYk",
+      "name": "Q5",
+      "count": 3,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "JyVWxe",
+      "name": "Q7",
+      "count": 4,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMbaqk",
+      "name": "Q8",
+      "count": 2,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "rel1Vk",
+      "name": "R8",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "EMpwBk",
+      "name": "RS3",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VeJaJy",
+      "name": "RS4",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "YyLvOk",
+      "name": "RS5",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zyxdEy",
+      "name": "RS6",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yRmlM",
+      "name": "RS7",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "BkB6Qk",
+      "name": "RS Q8",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XyQmGy",
+      "name": "S3",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMjdZe",
+      "name": "S4",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XMwAme",
+      "name": "S5",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lkYvJM",
+      "name": "S6",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "dM9OLe",
+      "name": "S7",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMbwZy",
+      "name": "S8",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VerZpe",
+      "name": "SQ5",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "gMDZ5e",
+      "name": "SQ7",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "We6r1e",
+      "name": "SQ8",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ae1mle",
+      "name": "TT",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "OyZXlk",
+      "name": "TTRS",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "KkmW2y",
+      "name": "TTS",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "bePxWe",
+      "name": "V8",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XMw4ry",
+      "name": "A6 e-트론",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yOP7e",
+      "name": "Q6 e-트론",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "9kzddy",
+      "name": "Q8 e-트론",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yOjKM",
+      "name": "S6 e-트론",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMb4Pe",
+      "name": "SQ6 e-트론",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ne8NGM",
+      "name": "SQ8 e-트론",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "7MEAzM",
+      "name": "e-트론",
+      "count": 9,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VeJJBe",
+      "name": "e-트론 GT",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ae1VQk",
+      "name": "RS e-트론 GT",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "0yNvEy",
+      "name": "올로드 콰트로",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}

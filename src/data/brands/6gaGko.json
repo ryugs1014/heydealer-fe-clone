@@ -1,0 +1,286 @@
+{
+  "hash_id": "6gaGko",
+  "name": "닛산",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2025/10/31/64_e02312d2-7f2e-4bb9-874d-9f237fe2432b.png",
+  "count": 6,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "relOry",
+      "name": "180SX",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Dyd2Ek",
+      "name": "200SX",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "YyLpay",
+      "name": "240SX",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "BkBEwe",
+      "name": "280ZX",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VerA8y",
+      "name": "300ZX",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "2k36Ve",
+      "name": "350Z",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMjpLe",
+      "name": "370Z",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "OyZ2Xy",
+      "name": "GT-R",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RMa8qk",
+      "name": "NV",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zeXQNk",
+      "name": "로그",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VeJbGe",
+      "name": "로렐",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yAJ4e",
+      "name": "리프",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "YyGQ8k",
+      "name": "마치",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ok4RWy",
+      "name": "맥시마",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "EMpOjk",
+      "name": "모코",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMb23M",
+      "name": "무라노",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "7MEVVy",
+      "name": "베르사",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "9kzQLe",
+      "name": "블루버드",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "JyV24y",
+      "name": "블루버드 실피",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ae1J8k",
+      "name": "세드릭",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lkYnEM",
+      "name": "세레나",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ae1qwe",
+      "name": "세피로",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "EMp3Yk",
+      "name": "센트라",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RyW9Lk",
+      "name": "스카이라인",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "rk06oy",
+      "name": "시마",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yAJPe",
+      "name": "실비아",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ne81xk",
+      "name": "알마다",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "7MEVYy",
+      "name": "알티마",
+      "count": 5,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XMw7EM",
+      "name": "엑스테라",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMjp8e",
+      "name": "엘그란드",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VerAWy",
+      "name": "윙로드",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XevApy",
+      "name": "쥬크",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8enpPM",
+      "name": "캐시카이",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yOd1e",
+      "name": "퀘스트",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yOdne",
+      "name": "큐브",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMbWGy",
+      "name": "타이탄",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lMgqXe",
+      "name": "티아나",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "gMDdBM",
+      "name": "파오",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zyxl0y",
+      "name": "패스파인더",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XMw79M",
+      "name": "펄사",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "OyZ23y",
+      "name": "푸가",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "JyVlAk",
+      "name": "프레리",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Vy260y",
+      "name": "프레지던트",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lkY75y",
+      "name": "프론티어",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yRjVy",
+      "name": "휘가로",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMjO9y",
+      "name": "엑스트레일",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}

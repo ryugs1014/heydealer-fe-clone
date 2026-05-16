@@ -1,0 +1,8 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.main {
+  background-color: var(--color-basic-bg);
+  color: var(--color-gray-0);
+  width: 100%;
+}

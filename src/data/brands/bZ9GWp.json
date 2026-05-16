@@ -1,0 +1,82 @@
+{
+  "hash_id": "bZ9GWp",
+  "name": "KG모빌리티(쌍용)",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2025/07/24/3_572edeba-e71f-4168-8810-52579454d72e.png",
+  "count": 189,
+  "is_domestic": true,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "relpeK",
+      "name": "렉스턴",
+      "count": 52,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "KkmKyP",
+      "name": "뉴훼미리",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XyQveR",
+      "name": "로디우스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "bePrMz",
+      "name": "무쏘",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "0yNAMx",
+      "name": "액티언",
+      "count": 9,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "qM7wM2",
+      "name": "이스타나",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "We6Qyv",
+      "name": "체어맨",
+      "count": 2,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "KM52yn",
+      "name": "카이런",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "dM9OeO",
+      "name": "코란도",
+      "count": 19,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Dydpyn",
+      "name": "칼리스타",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XMwpGy",
+      "name": "토레스",
+      "count": 50,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "peqLyE",
+      "name": "티볼리",
+      "count": 56,
+      "is_subscribed": false
+    }
+  ]
+}

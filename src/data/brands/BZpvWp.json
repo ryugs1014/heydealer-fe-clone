@@ -1,0 +1,118 @@
+{
+  "hash_id": "BZpvWp",
+  "name": "인피니티",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/16_55a0817e-ba06-4385-bb94-e0bcab01b0fd.PNG",
+  "count": 4,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "XkoJ1e",
+      "name": "EX",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zeX9ok",
+      "name": "FX",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8enm5y",
+      "name": "G",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "0yNEoM",
+      "name": "I",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "bePd8e",
+      "name": "J30",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "We6Rbe",
+      "name": "JX",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "BkB4my",
+      "name": "M",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "YyLX4y",
+      "name": "Q",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "YyLPwy",
+      "name": "Q30",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "KM5mEM",
+      "name": "Q50",
+      "count": 2,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "peqzQk",
+      "name": "Q60",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lkYP4e",
+      "name": "Q70",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "gMD7rk",
+      "name": "QX",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "qM7o6M",
+      "name": "QX50",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "KkmqDk",
+      "name": "QX60",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ok45EM",
+      "name": "QX70",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Vy2XPk",
+      "name": "QX80",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "aMK7AM",
+      "name": "QX30",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}

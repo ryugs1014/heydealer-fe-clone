@@ -1,0 +1,38 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.container {
+  margin: 0 auto;
+  padding-left: rem(56);
+  padding-right: rem(56);
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: rem(991)) {
+    padding-left: rem(40);
+    padding-right: rem(40);
+  }
+
+  @media (max-width: rem(768)) {
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+}
+
+.lg {
+  max-width: rem(1920);
+}
+
+.md {
+  max-width: rem(1504);
+}
+
+.sm {
+  max-width: rem(960);
+  padding-left: rem(108);
+  padding-right: rem(108);
+}
+
+.none {
+  max-width: 100%;
+}

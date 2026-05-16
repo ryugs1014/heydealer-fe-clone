@@ -1,0 +1,82 @@
+{
+  "hash_id": "rWdrxZ",
+  "name": "마세라티",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/58_0c90bff2-29f7-49bc-a507-8c16a573a31d.PNG",
+  "count": 1,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "zeXvjM",
+      "name": "3200",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ne8ELk",
+      "name": "MC12",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "JyVYjM",
+      "name": "MC20",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Vy2wme",
+      "name": "그란스포츠",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XevWJk",
+      "name": "그란카브리오",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "gMD33k",
+      "name": "그란투리스모",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMjl1e",
+      "name": "그레칼레",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RManay",
+      "name": "기블리",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMj79y",
+      "name": "르반떼",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "rk0VPy",
+      "name": "스파이더",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "9kzNgk",
+      "name": "콰트로포르테",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lMgvwk",
+      "name": "쿠페",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}

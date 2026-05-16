@@ -1,0 +1,69 @@
+@use '../rem' as *; // 최신 방식으로 rem 함수 불러오기
+
+// ===============================
+// ✅ flexBox 사용 예시
+// ===============================
+
+// * 기본 사용
+//@include flexBox();
+//@include flexBox(flex);
+
+// * 가운데 정렬
+//@include flexBox(flex, center, center);
+
+// * 수직 정렬 + gap
+//@include flexBox(flex, center, center, column, 30);
+
+// ! 풀사이즈 박스
+//@include flexBox(full-flex);
+//@include flexBox(full-grid);
+
+// ===============================
+// ✅ flexBox mixin 설정
+// ===============================
+@mixin flexBox(
+  $display: flex,
+  $justify: flex-start,
+  $align: stretch,
+  $direction: row,
+  $gap: null
+) {
+  @if $display == full-flex {
+    display: flex;
+    width: 100%;
+  } @else if $display == full-grid {
+    display: grid;
+    width: 100%;
+  } @else {
+    display: $display;
+  }
+
+  // ✅ start/end → flex-start/flex-end 변환
+  @if $justify == start {
+    justify-content: flex-start;
+  } @else if $justify == end {
+    justify-content: flex-end;
+  } @else {
+    justify-content: $justify;
+  }
+
+  @if $align == start {
+    align-items: flex-start;
+  } @else if $align == end {
+    align-items: flex-end;
+  } @else {
+    align-items: $align;
+  }
+
+  @if $direction != null {
+    flex-direction: $direction;
+  }
+
+  @if $gap != null {
+    @if type-of($gap) == 'number' {
+      gap: rem($gap); // 숫자는 rem 변환
+    } @else {
+      gap: $gap; // rem(), %, em 등 직접 지정한 값 그대로
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use '../rem' as *; // 최신 방식으로 rem 함수 불러오기
+
+@mixin textLine($lineClamp) {
+  display: -webkit-box !important;
+  word-break: break-all;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lineClamp;
+  overflow: hidden;
+}
+
+@mixin textUnderline {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: rem(1);
+  text-underline-offset: 5%; /* 4px */
+  text-underline-position: from-font;
+}

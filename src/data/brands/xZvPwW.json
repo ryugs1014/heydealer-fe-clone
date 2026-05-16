@@ -1,0 +1,34 @@
+{
+  "hash_id": "xZvPwW",
+  "name": "BYD",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2025/07/02/78_b00f5ad3-6bd4-4dfe-8fb9-07205762b887.png",
+  "count": 3,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "rel4pe",
+      "name": "돌핀",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yApbM",
+      "name": "아토3",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "EMpzNe",
+      "name": "SEAL",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VerRqe",
+      "name": "SEALION 7",
+      "count": 2,
+      "is_subscribed": false
+    }
+  ]
+}

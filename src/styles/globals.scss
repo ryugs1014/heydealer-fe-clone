@@ -1,0 +1,296 @@
+/* 전역에서 사용될 CSS */
+@import './reset.css';
+@import './font.css';
+@import './rem';
+
+:root,
+html {
+  scroll-behavior: auto;
+}
+
+@for $i from 0 through 20 {
+  @if ($i == 0) {
+    .mt-#{5*$i} {
+      margin-top: rem(5 * $i) !important;
+    }
+    .mb-#{5*$i} {
+      margin-bottom: rem(5 * $i) !important;
+    }
+    .ml-#{5*$i} {
+      margin-left: rem(5 * $i) !important;
+    }
+    .mr-#{5*$i} {
+      margin-right: rem(5 * $i) !important;
+    }
+  } @else {
+    .mt-#{5*$i} {
+      margin-top: rem(5 * $i);
+    }
+    .mb-#{5*$i} {
+      margin-bottom: rem(5 * $i);
+    }
+    .ml-#{5*$i} {
+      margin-left: rem(5 * $i);
+    }
+    .mr-#{5*$i} {
+      margin-right: rem(5 * $i);
+    }
+  }
+}
+
+@for $i from 1 through 20 {
+  .pt-#{5*$i} {
+    padding-top: rem(5 * $i);
+  }
+  .pb-#{5*$i} {
+    padding-bottom: rem(5 * $i);
+  }
+  .pl-#{5*$i} {
+    padding-left: rem(5 * $i);
+  }
+  .pr-#{5*$i} {
+    padding-right: rem(5 * $i);
+  }
+}
+
+// html, body{width:100vw; overflow-x:hidden;}
+// position: sticky 적용용 body overflow 삭제
+html,
+body {
+  // width: 100vw 크롬 브라우저 버그발생(Header, Main 어긋남)
+  // width: 100vw;
+  width: 100%;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  //overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-gray-0);
+  color: var(--color-basic-font);
+}
+
+label {
+  cursor: pointer;
+}
+
+input.fullWidth {
+  width: 100%;
+}
+
+textarea.fullWidth {
+  width: 100%;
+  border: rem(1) solid transparent;
+  padding: rem(10) rem(8);
+  min-height: rem(100);
+}
+
+input.halfWidth {
+  width: 50%;
+}
+
+input.text-align-right {
+  text-align: right;
+}
+
+input.text-align-center {
+  text-align: center;
+}
+
+input[data-align='right'] {
+  text-align: right;
+}
+
+.disabled {
+  cursor: not-allowed;
+
+  input,
+  button,
+  textarea,
+  select {
+    cursor: inherit;
+    pointer-events: none;
+    background-color: var(--color-gray-700) !important;
+  }
+
+  label {
+    cursor: default;
+  }
+}
+
+input.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  background-color: red !important;
+}
+
+button.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.mainColor {
+  color: var(--color-main);
+}
+
+.img-wrap,
+.img-box {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  min-width: rem(10);
+  min-height: rem(10);
+}
+
+.flex-wrap,
+.flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @for $i from 0 through 100 {
+    &.gap-#{$i} {
+      gap: rem($i);
+    }
+  }
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+.animation-show {
+  animation: show var(--ani-default) forwards;
+  @for $i from 1 through 5 {
+    &.animation-delay-#{$i} {
+      animation-delay: 0.1 * $i + s;
+    }
+  }
+}
+
+.animation-show-all-child {
+  animation: show var(--ani-default) forwards;
+  @for $i from 1 through 20 {
+    * :nth-child(#{$i}) {
+      animation: show 0.4s var(--transition-cubic) forwards;
+    }
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+    pointer-events: all;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// 폰트 설정~~
+
+/* ! 부모의 너비에 영향을 끼치지 않ㅇ */
+@mixin aspectImage {
+}
+
+// *  MOBILE , WEB > Show & Hide
+
+.mobile {
+  display: none !important;
+}
+
+.pc {
+  display: block !important;
+}
+
+@media (max-width: rem(1200)) {
+}
+
+//@media (max-width: rem(600)) {
+//  #__next .mobile {
+//    display: block !important;
+//  }
+//  #__next .pc {
+//    display: none !important;
+//  }
+//  body {
+//    overflow-x: hidden;
+//  }
+//}
+
+// 에러 메시지
+.errorMSG {
+  color: var(--color-warning) !important;
+  font-size: rem(12);
+  font-family:
+    'Spoqa Han Sans Neo',
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    helvetica,
+    'Helvetica Neue',
+    'Apple SD Gothic Neo',
+    'Malgun Gothic',
+    '맑은 고딕',
+    sans-serif;
+  margin: 0;
+}
+
+.link {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+//  ========= FORM =========
+.required {
+  position: relative;
+
+  &::before {
+    content: '*';
+    color: var(--color-warning);
+    font-size: rem(12);
+    position: absolute;
+    left: rem(-7);
+    top: rem(-2);
+  }
+}

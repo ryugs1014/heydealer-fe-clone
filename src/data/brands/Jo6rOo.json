@@ -1,0 +1,154 @@
+{
+  "hash_id": "Jo6rOo",
+  "name": "볼보",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/61_3ebb1d12-8aaa-42cb-9935-e98560341154.PNG",
+  "count": 56,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "BkBQwe",
+      "name": "740",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XyQXrM",
+      "name": "760",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "We6pKM",
+      "name": "850",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "qM7wnM",
+      "name": "940",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "dM9ZYy",
+      "name": "960",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ok4bWy",
+      "name": "C30",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "EMp6be",
+      "name": "C40",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "KkmEVk",
+      "name": "C70",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Vy2dJk",
+      "name": "EX30",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XyQAvy",
+      "name": "EX90",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8enAPy",
+      "name": "S40",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "KM5VJy",
+      "name": "S60",
+      "count": 7,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XkodQM",
+      "name": "S70",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "7MENYy",
+      "name": "S80",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lkY35y",
+      "name": "S90",
+      "count": 3,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yA9Py",
+      "name": "V40",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "YyL6ak",
+      "name": "V50",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "0yNNgy",
+      "name": "V60",
+      "count": 7,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "DydbRk",
+      "name": "V70",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "0yN2zy",
+      "name": "V90",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zyx6mk",
+      "name": "XC40",
+      "count": 25,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMjr8M",
+      "name": "XC60",
+      "count": 13,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "peq99e",
+      "name": "XC70",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "bePLbe",
+      "name": "XC90",
+      "count": 1,
+      "is_subscribed": false
+    }
+  ]
+}

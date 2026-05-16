@@ -1,0 +1,70 @@
+{
+  "hash_id": "eo7QgO",
+  "name": "피아트",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/8_d5aaa711-bf56-41f5-bd58-7058cff785fc.PNG",
+  "count": 1,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "Ae126k",
+      "name": "124",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RyW5k1",
+      "name": "500",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zyx2rk",
+      "name": "500X",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yRry3",
+      "name": "란치아",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RyW0De",
+      "name": "멀티피아",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zyxvkE",
+      "name": "바르게타",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMbPPe",
+      "name": "쿠페",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "2k37kD",
+      "name": "크로마",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ae1Xby",
+      "name": "푼토",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VeJYyw",
+      "name": "프리몬트",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}

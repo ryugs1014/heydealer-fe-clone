@@ -1,0 +1,58 @@
+{
+  "hash_id": "QZq3WM",
+  "name": "랜드로버",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/35_951e5aa8-b152-464f-a627-4d74022dfd6a.PNG",
+  "count": 27,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "8enB9e",
+      "name": "디스커버리",
+      "count": 10,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ok4oJe",
+      "name": "디스커버리 스포츠",
+      "count": 4,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lkYV7M",
+      "name": "디펜더",
+      "count": 5,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "YyLO6M",
+      "name": "레인지로버",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "rk0Wqe",
+      "name": "레인지로버 벨라",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "BkB2zk",
+      "name": "레인지로버 스포츠",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Vy2oDe",
+      "name": "레인지로버 이보크",
+      "count": 6,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "gMDAmy",
+      "name": "프리랜더",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}

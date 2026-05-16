@@ -1,0 +1,118 @@
+{
+  "hash_id": "KWnXZB",
+  "name": "재규어",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/32_ec06d5c4-8b8c-417d-9ca7-914f8c030fcf.PNG",
+  "count": 6,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "RyWW9y",
+      "name": "E-PACE",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "OyZ1mM",
+      "name": "F-PACE",
+      "count": 3,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XMw30M",
+      "name": "F-TYPE",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XyQRRe",
+      "name": "S-TYPE",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VerYly",
+      "name": "X-TYPE",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "DydANe",
+      "name": "XE",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMjgGy",
+      "name": "XF",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yAP6M",
+      "name": "XJ",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "EMpoLk",
+      "name": "XJ-6",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "OyZgQe",
+      "name": "XJ-8",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "7MEbWy",
+      "name": "XJR",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "rel80e",
+      "name": "XJS",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "bePRqM",
+      "name": "XK",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yOA9k",
+      "name": "XK8",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "0yNR4y",
+      "name": "XKR",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "qM7b2k",
+      "name": "다임러",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "aMKRpk",
+      "name": "소버린",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "qM73OM",
+      "name": "I-PACE",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}

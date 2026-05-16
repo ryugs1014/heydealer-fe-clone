@@ -1,0 +1,226 @@
+{
+  "hash_id": "lgBNgw",
+  "name": "벤츠",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/31_de9264bb-7406-4d6e-a37a-19667eec0192.PNG",
+  "count": 206,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "Ne8n1M",
+      "name": "190클래스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMjVBM",
+      "name": "A클래스",
+      "count": 19,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "9kz96e",
+      "name": "AMG GT",
+      "count": 2,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ae1OvM",
+      "name": "B클래스 (MY B)",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "2k3qwy",
+      "name": "C클래스",
+      "count": 25,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VeJv5e",
+      "name": "CL클래스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XevYWy",
+      "name": "CLA클래스",
+      "count": 10,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lMgzlk",
+      "name": "CLE클래스",
+      "count": 3,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMbg4y",
+      "name": "CLK클래스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yR9aM",
+      "name": "CLS클래스",
+      "count": 4,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "JyVLZk",
+      "name": "E클래스",
+      "count": 69,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "YyGYdk",
+      "name": "EQA",
+      "count": 4,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yOY7k",
+      "name": "EQB",
+      "count": 4,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "OyZamM",
+      "name": "EQC",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "OyZWEe",
+      "name": "EQE",
+      "count": 8,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RMawVe",
+      "name": "EQS",
+      "count": 3,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Vy2Dqk",
+      "name": "GLE-클래스 W167",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RMaW2e",
+      "name": "G클래스 (G바겐)",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XMw3XM",
+      "name": "GL클래스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VerY2y",
+      "name": "GLA클래스",
+      "count": 11,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XyQYqy",
+      "name": "GLB클래스",
+      "count": 11,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Vy2JKy",
+      "name": "GLC클래스",
+      "count": 22,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "gMDb6e",
+      "name": "GLE클래스",
+      "count": 6,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "JyVLPk",
+      "name": "GLK클래스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yAz4e",
+      "name": "GLS클래스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMbgvy",
+      "name": "M클래스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "OyZgxe",
+      "name": "R클래스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "EMpomk",
+      "name": "S클래스",
+      "count": 2,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yAvLe",
+      "name": "SEL/SEC",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RyWXWe",
+      "name": "SL클래스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ae166k",
+      "name": "SLC클래스",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zyxoLM",
+      "name": "SLK클래스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "rk0wme",
+      "name": "SLR",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "aMKnjk",
+      "name": "SLS AMG",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yOAak",
+      "name": "V클래스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ae1OAM",
+      "name": "스프린터",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}

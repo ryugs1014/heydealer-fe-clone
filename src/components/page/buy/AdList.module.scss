@@ -1,0 +1,94 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.ad-list-container {
+  .overflow-box {
+    display: grid;
+    position: relative;
+    border-radius: rem(4);
+    overflow: hidden;
+    cursor: pointer;
+
+    &.car-box {
+      &::after {
+        position: absolute;
+        inset: 0;
+        content: '';
+        background-color: var(--color-label-normal);
+        opacity: 0;
+        transition: 0.1s ease-in-out;
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 0.05;
+        }
+      }
+    }
+
+    &.card-box {
+      width: 100%;
+      justify-content: flex-end;
+      background-color: var(--color-label-normal);
+    }
+
+    .svg-box {
+      position: absolute;
+      top: rem(20);
+      left: rem(20);
+      @include svgBox(rem(88));
+      height: rem(51);
+      z-index: 3;
+    }
+
+    .text-box {
+      position: absolute;
+      top: rem(20);
+      left: rem(20);
+      z-index: 3;
+      color: var(--color-token-white);
+      @include font-style(15, 700, rem(22));
+      white-space: pre-wrap;
+      pointer-events: none;
+    }
+  }
+
+  .img-wrap {
+    &.card-img {
+      position: relative;
+      width: rem(141);
+      height: rem(100);
+    }
+
+    > img {
+      position: unset !important;
+    }
+  }
+
+  .video-wrap {
+    position: relative;
+
+    .video-element {
+      width: rem(141);
+      height: rem(100);
+    }
+  }
+
+  .video-element {
+    width: 100%;
+    z-index: 2;
+  }
+
+  .img-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgb(15, 16, 20) 0%,
+      rgba(15, 16, 20, 0) 30%,
+      rgba(102, 102, 102, 0) 100%
+    );
+  }
+}

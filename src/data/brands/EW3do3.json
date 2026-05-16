@@ -1,0 +1,100 @@
+{
+  "hash_id": "EW3do3",
+  "name": "렉서스",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/15_7d30201a-0df2-44bb-a5f0-edb30f4ed2cc.PNG",
+  "count": 18,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "OyZ32e",
+      "name": "CT200h",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Dydlzy",
+      "name": "ES",
+      "count": 8,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "7MEWAe",
+      "name": "GS",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "dM9l0k",
+      "name": "GX",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XyQLxM",
+      "name": "IS",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XyQoOk",
+      "name": "LC",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RMazVy",
+      "name": "LM",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMjROM",
+      "name": "LS",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "aMKrok",
+      "name": "LX",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yOzZM",
+      "name": "NX",
+      "count": 7,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yA2Ne",
+      "name": "RC",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "relm4k",
+      "name": "RX",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lkYzEM",
+      "name": "RZ",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XMwZ8k",
+      "name": "SC",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "KkmK3y",
+      "name": "UX",
+      "count": 1,
+      "is_subscribed": false
+    }
+  ]
+}

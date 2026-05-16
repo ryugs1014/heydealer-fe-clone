@@ -1,0 +1,28 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.content-container {
+  display: grid;
+  grid-template-columns: rem(248) 1fr;
+  gap: rem(64);
+  padding: rem(56) 0;
+  box-sizing: border-box;
+}
+
+.left-aside {
+  display: grid;
+  gap: rem(32);
+  align-content: flex-start;
+}
+
+.ad-list-container {
+  display: grid;
+  gap: rem(12);
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: rem(1);
+  background-color: var(--color-line-divider);
+}

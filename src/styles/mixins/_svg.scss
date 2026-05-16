@@ -1,0 +1,25 @@
+@use '../rem' as *; // 최신 방식으로 rem 함수 불러오기
+
+// ===============================
+// ✅ svgBox 사용 예시
+// ===============================
+
+// * 기본 사용
+//@include svgBox();
+
+// * 고정 너비로 사용 (width: rem(120))
+//@include svgBox(rem(120));
+
+// * 최대 너비만 지정 (반응형 + 제한)
+//@include svgBox(100%, rem(200));
+
+@mixin svgBox($width: 100%, $maxWidth: null) {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  width: $width;
+
+  @if $maxWidth != null {
+    max-width: $maxWidth;
+  }
+}

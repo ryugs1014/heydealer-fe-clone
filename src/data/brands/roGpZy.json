@@ -1,0 +1,148 @@
+{
+  "hash_id": "roGpZy",
+  "name": "캐딜락",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/36_623305e5-4f5a-4fe2-93f7-36b39fabfce8.PNG",
+  "count": 3,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "RyW1jk",
+      "name": "ATS",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ne8PRe",
+      "name": "ATS-V",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMbYvk",
+      "name": "BLS",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "qM7KaM",
+      "name": "CT4",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "bePzKM",
+      "name": "CT5",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "EMp7Yk",
+      "name": "CT6",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RMaYxM",
+      "name": "CTS",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lMg2zk",
+      "name": "CTS-V",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zyx85y",
+      "name": "DTS",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "JyV6Zy",
+      "name": "SRX",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "YyG1bk",
+      "name": "STS",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VeJpmM",
+      "name": "XLR",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ok4O1e",
+      "name": "XT4",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VerLoM",
+      "name": "XT5",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yOm7k",
+      "name": "XT6",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "2k3oEk",
+      "name": "드빌",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "YyGjdM",
+      "name": "리릭",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "9kzEVe",
+      "name": "스빌",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XevxaM",
+      "name": "에스컬레이드",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yRLOk",
+      "name": "엘도라도",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ae18vy",
+      "name": "컨코어",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "rk02zy",
+      "name": "플리트우드",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "beP5Pk",
+      "name": "XTS",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}

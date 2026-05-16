@@ -1,0 +1,148 @@
+{
+  "hash_id": "wgNwQW",
+  "name": "푸조",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/51_c94ba652-b123-4fce-a55c-580860831f6a.PNG",
+  "count": 6,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "zMbBZM",
+      "name": "1007",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "aMKQle",
+      "name": "107",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "OyZAlM",
+      "name": "205",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "JyVrxy",
+      "name": "206",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yO1bk",
+      "name": "207",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ae1j9k",
+      "name": "208",
+      "count": 2,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XMwBmk",
+      "name": "2008",
+      "count": 2,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMjbaM",
+      "name": "306",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "EMprBe",
+      "name": "307",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "OyZAaM",
+      "name": "308",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMbBWM",
+      "name": "3008",
+      "count": 2,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "EMpr7e",
+      "name": "405",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Verjme",
+      "name": "406",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yO1qk",
+      "name": "407",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "dM96ly",
+      "name": "408",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Verjpe",
+      "name": "508",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "2k3LdM",
+      "name": "5008",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yARBe",
+      "name": "605",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMjbZM",
+      "name": "607",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ae1jlk",
+      "name": "806",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XMwBYk",
+      "name": "807",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "JyVr2y",
+      "name": "RCZ",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "7ME21y",
+      "name": "익스퍼트",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}

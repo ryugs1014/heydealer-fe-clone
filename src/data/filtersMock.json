@@ -1,0 +1,27 @@
+{
+  "fuel": [
+    { "name": "휘발유", "value": "gasoline" },
+    { "name": "경유", "value": "diesel" },
+    { "name": "LPG", "value": "lpg" },
+    { "name": "바이퓨얼", "value": "bifuel" },
+    { "name": "전기", "value": "electric" },
+    { "name": "수소", "value": "hydrogen" },
+    { "name": "하이브리드", "value": "hybrid" }
+  ],
+  "car_shape": [
+    { "name": "경 ∙ 소형", "value": "small" },
+    { "name": "세단", "value": "sedan" },
+    { "name": "SUV ∙ RV", "value": "suv_rv" },
+    { "name": "쿠페", "value": "coupe" },
+    { "name": "리무진", "value": "limousine" },
+    { "name": "컨버터블", "value": "convertible" },
+    { "name": "해치백", "value": "hatchback" }
+  ],
+  "transmission": [],
+  "price": [100, 200, 300, 500, 1000, 2000, 3000, 5000, 10000],
+  "mileage": [10000, 30000, 50000, 70000, 100000],
+  "year": [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+  "option": [],
+  "exterior_color": [],
+  "interior_color": []
+}

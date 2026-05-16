@@ -1,0 +1,70 @@
+{
+  "hash_id": "Rg07Z0",
+  "name": "미니",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/29_7e2d24ce-80e6-476b-b656-759ae8ee41ed.PNG",
+  "count": 87,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "OyZ7xe",
+      "name": "로드스터",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMbD4e",
+      "name": "로버 미니",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "OyZzEy",
+      "name": "에이스맨",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "EMp5my",
+      "name": "컨트리맨",
+      "count": 20,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMbOqy",
+      "name": "일렉트릭",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XMwzXk",
+      "name": "쿠퍼",
+      "count": 40,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "JyVDPk",
+      "name": "쿠퍼 컨버터블",
+      "count": 4,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yOKay",
+      "name": "쿠페",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "aMKWjM",
+      "name": "클럽맨",
+      "count": 21,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ver12y",
+      "name": "페이스맨",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}

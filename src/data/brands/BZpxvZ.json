@@ -1,0 +1,64 @@
+{
+  "hash_id": "BZpxvZ",
+  "name": "로터스",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/60_0001e19c-8c58-4a70-88a2-b5b019319772.PNG",
+  "count": 1,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "JyVvAy",
+      "name": "2-Eleven",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XevVVe",
+      "name": "에미라",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ae1AQe",
+      "name": "에메야",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "EMpWjk",
+      "name": "에보라",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "aMKNXk",
+      "name": "에스프리",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VerQ8y",
+      "name": "엑시지",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XMw89y",
+      "name": "엘리스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VeJdBM",
+      "name": "엘레트라",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "OyZr3y",
+      "name": "유로파",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}

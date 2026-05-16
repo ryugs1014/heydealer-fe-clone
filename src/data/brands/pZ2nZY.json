@@ -1,0 +1,166 @@
+{
+  "hash_id": "pZ2nZY",
+  "name": "포드",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/30_a8cd9121-6b85-4c61-95f1-334125a11bd3.PNG",
+  "count": 30,
+  "is_domestic": false,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "Ok4qqM",
+      "name": "E-Series",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lMggZM",
+      "name": "F150",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8enJqe",
+      "name": "F250",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XyQ2ge",
+      "name": "F350",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "7MEm4M",
+      "name": "GT",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "bePKQy",
+      "name": "S-MAX",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "YyGn9M",
+      "name": "레인저",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMj8Be",
+      "name": "머스탱",
+      "count": 7,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "gMDJXe",
+      "name": "몬데오",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "KkmO8y",
+      "name": "브롱코",
+      "count": 2,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "rel0Ke",
+      "name": "썬더버드",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Xko3gk",
+      "name": "윈드스타",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "KM5Rmy",
+      "name": "이스케이프",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "dM9nQy",
+      "name": "이코노라인",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lkYWry",
+      "name": "익스플로러",
+      "count": 19,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "We6n5e",
+      "name": "익스플로러 스포츠트랙",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "peqjbk",
+      "name": "익스피디션",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "YyLWJM",
+      "name": "컨투어",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "RMaboy",
+      "name": "쿠가",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "0yNZpy",
+      "name": "토러스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMbK8y",
+      "name": "트랜짓",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zeXnJM",
+      "name": "파이브 헌드레드",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "qM7rEk",
+      "name": "포커스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "DydP9y",
+      "name": "퓨전",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yAnLe",
+      "name": "프로브",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "BkBa2e",
+      "name": "프리스타일",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}

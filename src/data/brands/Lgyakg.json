@@ -1,0 +1,292 @@
+{
+  "hash_id": "Lgyakg",
+  "name": "쉐보레(GM대우)",
+  "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/44_90ba72fc-6815-4adc-94ad-a8c15cc9c546.PNG",
+  "count": 287,
+  "is_domestic": true,
+  "is_subscribed": false,
+  "model_groups": [
+    {
+      "hash_id": "KkmBjM",
+      "name": "G2X",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lMgZmk",
+      "name": "넥시아",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "7MEXgk",
+      "name": "다마스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "We69ly",
+      "name": "누비라",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zeXqGk",
+      "name": "라보",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "aMKb6k",
+      "name": "라세티",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8enoOk",
+      "name": "라노스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "BkBqNe",
+      "name": "레조",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VerPPM",
+      "name": "마티즈",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "bePZVM",
+      "name": "말리부",
+      "count": 13,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Vy2NXy",
+      "name": "레간자",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XyQrBe",
+      "name": "매그너스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "OyZGae",
+      "name": "베리타스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "gMDm5y",
+      "name": "볼트 EUV",
+      "count": 5,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "peqLBy",
+      "name": "볼트 EV",
+      "count": 3,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Dyd6Xk",
+      "name": "로얄살롱",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMj6aM",
+      "name": "르망",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Kkm63M",
+      "name": "볼트(Volt)",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yAXBM",
+      "name": "브로엄",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "KM55AM",
+      "name": "슈퍼살롱",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ae1z9k",
+      "name": "스테이츠맨",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XkoPoM",
+      "name": "스파크",
+      "count": 173,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zMb6WM",
+      "name": "씨에로",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "7MEX1k",
+      "name": "아베오",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yAXwM",
+      "name": "아카디아",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "1yOOqy",
+      "name": "맵시",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "0yNwbe",
+      "name": "알페온",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "XMwQYe",
+      "name": "에스페로",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "dM94Vk",
+      "name": "올란도",
+      "count": 2,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VMj6bM",
+      "name": "윈스톰",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Vy28qk",
+      "name": "이쿼녹스",
+      "count": 3,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "lkYXLe",
+      "name": "임팔라",
+      "count": 4,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "reln7M",
+      "name": "임페리얼",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "qM7vmk",
+      "name": "젠트라",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "EMpY7y",
+      "name": "카마로",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "peq6nk",
+      "name": "칼로스",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "JyVd2k",
+      "name": "캡티바",
+      "count": 1,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "BkBKWM",
+      "name": "콜로라도",
+      "count": 2,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "aMKblk",
+      "name": "콜벳",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "Ok4m6M",
+      "name": "크루즈",
+      "count": 6,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zyxw1M",
+      "name": "타호",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "YyGPze",
+      "name": "토스카",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "zeXaDk",
+      "name": "트래버스",
+      "count": 7,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "VerPmM",
+      "name": "트랙스",
+      "count": 44,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "8yArde",
+      "name": "트레일 블레이저",
+      "count": 23,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "gMDDLM",
+      "name": "티코",
+      "count": 0,
+      "is_subscribed": false
+    },
+    {
+      "hash_id": "YyLVDk",
+      "name": "프린스",
+      "count": 0,
+      "is_subscribed": false
+    }
+  ]
+}
