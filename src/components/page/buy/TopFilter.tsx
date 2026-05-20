@@ -1,14 +1,24 @@
 // src/components/page/buy/TopFilter.tsx
 'use client';
 
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, {
+  useState,
+  useEffect,
+  useMemo,
+  useRef,
+  useCallback,
+} from 'react';
 import s from './TopFilter.module.scss';
+import { FilterState } from './BuySection';
+import { ToastItem } from '@/components/atoms/modal/ToastItem';
+import { Modal } from '@/components/atoms/modal/Modal';
+
 import FilterOption from '/public/svg/filter-option.svg';
 import TableBlock from '/public/svg/table-block.svg';
 import TableTower from '/public/svg/table-tower.svg';
 import TableBoard from '/public/svg/table-board.svg';
 import FilterArrow from '/public/svg/filter-arrow.svg';
-import { FilterState } from './BuySection';
+import FilterReset from '/public/svg/filter-reset.svg';
 
 interface TopFilterProps {
   sortBy: string;
@@ -22,13 +32,22 @@ interface TopFilterProps {
   checkFilterMatch: (car: any, currentFilters: FilterState) => boolean;
 }
 
+interface FilterToast {
+  id: number;
+  message: string;
+}
+
 const YEAR_STEPS = [
   2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025,
 ];
 const MILEAGE_STEPS = [
   10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000,
 ];
-const PRICE_STEPS = [100, 200, 300, 500, 1000, 2000, 3000, 5000, 7000, 10000]; // 10000은 1억원
+const PRICE_STEPS = [
+  100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1200, 1400, 1600, 1800,
+  2000, 2200, 2400, 2600, 2800, 3000, 3200, 3400, 3600, 3800, 4000, 4200, 4400,
+  4600, 4800, 5000, 6000, 6500, 7000, 7500, 8000, 9000, 10000,
+];
 
 const CONSTANTS = {
   fuel: [
@@ -80,26 +99,60 @@ export default function TopFilter({
   checkFilterMatch,
 }: TopFilterProps) {
   const [openedModal, setOpenedModal] = useState<string | null>(null);
+  const [isAllFilterOpen, setIsAllFilterOpen] = useState(false); // 🌟 전체 필터 모달 오픈 상태
   const [isSortOpen, setIsSortOpen] = useState(false); // 🌟 커스텀 셀렉트 Open 상태
-  const dropdownRef = useRef<HTMLDivElement>(null); // 🌟 바깥 클릭 감지용 Ref
 
+  const dropdownRef = useRef<HTMLDivElement>(null); // 🌟 바깥 클릭 감지용 Ref
+  const filterWrapperRef = useRef<HTMLDivElement>(null); // 🌟 필터 영역 전체 외부 클릭 감지용 Ref
+
+  const [toasts, setToasts] = useState<FilterToast[]>([]);
   const [localFilters, setLocalFilters] = useState<FilterState>({
     ...globalFilters,
   });
 
   useEffect(() => {
     setLocalFilters({ ...globalFilters });
-  }, [globalFilters, openedModal]);
+  }, [globalFilters, openedModal, isAllFilterOpen]);
 
   useEffect(() => {
+    if (isAllFilterOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isAllFilterOpen]);
+
+  const isAnyFilterActive = useMemo(() => {
+    return (['year', 'mileage', 'price', 'fuel', 'carShape'] as const).some(
+      (type) => {
+        if (type === 'year' || type === 'mileage' || type === 'price') {
+          return globalFilters[type] !== 'all';
+        }
+        return globalFilters[type].length > 0;
+      },
+    );
+  }, [globalFilters]);
+
+  // 🌟 통합 외부 클릭 감지 로직 (정렬 드롭다운 & 모든 필터 모달 대상)
+  useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
+      const target = event.target as Node;
+
+      if (dropdownRef.current && !dropdownRef.current.contains(target)) {
         setIsSortOpen(false);
       }
+
+      if (
+        filterWrapperRef.current &&
+        !filterWrapperRef.current.contains(target)
+      ) {
+        setOpenedModal(null);
+      }
     };
+
     document.addEventListener('mousedown', handleOutsideClick);
     return () => document.removeEventListener('mousedown', handleOutsideClick);
   }, []);
@@ -122,9 +175,72 @@ export default function TopFilter({
     }));
   };
 
+  // 🌟 상단 바 전역 초기화 트리거
+  const handleResetAllGlobal = () => {
+    const baseFilters: FilterState = {
+      year: 'all',
+      mileage: 'all',
+      price: 'all',
+      fuel: [],
+      carShape: [],
+    };
+    onApplyFilters(baseFilters);
+    setLocalFilters(baseFilters);
+  };
+
+  // 🌟 전체 필터 모달 전용 초기화 트리거
+  const handleResetAllLocal = () => {
+    setLocalFilters({
+      year: 'all',
+      mileage: 'all',
+      price: 'all',
+      fuel: [],
+      carShape: [],
+    });
+  };
+
+  const renderAllFilterFooter = () => (
+    <div className={s['all-filter-footer']}>
+      <button
+        type="button"
+        className={s['reset-all-btn']}
+        onClick={handleResetAllLocal}
+      >
+        초기화
+      </button>
+      <button
+        type="button"
+        className={s['submit-all-btn']}
+        onClick={handleApply}
+      >
+        {previewCount.toLocaleString()}대 보기
+      </button>
+    </div>
+  );
+
   const handleApply = () => {
     onApplyFilters(localFilters);
     setOpenedModal(null);
+    setIsAllFilterOpen(false); // 전체 필터 모달에서 적용 시에도 대응
+  };
+
+  const removeToast = useCallback((id: number) => {
+    setToasts((prev) => prev.filter((t) => t.id !== id));
+  }, []);
+
+  const handleSubFilterClick = (filterName: string) => {
+    const newToast: FilterToast = {
+      id: Date.now() + Math.random(),
+      // message: `"${filterName}" 필터 기능은 준비 중입니다.`,
+      message: `모델을 선택하면 검색할 수 있어요.`,
+    };
+
+    setToasts((prev) => {
+      const nextToasts = [...prev, newToast];
+      // ⚠️ 주의: 5개가 넘을 때 무조건 slice(1)을 하면 애니메이션 없이 바로 DOM에서 파괴됩니다.
+      // 개수 제한을 여유롭게 주거나 없애는 것이 자연스러운 개별 페이드아웃에 도움이 됩니다.
+      return nextToasts.length > 8 ? nextToasts.slice(1) : nextToasts;
+    });
   };
 
   // 실시간 필터 대수 프리뷰 카운트
@@ -170,21 +286,53 @@ export default function TopFilter({
   };
 
   // 📌 5. 요구사항 구현: 0~11 가상 단계를 바탕으로 동적 레이블 텍스트 렌더링
-  const getRangeLabel = (type: 'year' | 'mileage' | 'price') => {
-    const steps = getSteps(type);
-    const [leftIdx, rightIdx] = getSliderIndices(type);
-    const maxIdx = steps.length + 1;
+  // 📌 5. 요구사항 구현: 가상 단계 및 배열 데이터를 바탕으로 동적 레이블 텍스트 렌더링
+  const getRangeLabel = (
+    type: 'year' | 'mileage' | 'price' | 'fuel' | 'carShape',
+  ) => {
+    const isRangeType =
+      type === 'year' || type === 'mileage' || type === 'price';
 
-    if (leftIdx === 0 && rightIdx === maxIdx) return '전체';
+    // 1. 슬라이더(범위형) 필터 처리
+    if (isRangeType) {
+      const steps = getSteps(type);
+      const [leftIdx, rightIdx] = getSliderIndices(type);
+      const maxIdx = steps.length + 1;
 
-    const leftText =
-      leftIdx === 0 ? '' : formatValueLabel(type, steps[leftIdx - 1]);
-    const rightText =
-      rightIdx === maxIdx ? '' : formatValueLabel(type, steps[rightIdx - 1]);
+      // 🌟 수정: 아무것도 건들지 않은 전체 범위일 때는 '전체' 반환
+      if (leftIdx === 0 && rightIdx === maxIdx) return '전체';
 
-    if (leftIdx === 0) return `~ ${rightText}`;
-    if (rightIdx === maxIdx) return `${leftText} ~`;
-    return `${leftText} ~ ${rightText}`;
+      const leftText =
+        leftIdx === 0 ? '' : formatValueLabel(type, steps[leftIdx - 1]);
+      const rightText =
+        rightIdx === maxIdx ? '' : formatValueLabel(type, steps[rightIdx - 1]);
+
+      if (leftIdx === 0) return `~ ${rightText}`;
+      if (rightIdx === maxIdx) return `${leftText} ~`;
+      return `${leftText} ~ ${rightText}`;
+    }
+
+    // 2. 복수 선택(배열형: 연료, 차체) 필터 처리
+    const selectedValues = localFilters[type] as string[];
+
+    // 🌟 수정: 아무것도 선택 안 되었을 때는 '전체' 반환
+    if (!selectedValues || selectedValues.length === 0) {
+      return '전체';
+    }
+
+    // CONSTANTS 맵에서 현재 유저가 '가장 먼저 선택한 값'의 한글 매핑 객체 찾기
+    const firstOption = CONSTANTS[type].find(
+      (opt) => opt.value === selectedValues[0],
+    );
+    const firstOptionName = firstOption ? firstOption.name : '';
+
+    // 1개만 선택되었을 때 -> 'LPG'
+    if (selectedValues.length === 1) {
+      return firstOptionName;
+    }
+
+    // 2개 이상 선택되었을 때 -> 'LPG 외 N건'
+    return `${firstOptionName} 외 ${selectedValues.length - 1}`;
   };
 
   // 📌 6. 슬라이더 바 변경 핸들러 (인덱스 -> 부모의 실 데이터 규격으로 역산)
@@ -216,195 +364,254 @@ export default function TopFilter({
     }
   };
 
+  // 🌟 개별 윈도우와 전체 필터 모달에 공통 공급할 알맹이 UI 함수화
+  const renderFilterContent = (
+    type: 'year' | 'mileage' | 'price' | 'fuel' | 'carShape',
+  ) => {
+    const isRangeType =
+      type === 'year' || type === 'mileage' || type === 'price';
+
+    if (isRangeType) {
+      const [leftIdx, rightIdx] = getSliderIndices(type);
+      const maxSteps = getSteps(type).length + 1;
+      const leftPercent = (leftIdx / maxSteps) * 100;
+      const rightPercent = (rightIdx / maxSteps) * 100;
+
+      return (
+        <div className={s['slider-container']}>
+          <div className={s['modal-row']}>
+            <div className={s['range-title']}>{FILTER_LABEL_MAP[type]}</div>
+            <label className={s['range-display-text']}>
+              {getRangeLabel(type)}
+            </label>
+          </div>
+          <div className={s['range-slider-box']}>
+            <div
+              className={s['slider-track-bar']}
+              style={{
+                background: `linear-gradient(to right, var(--color-line-normal, #e5e5e5) ${leftPercent}%, var(--color-label-normal, #0d0d0eff) ${leftPercent}%, var(--color-label-normal, #0d0d0eff) ${rightPercent}%, var(--color-line-normal, #e5e5e5) ${rightPercent}%)`,
+              }}
+            />
+            <input
+              type="range"
+              min="0"
+              max={maxSteps}
+              value={leftIdx}
+              onChange={(e) =>
+                handleSliderChange(type, 'left', Number(e.target.value))
+              }
+              className={`${s['range-input']} ${s['left-thumb']}`}
+            />
+            <input
+              type="range"
+              min="0"
+              max={maxSteps}
+              value={rightIdx}
+              onChange={(e) =>
+                handleSliderChange(type, 'right', Number(e.target.value))
+              }
+              className={`${s['range-input']} ${s['right-thumb']}`}
+            />
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className={s['grid-modal-container']}>
+        <div className={s['range-title']}>{FILTER_LABEL_MAP[type]}</div>
+        <div className={s['grid-selector-box']}>
+          {CONSTANTS[type as 'fuel' | 'carShape'].map((opt) => {
+            const isChecked = (
+              localFilters[type as 'fuel' | 'carShape'] as string[]
+            ).includes(opt.value);
+            return (
+              <button
+                key={opt.value}
+                type="button"
+                className={`${s['select-tile']} ${isChecked ? s['is-checked'] : ''}`}
+                onClick={() => {
+                  const currentList = localFilters[
+                    type as 'fuel' | 'carShape'
+                  ] as string[];
+                  const nextList = currentList.includes(opt.value)
+                    ? currentList.filter((v) => v !== opt.value)
+                    : [...currentList, opt.value];
+                  setLocalFilters((p) => ({ ...p, [type]: nextList }));
+                }}
+              >
+                {opt.name}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className={s['top-filter']}>
       <div className={s['option-filter-container']}>
-        <button type="button" className={s['filter-btn-main']}>
-          전체 필터
-          <div className={s['svg-box']}>
-            <FilterOption width="100%" height="100%" viewBox="0 0 24 24" />
+        <div className={s['option-filter-wrap']} ref={filterWrapperRef}>
+          <button
+            type="button"
+            className={`${s['filter-btn-main']} ${isAnyFilterActive && s['active-filter']}`}
+            onClick={() => setIsAllFilterOpen(true)}
+          >
+            전체 필터
+            <div className={s['svg-box']}>
+              <FilterOption width="100%" height="100%" viewBox="0 0 24 24" />
+            </div>
+          </button>
+
+          <span className={s['line']} />
+
+          <div className={s['modal-trigger-wrapper']}>
+            {(['year', 'mileage', 'price', 'fuel', 'carShape'] as const).map(
+              (type) => {
+                const isRangeType =
+                  type === 'year' || type === 'mileage' || type === 'price';
+                const hasActiveValue = isRangeType
+                  ? globalFilters[type] !== 'all'
+                  : globalFilters[type].length > 0;
+
+                return (
+                  <div key={type} className={s['modal-anchor']}>
+                    <button
+                      type="button"
+                      className={`${s['filter-pill']} ${openedModal === type ? s['is-open'] : ''} ${hasActiveValue ? s['has-value'] : ''}`}
+                      onClick={() => handleOpenModal(type)}
+                    >
+                      {hasActiveValue
+                        ? getRangeLabel(type)
+                        : FILTER_LABEL_MAP[type]}
+                    </button>
+
+                    {openedModal === type && (
+                      <div className={s['filter-modal-window']}>
+                        <div className={s['modal-body']}>
+                          {renderFilterContent(type)}
+                        </div>
+                        <div className={s['modal-footer']}>
+                          <button
+                            type="button"
+                            className={s['reset-btn']}
+                            onClick={() => handleResetLocal(type)}
+                          >
+                            초기화
+                          </button>
+                          <button
+                            type="button"
+                            className={s['submit-btn']}
+                            onClick={handleApply}
+                          >
+                            {previewCount.toLocaleString()}대 보기
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              },
+            )}
           </div>
-        </button>
 
-        <span className={s['line']} />
-
-        <div className={s['modal-trigger-wrapper']}>
-          {(['year', 'mileage', 'price', 'fuel', 'carShape'] as const).map(
-            (type) => {
-              const labelMap = {
-                year: '연식',
-                mileage: '주행거리',
-                price: '가격',
-                fuel: '연료',
-                carShape: '차체',
-              };
-              const isRangeType =
-                type === 'year' || type === 'mileage' || type === 'price';
-
-              // 필터가 활성화 상태(all이 아니거나 배열에 값이 있을 때)인지 체크
-              const hasActiveValue = isRangeType
-                ? globalFilters[type] !== 'all'
-                : globalFilters[type].length > 0;
-
-              return (
-                <div key={type} className={s['modal-anchor']}>
-                  <button
-                    type="button"
-                    className={`${s['filter-pill']} ${openedModal === type ? s['is-open'] : ''} ${hasActiveValue ? s['has-value'] : ''}`}
-                    onClick={() => handleOpenModal(type)}
-                  >
-                    {labelMap[type]}
-                  </button>
-
-                  {openedModal === type && (
-                    <div className={s['filter-modal-window']}>
-                      <div className={s['modal-body']}>
-                        {/* 🌟 수정 구역: 연식 / 주행거리 / 가격 가상 1단계 오버 플로우 슬라이더 엔진 */}
-                        {isRangeType && (
-                          <div className={s['slider-container']}>
-                            <div className={s['modal-row']}>
-                              <div className={s['range-title']}>
-                                {FILTER_LABEL_MAP[type]}
-                              </div>
-
-                              <label className={s['range-display-text']}>
-                                {getRangeLabel(type)}
-                              </label>
-                            </div>
-
-                            <div className={s['range-slider-box']}>
-                              {/* 🌟 [수정] 두 Thumb 사이의 영역에 채워질 색상을 linear-gradient 백그라운드로 동적 계산 처리 */}
-                              {(() => {
-                                const [leftIdx, rightIdx] =
-                                  getSliderIndices(type);
-                                const maxSteps = getSteps(type).length + 1;
-                                const leftPercent = (leftIdx / maxSteps) * 100;
-                                const rightPercent =
-                                  (rightIdx / maxSteps) * 100;
-
-                                return (
-                                  <div
-                                    className={s['slider-track-bar']}
-                                    style={{
-                                      background: `linear-gradient(to right, var(--color-line-normal, #e5e5e5) ${leftPercent}%, var(--color-label-normal, #0d0d0eff) ${leftPercent}%, var(--color-label-normal, #0d0d0eff) ${rightPercent}%, var(--color-line-normal, #e5e5e5) ${rightPercent}%)`,
-                                    }}
-                                  />
-                                );
-                              })()}
-
-                              <input
-                                type="range"
-                                min="0"
-                                max={getSteps(type).length + 1}
-                                value={getSliderIndices(type)[0]}
-                                onChange={(e) =>
-                                  handleSliderChange(
-                                    type,
-                                    'left',
-                                    Number(e.target.value),
-                                  )
-                                }
-                                className={`${s['range-input']} ${s['left-thumb']}`}
-                              />
-                              <input
-                                type="range"
-                                min="0"
-                                max={getSteps(type).length + 1}
-                                value={getSliderIndices(type)[1]}
-                                onChange={(e) =>
-                                  handleSliderChange(
-                                    type,
-                                    'right',
-                                    Number(e.target.value),
-                                  )
-                                }
-                                className={`${s['range-input']} ${s['right-thumb']}`}
-                              />
-                            </div>
-                          </div>
-                        )}
-
-                        {/* 연료 / 차체 다중 선택형 버튼 격자 UI */}
-                        {!isRangeType && (
-                          <div className={s['grid-modal-container']}>
-                            <div className={s['range-title']}>
-                              {FILTER_LABEL_MAP[type]}
-                            </div>
-
-                            <div className={s['grid-selector-box']}>
-                              {CONSTANTS[type as 'fuel' | 'carShape'].map(
-                                (opt) => {
-                                  const isChecked = (
-                                    localFilters[
-                                      type as 'fuel' | 'carShape'
-                                    ] as string[]
-                                  ).includes(opt.value);
-                                  return (
-                                    <button
-                                      key={opt.value}
-                                      type="button"
-                                      className={`${s['select-tile']} ${isChecked ? s['is-checked'] : ''}`}
-                                      onClick={() => {
-                                        const currentList = localFilters[
-                                          type as 'fuel' | 'carShape'
-                                        ] as string[];
-                                        const nextList = currentList.includes(
-                                          opt.value,
-                                        )
-                                          ? currentList.filter(
-                                              (v) => v !== opt.value,
-                                            )
-                                          : [...currentList, opt.value];
-                                        setLocalFilters((p) => ({
-                                          ...p,
-                                          [type]: nextList,
-                                        }));
-                                      }}
-                                    >
-                                      {opt.name}
-                                    </button>
-                                  );
-                                },
-                              )}
-                            </div>
-                          </div>
-                        )}
-                      </div>
-
-                      <div className={s['modal-footer']}>
-                        <button
-                          type="button"
-                          className={s['reset-btn']}
-                          onClick={() => handleResetLocal(type)}
-                        >
-                          초기화
-                        </button>
-                        <button
-                          type="button"
-                          className={s['submit-btn']}
-                          onClick={handleApply}
-                        >
-                          {previewCount.toLocaleString()}대 보기
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              );
-            },
-          )}
+          <button
+            className={s['filter-btn-sub']}
+            type="button"
+            onClick={() => handleSubFilterClick('옵션')}
+          >
+            옵션
+          </button>
+          <button
+            className={s['filter-btn-sub']}
+            type="button"
+            onClick={() => handleSubFilterClick('실외 색상')}
+          >
+            실외 색상
+          </button>
+          <button
+            className={s['filter-btn-sub']}
+            type="button"
+            onClick={() => handleSubFilterClick('실내 색상')}
+          >
+            실내 색상
+          </button>
         </div>
 
-        <button className={s['filter-btn-sub']} type="button">
-          옵션
-        </button>
-        <button className={s['filter-btn-sub']} type="button">
-          실외 색상
-        </button>
-        <button className={s['filter-btn-sub']} type="button">
-          실내 색상
-        </button>
+        {/* 🌟 1. 전체 초기화 버튼 활성화 구역 */}
+        {isAnyFilterActive && (
+          <button
+            type="button"
+            className={s['clear-all-pill-btn']}
+            onClick={handleResetAllGlobal}
+          >
+            필터 초기화{' '}
+            <div className={s['svg-box']}>
+              <FilterReset width="100%" height="100%" viewBox="0 0 15 15" />
+            </div>
+          </button>
+        )}
       </div>
+
+      <Modal
+        className={s['all-modal-body']}
+        isOpen={isAllFilterOpen}
+        onClose={() => setIsAllFilterOpen(false)}
+        title="전체 필터"
+        footer={renderAllFilterFooter()}
+      >
+        {(['year', 'mileage', 'price', 'fuel', 'carShape'] as const).map(
+          (type, index, array) => (
+            <React.Fragment key={`all-${type}`}>
+              <div className={s['all-filter-section']}>
+                {renderFilterContent(type)}
+              </div>
+              {index < array.length && <hr className={s['filter-divider']} />}
+            </React.Fragment>
+          ),
+        )}
+
+        <div className={s['slider-container']}>
+          <div className={s['modal-row']}>
+            <div className={s['range-title']}>옵션</div>
+          </div>
+
+          <div className={s['range-slider-box']}>
+            <div className={s['option-text']}>
+              모델을 선택하면 검색할 수 있어요
+            </div>
+          </div>
+        </div>
+
+        <hr className={s['filter-divider']} />
+
+        <div className={s['slider-container']}>
+          <div className={s['modal-row']}>
+            <div className={s['range-title']}>실외 색상</div>
+          </div>
+
+          <div className={s['range-slider-box']}>
+            <div className={s['option-text']}>
+              모델을 선택하면 검색할 수 있어요
+            </div>
+          </div>
+        </div>
+
+        <hr className={s['filter-divider']} />
+
+        <div className={s['slider-container']}>
+          <div className={s['modal-row']}>
+            <div className={s['range-title']}>실내 색상</div>
+          </div>
+
+          <div className={s['range-slider-box']}>
+            <div className={s['option-text']}>
+              모델을 선택하면 검색할 수 있어요
+            </div>
+          </div>
+        </div>
+      </Modal>
 
       <div className={s['table-filter']}>
         <div className={s['count']}>{totalCount.toLocaleString()} 대</div>
@@ -480,6 +687,14 @@ export default function TopFilter({
           </div>
         </div>
       </div>
+
+      {toasts.length > 0 && (
+        <div className={s['toast-container']}>
+          {toasts.map((toast) => (
+            <ToastItem key={toast.id} toast={toast} onExpiry={removeToast} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

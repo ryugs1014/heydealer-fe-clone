@@ -1,0 +1,65 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.toast-container {
+  position: fixed;
+  bottom: rem(40);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.toast-popup {
+  background-color: var(--color-label-strong);
+  color: var(--color-token-white);
+  padding: rem(8) rem(12);
+  border-radius: rem(4);
+  box-shadow: var(--shadow-strong);
+  @include flexBox(flex, start, start);
+  width: 100vw;
+  max-width: rem(304);
+  pointer-events: all;
+
+  /* 🌟 나타날 때: 페이드인 애니메이션 (forwards로 100% 상태 유지) */
+  animation: fadeIn 0.3s ease-in-out forwards;
+
+  /* 🌟 사라질 때: 서브 컴포넌트 타이머에 의해 클래스가 붙으면 페이드아웃 실행 */
+  &.is-exiting {
+    animation: fadeOut 0.3s ease-in-out forwards;
+  }
+
+  .toast-text {
+    @include font-style(15, 700, rem(22));
+    white-space: pre-wrap;
+    text-align: left;
+  }
+}
+
+/* 🌟 Keyframes 분리 정의 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(rem(10));
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(
+      rem(-10)
+    ); /* 사라질 때는 위로 가볍게 밀려 올라가며 소멸 */
+  }
+}

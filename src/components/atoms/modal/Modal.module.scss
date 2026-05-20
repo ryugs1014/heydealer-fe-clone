@@ -1,0 +1,86 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.modal-container {
+  position: fixed;
+  inset: 0;
+  padding: rem(56);
+  box-sizing: border-box;
+  @include flexBox(flex, center, center);
+  background-color: #0d0d0e99;
+  z-index: 9999;
+}
+
+.modal-window {
+  width: 100%;
+  height: 100%;
+  max-width: rem(420);
+  border-radius: rem(4);
+  box-sizing: border-box;
+  background-color: var(--color-token-white);
+  box-shadow: 0 rem(2) rem(8) 0 rgb(0 0 0 / 12%);
+  z-index: 100;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+}
+
+.modal-header {
+  padding: rem(10) rem(24) rem(10) rem(56);
+  box-sizing: border-box;
+  @include flexBox(flex, center, center, row, rem(8));
+  height: rem(72);
+
+  &.disabled-title {
+    justify-content: flex-end;
+    padding: rem(10) rem(24);
+  }
+
+  &.disabled-close {
+    padding: rem(10) rem(24);
+  }
+
+  > h3 {
+    width: 100%;
+    text-align: center;
+    @include font-style(15, 700, rem(22));
+  }
+
+  .close-btn {
+    padding: rem(8);
+    margin: rem(-8);
+    border-radius: rem(4);
+    transition: background-color 0.15s ease;
+
+    &:hover {
+      background-color: var(--color-line-divider);
+    }
+
+    .svg-box {
+      @include svgBox(rem(24));
+    }
+  }
+}
+
+.scroll-container {
+  overflow-y: auto;
+  display: grid;
+
+  &.scroll-bar {
+    scrollbar-gutter: stable;
+  }
+}
+
+.modal-body {
+  box-sizing: border-box;
+  display: grid;
+  gap: rem(32);
+}
+
+.modal-footer {
+  padding: rem(16);
+  display: grid;
+  position: sticky;
+  bottom: 0;
+  background-color: var(--color-token-white);
+}

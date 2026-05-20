@@ -9,6 +9,10 @@ import ResultList from './ResultList';
 import AdList from '@/components/page/buy/AdList';
 import AdCardList from '@/components/page/buy/AdCardList';
 import Container from '@/components/layout/Container';
+import { Modal } from '@/components/atoms/modal/Modal';
+import FavoriteFilterBar from '@/components/page/buy/FavoriteFilterBar';
+
+import SubActive from '/public/svg/sub-active.svg';
 
 export interface FilterState {
   year: [number, number] | 'all';
@@ -28,11 +32,13 @@ export default function BuySection() {
   const [selectedBrandId, setSelectedBrandId] = useState<string | null>(null);
   const [selectedModelId, setSelectedModelId] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<string>('latest');
-
-  // 🌟 1. 레이아웃 뷰타입 상태 ('grid' | 'list' | 'simple')
   const [viewType, setViewType] = useState<'grid' | 'list' | 'simple'>('grid');
 
-  // 🌟 2. 상단 상점용 다차원 필터 통합 상태
+  const [modalSortBy, setModalSortBy] = useState<string>('latest');
+  const [modalViewType, setModalViewType] = useState<
+    'grid' | 'list' | 'simple'
+  >('grid');
+
   const [filters, setFilters] = useState<FilterState>({
     year: 'all',
     mileage: 'all',
@@ -40,6 +46,10 @@ export default function BuySection() {
     fuel: [],
     carShape: [],
   });
+
+  const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
+  const [isFavoriteModalOpen, setIsFavoriteModalOpen] =
+    useState<boolean>(false);
 
   useEffect(() => {
     async function initFetch() {
@@ -61,6 +71,36 @@ export default function BuySection() {
       }
     }
     initFetch();
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    // 로컬스토리지에서 찜 목록을 읽어와 상태를 업데이트하는 헬퍼 함수
+    const updateFavoriteList = () => {
+      const saved = localStorage.getItem('car_favorites');
+      if (saved) {
+        try {
+          setFavoriteIds(JSON.parse(saved));
+        } catch (e) {
+          setFavoriteIds([]);
+        }
+      } else {
+        setFavoriteIds([]);
+      }
+    };
+
+    // 마운트 시 최초 1회 실행
+    updateFavoriteList();
+
+    // useFavorite에서 발생시키는 이벤트 리스너 등록
+    window.addEventListener('favorite_update', updateFavoriteList);
+    window.addEventListener('storage', updateFavoriteList);
+
+    return () => {
+      window.removeEventListener('favorite_update', updateFavoriteList);
+      window.removeEventListener('storage', updateFavoriteList);
+    };
   }, []);
 
   const currentBrandDetail = useMemo(() => {
@@ -162,6 +202,48 @@ export default function BuySection() {
     filters,
   ]);
 
+  // 🌟 4. favoriteIds 배열에 포함된 차량 데이터만 필터링 (순서 보장을 원하면 map 처리도 가능)
+  const favoriteCars = useMemo(() => {
+    return cars.filter((car) => favoriteIds.includes(car.hash_id));
+  }, [cars, favoriteIds]);
+
+  const sortedFavoriteCars = useMemo(() => {
+    const result = [...favoriteCars]; // 불변성 유지
+
+    if (modalSortBy === 'price-low') {
+      result.sort((a, b) => a.price - b.price);
+    } else if (modalSortBy === 'price-high') {
+      result.sort((a, b) => b.price - a.price);
+    } else if (modalSortBy === 'mileage-low') {
+      result.sort(
+        (a, b) => (a.detail_info?.mileage || 0) - (b.detail_info?.mileage || 0),
+      );
+    } else if (modalSortBy === 'mileage-high') {
+      result.sort(
+        (a, b) => (b.detail_info?.mileage || 0) - (a.detail_info?.mileage || 0),
+      );
+    } else if (modalSortBy === 'year-high') {
+      result.sort(
+        (a, b) => (b.detail_info?.year || 0) - (a.detail_info?.year || 0),
+      );
+    } else {
+      result.sort((a, b) => {
+        const dateA = new Date(a.detail_info?.offered_at || 0).getTime();
+        const dateB = new Date(b.detail_info?.offered_at || 0).getTime();
+        return dateB - dateA;
+      });
+    }
+    return result;
+  }, [favoriteCars, modalSortBy]);
+
+  if (isLoading) {
+    return (
+      <div style={{ padding: '100px 0', textAlign: 'center' }}>
+        데이터를 불러오는 중입니다...
+      </div>
+    );
+  }
+
   if (isLoading) {
     return (
       <div style={{ padding: '100px 0', textAlign: 'center' }}>
@@ -194,23 +276,74 @@ export default function BuySection() {
           </aside>
 
           <div className={s['right-content']}>
-            {/* 상단 통합 필터 바 컴포넌트 */}
-            <TopFilter
-              sortBy={sortBy}
-              onSortChange={setSortBy}
-              totalCount={filteredAndSortedCars.length}
-              viewType={viewType}
-              onViewTypeChange={setViewType}
-              globalCars={cars}
-              globalFilters={filters}
-              onApplyFilters={setFilters}
-              checkFilterMatch={checkFilterMatch}
-            />
-            {/* 동적 뷰타입 클래스를 전달받는 리스트 컴포넌트 */}
-            <ResultList cars={filteredAndSortedCars} viewType={viewType} />
+            <div className={s['sticky-container']}>
+              {/* 상단 통합 필터 바 컴포넌트 */}
+              <div className={s['main-content']}>
+                <TopFilter
+                  sortBy={sortBy}
+                  onSortChange={setSortBy}
+                  totalCount={filteredAndSortedCars.length}
+                  viewType={viewType}
+                  onViewTypeChange={setViewType}
+                  globalCars={cars}
+                  globalFilters={filters}
+                  onApplyFilters={setFilters}
+                  checkFilterMatch={checkFilterMatch}
+                />
+
+                {/* 동적 뷰타입 클래스를 전달받는 리스트 컴포넌트 */}
+                <ResultList cars={filteredAndSortedCars} viewType={viewType} />
+              </div>
+
+              <div className={s['sticky-wrap']}>
+                <div className={s['sticky-content']}>
+                  <button
+                    type="button"
+                    className={s['favorite-modal-btn']}
+                    onClick={() => setIsFavoriteModalOpen(true)}
+                  >
+                    <div className={s['svg-box']}>
+                      <SubActive
+                        width="100%"
+                        height="100%"
+                        viewBox="0 0 24 24"
+                      />
+                    </div>
+
+                    <div className={s['text-box']}>
+                      찜한 차 <span>{favoriteCars.length}</span>
+                    </div>
+                  </button>
+
+                  <span className={s['line']} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Container>
+
+      <Modal
+        isOpen={isFavoriteModalOpen}
+        onClose={() => setIsFavoriteModalOpen(false)}
+        title="찜한차"
+        showTitle={false}
+        showCloseButton={true}
+        className={s['favorite-modal-body']}
+        maxWidth={'1064px'}
+        scrollPadding={true}
+      >
+        <div className={s['favorite-result-wrapper']}>
+          <FavoriteFilterBar
+            sortBy={modalSortBy}
+            onSortChange={setModalSortBy}
+            totalCount={sortedFavoriteCars.length} // 💡 찜한 자동차 실제 총 카운트 바인딩
+            viewType={modalViewType}
+            onViewTypeChange={setModalViewType}
+          />
+          <ResultList cars={sortedFavoriteCars} viewType={modalViewType} />{' '}
+        </div>
+      </Modal>
     </section>
   );
 }

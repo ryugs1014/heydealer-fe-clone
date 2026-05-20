@@ -1,7 +1,7 @@
 // src/components/page/buy/LeftFilter.tsx
 'use client';
 
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import s from './LeftFilter.module.scss';
 import Image from 'next/image';
 import FilterClose from '/public/svg/filter-close.svg';
@@ -40,12 +40,38 @@ export default function LeftFilter({
   onSelectModel,
   onClearBrand,
 }: LeftFilterProps) {
+  const [excludeZero, setExcludeZero] = useState(false);
+
+  // 💡 토글 상태에 따라 브랜드 목록 필터링
+  const filteredBrands = useMemo(() => {
+    if (!excludeZero) return allBrands;
+    return allBrands.filter((brand) => brand.count > 0);
+  }, [allBrands, excludeZero]);
+
+  // 💡 토글 상태에 따라 현재 브랜드의 하위 모델 목록 필터링
+  const filteredModels = useMemo(() => {
+    if (!currentBrandDetail) return [];
+    if (!excludeZero) return currentBrandDetail.model_groups;
+    return currentBrandDetail.model_groups.filter((model) => model.count > 0);
+  }, [currentBrandDetail, excludeZero]);
+
   return (
     <div className={s['left-filter']}>
       <div className={s['filter-header']}>
         <div className={s['title-header-container']}>
           <h3 className={s['title']}>브랜드 ∙ 모델</h3>
-          <div className={s['radio-button']}>0대 제외</div>
+
+          <div className={s['toggle-wrapper']}>
+            <span className={s['toggle-label']}>0대 제외</span>
+            <button
+              type="button"
+              className={`${s['toggle-switch']} ${excludeZero ? s['is-active'] : ''}`}
+              onClick={() => setExcludeZero((prev) => !prev)}
+              aria-label="0대 매물 제외 토글"
+            >
+              <span className={s['toggle-handle']} />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -72,7 +98,7 @@ export default function LeftFilter({
         <div className={s['filter-body']}>
           {!currentBrandDetail ? (
             <ul className={s['list']}>
-              {allBrands.map((brand) => {
+              {filteredBrands.map((brand) => {
                 const logoSrc = `/img/brands/${brand.hash_id}.png`;
 
                 return (
@@ -106,7 +132,7 @@ export default function LeftFilter({
             </ul>
           ) : (
             <ul className={`${s['list']} ${s['model']}`}>
-              {currentBrandDetail.model_groups.map((model) => {
+              {filteredModels.map((model) => {
                 const isCurrentModelActive = selectedModelId === model.hash_id;
 
                 return (

@@ -1,0 +1,137 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.table-filter {
+  box-sizing: border-box;
+  @include flexBox(flex, space-between, center, row, rem(8));
+
+  .count {
+    @include font-style(24, 700, rem(22));
+    @include flexBox(flex, start, center, row, rem(8));
+
+    > span {
+      color: var(--color-point-heydealer);
+    }
+  }
+
+  .filter-end {
+    @include flexBox(flex, end, center, row, rem(16));
+
+    .line {
+      width: rem(1);
+      height: rem(16);
+      background-color: var(--color-line-normal);
+    }
+  }
+
+  // 🌟 커스텀 셀렉트 박스 컨테이너
+  .custom-select-container {
+    position: relative;
+
+    .select-trigger {
+      @include flexBox(flex, start, center, row, rem(4));
+      padding: rem(8);
+      margin: rem(-4);
+      border-radius: rem(4);
+      box-sizing: border-box;
+      @include font-style(15, 700, rem(22));
+      min-height: rem(36);
+      transition: background-color 0.25s ease;
+
+      &:hover {
+        border-color: var(--color-label-normal);
+        font-weight: bold;
+        background-color: var(--color-line-divider);
+      }
+
+      &.is-open {
+        border-color: #0d0d0e;
+      }
+
+      .arrow-icon {
+        font-size: rem(10);
+
+        .svg-box {
+          @include svgBox(rem(20));
+        }
+      }
+
+      &.is-open {
+        .arrow-icon {
+          transform: rotate(180deg); // 열렸을 때 화살표 뒤집기
+        }
+      }
+    }
+
+    // 🌟 드롭다운 리스트 옵션 목록 박스
+    .select-options-list {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      transform: translateY(rem(12));
+      width: 100vw;
+      max-width: rem(240);
+      background-color: var(--color-token-white);
+      border: rem(1) solid var(--color-line-normal);
+      border-radius: rem(4);
+      box-shadow: var(--shadow-strong);
+      z-index: 50;
+      margin: 0;
+      list-style: none;
+      overflow: hidden;
+
+      li {
+        width: 100%;
+      }
+
+      .option-btn {
+        width: 100%;
+        @include font-style(15, 700, rem(22));
+        padding: rem(8) rem(12);
+        text-align: left;
+        background: none;
+        border: none;
+        cursor: pointer;
+        height: rem(54);
+        color: var(--color-token-gray-90);
+        transition:
+          background 0.15s ease,
+          color 0.15s ease;
+
+        &:hover {
+          background-color: var(--color-line-divider);
+        }
+
+        &.is-selected {
+          color: var(--color-label-normal);
+        }
+      }
+    }
+  }
+}
+
+.layout-switcher-group {
+  @include flexBox(flex, end, center, row, rem(8));
+
+  .switch-btn {
+    cursor: pointer;
+    color: var(--color-label-weak);
+    padding: rem(2);
+    margin: rem(-2);
+    transition: background-color 0.25s ease;
+    border-radius: rem(4);
+
+    &:hover {
+      background-color: var(--color-line-divider);
+    }
+
+    .svg-box {
+      @include svgBox(rem(24));
+      min-width: rem(24);
+    }
+
+    &.is-active {
+      color: var(--color-label-normal);
+    }
+  }
+}

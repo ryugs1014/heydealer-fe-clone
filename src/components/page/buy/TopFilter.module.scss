@@ -4,11 +4,43 @@
 .top-filter {
   position: relative;
   z-index: 100;
+
+  .toast-container {
+    position: fixed;
+    @include flexBox(flex, center, center, column-reverse, rem(10));
+    z-index: 9999; /* 최상위 레이어 인덱스 확보 */
+    top: rem(56);
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .option-filter-container {
-  @include flexBox(flex, start, center, row, rem(8));
-  flex-wrap: wrap;
+  @include flexBox(flex, space-between, end, row, rem(8));
+
+  .option-filter-wrap {
+    @include flexBox(flex, start, center, row, rem(8));
+    flex-wrap: wrap;
+  }
+
+  .clear-all-pill-btn {
+    @include flexBox(flex, center, center, row, rem(4));
+    padding: rem(8) rem(12);
+    border-radius: rem(4);
+    box-sizing: border-box;
+    @include font-style(13, 400, rem(18));
+    min-height: rem(36);
+    transition: background-color 0.25s ease;
+    white-space: nowrap;
+
+    .svg-box {
+      @include svgBox(rem(16));
+    }
+
+    &:hover {
+      background-color: var(--color-line-divider);
+    }
+  }
 
   .filter-btn-main {
     @include flexBox(flex, start, center, row, rem(4));
@@ -19,6 +51,23 @@
     @include font-style(13, 400, rem(18));
     min-height: rem(36);
     transition: background-color 0.25s ease;
+
+    &.active-filter {
+      .svg-box {
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: rem(2);
+          right: 0;
+          width: rem(5);
+          height: rem(5);
+          border-radius: rem(10);
+          background-color: var(--color-point-heydealer);
+        }
+      }
+    }
 
     &:hover {
       background-color: var(--color-line-divider);
@@ -216,6 +265,50 @@
   }
 }
 
+.all-modal-body {
+  padding: rem(24) rem(32) rem(32);
+
+  .filter-divider {
+    all: unset;
+    width: 100%;
+    height: rem(1);
+    background-color: var(--color-line-normal);
+  }
+}
+
+.all-filter-footer {
+  display: grid;
+  gap: rem(8);
+  grid-template-columns: rem(100) 1fr;
+  width: 100%;
+
+  .reset-all-btn {
+    @include flexBox(flex, center, center, row, rem(4));
+    padding: rem(8) rem(12);
+    border: rem(1) solid var(--color-label-normal);
+    border-radius: rem(4);
+    box-sizing: border-box;
+    @include font-style(15, 700, rem(18));
+    height: rem(52);
+    transition: background-color 0.15s ease;
+
+    &:hover {
+      background-color: var(--color-line-divider);
+    }
+  }
+
+  .submit-all-btn {
+    @include flexBox(flex, center, center, row, rem(4));
+    padding: rem(8) rem(12);
+    color: var(--color-token-white);
+    background-color: var(--color-label-normal);
+    border-radius: rem(4);
+    box-sizing: border-box;
+    @include font-style(15, 700, rem(18));
+    height: rem(52);
+  }
+}
+
 .modal-anchor {
   position: relative; // 팝업 기준점 생성
   display: inline-block;
@@ -252,6 +345,7 @@
     border-radius: rem(4);
     box-sizing: border-box;
     @include font-style(13, 400, rem(18));
+    height: rem(40);
   }
   .submit-btn {
     @include flexBox(flex, start, center, row, rem(4));
@@ -261,6 +355,7 @@
     border-radius: rem(4);
     box-sizing: border-box;
     @include font-style(13, 700, rem(18));
+    height: rem(40);
   }
 }
 
@@ -306,7 +401,7 @@
 }
 
 .range-title {
-  @include font-style(15, 500, rem(22));
+  @include font-style(15, 700, rem(22));
 }
 
 .range-display-text {
@@ -320,6 +415,13 @@
   width: 100%;
   height: rem(24);
   @include flexBox(flex, center, center);
+
+  .option-text {
+    width: 100%;
+    text-align: left;
+    @include font-style(13, 500, rem(18));
+    color: var(--color-semantic-label-disable-light);
+  }
 
   .slider-track-bar {
     position: absolute;

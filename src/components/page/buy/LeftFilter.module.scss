@@ -1,6 +1,63 @@
 @use '@/styles/mixins/index' as *;
 @import '@/styles/rem';
 
+.title-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: rem(6);
+
+  .toggle-label {
+    @include font-style(11, 400, rem(22));
+    color: var(--color-label-weak);
+    user-select: none;
+  }
+
+  // 외부 트랙 (배경 터널)
+  .toggle-switch {
+    position: relative;
+    width: rem(30);
+    height: rem(18);
+    background-color: var(--color-semantic-label-disable-light);
+    border-radius: rem(100);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
+
+    &.is-active {
+      background-color: var(--color-label-normal);
+
+      .toggle-handle {
+        transform: translateX(rem(14));
+        border-color: var(--color-label-normal);
+      }
+    }
+  }
+
+  .toggle-handle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem(18);
+    height: rem(18);
+    background-color: var(--color-token-white);
+    border: rem(3) solid var(--color-semantic-label-disable-light);
+    box-sizing: border-box;
+    border-radius: 50%;
+    transition:
+      transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 0.2s,
+      border-color 0.2s;
+  }
+}
+
 .left-filter {
   display: grid;
   align-content: flex-start;
@@ -12,11 +69,6 @@
 
       .title {
         @include font-style(18, 700, rem(26));
-      }
-
-      .radio-button {
-        @include font-style(11, 400, rem(22));
-        color: var(--color-label-weak);
       }
     }
   }
