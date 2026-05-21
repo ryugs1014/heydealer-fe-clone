@@ -33,6 +33,11 @@
   gap: rem(40);
 }
 
+.main-content {
+  display: grid;
+  align-content: flex-start;
+}
+
 .sticky-wrap {
   padding-top: rem(50);
 
@@ -42,6 +47,10 @@
     display: grid;
     gap: rem(8);
     padding-right: rem(24);
+
+    &.list {
+      position: unset;
+    }
 
     .favorite-modal-btn {
       width: rem(56);

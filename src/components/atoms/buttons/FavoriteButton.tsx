@@ -9,9 +9,13 @@ import { useFavorite } from '@/hooks/useFavorite';
 
 interface FavoriteButtonProps {
   hashId: string; // 차량 고유 ID 필수
+  className?: string;
 }
 
-export default function FavoriteButton({ hashId }: FavoriteButtonProps) {
+export default function FavoriteButton({
+  hashId,
+  className,
+}: FavoriteButtonProps) {
   // 전역 상태 및 토글 로직을 커스텀 훅에서 가져옴
   const { isFavorite, toggleFavorite } = useFavorite(hashId);
 
@@ -21,7 +25,7 @@ export default function FavoriteButton({ hashId }: FavoriteButtonProps) {
   };
 
   return (
-    <div className={s['button-wrap']}>
+    <div className={`${s['button-wrap']} ${className || ''}`.trim()}>
       <button
         type="button"
         className={`${s['favorite-btn']} ${isFavorite ? s['is-active'] : ''}`}

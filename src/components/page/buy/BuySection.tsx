@@ -296,7 +296,9 @@ export default function BuySection() {
               </div>
 
               <div className={s['sticky-wrap']}>
-                <div className={s['sticky-content']}>
+                <div
+                  className={`${s['sticky-content']} ${viewType === 'list' && s['list']}`}
+                >
                   <button
                     type="button"
                     className={s['favorite-modal-btn']}
