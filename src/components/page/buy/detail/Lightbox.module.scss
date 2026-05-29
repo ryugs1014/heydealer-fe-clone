@@ -1,0 +1,111 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: #1b1c1fff;
+  color: var(--color-token-white);
+  overflow: auto;
+  scrollbar-width: auto;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.15s ease-in-out,
+    visibility 0.15s ease-in-out;
+  overscroll-behavior: contain;
+
+  &::-webkit-scrollbar {
+    height: auto;
+  }
+
+  &.fade-in {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal-header {
+  display: grid;
+  grid-template-columns: 1fr rem(24);
+  gap: rem(8);
+  width: 100%;
+  padding: rem(10) rem(48);
+  padding-inline-start: calc(#{rem(40)});
+  height: rem(72);
+  background-color: #1b1c1fff;
+  color: var(--color-token-white);
+  z-index: 2;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+
+  .header-page {
+    display: grid;
+    justify-content: center;
+    @include font-style(15, 700, rem(22));
+  }
+
+  .close-button {
+    width: rem(40);
+    min-width: rem(40);
+    height: rem(40);
+    @include flexBox(flex, center, center);
+    align-self: center;
+    padding: rem(8);
+    margin: rem(-8);
+
+    .svg-box {
+      @include svgBox(rem(24));
+    }
+  }
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: auto minmax(0, rem(1272)) auto;
+  gap: rem(48);
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding-inline: rem(72);
+
+  .img-wrap {
+    aspect-ratio: 3 / 2;
+    cursor: pointer;
+    @include flexBox(flex, center, center);
+
+    > img {
+      position: unset !important;
+      width: auto !important;
+    }
+  }
+
+  .arrow {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: rem(8);
+    margin: rem(-8);
+    width: rem(56);
+    height: rem(61);
+
+    &.right {
+      .svg-box {
+        margin-right: unset;
+        margin-left: rem(16);
+        transform: scale(-1);
+      }
+    }
+
+    .svg-box {
+      margin-right: rem(16);
+      @include svgBox(rem(40));
+    }
+  }
+}

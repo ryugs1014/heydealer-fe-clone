@@ -1,7 +1,11 @@
 // src/components/page/buy/detail/DetailModal.tsx
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import s from './DetailModal.module.scss';
+import Image from 'next/image';
+
+import Close from '/public/svg/mobile-menu-close.svg';
 
 interface Section {
   id: string;
@@ -15,7 +19,7 @@ interface DetailModalProps {
   sections: Section[];
   allImages: string[];
   onImageClick: (index: number) => void;
-  initialScrollId?: string | null; // ⭐ 스크롤 타겟 ID 추가
+  initialScrollId?: string | null;
 }
 
 export default function DetailModal({
@@ -24,31 +28,79 @@ export default function DetailModal({
   sections,
   allImages,
   onImageClick,
-  initialScrollId, // ⭐ Props 받기
+  initialScrollId,
 }: DetailModalProps) {
+  const [activeId, setActiveId] = useState<string>('');
+  const [shouldRender, setShouldRender] = useState(isOpen);
+  const [isFading, setIsFading] = useState(false);
+
+  // ⭐ 1. 열림/닫힘 애니메이션 상태 관리
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
     if (isOpen) {
+      setShouldRender(true);
+      // DOM이 렌더링된 직후 클래스를 추가하기 위해 아주 짧은 지연시간을 줍니다.
+      timeoutId = setTimeout(() => setIsFading(true), 10);
+    } else {
+      setIsFading(false);
+      // CSS 트랜지션 시간(300ms)이 끝난 후 DOM에서 완전히 제거합니다.
+      timeoutId = setTimeout(() => setShouldRender(false), 300);
+    }
+
+    return () => clearTimeout(timeoutId);
+  }, [isOpen]);
+
+  useEffect(() => {
+    // ⭐ isFading이 완료되어 화면에 보여질 때 스크롤 및 body 설정
+    if (isOpen && shouldRender) {
       const originalOverflow = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
 
-      // ⭐ 모달이 열리고 DOM이 렌더링된 후 타겟 위치로 스크롤
       if (initialScrollId) {
+        setActiveId(initialScrollId);
         setTimeout(() => {
           const target = document.getElementById(initialScrollId);
           if (target) {
-            // 헤더 높이 등을 고려해 부드럽게 스크롤
             target.scrollIntoView({ behavior: 'auto', block: 'start' });
           }
-        }, 0); // 렌더링 보장을 위한 0.1초 지연
+        }, 0);
+      } else if (sections.length > 0) {
+        setActiveId(sections[0].id);
       }
 
       return () => {
         document.body.style.overflow = originalOverflow;
       };
     }
-  }, [isOpen, initialScrollId]);
+  }, [isOpen, shouldRender, initialScrollId, sections]);
 
-  if (!isOpen) return null;
+  useEffect(() => {
+    // DOM이 없으면 옵저버 실행 안 함
+    if (!shouldRender) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: '-20% 0px -50% 0px',
+      },
+    );
+
+    sections.forEach((sec) => {
+      const el = document.getElementById(sec.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [shouldRender, sections]);
+
+  if (!shouldRender) return null;
 
   const scrollToSection = (id: string) => {
     const target = document.getElementById(id);
@@ -58,134 +110,43 @@ export default function DetailModal({
   };
 
   return (
-    <div
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100vw',
-        height: '100vh',
-        backgroundColor: '#ffffff',
-        zIndex: 1000,
-        overflowY: 'auto',
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-      {/* 상단 상단 고정 헤더 바 */}
-      <div
-        style={{
-          position: 'sticky',
-          top: 0,
-          backgroundColor: '#ffffff',
-          borderBottom: '1px solid #e5e7eb',
-          padding: '15px 24px',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          zIndex: 10,
-        }}
-      >
-        <div style={{ display: 'flex', gap: '12px' }}>
+    <div className={`${s['modal-container']} ${isFading ? s['fade-in'] : ''}`}>
+      {' '}
+      <div className={s['modal-header']}>
+        <div className={s['header-gnb']}>
           {sections.map((sec) => (
             <button
               key={sec.id}
               onClick={() => scrollToSection(sec.id)}
-              style={{
-                padding: '8px 16px',
-                borderRadius: '20px',
-                border: '1px solid #d1d5db',
-                backgroundColor: '#f3f4f6',
-                cursor: 'pointer',
-                fontWeight: '600',
-                fontSize: '14px',
-              }}
+              className={activeId === sec.id ? s['active'] : ''}
             >
-              {sec.title.split(' ')[0]}
+              <p>{sec.title.split(' ')[0]}</p>
+              <span />
             </button>
           ))}
         </div>
-        <button
-          onClick={onClose}
-          style={{
-            padding: '8px 18px',
-            backgroundColor: '#ef4444',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '8px',
-            fontWeight: 'bold',
-            cursor: 'pointer',
-            fontSize: '14px',
-          }}
-        >
-          ❌ 닫기
+
+        <button className={s['close-button']} onClick={onClose}>
+          <div className={s['svg-box']}>
+            <Close width="100%" height="100%" viewBox="0 0 24 24" />
+          </div>
         </button>
       </div>
-
-      {/* 본문 이미지 리스트 컨텐츠 */}
-      <div
-        style={{
-          padding: '40px 24px',
-          maxWidth: '1000px',
-          margin: '0 auto',
-          width: '100%',
-        }}
-      >
+      <div className={s['content-container']}>
         {sections.map((section) => (
-          <div
-            key={section.id}
-            id={section.id}
-            style={{ marginBottom: '60px', scrollMarginTop: '80px' }}
-          >
-            <h2
-              style={{
-                borderBottom: '2px solid #374151',
-                paddingBottom: '8px',
-                marginBottom: '20px',
-              }}
-            >
-              {section.title}
-            </h2>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-                gap: '20px',
-              }}
-            >
-              {section.images.map((imgSrc) => {
-                const globalIdx = allImages.indexOf(imgSrc);
-                return (
-                  <div
-                    key={imgSrc}
-                    onClick={() => onImageClick(globalIdx)}
-                    style={{
-                      borderRadius: '8px',
-                      overflow: 'hidden',
-                      cursor: 'zoom-in',
-                      boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
-                    }}
-                  >
-                    <img
-                      src={imgSrc}
-                      alt="차량 스냅"
-                      style={{
-                        width: '100%',
-                        height: '200px',
-                        objectFit: 'cover',
-                        transition: 'transform 0.2s',
-                      }}
-                      onMouseEnter={(e) =>
-                        (e.currentTarget.style.transform = 'scale(1.03)')
-                      }
-                      onMouseLeave={(e) =>
-                        (e.currentTarget.style.transform = 'scale(1)')
-                      }
-                    />
-                  </div>
-                );
-              })}
-            </div>
+          <div className={s['content-list']} key={section.id} id={section.id}>
+            {section.images.map((imgSrc) => {
+              const globalIdx = allImages.indexOf(imgSrc);
+              return (
+                <div
+                  className={`${s['img-wrap']} img-wrap`}
+                  key={imgSrc}
+                  onClick={() => onImageClick(globalIdx)}
+                >
+                  <Image src={imgSrc} alt="차량 스냅" fill sizes="100vw" />
+                </div>
+              );
+            })}
           </div>
         ))}
       </div>

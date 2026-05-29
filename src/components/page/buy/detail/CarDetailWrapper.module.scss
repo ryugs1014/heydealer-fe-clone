@@ -42,24 +42,31 @@
   }
 
   .sticky-container {
-    .sticky-content {
+    .sticky-wrap {
       position: sticky;
       top: rem(24);
       display: grid;
       gap: rem(24);
       align-content: start;
+
+      .sticky-content {
+      }
     }
+  }
+}
+
+.content-wrap {
+  display: grid;
+  gap: rem(24);
+
+  .modal-button {
+    @include font-style(15, 400, rem(22));
   }
 }
 
 .section-info {
   display: flex;
   gap: rem(24) rem(16);
-
-  .content-wrap {
-    display: grid;
-    gap: rem(24);
-  }
 
   .sub-text {
     @include font-style(15, 400, rem(22));
@@ -144,4 +151,126 @@
   width: 100%;
   height: rem(1);
   background-color: var(--color-line-divider);
+}
+
+.sticky-content {
+  padding: rem(24);
+  box-sizing: border-box;
+  border: rem(1) solid var(--color-line-divider);
+  border-radius: rem(4);
+  box-shadow: var(--shadow-normal);
+  display: grid;
+  gap: rem(24);
+}
+
+.main-info {
+  display: grid;
+  gap: rem(8);
+
+  .info-header {
+    @include flexBox(flex, space-between, center);
+
+    .price {
+      @include font-style(20, 700, rem(28));
+      color: var(--color-point-heydealer);
+    }
+
+    .favorite-button-wrap {
+      position: unset;
+
+      > button {
+        color: var(--color-semantic-label-disable-light);
+
+        > div {
+          width: rem(24) !important;
+
+          > svg {
+            path {
+              fill: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .origin-price {
+    @include font-style(13, 400, rem(18));
+    color: var(--color-semantic-label-disable-light);
+  }
+}
+
+.detail-info {
+  display: grid;
+  gap: rem(24);
+
+  .detail-price {
+    display: grid;
+    gap: rem(8);
+
+    .detail-title {
+      @include font-style(13, 700, rem(18));
+      margin-bottom: rem(4);
+    }
+
+    .price-list {
+      @include font-style(13, 400, rem(18));
+
+      .list {
+        @include flexBox(flex, space-between, center);
+        height: rem(24);
+      }
+    }
+
+    .total-price {
+      @include font-style(13, 700, rem(18));
+      text-align: right;
+    }
+  }
+}
+
+.info-modal-button {
+  padding: rem(12);
+  box-sizing: border-box;
+  border-radius: rem(4);
+  background-color: #396eff0a;
+  @include flexBox(flex, space-between, center);
+
+  .button-text {
+    @include font-style(13, 700, rem(18));
+
+    > span {
+      color: var(--color-point-heydealer);
+    }
+  }
+}
+
+.button-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(8);
+
+  .research-button {
+    @include flexBox(flex, center, center);
+    @include font-style(13, 400, rem(18));
+    height: rem(40);
+    padding: 0 rem(12);
+    border: rem(1) solid var(--color-line-normal);
+    border-radius: rem(4);
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+
+.reserve-button {
+  @include flexBox(flex, center, center);
+  @include font-style(15, 700, rem(22));
+  height: rem(52);
+  padding: 0 rem(12);
+  border: rem(1) solid var(--color-line-normal);
+  border-radius: rem(4);
+  box-sizing: border-box;
+  text-align: center;
+  background-color: var(--color-point-heydealer);
+  color: var(--color-token-white);
 }

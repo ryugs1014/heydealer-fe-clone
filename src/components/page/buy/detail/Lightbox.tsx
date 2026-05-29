@@ -1,7 +1,12 @@
 // src/components/page/buy/detail/Lightbox.tsx
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import s from './Lightbox.module.scss';
+import Image from 'next/image';
+
+import Close from '/public/svg/mobile-menu-close.svg';
+import Arrow from '/public/svg/arrow-left-big.svg';
 
 interface LightboxProps {
   index: number | null;
@@ -16,101 +21,69 @@ export default function Lightbox({
   onClose,
   onNavigate,
 }: LightboxProps) {
-  if (index === null) return null;
+  const [shouldRender, setShouldRender] = useState(false);
+  const [isFading, setIsFading] = useState(false);
+
+  const [cachedIndex, setCachedIndex] = useState<number>(0);
+
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
+    // index가 null이 아니면(열림)
+    if (index !== null) {
+      setCachedIndex(index);
+      setShouldRender(true);
+      timeoutId = setTimeout(() => setIsFading(true), 10);
+    } else {
+      // index가 null이면(닫힘)
+      setIsFading(false);
+      timeoutId = setTimeout(() => setShouldRender(false), 300); // CSS transition 시간(300ms)과 동일하게 맞춤
+    }
+
+    return () => clearTimeout(timeoutId);
+  }, [index]);
+
+  if (!shouldRender) return null;
 
   return (
-    <div
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100vw',
-        height: '100vh',
-        backgroundColor: 'rgba(0, 0, 0, 0.95)',
-        zIndex: 2000,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        userSelect: 'none',
-      }}
-    >
-      <button
-        onClick={onClose}
-        style={{
-          position: 'absolute',
-          top: '20px',
-          right: '20px',
-          padding: '10px 20px',
-          backgroundColor: 'rgba(255,255,255,0.2)',
-          color: '#fff',
-          border: 'none',
-          borderRadius: '6px',
-          cursor: 'pointer',
-          fontWeight: 'bold',
-          fontSize: '15px',
-          zIndex: 2010,
-        }}
-      >
-        ✕ 닫기
-      </button>
-
-      <button
-        onClick={() => onNavigate('prev')}
-        style={{
-          position: 'absolute',
-          left: '30px',
-          fontSize: '36px',
-          color: '#fff',
-          background: 'none',
-          border: 'none',
-          cursor: 'pointer',
-          zIndex: 2010,
-          opacity: 0.7,
-        }}
-      >
-        ❮
-      </button>
-
-      <div
-        style={{
-          maxWidth: '85%',
-          maxHeight: '85%',
-          position: 'relative',
-          textAlign: 'center',
-        }}
-      >
-        <img
-          src={images[index]}
-          alt="확대 사진"
-          style={{
-            maxWidth: '100%',
-            maxHeight: '80vh',
-            objectFit: 'contain',
-            borderRadius: '8px',
-            boxShadow: '0 0 20px rgba(0,0,0,0.5)',
-          }}
-        />
-        <div style={{ color: '#aaa', marginTop: '15px', fontSize: '14px' }}>
-          갤러리 이동 : {index + 1} / {images.length}
+    <div className={`${s['modal-container']} ${isFading ? s['fade-in'] : ''}`}>
+      <div className={s['modal-header']}>
+        <div className={s['header-page']}>
+          {cachedIndex + 1}/{images.length}{' '}
         </div>
+
+        <button className={s['close-button']} onClick={onClose}>
+          <div className={s['svg-box']}>
+            <Close width="100%" height="100%" viewBox="0 0 24 24" />
+          </div>
+        </button>
       </div>
 
-      <button
-        onClick={() => onNavigate('next')}
-        style={{
-          position: 'absolute',
-          right: '30px',
-          fontSize: '36px',
-          color: '#fff',
-          background: 'none',
-          border: 'none',
-          cursor: 'pointer',
-          zIndex: 2010,
-          opacity: 0.7,
-        }}
-      >
-        ❯
-      </button>
+      <div className={s['content-container']}>
+        <button className={`${s['arrow']} `} onClick={() => onNavigate('prev')}>
+          <div className={s['svg-box']}>
+            <Arrow width="100%" height="100%" viewBox="0 0 24 24" />
+          </div>
+        </button>
+
+        <div className={`${s['img-wrap']} img-wrap`}>
+          <Image
+            src={images[cachedIndex]}
+            alt="확대 사진"
+            fill
+            sizes="100vw"
+          />{' '}
+        </div>
+
+        <button
+          className={`${s['arrow']} ${s['right']}`}
+          onClick={() => onNavigate('next')}
+        >
+          <div className={s['svg-box']}>
+            <Arrow width="100%" height="100%" viewBox="0 0 24 24" />
+          </div>
+        </button>
+      </div>
     </div>
   );
 }

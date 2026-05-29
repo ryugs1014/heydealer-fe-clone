@@ -3,6 +3,7 @@
 
 import React, { useState } from 'react';
 import s from './CarDetailWrapper.module.scss'; // 필요시 경로 수정
+import Image from 'next/image';
 
 import Car360Viewer from './Car360Viewer';
 import DetailModal from './DetailModal';
@@ -11,16 +12,16 @@ import DetailHeader from '@/components/atoms/detail/DetailHeader';
 import InfoRow from '@/components/atoms/detail/InfoRow';
 
 import EyeIcon from '/public/svg/eye-icon.svg';
-import Image from 'next/image';
+import FavoriteButton from '@/components/atoms/buttons/FavoriteButton';
 
 interface CarDetailWrapperProps {
   carData: any;
 }
 
-// 🌟 1. '하부(underbody)'를 제외하고 맵핑 테이블을 구성합니다.
 const SECTION_MAP: { [key: string]: string } = {
-  outside: '외부',
   inside: '실내',
+  outside: '외부',
+  underbody: '하부',
   scratch: '스크래치',
 };
 
@@ -40,7 +41,6 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
       images: detailImageUrls[key],
     }));
 
-  // 🌟 2. 외부/실내(main) 그룹과 스크래치(scratch) 그룹을 분리합니다.
   const mainSections = DETAIL_SECTIONS.filter(
     (sec) => sec.id === 'outside' || sec.id === 'inside',
   );
@@ -122,8 +122,16 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
                 />
                 <InfoRow label="주행거리" value={`${formattedMileage}`} />
                 <InfoRow label="변속기" value={`오토(A/T)`} />
-                <InfoRow label="사고" value={<button>완전무사고</button>} />
-                <InfoRow label="자차 보험처리" value={<button>0건</button>} />
+                <InfoRow
+                  label="사고"
+                  value={
+                    <button className={s['modal-button']}>완전무사고</button>
+                  }
+                />
+                <InfoRow
+                  label="자차 보험처리"
+                  value={<button className={s['modal-button']}>0건</button>}
+                />
                 <InfoRow
                   label="헤이딜러 보증"
                   value={<span>{carData.price?.toLocaleString()}만원</span>}
@@ -176,10 +184,7 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
           <span className={s['section-line']} />
 
           <section className={s['section-info']}>
-            <DetailHeader
-              title={`${info?.model_name}`}
-              subtitle={`${info?.grade_part_name}`}
-            />
+            <DetailHeader title={`주요 옵션`} />
 
             <div className={s['content-wrap']}>
               <div className={s['data-grid']}>
@@ -251,11 +256,85 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
         </div>
 
         <div className={s['sticky-container']}>
-          <div className={s['sticky-content']}>스티키입니다</div>
+          <div className={s['sticky-wrap']}>
+            <div className={s['sticky-content']}>
+              <div className={s['main-info']}>
+                <div className={s['info-header']}>
+                  <div className={s['price']}>
+                    {carData?.price?.toLocaleString()}만원
+                  </div>
+
+                  <FavoriteButton
+                    hashId={carData?.hash_id}
+                    className={s['favorite-button-wrap']}
+                  />
+                </div>
+
+                <div className={s['origin-price']}>
+                  신차 {info?.factory_price?.toLocaleString()}
+                </div>
+              </div>
+
+              <span className={s['section-line']} />
+
+              <div className={s['detail-info']}>
+                <div className={s['detail-price']}>
+                  <div className={s['detail-title']}>총 구매 비용</div>
+
+                  <ul className={s['price-list']}>
+                    <li className={s['list']}>
+                      <span className={s['label']}>차량가</span>
+                      <span>{carData?.price?.toLocaleString()}만원</span>
+                    </li>
+
+                    <li className={s['list']}>
+                      <span className={s['label']}>이전관리지</span>
+                      <span>{carData?.price?.toLocaleString()}만원</span>
+                    </li>
+
+                    <li className={s['list']}>
+                      <span className={s['label']}>보증 가입비</span>
+                      <span>{carData?.price?.toLocaleString()}만원</span>
+                    </li>
+
+                    <li className={s['list']}>
+                      <span className={s['label']}>탁송비</span>
+                      <span>{carData?.price?.toLocaleString()}만원</span>
+                    </li>
+                  </ul>
+
+                  <div className={s['total-price']}>
+                    <span>만원</span>
+                  </div>
+                </div>
+
+                <button className={s['info-modal-button']}>
+                  <div className={s['button-forward']}>
+                    <div className={s['button-text']}>
+                      단순 변심도 <span>무료 환불</span> 가능
+                    </div>
+                  </div>
+                </button>
+
+                <div className={s['button-wrap']}>
+                  <button className={s['research-button']}>보험료 조회</button>
+                  <button className={s['research-button']}>
+                    할부한도 조회
+                  </button>
+                </div>
+              </div>
+
+              <span className={s['section-line']} />
+
+              <button className={s['reserve-button']}>
+                <div className={s['svg-box']}></div>
+                바로 구매예약
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* 모달 및 라이트박스 */}
       <DetailModal
         isOpen={isDetailOpen}
         onClose={() => {
