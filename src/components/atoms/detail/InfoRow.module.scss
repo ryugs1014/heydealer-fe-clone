@@ -1,0 +1,14 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.row-wrap {
+  display: grid;
+  grid-template-columns: rem(120) 1fr;
+  gap: rem(12);
+  @include font-style(15, 400, rem(22));
+  width: 100%;
+}
+
+.label {
+  color: var(--color-label-weak);
+}

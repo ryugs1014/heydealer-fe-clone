@@ -59,8 +59,33 @@ export default function Header() {
     };
   }, []);
 
+  // 👇 경로에 따라 다른 modifier 클래스를 반환하는 함수
+  const getHeaderVariantClass = () => {
+    // 1. 메인 페이지는 정확히 일치할 때만 적용
+    if (pathname === '/') {
+      return s['header--home'];
+    }
+    // 2. '/buy' 로 시작하는 모든 경로 (예: /buy/asdfasdf, /buy/123 등)
+    if (pathname.startsWith('/buy')) {
+      return s['header--buy'];
+    }
+    // 3. 기타 다른 페이지들
+    if (pathname.startsWith('/sell-car')) {
+      return s['header--sell-car'];
+    }
+    if (pathname.startsWith('/scrap-car')) {
+      return s['header--scrap-car'];
+    }
+    if (pathname.startsWith('/car-history')) {
+      return s['header--car-history'];
+    }
+
+    // 4. 매칭되는 게 없을 때 기본값
+    return s['header--default'];
+  };
+
   return (
-    <header className={s['header']}>
+    <header className={`${s['header']} ${getHeaderVariantClass() || ''}`}>
       <div className={s['gnb-container']}>
         <Link href="/" className={s['logo-link']}>
           <div className={s['logo-box']}>
@@ -93,7 +118,6 @@ export default function Header() {
           <MobileMenu width="100%" height="100%" viewBox="0 0 24 24" />
         </button>
       </div>
-
       <div
         className={`${s['mobile-sidebar']} ${isMobileMenuOpen ? s['is-open'] : ''}`}
       >
@@ -129,7 +153,6 @@ export default function Header() {
           ))}
         </nav>
       </div>
-
       <div
         className={`${s['sidebar-overlay']} ${isMobileMenuOpen ? s['is-active'] : ''}`}
         onClick={() => setIsMobileMenuOpen(false)}

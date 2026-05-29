@@ -1,0 +1,18 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.header-wrap {
+  display: grid;
+  gap: rem(4);
+  align-content: flex-start;
+  width: rem(224);
+  min-width: rem(224);
+
+  > h2 {
+    @include font-style(20, 700, rem(28));
+  }
+
+  > p {
+    @include font-style(15, 700, rem(22));
+  }
+}

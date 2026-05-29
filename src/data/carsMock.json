@@ -23,6 +23,26 @@
         "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/9eb7911a-388f-486c-a5c0-cd8c37acf216.png",
         "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
       ],
+      "detail_image_urls": {
+        "outside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/9eb7911a-388f-486c-a5c0-cd8c37acf216.png",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
+        ],
+        "inside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/9eb7911a-388f-486c-a5c0-cd8c37acf216.png",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
+        ],
+        "scratch": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/9eb7911a-388f-486c-a5c0-cd8c37acf216.png",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/9eb7911a-388f-486c-a5c0-cd8c37acf216.png",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/9eb7911a-388f-486c-a5c0-cd8c37acf216.png",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
+        ],
+        "underbody": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/9eb7911a-388f-486c-a5c0-cd8c37acf216.png",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
+        ]
+      },
       "tags": [
         {
           "text": "단순교환 무사고",
@@ -67,211 +87,6 @@
       "tags": [
         {
           "text": "완전무사고",
-          "style": "gray"
-        },
-        {
-          "text": "1년 보증",
-          "style": "gray"
-        },
-        {
-          "text": "eye 인증",
-          "style": "gray"
-        }
-      ]
-    },
-    "location": null
-  },
-  {
-    "hash_id": "Oyo53DQD",
-    "brand_id": "xoKegB",
-    "model_id": "rk0Jmy",
-    "price": 780,
-    "previous_price": null,
-    "savings_total": 63,
-    "sale_status": "listed",
-    "detail_info": {
-      "model_name": "그랜저 HG",
-      "model_part_name": "그랜저 HG",
-      "grade_part_name": "HG240 모던",
-      "grade_name": "HG240 모던",
-      "detail_name": null,
-      "initial_registration_date": "2015-05-20 00:00:00",
-      "year": 2016,
-      "mileage": 115710,
-      "factory_price": 3195,
-      "recommendation_comment": "・ 군더더기 없이 기본기에 충실한 차량입니다. 덜어낸 만큼 가격은 훨씬 더 합리적이에요.\n\n・ 입고 후 엔진 오일을 교환하여 소모품 교체 비용을 절감할 수 있어요.\n\n・ 주행 편의성을 더해주는 내비게이션과 후방 카메라가 추가되어 있어요.",
-      "offered_at": "2026-05-15 19:15:48",
-      "image_urls": [
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/eee8ae71-d40a-46c9-ad33-15de9ed71b89.png",
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/d50bd370-9a98-4ce6-b8f6-d4e5b3b68640.jpeg"
-      ],
-      "tags": [
-        {
-          "text": "단순교환 무사고",
-          "style": "gray"
-        },
-        {
-          "text": "1년 보증",
-          "style": "gray"
-        },
-        {
-          "text": "eye 인증",
-          "style": "gray"
-        }
-      ]
-    },
-    "location": null
-  },
-  {
-    "hash_id": "Oyo53DQD",
-    "brand_id": "xoKegB",
-    "model_id": "rk0Jmy",
-    "price": 780,
-    "previous_price": null,
-    "savings_total": 63,
-    "sale_status": "listed",
-    "detail_info": {
-      "model_name": "그랜저 HG",
-      "model_part_name": "그랜저 HG",
-      "grade_part_name": "HG240 모던",
-      "grade_name": "HG240 모던",
-      "detail_name": null,
-      "initial_registration_date": "2015-05-20 00:00:00",
-      "year": 2016,
-      "mileage": 115710,
-      "factory_price": 3195,
-      "recommendation_comment": "・ 군더더기 없이 기본기에 충실한 차량입니다. 덜어낸 만큼 가격은 훨씬 더 합리적이에요.\n\n・ 입고 후 엔진 오일을 교환하여 소모품 교체 비용을 절감할 수 있어요.\n\n・ 주행 편의성을 더해주는 내비게이션과 후방 카메라가 추가되어 있어요.",
-      "offered_at": "2026-05-15 19:15:48",
-      "image_urls": [
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/eee8ae71-d40a-46c9-ad33-15de9ed71b89.png",
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/d50bd370-9a98-4ce6-b8f6-d4e5b3b68640.jpeg"
-      ],
-      "tags": [
-        {
-          "text": "단순교환 무사고",
-          "style": "gray"
-        },
-        {
-          "text": "1년 보증",
-          "style": "gray"
-        },
-        {
-          "text": "eye 인증",
-          "style": "gray"
-        }
-      ]
-    },
-    "location": null
-  },
-  {
-    "hash_id": "Oyo53DQD",
-    "brand_id": "xoKegB",
-    "model_id": "rk0Jmy",
-    "price": 780,
-    "previous_price": null,
-    "savings_total": 63,
-    "sale_status": "listed",
-    "detail_info": {
-      "model_name": "그랜저 HG",
-      "model_part_name": "그랜저 HG",
-      "grade_part_name": "HG240 모던",
-      "grade_name": "HG240 모던",
-      "detail_name": null,
-      "initial_registration_date": "2015-05-20 00:00:00",
-      "year": 2016,
-      "mileage": 115710,
-      "factory_price": 3195,
-      "recommendation_comment": "・ 군더더기 없이 기본기에 충실한 차량입니다. 덜어낸 만큼 가격은 훨씬 더 합리적이에요.\n\n・ 입고 후 엔진 오일을 교환하여 소모품 교체 비용을 절감할 수 있어요.\n\n・ 주행 편의성을 더해주는 내비게이션과 후방 카메라가 추가되어 있어요.",
-      "offered_at": "2026-05-15 19:15:48",
-      "image_urls": [
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/eee8ae71-d40a-46c9-ad33-15de9ed71b89.png",
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/d50bd370-9a98-4ce6-b8f6-d4e5b3b68640.jpeg"
-      ],
-      "tags": [
-        {
-          "text": "단순교환 무사고",
-          "style": "gray"
-        },
-        {
-          "text": "1년 보증",
-          "style": "gray"
-        },
-        {
-          "text": "eye 인증",
-          "style": "gray"
-        }
-      ]
-    },
-    "location": null
-  },
-  {
-    "hash_id": "Oyo53DQD",
-    "brand_id": "xoKegB",
-    "model_id": "rk0Jmy",
-    "price": 780,
-    "previous_price": null,
-    "savings_total": 63,
-    "sale_status": "listed",
-    "detail_info": {
-      "model_name": "그랜저 HG",
-      "model_part_name": "그랜저 HG",
-      "grade_part_name": "HG240 모던",
-      "grade_name": "HG240 모던",
-      "detail_name": null,
-      "initial_registration_date": "2015-05-20 00:00:00",
-      "year": 2016,
-      "mileage": 115710,
-      "factory_price": 3195,
-      "recommendation_comment": "・ 군더더기 없이 기본기에 충실한 차량입니다. 덜어낸 만큼 가격은 훨씬 더 합리적이에요.\n\n・ 입고 후 엔진 오일을 교환하여 소모품 교체 비용을 절감할 수 있어요.\n\n・ 주행 편의성을 더해주는 내비게이션과 후방 카메라가 추가되어 있어요.",
-      "offered_at": "2026-05-15 19:15:48",
-      "image_urls": [
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/eee8ae71-d40a-46c9-ad33-15de9ed71b89.png",
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/d50bd370-9a98-4ce6-b8f6-d4e5b3b68640.jpeg"
-      ],
-      "tags": [
-        {
-          "text": "단순교환 무사고",
-          "style": "gray"
-        },
-        {
-          "text": "1년 보증",
-          "style": "gray"
-        },
-        {
-          "text": "eye 인증",
-          "style": "gray"
-        }
-      ]
-    },
-    "location": null
-  },
-  {
-    "hash_id": "Oyo53DQD",
-    "brand_id": "xoKegB",
-    "model_id": "rk0Jmy",
-    "price": 780,
-    "previous_price": null,
-    "savings_total": 63,
-    "sale_status": "listed",
-    "detail_info": {
-      "model_name": "그랜저 HG",
-      "model_part_name": "그랜저 HG",
-      "grade_part_name": "HG240 모던",
-      "grade_name": "HG240 모던",
-      "detail_name": null,
-      "initial_registration_date": "2015-05-20 00:00:00",
-      "year": 2016,
-      "mileage": 115710,
-      "factory_price": 3195,
-      "recommendation_comment": "・ 군더더기 없이 기본기에 충실한 차량입니다. 덜어낸 만큼 가격은 훨씬 더 합리적이에요.\n\n・ 입고 후 엔진 오일을 교환하여 소모품 교체 비용을 절감할 수 있어요.\n\n・ 주행 편의성을 더해주는 내비게이션과 후방 카메라가 추가되어 있어요.",
-      "offered_at": "2026-05-15 19:15:48",
-      "image_urls": [
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/eee8ae71-d40a-46c9-ad33-15de9ed71b89.png",
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/d50bd370-9a98-4ce6-b8f6-d4e5b3b68640.jpeg"
-      ],
-      "tags": [
-        {
-          "text": "단순교환 무사고",
           "style": "gray"
         },
         {

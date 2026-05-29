@@ -90,14 +90,17 @@
       grid-template-columns: 1fr;
 
       .product-card {
-        display: flex;
         padding: rem(12);
         margin: rem(-12);
         transition: background-color 0.15s ease;
         border: unset;
-        gap: rem(20);
         position: relative;
         overflow: hidden;
+
+        > a {
+          display: flex;
+          gap: rem(20);
+        }
 
         &:hover {
           background-color: var(--color-line-divider);

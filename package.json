@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
     "framer-motion": "^12.38.0",
     "next": "13.5.11",
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.5",
-    "styled-components": "^6.4.1"
+    "styled-components": "^6.4.1",
+    "three": "^0.184.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

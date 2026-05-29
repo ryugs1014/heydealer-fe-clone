@@ -1,0 +1,147 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.certification-bar {
+  @include flexBox(flex, start, center, row, rem(12));
+  background-color: rgb(39, 46, 64);
+  color: var(--color-token-white);
+  padding: rem(8) rem(20);
+  border-radius: 0 0 rem(4) rem(4);
+  box-sizing: border-box;
+
+  .icon {
+    @include flexBox(flex, start, center, row, rem(3));
+    @include font-style(13, 700, rem(18));
+  }
+
+  .svg-box {
+    @include svgBox(rem(70));
+    padding-top: rem(4);
+  }
+
+  .line {
+    width: rem(1);
+    height: rem(10);
+    background-color: var(--color-line-normal);
+  }
+
+  .tags-container {
+    @include font-style(13, 400, rem(18));
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) rem(320);
+  gap: rem(72);
+  padding: rem(72) 0;
+
+  .detail-container {
+    display: grid;
+    gap: rem(64);
+  }
+
+  .sticky-container {
+    .sticky-content {
+      position: sticky;
+      top: rem(24);
+      display: grid;
+      gap: rem(24);
+      align-content: start;
+    }
+  }
+}
+
+.section-info {
+  display: flex;
+  gap: rem(24) rem(16);
+
+  .content-wrap {
+    display: grid;
+    gap: rem(24);
+  }
+
+  .sub-text {
+    @include font-style(15, 400, rem(22));
+  }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(2, rem(324));
+    grid-template-rows: repeat(4, auto);
+    grid-auto-flow: column;
+    column-gap: rem(24);
+    row-gap: rem(8);
+    justify-content: space-between;
+
+    &.column {
+      grid-template-rows: repeat(2, auto);
+    }
+
+    &.info {
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(12);
+
+    &.scratch {
+      grid-template-columns: repeat(4, 1fr);
+      gap: rem(8);
+
+      .image-container {
+        aspect-ratio: 4 / 3;
+
+        .img-wrap {
+          aspect-ratio: 4 / 3;
+        }
+      }
+    }
+  }
+
+  .image-container {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
+
+    .img-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      transform: unset;
+      overflow: hidden;
+      @include flexBox(flex, center, center);
+      border-radius: rem(4);
+      cursor: pointer;
+
+      &:hover {
+        > img {
+          transform: scale(1.05);
+        }
+      }
+
+      > img {
+        position: unset !important;
+        width: auto !important;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    .img-title {
+      position: absolute;
+      bottom: rem(8);
+      right: rem(8);
+      @include font-style(12, 500, rem(16));
+      color: var(--color-token-white);
+    }
+  }
+}
+
+.section-line {
+  display: block;
+  width: 100%;
+  height: rem(1);
+  background-color: var(--color-line-divider);
+}
