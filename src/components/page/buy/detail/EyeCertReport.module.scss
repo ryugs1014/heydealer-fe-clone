@@ -1,0 +1,96 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.cert-report-wrapper {
+  display: grid;
+  padding-top: rem(64);
+  background-color: rgb(243, 243, 243);
+  border-radius: rem(4);
+  position: relative;
+
+  .logo-svg-box {
+    @include svgBox(rem(120));
+    position: absolute;
+    top: rem(32);
+    left: rem(32);
+    z-index: 1;
+  }
+}
+
+.video-element {
+  width: 100%;
+}
+
+.info-text {
+  @include font-style(12, 400, rem(16));
+  text-align: center;
+  color: var(--color-label-weak);
+}
+
+.report-bottom {
+  display: grid;
+  gap: rem(28);
+  padding: rem(24);
+  box-sizing: border-box;
+}
+
+.report-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(8);
+
+  .report-item {
+    background-color: var(--color-token-white);
+    border-radius: rem(4);
+
+    .item-title {
+      @include flexBox(flex, space-between, center, row, rem(4));
+      @include font-style(15, 700, rem(22));
+      padding: rem(16);
+      box-sizing: border-box;
+
+      > span {
+        @include flexBox(flex, center, center);
+        @include font-style(11, 400, rem(14));
+        padding: 0 rem(4);
+        box-sizing: unset;
+        height: rem(20);
+        color: var(--color-point-heydealer);
+        background-color: #396eff14;
+      }
+    }
+
+    .item-details {
+      @include font-style(13, 400, rem(18));
+      padding: rem(16);
+      box-sizing: border-box;
+      display: grid;
+      gap: rem(8);
+      align-content: flex-start;
+      border-top: rem(1) solid var(--color-line-divider);
+
+      > li {
+        @include flexBox(flex, space-between, center, row, rem(4));
+
+        .label {
+          color: var(--color-label-weak);
+        }
+      }
+    }
+  }
+}
+
+.report-button {
+  @include flexBox(flex, center, center, row, rem(4));
+  @include font-style(15, 700, rem(22));
+  color: var(--color-token-white);
+  width: 100%;
+  height: rem(52);
+  padding: 0 rem(24);
+  border-radius: rem(4);
+  background-color: var(--color-label-normal);
+
+  .svg-box {
+    @include svgBox(rem(44));
+  }
+}

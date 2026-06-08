@@ -7,8 +7,133 @@
   gap: rem(12);
   @include font-style(15, 400, rem(22));
   width: 100%;
+
+  &.label-only {
+    grid-template-columns: 1fr;
+  }
+
+  &.value-only {
+    grid-template-columns: 1fr;
+  }
+
+  &.small {
+    display: flex;
+    @include font-style(13, 400, rem(18));
+
+    .tooltip-container {
+      .tooltip {
+        @include font-style(13, 400, rem(24));
+      }
+    }
+  }
+}
+
+.item-wrap {
+  display: flex;
+  align-items: center;
+  gap: rem(4); /* 텍스트와 아이콘 사이 간격 */
+
+  &:hover {
+    .tooltip-container {
+      .tooltip {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
 }
 
 .label {
   color: var(--color-label-weak);
+}
+
+.value {
+  color: #333; /* 기존 value 색상 유지 혹은 변경 */
+}
+
+/* 툴팁 공통 스타일 */
+.tooltip-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  .info-icon {
+    background: none;
+    border: none;
+    padding: 0;
+    transition: color 0.2s ease;
+    cursor: unset;
+    @include svgBox(rem(20));
+    color: #37383d47;
+  }
+
+  .tooltip {
+    position: absolute;
+    top: calc(100% + #{rem(10)});
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-token-gray-180);
+    color: var(--color-token-white);
+    padding: rem(16);
+    box-sizing: border-box;
+    border-radius: rem(4);
+    @include font-style(15, 400, rem(24));
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease;
+    z-index: 100;
+    box-shadow: var(--shadow-strong);
+    display: grid;
+    gap: rem(4);
+    pointer-events: none;
+
+    /* 말풍선 꼬리 */
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: rem(4);
+      border-style: solid;
+      border-color: transparent transparent var(--color-token-gray-180)
+        transparent;
+    }
+
+    .tooltip-title {
+      @include font-style(15, 700, rem(22));
+    }
+  }
+
+  .value-tooltip {
+    white-space: normal !important;
+    width: max-content;
+    max-width: rem(240);
+    text-align: left;
+    display: grid;
+    gap: rem(12);
+
+    .img-wrap {
+      width: 100%;
+      max-width: rem(800);
+      display: block;
+      margin: 0 auto;
+
+      > img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .tooltip-text {
+      @include font-style(13, 400, rem(20));
+      margin: 0;
+      word-break: break-all;
+      text-align: left;
+    }
+  }
 }

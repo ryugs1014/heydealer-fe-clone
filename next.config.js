@@ -27,6 +27,12 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'heydealer-api.s3.amazonaws.com',
+        port: '',
+        pathname: '/**', // 해당 호스트 하위의 모든 이미지 경로 허용
+      },
+      {
+        protocol: 'https',
         hostname: 'prnd-car-purchase.s3.ap-northeast-2.amazonaws.com',
         port: '',
         pathname: '/**', // 해당 호스트 하위의 모든 이미지 경로 허용

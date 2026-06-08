@@ -1,0 +1,51 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.info-modal-button {
+  padding: rem(12);
+  box-sizing: border-box;
+  border-radius: rem(4);
+  background-color: #396eff0a;
+  @include flexBox(flex, space-between, center);
+  transition: background-color 0.1s ease-in-out;
+
+  &:hover {
+    background-color: rgba(13, 13, 14, 0.05);
+  }
+
+  .button-forward {
+    @include flexBox(flex, start, center, row, rem(8));
+  }
+
+  .img-wrap {
+    width: rem(16);
+    aspect-ratio: 1 / 1;
+    animation: star-rotate 4s 0s ease-in-out forwards infinite;
+  }
+
+  @keyframes star-rotate {
+    0% {
+      transform: rotate(0);
+    }
+    70% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .button-text {
+    @include font-style(13, 700, rem(18));
+
+    > span {
+      color: var(--color-point-heydealer);
+    }
+  }
+
+  .svg-box {
+    @include svgBox(rem(24));
+    color: var(--color-point-heydealer);
+    transform: rotate(-90deg);
+  }
+}

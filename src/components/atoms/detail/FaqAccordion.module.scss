@@ -1,0 +1,47 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.faq-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: rem(8);
+}
+
+.faq-question {
+  @include flexBox(flex, space-between, center, row, rem(8));
+  width: 100%;
+  min-height: rem(52);
+  @include font-style(15, 400, rem(22));
+  text-align: left;
+  cursor: pointer;
+
+  .question-title {
+    &.open {
+      font-weight: 700;
+    }
+  }
+
+  .icon {
+    @include svgBox(rem(24));
+    transform: scale(-1);
+
+    &.open {
+      transform: scale(-1) rotate(180deg);
+    }
+  }
+}
+
+.faq-answer-container {
+  overflow: hidden;
+}
+
+.faq-answer {
+  @include font-style(15, 400, rem(24));
+  padding: rem(16);
+  box-sizing: border-box;
+  border-radius: rem(4);
+  background-color: #70727c0d;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

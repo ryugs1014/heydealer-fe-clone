@@ -10,9 +10,17 @@
 
   > h2 {
     @include font-style(20, 700, rem(28));
+
+    &.title-size {
+      @include font-style(18, 700, rem(26));
+    }
   }
 
   > p {
     @include font-style(15, 700, rem(22));
+
+    &.title-size {
+      @include font-style(18, 700, rem(26));
+    }
   }
 }

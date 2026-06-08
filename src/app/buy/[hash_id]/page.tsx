@@ -3,12 +3,19 @@ import React from 'react';
 import s from '@/components/page/buy/BuySection.module.scss';
 import Container from '@/components/layout/Container';
 import CarDetailWrapper from '@/components/page/buy/detail/CarDetailWrapper';
+import type { Metadata } from 'next';
 
 interface DetailPageProps {
   params: {
     hash_id: string;
   };
 }
+
+export const metadata: Metadata = {
+  title: '헤이딜러 – 인증중고차, 내차팔기, [번호판]시세',
+  description:
+    '선루프, 전동접이미러, 풀오토에어컨, 가죽시트, 내비게이션, 버튼시동, 열선핸들, 열선시트',
+};
 
 // 🌟 데이터를 안전하게 가져오는 함수
 async function getCarDetail(hashId: string) {

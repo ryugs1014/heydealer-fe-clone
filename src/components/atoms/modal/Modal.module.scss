@@ -23,6 +23,11 @@
   display: grid;
   grid-template-rows: auto 1fr;
   overflow: hidden;
+
+  &.max-height {
+    height: unset;
+    max-height: 100%;
+  }
 }
 
 .modal-header {
@@ -64,6 +69,7 @@
 
 .scroll-container {
   overflow-y: auto;
+  overflow-x: hidden;
   display: grid;
 
   &.scroll-bar {

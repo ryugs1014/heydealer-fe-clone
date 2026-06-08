@@ -1,0 +1,123 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.purchase-review-section {
+  display: grid;
+  justify-items: flex-start;
+  gap: rem(24);
+}
+
+.preview-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(32) rem(48);
+
+  .review-card {
+    padding: rem(12);
+    margin: rem(-12);
+    box-sizing: border-box;
+    border-radius: rem(4);
+    display: grid;
+    gap: rem(24);
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+
+    &:hover {
+      background-color: rgba(13, 13, 14, 0.05);
+    }
+
+    .content {
+      @include font-style(15, 400, rem(24));
+      white-space: pre-wrap;
+      @include textLine(4);
+    }
+  }
+}
+
+.main-info-wrap {
+  padding: rem(16);
+  box-sizing: border-box;
+  border-radius: rem(4);
+  display: grid;
+  gap: rem(24);
+}
+
+.owner-info {
+  width: 100%;
+  @include font-style(12, 400, rem(16));
+  color: var(--color-label-weak);
+}
+
+.content {
+  @include font-style(15, 400, rem(24));
+  white-space: pre-wrap;
+}
+
+.car-profile {
+  @include flexBox(flex, start, center, row, rem(12));
+
+  .img-wrap {
+    width: 100%;
+    max-width: rem(40);
+    aspect-ratio: 1 / 1;
+    border-radius: rem(4);
+  }
+}
+
+.car-specs {
+  display: grid;
+  @include font-style(12, 400, rem(16));
+  color: var(--color-label-weak);
+
+  .grade {
+    @include font-style(13, 700, rem(18));
+    color: var(--color-label-normal);
+  }
+}
+
+.show-all-btn {
+  @include font-style(13, 400, rem(18));
+  padding: rem(8) rem(12);
+  box-sizing: border-box;
+  border-radius: rem(4);
+  border: rem(1) solid var(--color-line-normal);
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    background-color: rgba(13, 13, 14, 0.05);
+  }
+}
+
+.modal-body {
+  display: grid;
+  gap: rem(16);
+  padding: 0 rem(32) rem(32);
+  box-sizing: border-box;
+}
+
+.header-wrap {
+  @include font-style(20, 700, rem(28));
+
+  > span {
+    color: var(--color-point-heydealer);
+  }
+}
+
+.modal-list {
+  display: grid;
+  justify-items: flex-start;
+  gap: rem(24);
+
+  .divider {
+    all: unset;
+    width: 100%;
+    height: rem(1);
+    background-color: var(--color-line-divider);
+    margin-bottom: rem(8);
+  }
+}
+
+.modal-card {
+  display: grid;
+  gap: rem(8);
+}

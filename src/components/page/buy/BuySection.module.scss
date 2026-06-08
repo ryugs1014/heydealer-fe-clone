@@ -101,4 +101,8 @@
   display: grid;
   grid-template-rows: auto 1fr;
   gap: rem(24);
+
+  > div {
+    margin-right: unset !important;
+  }
 }

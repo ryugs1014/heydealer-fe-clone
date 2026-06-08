@@ -17,6 +17,7 @@ interface ModalProps {
   showCloseButton?: boolean;
   maxWidth?: string;
   scrollPadding?: boolean;
+  maxHeight?: boolean;
 }
 
 export const Modal = ({
@@ -30,6 +31,7 @@ export const Modal = ({
   showCloseButton = true,
   maxWidth,
   scrollPadding = false,
+  maxHeight = false,
 }: ModalProps) => {
   const [mounted, setMounted] = useState(false);
 
@@ -54,7 +56,7 @@ export const Modal = ({
     <div className={s['modal-overlay']}>
       <div className={s['modal-container']} onClick={onClose}>
         <div
-          className={s['modal-window']}
+          className={`${s['modal-window']} ${!maxHeight ? s['max-height'] : ''}`}
           onClick={(e) => e.stopPropagation()}
           style={maxWidth ? { maxWidth } : undefined}
         >

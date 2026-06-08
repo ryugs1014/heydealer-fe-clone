@@ -1,0 +1,165 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.modal-body {
+  align-content: flex-start;
+}
+
+.review-section {
+  display: grid;
+  justify-items: flex-start;
+  gap: rem(24);
+}
+
+.grade-filters {
+  display: grid;
+  gap: rem(8);
+  grid-auto-columns: max-content;
+  grid-auto-flow: column;
+  scrollbar-width: none;
+  overflow: auto;
+
+  .filter-btn {
+    @include font-style(13, 400, rem(18));
+    padding: rem(8) rem(12);
+    box-sizing: border-box;
+    border-radius: rem(4);
+    border: rem(1) solid var(--color-line-normal);
+    transition: 0.1s ease-in-out;
+
+    &:hover {
+      background-color: rgba(13, 13, 14, 0.05);
+    }
+  }
+}
+
+.preview-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(12);
+
+  .preview-item {
+    padding: rem(16);
+    box-sizing: border-box;
+    border-radius: rem(4);
+    background-color: #70727c0d;
+    display: grid;
+    gap: rem(24);
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+
+    &:hover {
+      background-color: rgba(13, 13, 14, 0.05);
+    }
+  }
+
+  .preview-content {
+    @include textLine(4);
+    @include font-style(15, 400, rem(24));
+  }
+
+  .preview-meta {
+    width: 100%;
+    @include flexBox(flex, space-between, center, row, rem(8));
+    @include font-style(12, 400, rem(16));
+    color: var(--color-label-weak);
+  }
+}
+
+.show-all-btn {
+  @include font-style(13, 400, rem(18));
+  padding: rem(8) rem(12);
+  box-sizing: border-box;
+  border-radius: rem(4);
+  border: rem(1) solid var(--color-line-normal);
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    background-color: rgba(13, 13, 14, 0.05);
+  }
+}
+
+.modal-body {
+  display: grid;
+  gap: rem(16);
+  padding: 0 rem(32) rem(32);
+  box-sizing: border-box;
+}
+
+.header-wrap {
+  @include font-style(20, 700, rem(28));
+}
+
+.modal-header-actions {
+  width: 100%;
+  @include flexBox(flex, space-between, center, row, rem(8));
+
+  .review-count {
+    @include font-style(13, 400, rem(13));
+  }
+}
+
+.full-review-list {
+  display: grid;
+  gap: rem(32);
+
+  .full-review-item {
+    display: grid;
+    gap: rem(16);
+
+    .main-info-wrap {
+      padding: rem(16);
+      box-sizing: border-box;
+      border-radius: rem(4);
+      background-color: #70727c0d;
+      display: grid;
+      gap: rem(24);
+    }
+
+    .owner-info {
+      width: 100%;
+      @include font-style(12, 400, rem(16));
+      color: var(--color-label-weak);
+    }
+
+    .content {
+      @include font-style(15, 400, rem(24));
+      white-space: pre-wrap;
+    }
+
+    .car-profile {
+      @include flexBox(flex, start, center, row, rem(12));
+
+      .img-wrap {
+        width: 100%;
+        max-width: rem(40);
+        aspect-ratio: 1 / 1;
+        border-radius: rem(4);
+      }
+    }
+
+    .car-specs {
+      display: grid;
+      gap: rem(4);
+      @include font-style(12, 400, rem(16));
+      color: var(--color-semantic-label-middle-light);
+
+      .grade {
+        font-weight: 500;
+        color: var(--color-label-normal);
+      }
+    }
+
+    .footer-meta {
+      width: 100%;
+      @include flexBox(flex, space-between, center, row, rem(8));
+      @include font-style(12, 400, rem(16));
+      color: var(--color-label-weak);
+
+      .likes {
+        font-weight: 700;
+        color: var(--color-label-normal);
+      }
+    }
+  }
+}
