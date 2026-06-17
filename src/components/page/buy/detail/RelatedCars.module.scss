@@ -1,0 +1,7 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.related-cars-section {
+  //display: grid;
+  gap: rem(64);
+}

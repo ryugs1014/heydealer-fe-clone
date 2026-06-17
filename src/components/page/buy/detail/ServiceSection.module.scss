@@ -1,0 +1,68 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.service-section-wrapper {
+  padding: rem(72) 0;
+  box-sizing: border-box;
+  margin-top: rem(40);
+}
+
+.service-top {
+  display: grid;
+  gap: rem(16);
+  justify-items: flex-start;
+}
+
+.service-bottom {
+}
+
+.service-text {
+  display: grid;
+  gap: rem(8);
+
+  .emoji-text {
+    @include font-style(32, 700, rem(44));
+  }
+  .main-text {
+    @include font-style(15, 700, rem(22));
+  }
+  .sub-text {
+    @include font-style(13, 400, rem(20));
+  }
+}
+
+.service-button {
+  @include flexBox(flex, center, center);
+  @include font-style(13, 400, rem(18));
+  height: rem(40);
+  padding: 0 rem(12);
+  box-sizing: border-box;
+  border-radius: rem(4);
+  border: rem(1) solid var(--color-line-normal);
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    background-color: rgba(13, 13, 14, 0.05);
+  }
+}
+
+.service-bottom {
+  display: grid;
+  justify-items: flex-end;
+}
+
+.ect-button {
+  @include flexBox(flex, center, center);
+  @include font-style(13, 400, rem(18));
+  @include textUnderline;
+  color: var(--color-label-weak);
+  padding: rem(4);
+  margin: rem(-4);
+  box-sizing: border-box;
+  border-radius: rem(4);
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    background-color: rgba(13, 13, 14, 0.05);
+  }
+}

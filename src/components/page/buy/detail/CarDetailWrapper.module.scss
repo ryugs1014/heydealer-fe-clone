@@ -265,7 +265,7 @@
 
 .detail-info {
   display: grid;
-  gap: rem(24);
+  gap: rem(20);
 
   .detail-price {
     display: grid;
@@ -289,6 +289,13 @@
 
         .price {
           word-break: keep-all;
+          display: flex;
+          gap: rem(8);
+
+          > del {
+            @include font-style(13, 400, rem(18));
+            color: var(--color-token-gray-60);
+          }
         }
       }
     }
@@ -349,7 +356,8 @@
 .main-sticky-container {
   display: grid;
   grid-template-columns: 100% auto;
-  gap: rem(40);
+  row-gap: 0;
+  column-gap: rem(40);
 }
 
 .main-content {
@@ -408,6 +416,89 @@
       width: 100%;
       height: rem(1);
       background-color: var(--color-line-divider);
+    }
+  }
+}
+
+.content-wrap {
+  display: grid;
+  gap: rem(24);
+  align-content: flex-start;
+
+  .qr-section {
+    @include flexBox(flex, space-between, center, row, rem(4));
+    padding: rem(16) rem(20);
+    box-sizing: border-box;
+    border: rem(1) solid var(--color-line-divider);
+    border-radius: rem(4);
+
+    .qr-text-info {
+      display: grid;
+      gap: rem(8);
+      color: var(--color-semantic-label-middle-light);
+
+      .app-guide-text {
+        @include font-style(13, 700, rem(18));
+      }
+
+      .qr-guide-text {
+        @include font-style(11, 400, rem(14));
+      }
+    }
+
+    .svg-box {
+      @include svgBox(rem(96));
+    }
+  }
+
+  .chat-button-wrap {
+    @include flexBox(flex, end, start);
+    width: 100%;
+
+    .chat-contact {
+      @include flexBox(flex, start, center, row, rem(8));
+      @include font-style(13, 700, rem(18));
+      padding: rem(8) rem(16) rem(8) rem(8);
+      box-sizing: border-box;
+      border-radius: rem(112);
+      height: rem(56);
+      background-color: var(--color-token-white);
+      box-shadow: var(--shadow-strong);
+      white-space: nowrap;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: rgba(13, 13, 14, 0.05);
+      }
+
+      .chat-profile-img {
+        width: rem(44);
+        height: rem(40);
+        @include flexBox(flex, center, start);
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: rem(-2);
+          right: rem(-2);
+          width: rem(8);
+          height: rem(8);
+          background-color: var(--color-point-heydealer);
+          border-radius: rem(50);
+          border: rem(2) solid var(--color-token-white);
+        }
+      }
+
+      .img-wrap {
+        width: 100%;
+        max-width: rem(40);
+        min-width: rem(40);
+        border-radius: 100%;
+        overflow: hidden;
+        aspect-ratio: 1 / 1;
+        border: rem(2) solid var(--color-line-divider);
+      }
     }
   }
 }

@@ -17,6 +17,7 @@
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.5",
     "styled-components": "^6.4.1",
+    "swiper": "^12.2.0",
     "three": "^0.184.0"
   },
   "devDependencies": {
