@@ -9,9 +9,9 @@ const NAV_GROUPS = [
   {
     category: '서비스',
     items: [
-      { label: '내차팔기', href: '/sell-car' },
+      { label: '내차팔기', href: '/sell' },
       { label: '폐차 견적받기', href: '/scrap-car' },
-      { label: '중고차 숨은 이력', href: '/car-history' },
+      { label: '중고차 숨은 이력', href: '/total-info' },
     ],
   },
   {
@@ -61,13 +61,13 @@ export default function Footer() {
     }
     // 3. 기타 다른 페이지들
     if (pathname.startsWith('/sell-car')) {
-      return s['header--sell-car'];
+      return s['header--sell'];
     }
     if (pathname.startsWith('/scrap-car')) {
       return s['header--scrap-car'];
     }
-    if (pathname.startsWith('/car-history')) {
-      return s['header--car-history'];
+    if (pathname.startsWith('/total-info')) {
+      return s['header--total-info'];
     }
 
     // 4. 매칭되는 게 없을 때 기본값

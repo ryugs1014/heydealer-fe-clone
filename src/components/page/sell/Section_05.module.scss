@@ -1,0 +1,42 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.section-container {
+  background-color: var(--color-bg-alternative);
+  padding: rem(80) 0;
+
+  .section-wrap {
+    @include flexBox(flex, start, center, row, rem(58));
+
+    .text-wrap {
+      display: grid;
+      gap: rem(12);
+    }
+
+    .main-text-wrap {
+      display: grid;
+      gap: rem(24);
+    }
+
+    .text-top {
+      @include font-style(36, 700, rem(48));
+    }
+
+    .text-bottom {
+      @include font-style(15, 400, rem(22));
+    }
+
+    .sub-text {
+      @include font-style(13, 400, rem(18));
+      color: var(--color-label-weak);
+    }
+
+    .img-container {
+      .img-wrap {
+        width: 100vw;
+        max-width: rem(452);
+        aspect-ratio: 1506 / 1950;
+      }
+    }
+  }
+}

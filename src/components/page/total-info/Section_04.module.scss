@@ -1,0 +1,64 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.section-container {
+  background-color: var(--color-token-white);
+  padding: rem(128) 0;
+
+  .section-wrap {
+    display: grid;
+    justify-items: center;
+    gap: rem(64);
+
+    .text-top {
+      @include flexBox(flex, center, center);
+      @include font-style(36, 700, rem(48));
+      text-align: center;
+    }
+
+    .box-container {
+      @include flexBox(flex, center, center, row, rem(24));
+      width: 100%;
+      flex-wrap: wrap;
+
+      .box-wrap {
+        @include flexBox(flex, space-between, center, column, rem(24));
+        width: 100%;
+        max-width: rem(302);
+        padding: rem(32);
+        box-sizing: border-box;
+        border-radius: rem(4);
+        background-color: rgb(248, 248, 249);
+        height: 100%;
+
+        .box-img {
+          .img-wrap {
+            height: rem(72);
+            aspect-ratio: 1 / 1;
+          }
+        }
+
+        .box-header {
+          display: grid;
+          gap: rem(8);
+          text-align: center;
+
+          .main-text {
+            @include font-style(18, 700, rem(26));
+          }
+          .sub-text {
+            @include font-style(12, 400, rem(16));
+            color: var(--color-label-weak);
+          }
+        }
+        .box-text {
+          @include font-style(15, 400, rem(24));
+        }
+
+        > span {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

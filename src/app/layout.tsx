@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import '../styles/globals.scss';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import StickyBanner from '@/components/layout/StickyBanner';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <StickyBanner />
       </body>
     </html>
   );

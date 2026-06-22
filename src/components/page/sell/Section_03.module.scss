@@ -1,0 +1,43 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.section-container {
+  background-color: rgb(233, 237, 243);
+
+  .section-wrap {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    padding: rem(80) 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    .text-wrap {
+      display: grid;
+      justify-items: center;
+      gap: rem(16);
+    }
+
+    .text-top {
+      @include flexBox(flex, center, center, row, rem(12));
+      @include font-style(36, 700, rem(48));
+
+      .text-top-header {
+        @include flexBox(flex, center, center, row, rem(8));
+      }
+    }
+
+    .text-bottom {
+      @include font-style(15, 400, rem(22));
+      color: var(--color-label-weak);
+    }
+
+    .video-container {
+      max-height: rem(299.2);
+
+      .video-element {
+        height: 100%;
+      }
+    }
+  }
+}

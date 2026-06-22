@@ -1,0 +1,88 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.section-container {
+  background-color: #f7f8fb;
+
+  .section-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .text-container {
+      display: grid;
+      align-items: flex-start;
+      padding: rem(120) 0;
+    }
+
+    .text-wrap {
+      display: grid;
+      gap: rem(24);
+    }
+
+    .text-top {
+      @include font-style(36, 700, rem(48));
+
+      > p {
+        color: var(--color-point-heydealer);
+      }
+    }
+
+    .text-bottom {
+      @include font-style(15, 400, rem(22));
+      color: var(--color-semantic-label-middle-light);
+    }
+
+    .padding-container {
+      padding: rem(120) 0;
+    }
+
+    .img-container {
+      position: relative;
+      height: rem(266);
+
+      .img-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50vw;
+        height: rem(266);
+        overflow: hidden;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50vw;
+          height: 100%;
+          background: linear-gradient(
+            90deg,
+            rgb(247, 248, 251) 0%,
+            rgba(247, 248, 251, 0) 15%
+          );
+          z-index: 1;
+        }
+
+        .slide-img {
+          width: 100%;
+          height: 100%;
+          background-repeat: repeat-x;
+          background-position: 0 center;
+          background-size: auto 100%;
+          background-image: url('/img/total-info/desktop_section3.png');
+          animation: 30000ms linear 0s infinite normal none running slide;
+
+          @keyframes slide {
+            0% {
+              background-position-x: 0;
+            }
+
+            100% {
+              background-position-x: rem(-2000.24);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.sticky-banner-container {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.sticky-banner-wrap {
+  width: 100%;
+  padding: rem(16) 0;
+  border-radius: rem(16) rem(16) 0 0;
+  background: var(--color-token-white);
+  box-shadow: var(--shadow-normal);
+}
+
+.content-wrap {
+  @include flexBox(flex, space-between, center);
+  max-width: rem(912);
+  margin: 0 auto;
+}
+
+.text-wrap {
+  display: grid;
+  gap: rem(8);
+
+  .main-text {
+    @include font-style(18, 700, rem(26));
+  }
+
+  .sub-text {
+    @include font-style(15, 400, rem(22));
+  }
+}
+
+.svg-box {
+  @include svgBox(rem(96));
+  padding: rem(8);
+  box-sizing: border-box;
+}

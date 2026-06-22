@@ -1,0 +1,39 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.section-container {
+  background-color: var(--color-token-white);
+  padding: rem(80) 0;
+
+  .section-wrap {
+    @include flexBox(flex, space-between, center, row, 0);
+
+    .text-wrap {
+      display: grid;
+      gap: rem(24);
+    }
+
+    .text-top {
+      @include font-style(36, 700, rem(48));
+    }
+
+    .text-bottom {
+      @include font-style(15, 400, rem(22));
+      color: var(--color-label-weak);
+    }
+
+    .img-container {
+      @include flexBox(flex, end, center, row, rem(24));
+      margin-right: rem(38);
+
+      .img-wrap {
+        width: 100vw;
+        max-width: rem(260);
+        border-radius: rem(4);
+        overflow: hidden;
+        aspect-ratio: 780 / 1272;
+        box-shadow: rem(-15) rem(15) rem(30) rgb(0 0 0 / 15%);
+      }
+    }
+  }
+}

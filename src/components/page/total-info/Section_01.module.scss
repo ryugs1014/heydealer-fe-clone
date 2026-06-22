@@ -1,0 +1,60 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.section-container {
+  background-color: #000000f5;
+
+  .section-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .text-wrap {
+      display: grid;
+      gap: rem(24);
+      padding: rem(230.08) 0 rem(268);
+    }
+
+    .text-top {
+      @include font-style(36, 700, rem(48));
+      color: var(--color-token-white);
+    }
+
+    .text-bottom {
+      @include font-style(15, 700, rem(22));
+      color: var(--color-point-heydealer);
+    }
+
+    .img-container {
+      height: rem(524.04);
+      overflow: hidden;
+      align-self: flex-end;
+      position: relative;
+
+      .img-wrap {
+        width: 100vw;
+        max-width: rem(282);
+        aspect-ratio: 350 / 707;
+      }
+
+      .gif-img-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        max-width: rem(282);
+        aspect-ratio: 516 / 1112;
+
+        > img {
+          box-sizing: border-box;
+          height: 100%;
+          padding: 4%;
+          object-fit: contain;
+          object-position: center top;
+          overflow-clip-margin: content-box;
+          overflow: clip;
+          border-radius: rem(45) rem(45) 0 0;
+        }
+      }
+    }
+  }
+}

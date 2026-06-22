@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Container.module.scss';
 
 interface Props {
-  size?: 'lg' | 'md' | 'sm' | 'none' | 'detail'; // 'lg' = 1820px, 'md' = 1720px, 'sm' = 1160px
+  size?: 'lg' | 'md' | 'sm' | 'sm-min' | 'none' | 'detail'; // 'lg' = 1820px, 'md' = 1720px, 'sm' = 1160px
   className?: string;
   children: React.ReactNode;
 }

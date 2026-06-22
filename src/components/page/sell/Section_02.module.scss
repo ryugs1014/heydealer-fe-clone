@@ -1,0 +1,23 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.section-container {
+  background-color: var(--color-token-white);
+
+  .section-wrap {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: rem(16);
+    padding: rem(116) 0;
+    box-sizing: border-box;
+
+    > span {
+      @include font-style(20, 700, rem(28));
+    }
+
+    .text-top {
+      color: var(--color-label-weak);
+    }
+  }
+}
