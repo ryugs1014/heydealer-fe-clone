@@ -43,12 +43,7 @@ export default function RewardModal({ isOpen, onClose }: RewardModalProps) {
             style={{ y }}
             drag="y"
             dragConstraints={{ top: 0, bottom: Number.MAX_VALUE }}
-            // --- ✨ 위쪽으로만 약간의 탄성(고무줄 효과) 부여 ✨ ---
-            // top: 0.1 -> 위로 강하게 올려도 조금(약 50px 내외)만 늘어나고 턱 막히는 느낌
-            // bottom: 0 -> 아래로는 무제한이므로 탄성값이 사실상 무의미하지만 0으로 명시
             dragElastic={{ top: 0.1, bottom: 0 }}
-            // --------------------------------------------------
-
             onDragEnd={(event, info) => {
               const displacementThreshold = 50;
               const velocityThreshold = 0;

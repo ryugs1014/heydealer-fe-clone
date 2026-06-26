@@ -270,12 +270,10 @@
     }
   }
 
-  /* 라디오 버튼들을 가로로 나열 */
   .radio-group {
     text-align: left;
   }
 
-  /* 라디오 라벨 기본 스타일 */
   .radio-label {
     @include flexBox(flex, start, center);
     gap: rem(12);
@@ -316,7 +314,6 @@
     }
   }
 
-  /* 실제 기본 라디오 인풋은 눈에 안 보이게 숨김 */
   .hidden-radio {
     position: absolute;
     opacity: 0;
@@ -324,7 +321,6 @@
     height: 0;
   }
 
-  /* 내가 직접 그리는 커스텀 라디오 동그라미 */
   .custom-radio {
     width: rem(24);
     height: rem(24);
@@ -335,11 +331,9 @@
     transition: all 0.2s ease;
   }
 
-  /* 라디오가 체크되었을 때 커스텀 라디오의 디자인 */
   .hidden-radio:checked + .custom-radio {
     border-color: rgb(57, 110, 255);
 
-    /* 안쪽에 채워지는 동그라미 */
     &::after {
       content: '';
       position: absolute;

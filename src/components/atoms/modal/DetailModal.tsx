@@ -89,7 +89,6 @@ export default function DetailModal({
           </h2>
 
           <div className={s['input-section']}>
-            {/* 기존 라디오/인풋 폼 영역 유지 */}
             <div className={`${s['input-wrap']} ${s['radio-input-wrap']}`}>
               <label className={s['info-label']}>
                 🚙 운행이 가능한가요?

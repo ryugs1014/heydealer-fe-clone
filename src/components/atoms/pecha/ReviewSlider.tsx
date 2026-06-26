@@ -23,23 +23,18 @@ interface ReviewSliderProps {
 export default function ReviewSlider({ reviews }: ReviewSliderProps) {
   const trackRef = useRef<HTMLDivElement>(null);
 
-  // 👇 버튼 표시 여부를 관리하는 상태 추가
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
 
-  // 👇 스크롤 위치를 계산하여 상태를 업데이트하는 함수
   const handleScroll = () => {
     if (!trackRef.current) return;
     const { scrollLeft, scrollWidth, clientWidth } = trackRef.current;
 
-    // 맨 앞인지 확인 (스크롤이 0이거나 0보다 작을 때)
     setIsAtStart(scrollLeft <= 0);
 
-    // 맨 끝인지 확인 (소수점 오차를 고려해 1~2px 정도 여유를 둠)
     setIsAtEnd(Math.ceil(scrollLeft + clientWidth) >= scrollWidth - 1);
   };
 
-  // 👇 컴포넌트 마운트 시 및 창 크기 변경 시 초기 스크롤 상태 계산
   useEffect(() => {
     handleScroll(); // 초기 렌더링 시 확인
     window.addEventListener('resize', handleScroll);
@@ -97,7 +92,6 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
   return (
     <div className={s['slider-wrap']}>
       <div className={s['nav-buttons']}>
-        {/* 👇 상태에 따라 visibility 속성으로 요소를 숨김 (DOM에서 아예 없애면 space-between 정렬이 깨짐) */}
         <button
           onClick={handlePrev}
           className={`${s['nav-btn']} ${s['prev']}`}
