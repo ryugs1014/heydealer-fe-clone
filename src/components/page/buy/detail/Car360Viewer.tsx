@@ -328,6 +328,9 @@ export default function Car360Viewer({
             <Canvas
               camera={{ position: [0, 1, 6], fov: 60 }}
               style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
                 width: '100%',
                 height: '100%',
                 pointerEvents: 'auto',

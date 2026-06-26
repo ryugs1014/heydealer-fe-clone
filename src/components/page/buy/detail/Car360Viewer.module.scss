@@ -59,6 +59,7 @@
   position: absolute;
   bottom: rem(8);
   left: rem(8);
+  @include flexBox(flex, center, center);
   width: rem(48);
   height: rem(48);
   z-index: 2;
