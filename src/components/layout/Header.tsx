@@ -8,19 +8,30 @@ import Logo from '/public/svg/clip0_169_521.svg';
 import MobileMenu from '/public/svg/mobile-menu.svg';
 import MobileMenuClose from '/public/svg/mobile-menu-close.svg';
 
-const NAV_ITEMS = [
+interface NavItem {
+  label: string;
+  href: string;
+  isNewTab?: boolean;
+}
+
+interface NavGroup {
+  category: string;
+  items: NavItem[];
+}
+
+const NAV_ITEMS: NavItem[] = [
   { label: '내차사기', href: '/' },
   { label: '내차팔기', href: '/sell' },
-  { label: '폐차 견적받기', href: '/scrap-car' },
+  { label: '폐차 견적받기', href: '/pecha', isNewTab: true },
   { label: '중고차 숨은 이력', href: '/total-info' },
 ];
 
-const MOBILE_NAV_GROUPS = [
+const MOBILE_NAV_GROUPS: NavGroup[] = [
   {
     category: '서비스',
     items: [
       { label: '내차팔기', href: '/sell' },
-      { label: '폐차 견적받기', href: '/scrap-car' },
+      { label: '폐차 견적받기', href: '/pecha', isNewTab: true },
       { label: '중고차 숨은 이력', href: '/total-info' },
     ],
   },
@@ -50,39 +61,39 @@ export default function Header() {
       setIsMobileMenuOpen(false);
     }
 
-    // 미디어 쿼리 상태 변화 리스너 등록
     mediaQuery.addEventListener('change', handleMediaChange);
 
-    // 컴포넌트 언마운트 시 리스너 해제 (메모리 누수 방지)
     return () => {
       mediaQuery.removeEventListener('change', handleMediaChange);
     };
   }, []);
 
-  // 👇 경로에 따라 다른 modifier 클래스를 반환하는 함수
   const getHeaderVariantClass = () => {
-    // 1. 메인 페이지는 정확히 일치할 때만 적용
     if (pathname === '/') {
       return s['header--home'];
     }
-    // 2. '/buy' 로 시작하는 모든 경로 (예: /buy/asdfasdf, /buy/123 등)
     if (pathname.startsWith('/buy')) {
       return s['header--buy'];
     }
-    // 3. 기타 다른 페이지들
-    if (pathname.startsWith('/sell-car')) {
+    if (pathname.startsWith('/sell')) {
       return s['header--sell'];
     }
-    if (pathname.startsWith('/scrap-car')) {
-      return s['header--scrap-car'];
+    if (pathname.startsWith('/pecha')) {
+      return s['header--pecha'];
     }
     if (pathname.startsWith('/total-info')) {
       return s['header--total-info'];
     }
 
-    // 4. 매칭되는 게 없을 때 기본값
     return s['header--default'];
   };
+
+  //Header Hide
+  const hiddenRoutes = ['/pecha'];
+
+  if (hiddenRoutes.includes(pathname)) {
+    return null;
+  }
 
   return (
     <header className={`${s['header']} ${getHeaderVariantClass() || ''}`}>
@@ -95,11 +106,17 @@ export default function Header() {
 
         <nav className={s['pc-nav']}>
           {NAV_ITEMS.map((item, index) => {
-            // 현재 주소(pathname)와 메뉴의 href가 일치하는지 확인
             const isActive = pathname === item.href;
 
             return (
-              <Link key={index} href={item.href} className={s['nav-link']}>
+              // 2. 데스크탑 Link 컴포넌트에 target과 rel 속성 조건부 추가
+              <Link
+                key={index}
+                href={item.href}
+                className={s['nav-link']}
+                target={item.isNewTab ? '_blank' : undefined}
+                rel={item.isNewTab ? 'noopener noreferrer' : undefined}
+              >
                 <button
                   className={`${s['nav-button']} ${isActive ? s['is-active'] : ''}`}
                 >
@@ -118,6 +135,7 @@ export default function Header() {
           <MobileMenu width="100%" height="100%" viewBox="0 0 24 24" />
         </button>
       </div>
+
       <div
         className={`${s['mobile-sidebar']} ${isMobileMenuOpen ? s['is-open'] : ''}`}
       >
@@ -125,7 +143,7 @@ export default function Header() {
           <button
             className={`${s['hamburger-btn']} ${isMobileMenuOpen ? s['is-active'] : ''}`}
             onClick={() => setIsMobileMenuOpen(false)}
-            aria-label="메뉴 열기"
+            aria-label="메뉴 닫기"
           >
             <MobileMenuClose width="100%" height="100%" viewBox="0 0 24 24" />
           </button>
@@ -139,10 +157,13 @@ export default function Header() {
               <ul className={s['mobile-group-list']}>
                 {group.items.map((item, itemIndex) => (
                   <li key={itemIndex}>
+                    {/* 3. 모바일 Link 컴포넌트에도 동일하게 추가 */}
                     <Link
                       href={item.href}
                       className={s['mobile-nav-link']}
                       onClick={() => setIsMobileMenuOpen(false)}
+                      target={item.isNewTab ? '_blank' : undefined}
+                      rel={item.isNewTab ? 'noopener noreferrer' : undefined}
                     >
                       <button className={s['nav-button']}>{item.label}</button>
                     </Link>
@@ -153,6 +174,7 @@ export default function Header() {
           ))}
         </nav>
       </div>
+
       <div
         className={`${s['sidebar-overlay']} ${isMobileMenuOpen ? s['is-active'] : ''}`}
         onClick={() => setIsMobileMenuOpen(false)}

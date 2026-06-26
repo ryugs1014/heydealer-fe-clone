@@ -1,0 +1,79 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.footer {
+  display: grid;
+  gap: rem(32);
+  padding: rem(32) rem(24) rem(56);
+  box-sizing: border-box;
+  color: rgb(134, 154, 183);
+  background-color: rgb(233, 237, 244);
+}
+
+.footer-info {
+  @include flexBox(flex, start, start, column, rem(32));
+  width: 100%;
+  max-width: rem(1392);
+
+  .form-link {
+    width: 100%;
+  }
+}
+
+.sign-up {
+  @include flexBox(flex, space-between, center, row, rem(4));
+  width: 100%;
+  padding: rem(12) rem(16);
+  border: rem(1) solid rgb(204, 216, 232);
+  border-radius: rem(4);
+  box-sizing: border-box;
+
+  .sign-up-text {
+    @include font-style(12, 700, rem(20));
+    color: rgb(65, 77, 107);
+  }
+
+  .sign-up-button {
+    @include flexBox(flex, start, center, row, 0);
+    @include font-style(12, 700, rem(20));
+    color: rgb(96, 139, 255);
+  }
+}
+
+.main-info {
+  display: grid;
+  gap: rem(8);
+
+  .company-name {
+    @include font-style(12, 700, rem(20));
+  }
+
+  .info-top {
+    @include flexBox(flex, start, center, column, rem(8));
+    flex-wrap: wrap;
+    row-gap: 0;
+    @include font-style(12, 400, rem(20));
+  }
+
+  .info-bottom {
+    @include flexBox(flex, start, center, row, rem(4));
+    flex-wrap: wrap;
+    row-gap: 0;
+
+    > span {
+      @include font-style(12, 400, rem(20));
+    }
+
+    > button {
+      @include font-style(12, 400, rem(20));
+    }
+
+    .per-info-button {
+      font-weight: 700;
+    }
+  }
+}
+
+.copyright-info {
+  @include font-style(12, 400, rem(20));
+}

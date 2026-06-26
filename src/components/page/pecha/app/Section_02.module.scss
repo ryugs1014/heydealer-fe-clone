@@ -1,0 +1,60 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.section-content {
+  padding: rem(32) rem(24);
+  box-sizing: border-box;
+  background-color: var(--color-token-white);
+}
+
+.banner-wrap {
+  @include flexBox(flex, space-between, center, row, rem(4));
+  padding: rem(20) rem(20) rem(16);
+  border-radius: rem(4);
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgba(57, 110, 255, 0.08);
+  cursor: pointer;
+}
+
+.content-wrap {
+  display: grid;
+  gap: rem(8);
+  justify-items: flex-start;
+  text-align: left;
+
+  .badge {
+    height: rem(20);
+    padding: 0 rem(4);
+    border-radius: rem(4);
+    box-sizing: border-box;
+    @include font-style(12, 700, rem(20));
+    color: rgb(51, 98, 228);
+    background-color: rgba(57, 110, 255, 0.16);
+  }
+
+  .text-wrap {
+    @include font-style(14, 700, rem(24));
+    color: rgb(51, 98, 228);
+  }
+
+  .more-button {
+    @include flexBox(flex, start, center, row, rem(4));
+    @include font-style(12, 400, rem(20));
+    color: rgb(134, 154, 183);
+
+    .svg-box {
+      @include svgBox(rem(16));
+    }
+  }
+}
+
+.img-section {
+  .img-wrap {
+    position: relative;
+    width: rem(104);
+    aspect-ratio: 1 / 1;
+    @include flexBox(flex, center, center);
+    overflow: hidden;
+  }
+}

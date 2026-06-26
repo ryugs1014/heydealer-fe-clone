@@ -1,0 +1,51 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.section-content {
+  padding: rem(32) rem(24);
+  box-sizing: border-box;
+  background-color: var(--color-token-white);
+}
+
+.content-wrap {
+  display: grid;
+  gap: rem(20);
+  justify-items: flex-start;
+  text-align: left;
+
+  .text-wrap {
+    display: grid;
+    gap: rem(8);
+    @include font-style(14, 700, rem(24));
+
+    .title-text {
+      @include font-style(16, 700, rem(28));
+      color: rgb(39, 46, 64);
+    }
+
+    .detail-text {
+      @include font-style(14, 400, rem(24));
+      color: rgb(39, 46, 64);
+    }
+  }
+
+  .more-button {
+    @include flexBox(flex, start, center, row, rem(8));
+    @include font-style(14, 700, rem(16));
+    color: rgb(134, 154, 183);
+    padding: rem(16);
+    border: rem(1) solid rgb(233, 237, 244);
+    border-radius: rem(4);
+    box-sizing: border-box;
+    background-color: var(--color-token-white);
+    user-select: none;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 rem(2) rem(4) 0 rgba(39, 46, 64, 0.08);
+
+    .svg-box {
+      @include svgBox(rem(16));
+      min-width: rem(16);
+      color: rgb(175, 194, 219);
+    }
+  }
+}

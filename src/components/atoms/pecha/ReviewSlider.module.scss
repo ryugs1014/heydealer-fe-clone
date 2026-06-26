@@ -1,0 +1,162 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.slider-wrap {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+
+  &:hover {
+    .nav-buttons {
+      display: flex;
+    }
+  }
+}
+
+.nav-buttons {
+  display: none;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: rem(-16);
+  right: rem(-16);
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: none;
+
+  .nav-btn {
+    width: rem(42);
+    height: rem(42);
+    background-color: rgb(247, 248, 251);
+    border: rem(1) solid rgb(233, 237, 244);
+    border-radius: rem(100);
+    pointer-events: auto;
+    cursor: pointer;
+
+    &.prev {
+      .svg-box {
+        transform: rotate(-90deg) scale(-1);
+      }
+    }
+
+    .svg-box {
+      @include svgBox(rem(24));
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.slider-container {
+  position: relative;
+  display: grid;
+  margin: 0 rem(-24);
+}
+
+.slider-track {
+  display: grid;
+  grid-auto-flow: column;
+  gap: rem(12);
+  padding: rem(16) rem(24);
+  padding-inline-end: 0;
+  margin: rem(-16) 0;
+  overflow: auto visible;
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+}
+
+.review-slide {
+  flex-shrink: 0;
+  scroll-snap-align: center;
+
+  &:last-child {
+    margin-right: rem(24);
+  }
+}
+
+.review-card {
+  display: grid;
+  gap: rem(20);
+  align-content: space-between;
+  width: rem(292);
+  height: 100%;
+  padding: rem(20);
+  box-sizing: border-box;
+  border-radius: rem(4);
+  outline-offset: rem(-0.5);
+  outline: rgb(233, 237, 244) solid rem(1);
+  background-color: var(--color-token-white);
+
+  .info-box {
+    display: grid;
+    gap: rem(12);
+
+    .info-header {
+      display: grid;
+      gap: rem(4);
+      justify-items: start;
+
+      .model-name {
+        @include font-style(16, 700, rem(28));
+        color: rgb(39, 46, 64);
+      }
+
+      .stars {
+        display: grid;
+        grid-auto-flow: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+        color: rgb(57, 110, 255);
+        font-size: rem(12);
+        line-height: rem(12);
+
+        .star-empty {
+          color: rgb(233, 237, 244);
+        }
+
+        .svg-box {
+          @include svgBox(rem(12));
+        }
+      }
+    }
+
+    .info-footer {
+      display: grid;
+      gap: rem(4);
+      justify-items: start;
+
+      .review-content {
+        @include font-style(14, 400, rem(24));
+        color: rgb(39, 46, 64);
+      }
+
+      .price-box {
+        @include flexBox(flex, start, center, row, rem(4));
+        @include font-style(14, 700, rem(24));
+        color: rgb(39, 46, 64);
+
+        .price {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .image-box {
+    .img-wrap {
+      position: relative;
+      width: rem(80);
+      aspect-ratio: 1 / 1;
+      cursor: pointer;
+      @include flexBox(flex, center, center);
+      border-radius: rem(4);
+      overflow: hidden;
+      background-color: rgb(247, 248, 251);
+    }
+  }
+}

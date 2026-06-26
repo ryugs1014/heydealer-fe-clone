@@ -5,12 +5,23 @@ import s from './Footer.module.scss';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const NAV_GROUPS = [
+interface NavItem {
+  label: string;
+  href: string;
+  isNewTab?: boolean;
+}
+
+interface NavGroup {
+  category: string;
+  items: NavItem[];
+}
+
+const NAV_GROUPS: NavGroup[] = [
   {
     category: '서비스',
     items: [
       { label: '내차팔기', href: '/sell' },
-      { label: '폐차 견적받기', href: '/scrap-car' },
+      { label: '폐차 견적받기', href: '/pecha', isNewTab: true },
       { label: '중고차 숨은 이력', href: '/total-info' },
     ],
   },
@@ -60,11 +71,11 @@ export default function Footer() {
       return s['header--buy'];
     }
     // 3. 기타 다른 페이지들
-    if (pathname.startsWith('/sell-car')) {
+    if (pathname.startsWith('/sell')) {
       return s['header--sell'];
     }
-    if (pathname.startsWith('/scrap-car')) {
-      return s['header--scrap-car'];
+    if (pathname.startsWith('/pecha')) {
+      return s['header--pecha'];
     }
     if (pathname.startsWith('/total-info')) {
       return s['header--total-info'];
@@ -73,6 +84,13 @@ export default function Footer() {
     // 4. 매칭되는 게 없을 때 기본값
     return s['header--default'];
   };
+
+  //Footer Hide
+  const hiddenRoutes = ['/pecha'];
+
+  if (hiddenRoutes.includes(pathname)) {
+    return null;
+  }
 
   return (
     <footer className={`${s['footer']} ${getHeaderVariantClass() || ''}`}>
@@ -84,10 +102,13 @@ export default function Footer() {
             <ul className={s['group-list']}>
               {group.items.map((item, itemIndex) => (
                 <li key={itemIndex}>
+                  {/* 3. Link 컴포넌트에 target 및 rel 속성을 조건부로 추가 */}
                   <Link
                     href={item.href}
                     className={s['nav-link']}
                     onClick={() => setIsMobileMenuOpen(false)}
+                    target={item.isNewTab ? '_blank' : undefined}
+                    rel={item.isNewTab ? 'noopener noreferrer' : undefined}
                   >
                     <button className={s['nav-button']}>{item.label}</button>
                   </Link>

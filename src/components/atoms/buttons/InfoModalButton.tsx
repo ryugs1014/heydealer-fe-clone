@@ -6,9 +6,9 @@ import Star from '/public/img/ui/star.png';
 import Image from 'next/image';
 
 interface InfoModalButtonProps {
-  textBefore?: string; // 강조 텍스트 앞부분 (예: "단순 변심도 ")
-  highlightText?: string; // 강조할 텍스트 (예: "무료 환불")
-  textAfter?: string; // 강조 텍스트 뒷부분 (예: " 가능")
+  textBefore?: string;
+  highlightText?: string;
+  textAfter?: string;
   onClick?: () => void;
   className?: string;
 }

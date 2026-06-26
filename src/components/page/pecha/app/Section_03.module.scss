@@ -1,0 +1,27 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.section-content {
+  padding: rem(40) rem(24);
+  box-sizing: border-box;
+  background-color: var(--color-token-white);
+}
+
+.content-wrap {
+  display: grid;
+  gap: rem(20);
+  justify-items: flex-start;
+  text-align: left;
+
+  .text-wrap {
+    @include font-style(20, 700, rem(32));
+    color: rgb(16, 19, 26);
+  }
+
+  .text-list {
+    display: grid;
+    gap: rem(4);
+    @include font-style(16, 400, rem(28));
+    color: rgb(16, 19, 26);
+  }
+}

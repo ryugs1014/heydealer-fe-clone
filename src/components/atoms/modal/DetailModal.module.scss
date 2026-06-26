@@ -1,0 +1,397 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.modal-overlay {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100dvh;
+  max-width: rem(380);
+  margin: 0 auto;
+  //background-color: rgba(0, 0, 0, 0.6);
+  z-index: 6;
+  overflow: hidden;
+}
+
+.close-modal-bg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100dvh;
+  max-width: rem(380);
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 6;
+  transition: opacity 0.3s ease;
+
+  &.fade-in {
+    opacity: 1;
+  }
+  &.fade-out {
+    opacity: 0;
+    pointer-events: none; /* 클릭 이벤트 방지 */
+  }
+}
+
+.modal-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: rem(380);
+  margin: 0 auto;
+  z-index: 7;
+  background-color: var(--color-token-white);
+  border-radius: rem(16) rem(16) 0 0;
+  max-height: calc(100% - #{rem(24)});
+  display: grid;
+  grid-template-rows: 1fr auto;
+
+  transition: transform 0.15s linear;
+
+  &.slide-right {
+    transform: translateX(100%);
+  }
+  &.slide-down {
+    transform: translateY(100%);
+  }
+  &.visible {
+    transform: translate(0, 0);
+  }
+
+  .modal-header {
+    padding-top: rem(8);
+    @include flexBox(flex, space-between, center);
+
+    .button-section {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: rem(8);
+      height: rem(56);
+      padding: rem(4);
+      box-sizing: border-box;
+    }
+
+    .close-btn,
+    .back-btn {
+      width: rem(48);
+      height: rem(48);
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: rgb(39, 46, 64);
+
+      .svg-box {
+        @include svgBox(rem(24));
+        min-width: rem(24);
+      }
+    }
+  }
+
+  h2 {
+    @include font-style(24, 700, rem(40));
+    color: rgb(39, 46, 64);
+    padding: rem(12) rem(24) 0;
+    box-sizing: border-box;
+  }
+
+  .modal-body {
+  }
+}
+
+.detail-content {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+  overflow: auto;
+  gap: rem(24);
+}
+
+.pecha-section {
+  display: grid;
+  //gap: rem(24);
+
+  .input-section {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: rem(16);
+    padding: rem(24);
+    box-sizing: border-box;
+  }
+
+  .input-wrap {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: rem(8);
+
+    &.radio-input-wrap {
+      display: grid;
+      gap: rem(8);
+      padding: rem(16);
+      border: rem(1) solid rgb(233, 237, 244);
+      border-radius: rem(8);
+      box-sizing: inherit;
+      background-color: rgb(251, 252, 255);
+
+      > label {
+        font-weight: 600;
+        color: rgb(39, 46, 64);
+        cursor: unset;
+      }
+
+      .info-label {
+        @include flexBox(flex, space-between, center, row, rem(4));
+
+        .info-button-wrap {
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+
+          &:hover {
+            .tooltip {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+
+          .info-svg-box {
+            @include svgBox(rem(16));
+            min-width: rem(16);
+            color: rgb(175, 194, 219);
+          }
+
+          .tooltip {
+            position: absolute;
+            top: rem(32);
+            left: rem(-199);
+            background-color: rgb(39, 46, 64);
+            color: var(--color-token-white);
+            padding: rem(16);
+            box-sizing: border-box;
+            border-radius: rem(4);
+            @include font-style(14, 300, rem(24));
+            word-break: keep-all;
+            opacity: 0;
+            visibility: hidden;
+            transition:
+              opacity 0.2s ease,
+              visibility 0.2s ease;
+            z-index: 100;
+            box-shadow: rgba(39, 46, 64, 0.32) 0 rem(2) rem(4) 0;
+            display: grid;
+            gap: rem(4);
+            pointer-events: none;
+            width: rem(240);
+
+            /* 말풍선 꼬리 */
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 100%;
+              left: rem(203);
+              border-width: rem(4);
+              border-style: solid;
+              border-color: transparent transparent var(--color-token-gray-180)
+                transparent;
+            }
+
+            .tooltip-title {
+              @include font-style(15, 700, rem(22));
+            }
+          }
+        }
+      }
+    }
+
+    > label {
+      @include font-style(14, 400, rem(24));
+      color: rgb(134, 154, 183);
+    }
+
+    .input-box {
+      width: 100%;
+      padding: rem(14) rem(16);
+      border-radius: rem(4);
+      border: rem(1) solid rgb(233, 237, 244);
+      box-sizing: border-box;
+      background-color: var(--color-token-white);
+      box-shadow: rgba(39, 46, 64, 0.08) 0 rem(2) rem(4) 0;
+
+      &:hover {
+        border-color: rgb(134, 154, 183);
+        background-color: rgb(251, 252, 255);
+      }
+
+      &:focus-within {
+        border-color: var(--color-point-heydealer);
+        background-color: var(--color-token-white);
+      }
+    }
+
+    input {
+      all: unset;
+      width: 100%;
+      @include font-style(16, 700, rem(28));
+      color: rgb(39, 46, 64);
+
+      &::placeholder {
+        @include font-style(16, 400, rem(28));
+        color: rgb(204, 216, 232);
+      }
+
+      &:focus {
+        border-color: rgb(57, 110, 255);
+      }
+    }
+
+    &.error {
+      input {
+        border-color: rgb(255, 76, 76);
+      }
+    }
+
+    .error-wrap {
+      display: flex;
+      gap: rem(4);
+
+      .error-svg-box {
+        @include svgBox(rem(16));
+        min-width: rem(16);
+      }
+    }
+
+    .error-text {
+      @include font-style(14, 400, rem(24));
+      color: rgb(134, 154, 183);
+
+      b {
+        font-weight: 700;
+      }
+    }
+  }
+
+  /* 라디오 버튼들을 가로로 나열 */
+  .radio-group {
+    text-align: left;
+  }
+
+  /* 라디오 라벨 기본 스타일 */
+  .radio-label {
+    @include flexBox(flex, start, center);
+    gap: rem(12);
+    font-family: var(--heydealer-ui-default-font-family);
+    width: 100%;
+    padding: rem(14) rem(16);
+    border: rem(1) solid rgb(233, 237, 244);
+    box-sizing: border-box;
+    background-color: var(--color-token-white);
+    box-shadow: rgba(39, 46, 64, 0.08) 0 rem(2) rem(4) 0;
+    cursor: pointer;
+    user-select: none;
+
+    &:first-child {
+      border-radius: rem(4) rem(4) 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 rem(4) rem(4);
+    }
+
+    &:hover {
+      border-color: rgb(134, 154, 183);
+      background-color: rgb(251, 252, 255);
+
+      .custom-radio {
+        border-color: rgb(134, 154, 183);
+      }
+    }
+
+    &.checked {
+      border-color: var(--color-point-heydealer);
+      background-color: rgba(57, 110, 255, 0.08);
+    }
+
+    > input {
+      display: none;
+    }
+  }
+
+  /* 실제 기본 라디오 인풋은 눈에 안 보이게 숨김 */
+  .hidden-radio {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* 내가 직접 그리는 커스텀 라디오 동그라미 */
+  .custom-radio {
+    width: rem(24);
+    height: rem(24);
+    border-radius: rem(100);
+    border: rem(1) solid rgb(204, 216, 232);
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  /* 라디오가 체크되었을 때 커스텀 라디오의 디자인 */
+  .hidden-radio:checked + .custom-radio {
+    border-color: rgb(57, 110, 255);
+
+    /* 안쪽에 채워지는 동그라미 */
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: rem(16);
+      height: rem(16);
+      background-color: rgb(57, 110, 255);
+      border-radius: rem(50);
+    }
+  }
+}
+
+.button-section {
+  position: sticky;
+  bottom: 0;
+  padding: rem(16);
+  box-sizing: border-box;
+  display: grid;
+  gap: rem(16);
+  background-color: var(--color-token-white);
+
+  .info-text {
+    @include font-style(14, 400, rem(24));
+    color: rgb(39, 46, 64);
+    text-align: center;
+  }
+}
+
+.submit-button {
+  position: relative;
+  @include flexBox(flex, center, center, row, rem(8));
+  @include font-style(16, 700, rem(24));
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(39, 46, 64);
+  padding: rem(16);
+  box-sizing: border-box;
+  border-radius: rem(4);
+  overflow: hidden;
+  user-select: none;
+  transition: 0.3s ease-in-out;
+  will-change: background-color, box-shadow;
+  box-shadow: 0 rem(2) rem(4) 0 rgba(39, 46, 64, 0.32);
+
+  &:hover {
+    background-color: rgb(65, 77, 107);
+  }
+
+  .svg-box {
+    @include svgBox(rem(24));
+    min-width: rem(24);
+  }
+}

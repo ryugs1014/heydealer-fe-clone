@@ -1,0 +1,73 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.section-content {
+  padding: rem(40) rem(24);
+  box-sizing: border-box;
+  background-color: var(--color-token-white);
+}
+
+.content-wrap {
+  display: grid;
+  gap: rem(20);
+  justify-items: flex-start;
+  text-align: left;
+
+  .text-wrap {
+    @include font-style(20, 700, rem(32));
+    color: rgb(16, 19, 26);
+  }
+
+  .text-list {
+    display: grid;
+    gap: rem(4);
+
+    .text-title {
+      display: grid;
+      grid-template-columns: rem(16) 1fr;
+      gap: rem(8);
+      align-items: center;
+
+      .badge {
+        @include flexBox(flex, center, center);
+        width: rem(16);
+        height: rem(16);
+        border-radius: rem(50);
+        @include font-style(10, 400, rem(16));
+        color: var(--color-token-white);
+        background-color: rgb(57, 110, 255);
+      }
+
+      .title {
+        @include font-style(16, 600, rem(28));
+        color: rgb(57, 110, 255);
+      }
+    }
+
+    .text-detail {
+      display: grid;
+      grid-template-columns: rem(16) 1fr;
+      gap: rem(8);
+      align-items: flex-start;
+
+      .detail-line {
+        display: grid;
+        gap: rem(4);
+        justify-items: center;
+
+        > span {
+          width: rem(2);
+          height: rem(2);
+          background: rgb(204, 216, 232);
+          border-radius: rem(10);
+        }
+      }
+
+      .detail {
+        @include font-style(14, 400, rem(24));
+        color: rgb(39, 46, 64);
+        white-space: pre-wrap;
+      }
+    }
+  }
+}

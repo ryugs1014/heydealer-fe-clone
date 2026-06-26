@@ -1,0 +1,192 @@
+@use '@/styles/mixins' as *;
+@import '@/styles/rem';
+
+.detail-content {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+  overflow: auto;
+  gap: rem(24);
+
+  &.modal-option {
+    .input-section {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      gap: rem(16);
+      padding: rem(24);
+      box-sizing: border-box;
+    }
+
+    .button-section {
+      position: sticky;
+      bottom: 0;
+      padding: rem(16);
+      box-sizing: border-box;
+      display: grid;
+      gap: rem(16);
+      background-color: var(--color-token-white);
+
+      .svg-box {
+        display: none;
+      }
+    }
+  }
+}
+
+.pecha-section {
+  display: grid;
+  //gap: rem(24);
+
+  .input-section {
+    display: grid;
+    gap: rem(12);
+  }
+
+  .input-wrap {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: rem(8);
+
+    > label {
+      @include font-style(14, 400, rem(24));
+      color: rgb(134, 154, 183);
+    }
+
+    .input-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      width: 100%;
+      border-radius: rem(4);
+      border: rem(1) solid rgb(233, 237, 244);
+      box-sizing: border-box;
+      background-color: var(--color-token-white);
+      box-shadow: rgba(39, 46, 64, 0.08) 0 rem(2) rem(4) 0;
+
+      .close-svg-box {
+        @include svgBox(rem(16));
+        min-width: rem(16);
+        color: rgb(204, 216, 232);
+        padding: rem(16);
+      }
+
+      &:hover {
+        border-color: rgb(134, 154, 183);
+        background-color: rgb(251, 252, 255);
+      }
+
+      &:focus-within {
+        border-color: var(--color-point-heydealer);
+        background-color: var(--color-token-white);
+      }
+    }
+
+    input {
+      all: unset;
+      width: 100%;
+      @include font-style(16, 700, rem(28));
+      color: rgb(39, 46, 64);
+      padding: rem(14) rem(16);
+      box-sizing: border-box;
+
+      &::placeholder {
+        @include font-style(16, 400, rem(28));
+        color: rgb(204, 216, 232);
+      }
+
+      &:focus {
+        border-color: rgb(57, 110, 255);
+      }
+    }
+
+    &.error {
+      .input-box {
+        &:focus-within {
+          border-color: rgb(255, 76, 76);
+        }
+      }
+    }
+
+    .error-wrap {
+      display: flex;
+      gap: rem(4);
+
+      .error-svg-box {
+        @include svgBox(rem(16));
+        min-width: rem(16);
+        height: rem(24);
+        color: rgb(255, 88, 93);
+      }
+    }
+
+    .error-text {
+      @include font-style(14, 400, rem(24));
+      color: rgb(134, 154, 183);
+
+      b {
+        font-weight: 700;
+      }
+    }
+
+    /* 판매지역 버튼 (input룩) */
+    .location-button {
+      all: unset;
+      @include flexBox(flex, start, center);
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      @include font-style(16, 400, rem(28));
+      color: rgb(204, 216, 232);
+      padding: rem(14) rem(16);
+      box-sizing: border-box;
+
+      .svg-box {
+        @include svgBox(rem(16));
+        min-width: rem(16);
+        margin-right: rem(8);
+        color: rgb(204, 216, 232);
+      }
+
+      &::placeholder {
+        @include font-style(16, 400, rem(28));
+        color: rgb(204, 216, 232);
+      }
+
+      &:focus {
+        border-color: rgb(57, 110, 255);
+      }
+
+      &.selected {
+        @include font-style(16, 700, rem(28));
+        color: rgb(39, 46, 64);
+      }
+    }
+  }
+}
+
+.submit-button {
+  position: relative;
+  @include flexBox(flex, center, center, row, rem(8));
+  @include font-style(16, 700, rem(24));
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(39, 46, 64);
+  padding: rem(16);
+  box-sizing: border-box;
+  border-radius: rem(4);
+  overflow: hidden;
+  user-select: none;
+  transition: 0.3s ease-in-out;
+  will-change: background-color, box-shadow;
+  box-shadow: 0 rem(2) rem(4) 0 rgba(39, 46, 64, 0.32);
+
+  &:hover {
+    background-color: rgb(65, 77, 107);
+  }
+
+  .svg-box {
+    @include svgBox(rem(16));
+    min-width: rem(16);
+  }
+}
