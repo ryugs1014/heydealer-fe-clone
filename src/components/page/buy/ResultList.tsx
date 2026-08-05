@@ -9,10 +9,15 @@ import FavoriteButton from '@/components/atoms/buttons/FavoriteButton';
 
 interface ResultListProps {
   cars: any[];
-  viewType: 'grid' | 'list' | 'simple'; // 🌟 상위 뷰 타입 주입 수신
+  viewType: 'grid' | 'list' | 'simple';
+  isLoading?: boolean;
 }
 
-export default function ResultList({ cars, viewType }: ResultListProps) {
+export default function ResultList({
+  cars,
+  viewType,
+  isLoading,
+}: ResultListProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef<boolean>(false);
   const hasDragged = useRef<boolean>(false); // 🌟 드래그 여부 판별용 ref
@@ -79,6 +84,46 @@ export default function ResultList({ cars, viewType }: ResultListProps) {
     animationRef.current = requestAnimationFrame(applyMomentum);
   };
 
+  if (isLoading) {
+    return (
+      <div className={`${s['result-list-container']} ${s[`view-${viewType}`]}`}>
+        <div className={s['grid-layout']}>
+          {Array.from({ length: 12 }).map((_, idx) => (
+            <article
+              key={idx}
+              className={`${s['product-card']} ${s[`card-${viewType}`]} ${s['skeleton-card']}`}
+            >
+              <div className={s['card-link-area']}>
+                {/* 단순형 뷰가 아닐 때 썸네일 스켈레톤 노출 */}
+                {viewType !== 'simple' && (
+                  <div className={s['thumbnail-area']}>
+                    <div
+                      className={`${s['img-wrap']} img-wrap ${s['skeleton-box']}`}
+                    />
+                  </div>
+                )}
+
+                <div className={s['info-container']}>
+                  <div className={s['info-row-top']}>
+                    <div className={`${s['skeleton-text']} ${s['sk-title']}`} />
+                    <div className={`${s['skeleton-text']} ${s['sk-spec']}`} />
+                  </div>
+                  <div className={s['info-row-bottom']}>
+                    <div className={`${s['skeleton-text']} ${s['sk-price']}`} />
+                    <div
+                      className={`${s['skeleton-text']} ${s['sk-factory']}`}
+                    />
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // 🌟 2. 로딩이 완료되었는데 차가 없는 경우
   if (cars.length === 0) {
     return (
       <div className={s['empty-message']}>
@@ -118,104 +163,126 @@ export default function ResultList({ cars, viewType }: ResultListProps) {
             ? `${(mileageValue / 10000).toFixed(1)}만km`
             : '0만km';
 
+          // 💡 공통 카드 내용물 (UI) 변수화
+          const CardInnerContent = (
+            <>
+              {/* 단순형(simple) 뷰어일 때는 썸네일 노출 제거 */}
+              <div className={s['thumbnail-area']}>
+                <div className={`${s['img-wrap']} img-wrap`}>
+                  {info?.image_urls?.[0] ? (
+                    <Image
+                      src={info.image_urls[0]}
+                      alt={info.model_name}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className={s['dummy-img']}>이미지 준비중</div>
+                  )}
+                </div>
+
+                {viewType !== 'list' && info?.image_urls?.[1] && (
+                  <div className={`${s['sub-img-wrap']} img-wrap`}>
+                    <div className={s['secondary-thumb']}>
+                      <Image
+                        src={info.image_urls[1]}
+                        alt="서브"
+                        fill
+                        sizes="15vw"
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <div className={s['info-container']}>
+                <div className={s['info-row-top']}>
+                  <h3 className={s['item-title']}>
+                    {info?.model_name} {info?.grade_part_name}{' '}
+                    {info?.detail_name}
+                  </h3>
+
+                  <p className={s['item-spec']}>
+                    {info?.year}년 ({formattedRegDate}) ㆍ {formattedMileage}
+                  </p>
+                </div>
+
+                <div className={s['info-row-bottom']}>
+                  <div className={s['price-block']}>
+                    <span className={s['item-price']}>
+                      {item.price?.toLocaleString()}만원
+                    </span>
+                    {viewType === 'grid' &&
+                      info?.tags &&
+                      info.tags.length > 0 && (
+                        <div className={s['tags-container']}>
+                          {info.tags.map((tag: any, idx: number) => (
+                            <span
+                              key={idx}
+                              className={`${s['tag-badge']} ${s[tag.style || 'gray']}`}
+                            >
+                              {tag.text}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                  </div>
+                  <div className={s['price-block']}>
+                    <span className={s['factory-price']}>
+                      신차 {info?.factory_price?.toLocaleString()}
+                    </span>
+                    {viewType === 'simple' &&
+                      info?.tags &&
+                      info.tags.length > 0 && (
+                        <div className={s['tags-container']}>
+                          {info.tags.map((tag: any, idx: number) => (
+                            <span
+                              key={idx}
+                              className={`${s['tag-badge']} ${s[tag.style || 'gray']}`}
+                            >
+                              {tag.text}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                  </div>
+                </div>
+              </div>
+            </>
+          );
+
           return (
             <article
               key={item.hash_id}
               className={`${s['product-card']} ${s[`card-${viewType}`]}`}
             >
+              {/* 💡 1. 데스크탑용 링크 (새 탭) */}
               <Link
                 href={`/buy/${item.hash_id}`}
-                target="_blank" // 새 탭에서 열기
-                rel="noopener noreferrer" // 보안 속성
-                className={s['card-link-area']} // 클릭 영역을 넓히기 위한 클래스 (SCSS에 추가 권장)
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${s['card-link-area']} ${s['desktop-link']}`}
                 onClick={(e) => {
                   if (hasDragged.current) {
                     e.preventDefault(); // 드래그 중이었다면 페이지 이동 취소
                   }
                 }}
               >
-                {/* 단순형(simple) 뷰어일 때는 썸네일 노출 제거 */}
-                <div className={s['thumbnail-area']}>
-                  <div className={`${s['img-wrap']} img-wrap`}>
-                    {info?.image_urls?.[0] ? (
-                      <Image
-                        src={info.image_urls[0]}
-                        alt={info.model_name}
-                        fill
-                        sizes="(max-width: 768px) 50vw, 33vw"
-                      />
-                    ) : (
-                      <div className={s['dummy-img']}>이미지 준비중</div>
-                    )}
-                  </div>
+                {CardInnerContent}
+              </Link>
 
-                  {viewType !== 'list' && info?.image_urls?.[1] && (
-                    <div className={`${s['sub-img-wrap']} img-wrap`}>
-                      <div className={s['secondary-thumb']}>
-                        <Image
-                          src={info.image_urls[1]}
-                          alt="서브"
-                          fill
-                          sizes="15vw"
-                        />
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                <div className={s['info-container']}>
-                  <div className={s['info-row-top']}>
-                    <h3 className={s['item-title']}>
-                      {info?.model_name} {info?.grade_part_name}{' '}
-                      {info?.detail_name}
-                    </h3>
-
-                    <p className={s['item-spec']}>
-                      {info?.year}년 ({formattedRegDate}) ㆍ {formattedMileage}
-                    </p>
-                  </div>
-
-                  <div className={s['info-row-bottom']}>
-                    <div className={s['price-block']}>
-                      <span className={s['item-price']}>
-                        {item.price?.toLocaleString()}만원
-                      </span>
-                      {viewType === 'grid' &&
-                        info?.tags &&
-                        info.tags.length > 0 && (
-                          <div className={s['tags-container']}>
-                            {info.tags.map((tag: any, idx: number) => (
-                              <span
-                                key={idx}
-                                className={`${s['tag-badge']} ${s[tag.style || 'gray']}`}
-                              >
-                                {tag.text}
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                    </div>
-                    <div className={s['price-block']}>
-                      <span className={s['factory-price']}>
-                        신차 {info?.factory_price?.toLocaleString()}
-                      </span>
-                      {viewType === 'simple' &&
-                        info?.tags &&
-                        info.tags.length > 0 && (
-                          <div className={s['tags-container']}>
-                            {info.tags.map((tag: any, idx: number) => (
-                              <span
-                                key={idx}
-                                className={`${s['tag-badge']} ${s[tag.style || 'gray']}`}
-                              >
-                                {tag.text}
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                    </div>
-                  </div>
-                </div>
+              {/* 💡 2. 모바일용 링크 (현재 창) */}
+              <Link
+                href={`/buy/${item.hash_id}`}
+                target="_self"
+                className={`${s['card-link-area']} ${s['mobile-link']}`}
+                onClick={(e) => {
+                  if (hasDragged.current) {
+                    e.preventDefault(); // 드래그 중이었다면 페이지 이동 취소
+                  }
+                }}
+              >
+                {CardInnerContent}
               </Link>
 
               <FavoriteButton

@@ -297,6 +297,7 @@ export default function Car360Viewer({
         ref={containerRef}
       >
         <div
+          className={s['viewer-aspect']}
           onMouseDown={handleMouseDown}
           style={{
             position: 'relative',

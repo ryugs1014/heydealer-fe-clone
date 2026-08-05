@@ -5,8 +5,19 @@
   position: sticky;
   bottom: 0;
   width: 100%;
+  transform: translateY(100%);
   box-sizing: border-box;
   z-index: 2;
+  animation: banner-up 0.5s 0s linear forwards;
+}
+
+@keyframes banner-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .sticky-banner-wrap {
@@ -21,6 +32,7 @@
   @include flexBox(flex, space-between, center);
   max-width: rem(912);
   margin: 0 auto;
+  padding: 0 rem(40);
 }
 
 .text-wrap {
@@ -34,10 +46,61 @@
   .sub-text {
     @include font-style(15, 400, rem(22));
   }
+
+  .mobile-button {
+    display: none;
+  }
 }
 
 .svg-box {
   @include svgBox(rem(96));
   padding: rem(8);
   box-sizing: border-box;
+}
+
+@media (max-width: rem(991)) {
+  .sticky-banner-container {
+    position: fixed;
+  }
+
+  .sticky-banner-wrap {
+    background: unset;
+    box-shadow: unset;
+  }
+
+  .content-wrap {
+    padding: 0 rem(16);
+    max-width: 100%;
+  }
+
+  .text-wrap {
+    width: 100%;
+
+    .main-text {
+      display: none;
+    }
+
+    .sub-text {
+      display: none;
+    }
+
+    .mobile-button {
+      @include flexBox(flex, center, center);
+      width: 100%;
+      height: rem(52);
+      padding: 0 rem(24);
+      border-radius: rem(4);
+      box-sizing: border-box;
+      background-color: var(--color-point-heydealer);
+    }
+    .mobile-text {
+      @include font-style(15, 700, rem(22));
+      text-align: center;
+      color: var(--color-token-white);
+    }
+  }
+
+  .svg-box {
+    display: none;
+  }
 }

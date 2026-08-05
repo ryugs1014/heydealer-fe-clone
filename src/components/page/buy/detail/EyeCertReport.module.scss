@@ -94,3 +94,46 @@
     @include svgBox(rem(44));
   }
 }
+
+@media (max-width: rem(1500)) {
+  .cert-report-wrapper {
+    border-radius: 0;
+  }
+
+  .report-list {
+    display: grid;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: start;
+    gap: rem(8);
+
+    overflow: auto visible;
+
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    scroll-padding-left: rem(24);
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    margin: 0 rem(-24);
+
+    padding: 0 rem(24);
+    padding-inline-end: 0;
+
+    .report-item {
+      width: rem(240);
+      scroll-snap-align: start;
+
+      &:last-child {
+        margin-right: rem(24);
+      }
+    }
+  }
+}

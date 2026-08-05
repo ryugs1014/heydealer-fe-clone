@@ -28,6 +28,41 @@
         max-width: rem(452);
         aspect-ratio: 1506 / 1950;
       }
+      .mobile-img-wrap {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: rem(991)) {
+  .section-container {
+    padding: rem(72) 0 0;
+
+    .section-wrap {
+      @include flexBox(flex, start, start, column, rem(24));
+
+      .text-top {
+        @include font-style(28, 700, rem(38));
+      }
+
+      .img-container {
+        width: 100%;
+        @include flexBox(flex, center, start);
+        padding-right: rem(16);
+        height: rem(339);
+        overflow: hidden;
+
+        .img-wrap {
+          display: none;
+        }
+        .mobile-img-wrap {
+          display: block;
+          width: 100vw;
+          aspect-ratio: 1420 / 2600;
+          max-width: rem(220);
+        }
+      }
     }
   }
 }

@@ -135,7 +135,6 @@ export default function SectionPecha() {
       <div className={s['section-bg']} />
 
       <div className={s['section-flex-wrap']}>
-        {/* ... (기존 sticky 내용 유지) ... */}
         <div className={s['section-sticky-container']}>
           <div className={s['section-sticky-wrap']}>
             <div className={s['section-sticky-content']}>

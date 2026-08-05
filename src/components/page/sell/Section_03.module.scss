@@ -8,7 +8,7 @@
     display: grid;
     justify-items: center;
     text-align: center;
-    padding: rem(80) 0;
+    padding: rem(80) rem(40);
     box-sizing: border-box;
     margin: 0 auto;
 
@@ -37,6 +37,32 @@
 
       .video-element {
         height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: rem(991)) {
+  .section-container {
+    .section-wrap {
+      justify-items: flex-start;
+      text-align: left;
+      padding: rem(72) rem(32) rem(32);
+
+      .text-wrap {
+        display: grid;
+        justify-items: flex-start;
+      }
+
+      .text-top {
+        @include font-style(28, 700, rem(38));
+      }
+
+      .video-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        max-height: rem(256);
       }
     }
   }

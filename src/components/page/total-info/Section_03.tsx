@@ -6,7 +6,7 @@ import Container from '@/components/layout/Container';
 export default function Section_03() {
   return (
     <div className={s['section-container']}>
-      <Container size={'sm-min'}>
+      <Container size={'sm-slide'}>
         <div className={s['section-wrap']}>
           <div className={s['text-container']}>
             <div className={s['text-wrap']}>

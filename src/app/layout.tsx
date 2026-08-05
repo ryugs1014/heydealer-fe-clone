@@ -22,10 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
-        <StickyBanner />
+        <div id="app-wrapper" style={{ overflowX: 'clip', width: '100%' }}>
+          <Header />
+          {children}
+          <Footer />
+          <StickyBanner />
+        </div>
       </body>
     </html>
   );

@@ -49,3 +49,15 @@
     transform: rotate(-90deg);
   }
 }
+
+@media (max-width: rem(1500)) {
+  .info-modal-button {
+    padding: rem(16);
+    @include flexBox(flex, center, center);
+    background-color: rgba(13, 13, 14, 0.05);
+
+    .svg-box {
+      display: none;
+    }
+  }
+}

@@ -66,3 +66,9 @@
     background-color: rgba(13, 13, 14, 0.05);
   }
 }
+
+@media (max-width: rem(1500)) {
+  .service-section-wrapper {
+    display: none;
+  }
+}

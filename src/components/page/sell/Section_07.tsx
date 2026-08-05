@@ -8,10 +8,12 @@ import SectionImage01 from '/public/img/sell/desktop-section7-01.png';
 import SectionImage02 from '/public/img/sell/desktop-section7-02.png';
 import SectionImage03 from '/public/img/sell/desktop-section7-03.png';
 
+import DraggableContainer from '@/components/common/slide/DraggableContainer';
+
 export default function Section_07() {
   return (
     <div className={s['section-container']}>
-      <Container size={'sm-min'}>
+      <Container size={'sm-slide'}>
         <div className={s['section-wrap']}>
           <div className={s['text-wrap']}>
             <span className={s['text-top']}>
@@ -21,7 +23,7 @@ export default function Section_07() {
             </span>
           </div>
 
-          <div className={s['box-container']}>
+          <DraggableContainer className={s['box-container']}>
             <div className={s['box-wrap']}>
               <span className={s['box-header']}>부당감가 보상제</span>
               <div className={s['box-img']}>
@@ -60,7 +62,7 @@ export default function Section_07() {
                 도움을 요청하세요.
               </span>
             </div>
-          </div>
+          </DraggableContainer>
         </div>
       </Container>
     </div>

@@ -65,6 +65,7 @@
   height: fit-content;
   min-height: 100%;
   margin: 0 auto;
+  //padding-left: rem(40);
 }
 
 .section-sticky-container {
@@ -295,5 +296,35 @@
     color: rgb(39, 46, 64);
     padding: rem(12) rem(24) 0;
     box-sizing: border-box;
+  }
+}
+
+@media (max-width: rem(1103)) {
+  .section-sticky-container {
+    display: none;
+  }
+
+  .section-flex-wrap {
+    width: 100%;
+  }
+
+  .section-app-container {
+    width: 100%;
+  }
+
+  .fixed-button-container {
+    max-width: 100%;
+  }
+
+  .modal-overlay {
+    max-width: 100%;
+  }
+
+  .close-modal-bg {
+    max-width: 100%;
+  }
+
+  .modal-content {
+    max-width: 100%;
   }
 }

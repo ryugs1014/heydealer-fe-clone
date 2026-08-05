@@ -26,17 +26,20 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
 
+  // --- 드래그를 위한 상태 추가 ---
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
   const handleScroll = () => {
     if (!trackRef.current) return;
     const { scrollLeft, scrollWidth, clientWidth } = trackRef.current;
-
     setIsAtStart(scrollLeft <= 0);
-
     setIsAtEnd(Math.ceil(scrollLeft + clientWidth) >= scrollWidth - 1);
   };
 
   useEffect(() => {
-    handleScroll(); // 초기 렌더링 시 확인
+    handleScroll();
     window.addEventListener('resize', handleScroll);
     return () => window.removeEventListener('resize', handleScroll);
   }, [reviews]);
@@ -89,8 +92,28 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
     }
   };
 
+  // --- 드래그 이벤트 핸들러 추가 ---
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!trackRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - trackRef.current.offsetLeft);
+    setScrollLeft(trackRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => setIsDragging(false);
+  const handleMouseUp = () => setIsDragging(false);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !trackRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - trackRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    trackRef.current.scrollLeft = scrollLeft - walk;
+  };
+
   return (
     <div className={s['slider-wrap']}>
+      {/* nav-buttons 영역 */}
       <div className={s['nav-buttons']}>
         <button
           onClick={handlePrev}
@@ -114,9 +137,13 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
 
       <div className={s['slider-container']}>
         <div
-          className={s['slider-track']}
+          className={`${s['slider-track']} ${isDragging ? s['active'] : ''}`}
           ref={trackRef}
           onScroll={handleScroll}
+          onMouseDown={handleMouseDown}
+          onMouseLeave={handleMouseLeave}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
         >
           {reviews.map((review) => (
             <div key={review.id} className={s['review-slide']}>
@@ -124,7 +151,6 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
                 <div className={s['info-box']}>
                   <div className={s['info-header']}>
                     <h3 className={s['model-name']}>{review.modelName}</h3>
-
                     <span className={s['stars']}>
                       {renderStars(review.rating)}
                     </span>
@@ -132,7 +158,6 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
 
                   <div className={s['info-footer']}>
                     <p className={s['review-content']}>{review.content}</p>
-
                     <div className={s['price-box']}>
                       판매가
                       <span className={s['price']}>
@@ -149,9 +174,8 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
                       alt={review.modelName}
                       fill
                       sizes="10vw"
-                      style={{
-                        objectFit: 'cover',
-                      }}
+                      style={{ objectFit: 'cover' }}
+                      draggable={false} /* 💡 이미지 드래그 끊김 방지 */
                     />
                   </div>
                 </div>

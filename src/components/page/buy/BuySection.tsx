@@ -51,6 +51,8 @@ export default function BuySection() {
   const [isFavoriteModalOpen, setIsFavoriteModalOpen] =
     useState<boolean>(false);
 
+  const [isLeftFilterOpen, setIsLeftFilterOpen] = useState<boolean>(false);
+
   useEffect(() => {
     async function initFetch() {
       try {
@@ -107,6 +109,32 @@ export default function BuySection() {
     if (!selectedBrandId) return null;
     return brandMap[selectedBrandId] || null;
   }, [selectedBrandId, brandMap]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const mediaQuery = window.matchMedia('(max-width: 1500px)');
+
+    const handleResize = (e: MediaQueryListEvent | MediaQueryList) => {
+      if (e.matches) {
+        // 1500px 이하일 때는 강제로 list 뷰 설정
+        setViewType('grid');
+      } else {
+        // 1500px 초과일 때 기본값인 grid로 복구하고 싶다면 아래 주석을 해제하세요.
+        // setViewType('grid');
+      }
+    };
+
+    // 마운트 시점에 현재 화면 크기 확인 후 즉시 적용
+    handleResize(mediaQuery);
+
+    // 리사이즈 이벤트 리스너 등록
+    mediaQuery.addEventListener('change', handleResize);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleResize);
+    };
+  }, []);
 
   // 🌟 3. 데이터 필터링 조건 전용 헬퍼 함수 (Live Count 연산과 공유)
   const checkFilterMatch = (car: any, currentFilters: FilterState) => {
@@ -236,22 +264,6 @@ export default function BuySection() {
     return result;
   }, [favoriteCars, modalSortBy]);
 
-  if (isLoading) {
-    return (
-      <div style={{ padding: '100px 0', textAlign: 'center' }}>
-        데이터를 불러오는 중입니다...
-      </div>
-    );
-  }
-
-  if (isLoading) {
-    return (
-      <div style={{ padding: '100px 0', textAlign: 'center' }}>
-        데이터를 불러오는 중입니다...
-      </div>
-    );
-  }
-
   return (
     <section className={s['buy-section']}>
       <Container size={'md'}>
@@ -262,17 +274,25 @@ export default function BuySection() {
               <AdCardList />
             </div>
             <span className={s['line']} />
-            <LeftFilter
-              allBrands={allBrandsList}
-              currentBrandDetail={currentBrandDetail}
-              selectedModelId={selectedModelId}
-              onSelectBrand={setSelectedBrandId}
-              onSelectModel={setSelectedModelId}
-              onClearBrand={() => {
-                setSelectedBrandId(null);
-                setSelectedModelId(null);
-              }}
-            />
+
+            <div
+              className={`${s['modal-overlay']} ${isLeftFilterOpen ? s['active'] : ''}`}
+            >
+              <div className={s['modal-content']}>
+                <LeftFilter
+                  allBrands={allBrandsList}
+                  currentBrandDetail={currentBrandDetail}
+                  selectedModelId={selectedModelId}
+                  onSelectBrand={setSelectedBrandId}
+                  onSelectModel={setSelectedModelId}
+                  onClearBrand={() => {
+                    setSelectedBrandId(null);
+                    setSelectedModelId(null);
+                  }}
+                  onClose={() => setIsLeftFilterOpen(false)}
+                />
+              </div>
+            </div>
           </aside>
 
           <div className={s['right-content']}>
@@ -289,10 +309,15 @@ export default function BuySection() {
                   globalFilters={filters}
                   onApplyFilters={setFilters}
                   checkFilterMatch={checkFilterMatch}
+                  onOpenFilter={() => setIsLeftFilterOpen(true)}
                 />
 
                 {/* 동적 뷰타입 클래스를 전달받는 리스트 컴포넌트 */}
-                <ResultList cars={filteredAndSortedCars} viewType={viewType} />
+                <ResultList
+                  cars={filteredAndSortedCars}
+                  viewType={viewType}
+                  isLoading={isLoading}
+                />
               </div>
 
               <div className={s['sticky-wrap']}>

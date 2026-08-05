@@ -160,3 +160,37 @@
     }
   }
 }
+
+@media (max-width: rem(1103)) {
+  .nav-buttons {
+    pointer-events: none;
+
+    .nav-btn {
+      display: none;
+    }
+  }
+
+  .slider-track {
+    display: grid;
+    grid-auto-flow: column;
+    gap: rem(12);
+    padding: rem(16) rem(24);
+    padding-inline-end: 0;
+    margin: rem(-16) 0;
+    overflow: auto visible;
+    scroll-snap-type: x mandatory; /* 기본적으로 스냅 켜짐 */
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+
+    &::-webkit-scrollbar {
+      display: none; /* Chrome/Safari */
+    }
+
+    /* 💡 핵심: 마우스로 드래그 중(active)일 때는 스냅을 잠시 해제 */
+    &.active {
+      scroll-snap-type: none;
+      cursor: grabbing; /* 드래그 중 마우스 커서 변경 (선택사항) */
+    }
+  }
+}

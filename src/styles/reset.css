@@ -114,6 +114,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* 모든 요소 공간 0, 서체 크기 100%, 세로정렬 baseline, 배경색 투명 */

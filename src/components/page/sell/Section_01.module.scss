@@ -24,8 +24,8 @@
 
       .content-wrap {
         max-width: rem(938);
-        background-color: red;
         margin: 0 auto;
+        padding: 0 rem(32);
 
         .img-wrap {
           position: absolute;
@@ -57,6 +57,46 @@
             .button-img-wrap {
               width: rem(116);
               height: rem(25);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: rem(768)) {
+  .section-container {
+    .video-container {
+      width: 100%;
+      max-height: rem(612);
+      overflow: hidden;
+      @include flexBox(flex, center, center);
+
+      .video-element {
+        //aspect-ratio: 10 / 17;
+        //min-width: rem(360);
+        width: auto;
+        height: 100vh;
+        //max-height: rem(612);
+      }
+    }
+
+    .section-wrap {
+      .content-container {
+        .content-wrap {
+          .img-wrap {
+          }
+
+          .button-wrap {
+            .store-button {
+              width: rem(120);
+              height: rem(46);
+
+              .button-img-wrap {
+                width: rem(93);
+                height: rem(20);
+              }
             }
           }
         }

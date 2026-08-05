@@ -70,6 +70,10 @@
       .title {
         @include font-style(18, 700, rem(26));
       }
+
+      .close-btn {
+        display: none;
+      }
     }
   }
 }
@@ -190,6 +194,107 @@
         @include font-style(12, 400, rem(12));
         color: var(--color-point-heydealer);
       }
+    }
+  }
+}
+
+.all-filter-footer {
+  display: none;
+}
+
+@media (max-width: rem(1500)) {
+  .left-filter {
+    //display: flex;
+    //flex-direction: column;
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: auto minmax(0px, 1fr) auto;
+    gap: 0;
+
+    .filter-header {
+      flex-shrink: 0;
+
+      .title-header-container {
+        @include flexBox(flex, space-between, center);
+        height: rem(56);
+        padding: rem(10) rem(24);
+        box-sizing: border-box;
+
+        .title {
+          display: none;
+        }
+
+        .close-btn {
+          @include flexBox(flex, center, center);
+          width: rem(48);
+          height: rem(48);
+          background: none;
+          border: none;
+          cursor: pointer;
+          color: rgb(39, 46, 64);
+          margin: rem(-8);
+          padding: rem(8);
+
+          .svg-box {
+            @include svgBox(rem(24));
+            min-width: rem(24);
+          }
+        }
+      }
+    }
+  }
+
+  .scroll-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0;
+    padding: rem(24);
+  }
+
+  .filter-body {
+    flex: 1;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    max-height: unset;
+    padding: 0 0 0 rem(8);
+    margin: 0 0 0 rem(-8);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .all-filter-footer {
+    display: grid;
+    gap: rem(8);
+    grid-template-columns: rem(100) 1fr;
+    width: 100%;
+    padding: rem(16);
+    box-sizing: border-box;
+
+    .reset-all-btn {
+      @include flexBox(flex, center, center, row, rem(4));
+      padding: rem(8) rem(12);
+      border: rem(1) solid var(--color-label-normal);
+      border-radius: rem(4);
+      box-sizing: border-box;
+      @include font-style(15, 700, rem(18));
+      height: rem(52);
+      transition: background-color 0.15s ease;
+
+      &:hover {
+        background-color: var(--color-line-divider);
+      }
+    }
+
+    .submit-all-btn {
+      @include flexBox(flex, center, center, row, rem(4));
+      padding: rem(8) rem(12);
+      color: var(--color-token-white);
+      background-color: var(--color-point-heydealer);
+      border-radius: rem(4);
+      box-sizing: border-box;
+      @include font-style(15, 700, rem(18));
+      height: rem(52);
     }
   }
 }

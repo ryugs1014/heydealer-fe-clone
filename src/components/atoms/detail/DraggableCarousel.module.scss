@@ -57,3 +57,9 @@
   @include font-style(12, 400, rem(16));
   z-index: 10;
 }
+
+@media (max-width: rem(1500)) {
+  .carousel-container {
+    grid-auto-columns: rem(200);
+  }
+}

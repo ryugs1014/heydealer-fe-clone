@@ -67,3 +67,9 @@
     color: var(--color-token-white);
   }
 }
+
+@media (max-width: rem(1500)) {
+  .marquee-container {
+    display: none;
+  }
+}

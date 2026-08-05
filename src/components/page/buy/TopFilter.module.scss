@@ -1,6 +1,10 @@
 @use '@/styles/mixins/index' as *;
 @import '@/styles/rem';
 
+.mobile-filter-open-btn {
+  display: none;
+}
+
 .top-filter {
   position: relative;
   z-index: 100;
@@ -397,6 +401,10 @@
   .modal-row {
     @include flexBox(flex, start, start, column, rem(16));
     margin-bottom: rem(20);
+
+    .modal-close-button {
+      display: none;
+    }
   }
 }
 
@@ -470,5 +478,220 @@
       box-shadow: 0 rem(2) rem(6) rgba(0, 0, 0, 0.2);
       cursor: pointer;
     }
+  }
+}
+
+@media (max-width: rem(1500)) {
+  .top-filter {
+    position: relative;
+    z-index: 100;
+
+    /* 모달이 열렸을 때 전체 필터 영역을 Header 위로 확 끌어올림 */
+    &.has-open-modal {
+      z-index: 999999;
+    }
+  }
+
+  .table-filter {
+    padding: 0;
+    height: rem(40);
+
+    .count {
+      @include font-style(13, 400, rem(18));
+    }
+    .custom-select-container {
+      .select-trigger {
+        @include font-style(13, 400, rem(18));
+      }
+    }
+  }
+
+  .option-filter-container {
+    .sticky-wrap {
+      height: rem(52);
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+    }
+
+    .option-filter-wrap {
+      padding: rem(8) rem(16);
+      position: fixed;
+      top: rem(56);
+      left: 0;
+      background-color: var(--color-token-white);
+      width: 100%;
+
+      /* 💡 가로 스와이프 스크롤을 위한 설정 */
+      display: flex;
+      flex-wrap: nowrap; /* 줄바꿈 방지 */
+      overflow-x: auto; /* 가로 스크롤 활성화 */
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch; /* iOS 부드러운 스크롤 */
+      gap: rem(8);
+
+      /* 💡 스크롤바 숨기기 (선택 사항이나 모바일에서 깔끔함) */
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* 자식 요소들이 컨테이너 크기에 맞춰 찌그러지지 않도록 방지 */
+      > * {
+        flex-shrink: 0;
+      }
+    }
+
+    .modal-trigger-wrapper {
+      flex-shrink: 0;
+    }
+
+    .filter-btn-main {
+      display: none;
+    }
+
+    .mobile-filter-open-btn {
+      display: flex;
+    }
+
+    .line {
+      display: none;
+    }
+  }
+
+  .table-filter {
+    .filter-end {
+      .line {
+        display: none;
+      }
+    }
+  }
+
+  .layout-switcher-group {
+    display: none;
+  }
+
+  @keyframes slideUpBottomSheet {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  /* 🌟 2. 배경 오버레이가 부드럽게 나타나는 애니메이션 (선택사항, 함께 쓰면 훨씬 자연스럽습니다) */
+  @keyframes fadeInOverlay {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .filter-modal-window {
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    max-width: unset;
+    border-radius: rem(12) rem(12) 0 0;
+    border: rem(1) solid var(--color-line-normal);
+    box-sizing: border-box;
+    background-color: var(--color-token-white);
+    box-shadow: 0 rem(2) rem(8) 0 rgb(0 0 0 / 12%);
+    z-index: 2;
+    animation: slideUpBottomSheet 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    opacity: 1;
+    pointer-events: auto;
+    animation: fadeInOverlay 0.2s ease-out forwards;
+  }
+
+  .slider-container {
+    .modal-row {
+      @include flexBox(flex, start, start, column, rem(16));
+      margin-bottom: rem(20);
+    }
+  }
+
+  .title-wrapper {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, auto) 1fr;
+    width: 100%;
+    margin-bottom: rem(24);
+  }
+
+  .button-wrapper {
+    @include flexBox(flex, start, center);
+  }
+
+  .modal-close-button {
+    @include flexBox(flex, center, center);
+    width: rem(40);
+    height: rem(40);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(39, 46, 64);
+    margin: rem(-8);
+    padding: rem(8);
+
+    .svg-box {
+      @include svgBox(rem(24));
+      min-width: rem(24);
+    }
+  }
+
+  .modal-footer {
+    display: grid;
+    gap: rem(8);
+    grid-template-columns: auto 1fr;
+    width: 100%;
+    padding: rem(16);
+    box-sizing: border-box;
+
+    .reset-btn {
+      @include flexBox(flex, center, center, row, rem(4));
+      padding: rem(8) rem(24);
+      border: rem(1) solid var(--color-label-normal);
+      border-radius: rem(4);
+      box-sizing: border-box;
+      @include font-style(15, 700, rem(18));
+      height: rem(52);
+      transition: background-color 0.15s ease;
+    }
+    .submit-btn {
+      @include flexBox(flex, center, center, row, rem(4));
+      padding: rem(8) rem(12);
+      color: var(--color-token-white);
+      background-color: var(--color-point-heydealer);
+      border-radius: rem(4);
+      box-sizing: border-box;
+      @include font-style(15, 700, rem(18));
+      height: rem(52);
+    }
+  }
+}
+
+@media (max-width: rem(991)) {
+  .top-filter {
+    padding-left: rem(16);
+    padding-right: rem(16);
   }
 }

@@ -30,6 +30,7 @@ const MOBILE_NAV_GROUPS: NavGroup[] = [
   {
     category: '서비스',
     items: [
+      { label: '내차사기', href: '/' },
       { label: '내차팔기', href: '/sell' },
       { label: '폐차 견적받기', href: '/pecha', isNewTab: true },
       { label: '중고차 숨은 이력', href: '/total-info' },
@@ -96,89 +97,95 @@ export default function Header() {
   }
 
   return (
-    <header className={`${s['header']} ${getHeaderVariantClass() || ''}`}>
-      <div className={s['gnb-container']}>
-        <Link href="/" className={s['logo-link']}>
-          <div className={s['logo-box']}>
-            <Logo width="100%" height="100%" viewBox="0 0 108 17" />
-          </div>
-        </Link>
+    <div
+      className={`${s['header-container']} ${getHeaderVariantClass() || ''}`}
+    >
+      <header className={`${s['header']} ${getHeaderVariantClass() || ''}`}>
+        <div className={s['gnb-container']}>
+          <Link href="/" className={s['logo-link']}>
+            <div className={s['logo-box']}>
+              <Logo width="100%" height="100%" viewBox="0 0 108 17" />
+            </div>
+          </Link>
 
-        <nav className={s['pc-nav']}>
-          {NAV_ITEMS.map((item, index) => {
-            const isActive = pathname === item.href;
+          <nav className={s['pc-nav']}>
+            {NAV_ITEMS.map((item, index) => {
+              const isActive = pathname === item.href;
 
-            return (
-              // 2. 데스크탑 Link 컴포넌트에 target과 rel 속성 조건부 추가
-              <Link
-                key={index}
-                href={item.href}
-                className={s['nav-link']}
-                target={item.isNewTab ? '_blank' : undefined}
-                rel={item.isNewTab ? 'noopener noreferrer' : undefined}
-              >
-                <button
-                  className={`${s['nav-button']} ${isActive ? s['is-active'] : ''}`}
+              return (
+                // 2. 데스크탑 Link 컴포넌트에 target과 rel 속성 조건부 추가
+                <Link
+                  key={index}
+                  href={item.href}
+                  className={s['nav-link']}
+                  target={item.isNewTab ? '_blank' : undefined}
+                  rel={item.isNewTab ? 'noopener noreferrer' : undefined}
                 >
-                  {item.label}
-                </button>
-              </Link>
-            );
-          })}
-        </nav>
+                  <button
+                    className={`${s['nav-button']} ${isActive ? s['is-active'] : ''}`}
+                  >
+                    {item.label}
+                  </button>
+                </Link>
+              );
+            })}
+          </nav>
 
-        <button
-          className={`${s['hamburger-btn']} ${isMobileMenuOpen ? s['is-active'] : ''}`}
-          onClick={() => setIsMobileMenuOpen(true)}
-          aria-label="메뉴 열기"
-        >
-          <MobileMenu width="100%" height="100%" viewBox="0 0 24 24" />
-        </button>
-      </div>
-
-      <div
-        className={`${s['mobile-sidebar']} ${isMobileMenuOpen ? s['is-open'] : ''}`}
-      >
-        <div className={s['gnb-header']}>
           <button
             className={`${s['hamburger-btn']} ${isMobileMenuOpen ? s['is-active'] : ''}`}
-            onClick={() => setIsMobileMenuOpen(false)}
-            aria-label="메뉴 닫기"
+            onClick={() => setIsMobileMenuOpen(true)}
+            aria-label="메뉴 열기"
           >
-            <MobileMenuClose width="100%" height="100%" viewBox="0 0 24 24" />
+            <MobileMenu width="100%" height="100%" viewBox="0 0 24 24" />
           </button>
         </div>
 
-        <nav className={s['mobile-nav']}>
-          {MOBILE_NAV_GROUPS.map((group, groupIndex) => (
-            <div key={groupIndex} className={s['mobile-nav-group']}>
-              <h3 className={s['mobile-group-title']}>{group.category}</h3>
+        <div
+          className={`${s['mobile-sidebar']} ${isMobileMenuOpen ? s['is-open'] : ''}`}
+        >
+          <div className={s['gnb-header']}>
+            <button
+              className={`${s['hamburger-btn']} ${isMobileMenuOpen ? s['is-active'] : ''}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="메뉴 닫기"
+            >
+              <MobileMenuClose width="100%" height="100%" viewBox="0 0 24 24" />
+            </button>
+          </div>
 
-              <ul className={s['mobile-group-list']}>
-                {group.items.map((item, itemIndex) => (
-                  <li key={itemIndex}>
-                    {/* 3. 모바일 Link 컴포넌트에도 동일하게 추가 */}
-                    <Link
-                      href={item.href}
-                      className={s['mobile-nav-link']}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      target={item.isNewTab ? '_blank' : undefined}
-                      rel={item.isNewTab ? 'noopener noreferrer' : undefined}
-                    >
-                      <button className={s['nav-button']}>{item.label}</button>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </nav>
-      </div>
+          <nav className={s['mobile-nav']}>
+            {MOBILE_NAV_GROUPS.map((group, groupIndex) => (
+              <div key={groupIndex} className={s['mobile-nav-group']}>
+                <h3 className={s['mobile-group-title']}>{group.category}</h3>
 
-      <div
-        className={`${s['sidebar-overlay']} ${isMobileMenuOpen ? s['is-active'] : ''}`}
-        onClick={() => setIsMobileMenuOpen(false)}
-      />
-    </header>
+                <ul className={s['mobile-group-list']}>
+                  {group.items.map((item, itemIndex) => (
+                    <li key={itemIndex}>
+                      {/* 3. 모바일 Link 컴포넌트에도 동일하게 추가 */}
+                      <Link
+                        href={item.href}
+                        className={s['mobile-nav-link']}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        target={item.isNewTab ? '_blank' : undefined}
+                        rel={item.isNewTab ? 'noopener noreferrer' : undefined}
+                      >
+                        <button className={s['nav-button']}>
+                          {item.label}
+                        </button>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </nav>
+        </div>
+
+        <div
+          className={`${s['sidebar-overlay']} ${isMobileMenuOpen ? s['is-active'] : ''}`}
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      </header>
+    </div>
   );
 }

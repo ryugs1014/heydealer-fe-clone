@@ -390,3 +390,17 @@
     min-width: rem(24);
   }
 }
+
+@media (max-width: rem(1103)) {
+  .modal-overlay {
+    max-width: 100%;
+  }
+
+  .close-modal-bg {
+    max-width: 100%;
+  }
+
+  .modal-content {
+    max-width: 100%;
+  }
+}

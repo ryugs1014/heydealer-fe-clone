@@ -1,9 +1,18 @@
 @use '@/styles/mixins' as *;
 @import '@/styles/rem';
 
+.header-container {
+  @media (max-width: rem(1500)) {
+    height: rem(56);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+}
+
 .header {
   position: relative;
-  width: 100dvw;
+  width: 100%;
   z-index: 100;
   padding: 0 rem(56);
   box-sizing: border-box;
@@ -11,9 +20,13 @@
   height: rem(71);
   border-bottom: rem(1) solid var(--color-line-divider);
 
-  @media (max-width: rem(960)) {
+  @media (max-width: rem(1500)) {
+    position: fixed;
+    top: 0;
     padding: rem(4) rem(12);
     height: rem(56);
+    background-color: var(--color-token-white);
+    border: none;
   }
 
   &.header--buy {
@@ -28,14 +41,15 @@
     @include svgBox(rem(132));
   }
 
-  @media (max-width: rem(960)) {
+  @media (max-width: rem(1500)) {
     height: rem(22);
-    align-items: start;
-    justify-content: start;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 
     .logo-box {
-      @include svgBox(rem(108));
-      padding: 0 rem(8);
+      //@include svgBox(rem(108));
+      padding: 0 rem(4);
     }
   }
 }
@@ -45,15 +59,16 @@
   width: 100%;
   max-width: rem(1392);
 
-  @media (max-width: rem(960)) {
+  @media (max-width: rem(1500)) {
     justify-content: space-between;
+    max-width: unset;
   }
 }
 
 .pc-nav {
   @include flexBox(flex, start, center, row, 64);
 
-  @media (max-width: rem(960)) {
+  @media (max-width: rem(1500)) {
     display: none;
   }
 }
@@ -102,7 +117,7 @@
   padding: 0;
   z-index: 110;
 
-  @media (max-width: rem(960)) {
+  @media (max-width: rem(1500)) {
     @include flexBox(flex, center, center);
     @include svgBox(rem(24));
   }
@@ -139,7 +154,7 @@
     padding: 0;
     z-index: 110;
 
-    @media (max-width: rem(960)) {
+    @media (max-width: rem(1500)) {
       @include flexBox(flex, center, center);
       @include svgBox(rem(24));
     }
@@ -194,5 +209,13 @@
   &.is-active {
     opacity: 0.5;
     pointer-events: visible;
+  }
+}
+
+@media (max-width: rem(1500)) {
+  .header-container {
+    &.header--buy {
+      display: none;
+    }
   }
 }

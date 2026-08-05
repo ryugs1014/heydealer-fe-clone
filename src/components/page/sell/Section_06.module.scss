@@ -37,3 +37,36 @@
     }
   }
 }
+
+@media (max-width: rem(991)) {
+  .section-container {
+    overflow: hidden;
+    padding: rem(72) 0 0;
+
+    .section-wrap {
+      @include flexBox(flex, start, start, column, 0);
+
+      .text-wrap {
+        padding: 0 rem(32);
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .text-top {
+        @include font-style(28, 700, rem(38));
+      }
+
+      .img-container {
+        @include flexBox(flex, start, center, row, rem(16));
+        margin-right: 0;
+        width: 100%;
+        padding-right: rem(40);
+
+        .img-wrap {
+          max-width: rem(180);
+          box-shadow: rem(-10) rem(10) rem(15) rgb(0 0 0 / 15%);
+        }
+      }
+    }
+  }
+}

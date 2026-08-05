@@ -19,6 +19,8 @@ import TableTower from '/public/svg/table-tower.svg';
 import TableBoard from '/public/svg/table-board.svg';
 import FilterArrow from '/public/svg/filter-arrow.svg';
 import FilterReset from '/public/svg/filter-reset.svg';
+import FilterClose from '/public/svg/filter-close.svg';
+import ModalClose from '/public/svg/modal-close.svg';
 
 interface TopFilterProps {
   sortBy: string;
@@ -30,6 +32,7 @@ interface TopFilterProps {
   globalFilters: FilterState;
   onApplyFilters: (filters: FilterState) => void;
   checkFilterMatch: (car: any, currentFilters: FilterState) => boolean;
+  onOpenFilter: () => void;
 }
 
 interface FilterToast {
@@ -97,13 +100,14 @@ export default function TopFilter({
   globalFilters,
   onApplyFilters,
   checkFilterMatch,
+  onOpenFilter,
 }: TopFilterProps) {
   const [openedModal, setOpenedModal] = useState<string | null>(null);
-  const [isAllFilterOpen, setIsAllFilterOpen] = useState(false); // 🌟 전체 필터 모달 오픈 상태
-  const [isSortOpen, setIsSortOpen] = useState(false); // 🌟 커스텀 셀렉트 Open 상태
+  const [isAllFilterOpen, setIsAllFilterOpen] = useState(false);
+  const [isSortOpen, setIsSortOpen] = useState(false);
 
-  const dropdownRef = useRef<HTMLDivElement>(null); // 🌟 바깥 클릭 감지용 Ref
-  const filterWrapperRef = useRef<HTMLDivElement>(null); // 🌟 필터 영역 전체 외부 클릭 감지용 Ref
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const filterWrapperRef = useRef<HTMLDivElement>(null);
 
   const [toasts, setToasts] = useState<FilterToast[]>([]);
   const [localFilters, setLocalFilters] = useState<FilterState>({
@@ -136,7 +140,6 @@ export default function TopFilter({
     );
   }, [globalFilters]);
 
-  // 🌟 통합 외부 클릭 감지 로직 (정렬 드롭다운 & 모든 필터 모달 대상)
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       const target = event.target as Node;
@@ -157,7 +160,6 @@ export default function TopFilter({
     return () => document.removeEventListener('mousedown', handleOutsideClick);
   }, []);
 
-  // 현재 정렬 값의 한글 레이블 찾기
   const currentSortLabel = useMemo(() => {
     return (
       SORT_OPTIONS.find((opt) => opt.value === sortBy)?.label || '최근등록순'
@@ -175,7 +177,6 @@ export default function TopFilter({
     }));
   };
 
-  // 🌟 상단 바 전역 초기화 트리거
   const handleResetAllGlobal = () => {
     const baseFilters: FilterState = {
       year: 'all',
@@ -188,7 +189,6 @@ export default function TopFilter({
     setLocalFilters(baseFilters);
   };
 
-  // 🌟 전체 필터 모달 전용 초기화 트리거
   const handleResetAllLocal = () => {
     setLocalFilters({
       year: 'all',
@@ -221,7 +221,7 @@ export default function TopFilter({
   const handleApply = () => {
     onApplyFilters(localFilters);
     setOpenedModal(null);
-    setIsAllFilterOpen(false); // 전체 필터 모달에서 적용 시에도 대응
+    setIsAllFilterOpen(false);
   };
 
   const removeToast = useCallback((id: number) => {
@@ -231,35 +231,29 @@ export default function TopFilter({
   const handleSubFilterClick = (filterName: string) => {
     const newToast: FilterToast = {
       id: Date.now() + Math.random(),
-      // message: `"${filterName}" 필터 기능은 준비 중입니다.`,
       message: `모델을 선택하면 검색할 수 있어요.`,
     };
 
     setToasts((prev) => {
       const nextToasts = [...prev, newToast];
-      // ⚠️ 주의: 5개가 넘을 때 무조건 slice(1)을 하면 애니메이션 없이 바로 DOM에서 파괴됩니다.
-      // 개수 제한을 여유롭게 주거나 없애는 것이 자연스러운 개별 페이드아웃에 도움이 됩니다.
       return nextToasts.length > 8 ? nextToasts.slice(1) : nextToasts;
     });
   };
 
-  // 실시간 필터 대수 프리뷰 카운트
   const previewCount = useMemo(() => {
     return globalCars.filter((car) => checkFilterMatch(car, localFilters))
       .length;
   }, [globalCars, localFilters, checkFilterMatch]);
 
-  // 📌 2. 헬퍼 기능: 타입별 스텝 매핑 반환
   const getSteps = (type: 'year' | 'mileage' | 'price') => {
     if (type === 'year') return YEAR_STEPS;
     if (type === 'mileage') return MILEAGE_STEPS;
     return PRICE_STEPS;
   };
 
-  // 📌 3. 부모의 실제 값 -> 슬라이더용 인덱스 [왼쪽 thumb, 오른쪽 thumb] 변환
   const getSliderIndices = (type: 'year' | 'mileage' | 'price') => {
     const steps = getSteps(type);
-    const maxIdx = steps.length + 1; // 가상 최대 인덱스
+    const maxIdx = steps.length + 1;
     const currentVal = localFilters[type];
 
     if (currentVal === 'all') return [0, maxIdx];
@@ -271,7 +265,6 @@ export default function TopFilter({
     return [leftIdx === 0 ? 0 : leftIdx, rightIdx === 0 ? maxIdx : rightIdx];
   };
 
-  // 📌 4. 단 단위 한글 치환 포맷터
   const formatValueLabel = (
     type: 'year' | 'mileage' | 'price',
     val: number,
@@ -285,21 +278,17 @@ export default function TopFilter({
     return String(val);
   };
 
-  // 📌 5. 요구사항 구현: 0~11 가상 단계를 바탕으로 동적 레이블 텍스트 렌더링
-  // 📌 5. 요구사항 구현: 가상 단계 및 배열 데이터를 바탕으로 동적 레이블 텍스트 렌더링
   const getRangeLabel = (
     type: 'year' | 'mileage' | 'price' | 'fuel' | 'carShape',
   ) => {
     const isRangeType =
       type === 'year' || type === 'mileage' || type === 'price';
 
-    // 1. 슬라이더(범위형) 필터 처리
     if (isRangeType) {
       const steps = getSteps(type);
       const [leftIdx, rightIdx] = getSliderIndices(type);
       const maxIdx = steps.length + 1;
 
-      // 🌟 수정: 아무것도 건들지 않은 전체 범위일 때는 '전체' 반환
       if (leftIdx === 0 && rightIdx === maxIdx) return '전체';
 
       const leftText =
@@ -312,30 +301,24 @@ export default function TopFilter({
       return `${leftText} ~ ${rightText}`;
     }
 
-    // 2. 복수 선택(배열형: 연료, 차체) 필터 처리
     const selectedValues = localFilters[type] as string[];
 
-    // 🌟 수정: 아무것도 선택 안 되었을 때는 '전체' 반환
     if (!selectedValues || selectedValues.length === 0) {
       return '전체';
     }
 
-    // CONSTANTS 맵에서 현재 유저가 '가장 먼저 선택한 값'의 한글 매핑 객체 찾기
     const firstOption = CONSTANTS[type].find(
       (opt) => opt.value === selectedValues[0],
     );
     const firstOptionName = firstOption ? firstOption.name : '';
 
-    // 1개만 선택되었을 때 -> 'LPG'
     if (selectedValues.length === 1) {
       return firstOptionName;
     }
 
-    // 2개 이상 선택되었을 때 -> 'LPG 외 N건'
     return `${firstOptionName} 외 ${selectedValues.length - 1}`;
   };
 
-  // 📌 6. 슬라이더 바 변경 핸들러 (인덱스 -> 부모의 실 데이터 규격으로 역산)
   const handleSliderChange = (
     type: 'year' | 'mileage' | 'price',
     side: 'left' | 'right',
@@ -349,12 +332,11 @@ export default function TopFilter({
     let nextRight = currentRight;
 
     if (side === 'left') {
-      nextLeft = Math.min(value, currentRight - 1); // 우측 thumb 충돌 방지
+      nextLeft = Math.min(value, currentRight - 1);
     } else {
-      nextRight = Math.max(value, currentLeft + 1); // 좌측 thumb 충돌 방지
+      nextRight = Math.max(value, currentLeft + 1);
     }
 
-    // 인덱스를 활용해 실제 데이터값 치환 생성
     if (nextLeft === 0 && nextRight === maxIdx) {
       setLocalFilters((p) => ({ ...p, [type]: 'all' }));
     } else {
@@ -364,7 +346,6 @@ export default function TopFilter({
     }
   };
 
-  // 🌟 개별 윈도우와 전체 필터 모달에 공통 공급할 알맹이 UI 함수화
   const renderFilterContent = (
     type: 'year' | 'mileage' | 'price' | 'fuel' | 'carShape',
   ) => {
@@ -380,7 +361,30 @@ export default function TopFilter({
       return (
         <div className={s['slider-container']}>
           <div className={s['modal-row']}>
+            <div className={s['title-wrapper']}>
+              {openedModal === type && (
+                <div className={s['button-wrapper']}>
+                  <button
+                    className={s['modal-close-button']}
+                    type="button"
+                    onClick={() => setOpenedModal(null)}
+                  >
+                    <div className={s['svg-box']}>
+                      <ModalClose
+                        width="100%"
+                        height="100%"
+                        viewBox="0 0 24 24"
+                      />
+                    </div>
+                  </button>
+                </div>
+              )}
+
+              <div className={s['range-title']}>{FILTER_LABEL_MAP[type]}</div>
+            </div>
+
             <div className={s['range-title']}>{FILTER_LABEL_MAP[type]}</div>
+
             <label className={s['range-display-text']}>
               {getRangeLabel(type)}
             </label>
@@ -419,7 +423,26 @@ export default function TopFilter({
 
     return (
       <div className={s['grid-modal-container']}>
+        <div className={s['title-wrapper']}>
+          {openedModal === type && (
+            <div className={s['button-wrapper']}>
+              <button
+                className={s['modal-close-button']}
+                type="button"
+                onClick={() => setOpenedModal(null)}
+              >
+                <div className={s['svg-box']}>
+                  <ModalClose width="100%" height="100%" viewBox="0 0 24 24" />
+                </div>
+              </button>
+            </div>
+          )}
+
+          <div className={s['range-title']}>{FILTER_LABEL_MAP[type]}</div>
+        </div>
+
         <div className={s['range-title']}>{FILTER_LABEL_MAP[type]}</div>
+
         <div className={s['grid-selector-box']}>
           {CONSTANTS[type as 'fuel' | 'carShape'].map((opt) => {
             const isChecked = (
@@ -450,96 +473,120 @@ export default function TopFilter({
   };
 
   return (
-    <div className={s['top-filter']}>
+    <div
+      className={`${s['top-filter']} ${openedModal ? s['has-open-modal'] : ''}`}
+    >
       <div className={s['option-filter-container']}>
-        <div className={s['option-filter-wrap']} ref={filterWrapperRef}>
-          <button
-            type="button"
-            className={`${s['filter-btn-main']} ${isAnyFilterActive && s['active-filter']}`}
-            onClick={() => setIsAllFilterOpen(true)}
-          >
-            전체 필터
-            <div className={s['svg-box']}>
-              <FilterOption width="100%" height="100%" viewBox="0 0 24 24" />
+        <div className={s['sticky-wrap']}>
+          <div className={s['option-filter-wrap']} ref={filterWrapperRef}>
+            <button
+              type="button"
+              className={`${s['filter-btn-main']} ${isAnyFilterActive && s['active-filter']}`}
+              onClick={() => setIsAllFilterOpen(true)}
+            >
+              전체 필터
+              <div className={s['svg-box']}>
+                <FilterOption width="100%" height="100%" viewBox="0 0 24 24" />
+              </div>
+            </button>
+
+            <span className={s['line']} />
+
+            <button
+              type="button"
+              className={`${s['filter-btn-main']} ${s['mobile-filter-open-btn']}`}
+              onClick={onOpenFilter}
+            >
+              <div className={s['svg-box']}>
+                <FilterOption width="100%" height="100%" viewBox="0 0 24 24" />
+              </div>
+              모델 검색
+            </button>
+
+            <div className={s['modal-trigger-wrapper']}>
+              {(['year', 'mileage', 'price', 'fuel', 'carShape'] as const).map(
+                (type) => {
+                  const isRangeType =
+                    type === 'year' || type === 'mileage' || type === 'price';
+                  const hasActiveValue = isRangeType
+                    ? globalFilters[type] !== 'all'
+                    : globalFilters[type].length > 0;
+
+                  return (
+                    <div key={type} className={s['modal-anchor']}>
+                      <button
+                        type="button"
+                        className={`${s['filter-pill']} ${openedModal === type ? s['is-open'] : ''} ${hasActiveValue ? s['has-value'] : ''}`}
+                        onClick={() => handleOpenModal(type)}
+                      >
+                        {hasActiveValue
+                          ? getRangeLabel(type)
+                          : FILTER_LABEL_MAP[type]}
+                      </button>
+
+                      {openedModal === type && (
+                        <>
+                          {openedModal && (
+                            <div
+                              className={s['modal-overlay']}
+                              onClick={() => setOpenedModal(null)}
+                            />
+                          )}
+                          <div
+                            className={`${s['filter-modal-window']} ${openedModal && s['active']}`}
+                          >
+                            <div className={s['modal-body']}>
+                              {renderFilterContent(type)}
+                            </div>
+                            <div className={s['modal-footer']}>
+                              <button
+                                type="button"
+                                className={s['reset-btn']}
+                                onClick={() => handleResetLocal(type)}
+                              >
+                                초기화
+                              </button>
+                              <button
+                                type="button"
+                                className={s['submit-btn']}
+                                onClick={handleApply}
+                              >
+                                {previewCount.toLocaleString()}대 보기
+                              </button>
+                            </div>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  );
+                },
+              )}
             </div>
-          </button>
 
-          <span className={s['line']} />
-
-          <div className={s['modal-trigger-wrapper']}>
-            {(['year', 'mileage', 'price', 'fuel', 'carShape'] as const).map(
-              (type) => {
-                const isRangeType =
-                  type === 'year' || type === 'mileage' || type === 'price';
-                const hasActiveValue = isRangeType
-                  ? globalFilters[type] !== 'all'
-                  : globalFilters[type].length > 0;
-
-                return (
-                  <div key={type} className={s['modal-anchor']}>
-                    <button
-                      type="button"
-                      className={`${s['filter-pill']} ${openedModal === type ? s['is-open'] : ''} ${hasActiveValue ? s['has-value'] : ''}`}
-                      onClick={() => handleOpenModal(type)}
-                    >
-                      {hasActiveValue
-                        ? getRangeLabel(type)
-                        : FILTER_LABEL_MAP[type]}
-                    </button>
-
-                    {openedModal === type && (
-                      <div className={s['filter-modal-window']}>
-                        <div className={s['modal-body']}>
-                          {renderFilterContent(type)}
-                        </div>
-                        <div className={s['modal-footer']}>
-                          <button
-                            type="button"
-                            className={s['reset-btn']}
-                            onClick={() => handleResetLocal(type)}
-                          >
-                            초기화
-                          </button>
-                          <button
-                            type="button"
-                            className={s['submit-btn']}
-                            onClick={handleApply}
-                          >
-                            {previewCount.toLocaleString()}대 보기
-                          </button>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                );
-              },
-            )}
+            <button
+              className={s['filter-btn-sub']}
+              type="button"
+              onClick={() => handleSubFilterClick('옵션')}
+            >
+              옵션
+            </button>
+            <button
+              className={s['filter-btn-sub']}
+              type="button"
+              onClick={() => handleSubFilterClick('실외 색상')}
+            >
+              실외 색상
+            </button>
+            <button
+              className={s['filter-btn-sub']}
+              type="button"
+              onClick={() => handleSubFilterClick('실내 색상')}
+            >
+              실내 색상
+            </button>
           </div>
-
-          <button
-            className={s['filter-btn-sub']}
-            type="button"
-            onClick={() => handleSubFilterClick('옵션')}
-          >
-            옵션
-          </button>
-          <button
-            className={s['filter-btn-sub']}
-            type="button"
-            onClick={() => handleSubFilterClick('실외 색상')}
-          >
-            실외 색상
-          </button>
-          <button
-            className={s['filter-btn-sub']}
-            type="button"
-            onClick={() => handleSubFilterClick('실내 색상')}
-          >
-            실내 색상
-          </button>
         </div>
 
-        {/* 🌟 1. 전체 초기화 버튼 활성화 구역 */}
         {isAnyFilterActive && (
           <button
             type="button"

@@ -34,7 +34,9 @@ export default function InfoRow({
       className={`${s['row-wrap']} ${!label ? s['label-only'] : ''} ${!value ? s['value-only'] : ''} ${small ? s['small'] : ''}`}
     >
       {label && (
-        <div className={s['item-wrap']}>
+        <div
+          className={`${s['item-wrap']} ${!labelTooltip ? s['between-item'] : ''} `}
+        >
           <span className={s['label']}>{label}</span>
           {labelTooltip && (
             <div className={s['tooltip-container']}>
@@ -56,7 +58,9 @@ export default function InfoRow({
 
       {/* Value 영역 */}
       {value && (
-        <div className={s['item-wrap']}>
+        <div
+          className={`${s['item-wrap']} ${valueTooltip ? s['between-item'] : ''} `}
+        >
           <span className={s['value']}>{value}</span>
           {valueTooltip && (
             <div className={s['tooltip-container']}>
@@ -65,7 +69,7 @@ export default function InfoRow({
               </button>
               <div className={`${s['tooltip']} ${s['value-tooltip']}`}>
                 {valueTooltip.text && (
-                  <p className={s['tooltip-text']}>{valueTooltip.text}</p>
+                  <pre className={s['tooltip-text']}>{valueTooltip.text}</pre>
                 )}
 
                 {valueTooltip.imageUrl && (

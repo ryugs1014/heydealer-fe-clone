@@ -165,3 +165,42 @@
     }
   }
 }
+
+@media (max-width: rem(1500)) {
+  .container {
+    .viewer-wrap {
+      .viewer-aspect {
+        aspect-ratio: 1844 / 1229 !important;
+      }
+    }
+  }
+
+  .sub-img-wrap {
+    display: none;
+  }
+
+  .fullscreen-button {
+    width: rem(40);
+    height: rem(40);
+
+    .svg-box {
+      @include svgBox(rem(20));
+    }
+  }
+
+  .type-button-wrap {
+    position: absolute;
+    left: unset;
+    right: rem(8);
+    bottom: rem(8);
+    transform: unset;
+
+    .type-button {
+      width: rem(54);
+      padding: rem(6) rem(12);
+      box-sizing: border-box;
+      @include font-style(12, 700, rem(18));
+      white-space: nowrap;
+    }
+  }
+}

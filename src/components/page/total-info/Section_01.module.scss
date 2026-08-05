@@ -58,3 +58,41 @@
     }
   }
 }
+
+@media (max-width: rem(991)) {
+  .section-container {
+    .section-wrap {
+      grid-template-columns: 1fr;
+      gap: rem(40);
+
+      .text-wrap {
+        display: grid;
+        gap: rem(16);
+        padding: rem(72) 0 0;
+      }
+
+      .text-top {
+        @include font-style(28, 700, rem(38));
+      }
+
+      .img-container {
+        margin: 0 auto;
+        height: rem(330);
+
+        .img-wrap {
+          max-width: rem(200);
+          aspect-ratio: 200 / 404;
+        }
+
+        .gif-img-wrap {
+          max-width: rem(200);
+          aspect-ratio: 200 / 409;
+
+          > img {
+            border-radius: rem(32) rem(32) 0 0;
+          }
+        }
+      }
+    }
+  }
+}

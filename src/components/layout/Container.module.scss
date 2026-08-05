@@ -25,10 +25,27 @@
 
 .md {
   max-width: rem(1504);
+
+  @media (max-width: rem(1500)) {
+    max-width: 100%;
+    padding-left: rem(16);
+    padding-right: rem(16);
+  }
+
+  @media (max-width: rem(991)) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .detail {
   max-width: rem(1416);
+
+  @media (max-width: rem(1500)) {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .sm {
@@ -39,6 +56,22 @@
 
 .sm-min {
   max-width: rem(1072);
+
+  @media (max-width: rem(991)) {
+    padding-left: rem(32);
+    padding-right: rem(32);
+  }
+}
+
+.sm-slide {
+  max-width: rem(1072);
+  padding-left: rem(40);
+  padding-right: rem(40);
+
+  @media (max-width: rem(991)) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .none {

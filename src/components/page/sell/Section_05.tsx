@@ -5,6 +5,7 @@ import s from './Section_05.module.scss';
 import Container from '@/components/layout/Container';
 import Image from 'next/image';
 import SectionImage from '/public/img/sell/desktop-section5.png';
+import SectionMobileImage from '/public/img/sell/mobile-section5.png';
 
 export default function Section_05() {
   return (
@@ -14,6 +15,10 @@ export default function Section_05() {
           <div className={s['img-container']}>
             <div className={`${s['img-wrap']} img-wrap`}>
               <Image src={SectionImage} alt={`star`} fill sizes="50vw" />
+            </div>
+
+            <div className={`${s['mobile-img-wrap']} img-wrap`}>
+              <Image src={SectionMobileImage} alt={`star`} fill sizes="50vw" />
             </div>
           </div>
 

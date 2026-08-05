@@ -13,8 +13,8 @@ export default function Section_02() {
         </span>
         <span className={s['text-bottom']}>
           모든 걸 세로로 보는 세상, <br />
-          그에 맞는 새로운 기술로 <br />
-          중고차 세로고침
+          그에 맞는 새로운 기술로 <br /> <br className={s['mobile-br']} />
+          <div className={s['slogan']}>중고차 세로고침</div>
         </span>
       </div>
     </div>

@@ -5,8 +5,9 @@
   display: grid;
   grid-template-rows: 1fr auto;
   height: 100%;
-  overflow: auto;
+  //overflow: auto;
   gap: rem(24);
+  overflow: visible;
 
   &.modal-option {
     .input-section {

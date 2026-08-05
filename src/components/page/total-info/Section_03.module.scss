@@ -11,7 +11,7 @@
     .text-container {
       display: grid;
       align-items: flex-start;
-      padding: rem(120) 0;
+      padding: rem(72) 0 0;
     }
 
     .text-wrap {
@@ -81,6 +81,44 @@
               background-position-x: rem(-2000.24);
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: rem(991)) {
+  .section-container {
+    .section-wrap {
+      grid-template-columns: 1fr;
+
+      .text-wrap {
+        display: grid;
+        gap: rem(16);
+        padding: rem(72) rem(40) 0;
+      }
+
+      .text-top {
+        @include font-style(28, 700, rem(38));
+      }
+
+      .padding-container {
+        padding: rem(40) 0 rem(40) rem(32);
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      .img-container {
+        position: relative;
+        height: rem(266);
+
+        .img-wrap {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: rem(266);
+          overflow: hidden;
         }
       }
     }

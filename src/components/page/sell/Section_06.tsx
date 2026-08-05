@@ -7,11 +7,12 @@ import Image from 'next/image';
 import SectionImage01 from '/public/img/sell/desktop-section6-01.png';
 import SectionImage02 from '/public/img/sell/desktop-section6-02.png';
 
+import DraggableContainer from '@/components/common/slide/DraggableContainer';
+
 export default function Section_06() {
   return (
     <div className={s['section-container']}>
-      {' '}
-      <Container size={'sm-min'}>
+      <Container size={'sm-slide'}>
         <div className={s['section-wrap']}>
           <div className={s['text-wrap']}>
             <span className={s['text-top']}>
@@ -25,14 +26,26 @@ export default function Section_06() {
             </span>
           </div>
 
-          <div className={s['img-container']}>
+          <DraggableContainer className={s['img-container']}>
             <div className={`${s['img-wrap']} img-wrap`}>
-              <Image src={SectionImage01} alt={`star`} fill sizes="50vw" />
+              <Image
+                src={SectionImage01}
+                alt={`star`}
+                fill
+                sizes="50vw"
+                draggable={false}
+              />
             </div>
             <div className={`${s['img-wrap']} img-wrap`}>
-              <Image src={SectionImage02} alt={`star`} fill sizes="50vw" />
+              <Image
+                src={SectionImage02}
+                alt={`star`}
+                fill
+                sizes="50vw"
+                draggable={false}
+              />
             </div>
-          </div>
+          </DraggableContainer>
         </div>
       </Container>
     </div>

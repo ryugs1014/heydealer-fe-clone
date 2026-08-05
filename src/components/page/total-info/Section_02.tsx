@@ -6,6 +6,7 @@ import Container from '@/components/layout/Container';
 import Image from 'next/image';
 import SectionImage01 from '/public/img/total-info/desktop_section2-01.png';
 import SectionImage02 from '/public/img/total-info/desktop_section2-02.png';
+import SectionMobileImage02 from '/public/img/total-info/mobile_section2-02.png';
 
 export default function Section_02() {
   return (
@@ -27,11 +28,24 @@ export default function Section_02() {
           </div>
 
           <div className={s['img-container']}>
-            <div className={`${s['img-wrap']} img-wrap`}>
-              <Image src={SectionImage02} alt={`total`} fill sizes="50vw" />
+            <div className={s['img-margin-container']}>
+              <div className={`${s['img-wrap']} img-wrap`}>
+                <Image src={SectionImage02} alt={`total`} fill sizes="50vw" />
+              </div>
+              <div className={`${s['top-img-wrap']} img-wrap`}>
+                <Image src={SectionImage01} alt={`total`} fill sizes="50vw" />
+              </div>
             </div>
-            <div className={`${s['top-img-wrap']} img-wrap`}>
-              <Image src={SectionImage01} alt={`total`} fill sizes="50vw" />
+
+            <div className={s['mobile-img-container']}>
+              <div className={`${s['img-wrap']} img-wrap`}>
+                <Image
+                  src={SectionMobileImage02}
+                  alt={`total`}
+                  fill
+                  sizes="50vw"
+                />
+              </div>
             </div>
           </div>
         </div>

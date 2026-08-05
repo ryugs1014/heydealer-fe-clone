@@ -1,6 +1,14 @@
 @use '@/styles/mixins/index' as *;
 @import '@/styles/rem';
 
+.desktop-link {
+  display: block;
+}
+
+.mobile-link {
+  display: none;
+}
+
 .empty-message {
   height: 100dvh;
   max-height: rem(640);
@@ -376,5 +384,36 @@
     box-sizing: border-box;
     border-radius: rem(4);
     white-space: pre;
+  }
+}
+
+@media (max-width: rem(1500)) {
+  .desktop-link {
+    display: none;
+  }
+
+  .mobile-link {
+    display: block;
+  }
+
+  .result-list-container {
+    .grid-layout {
+      row-gap: 0;
+
+      .product-card {
+        border-radius: 0;
+        border: 0;
+      }
+    }
+  }
+
+  .sub-img-wrap {
+    max-width: rem(100);
+  }
+}
+
+@media (max-width: rem(991)) {
+  .grid-layout {
+    grid-template-columns: 1fr;
   }
 }

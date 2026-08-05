@@ -8,16 +8,20 @@ import SectionImage01 from '/public/img/total-info/desktop_section4-01.png';
 import SectionImage02 from '/public/img/total-info/desktop_section4-02.png';
 import SectionImage03 from '/public/img/total-info/desktop_section4-03.png';
 
+import DraggableContainer from '@/components/common/slide/DraggableContainer';
+
 export default function Section_04() {
   return (
     <div className={s['section-container']}>
-      <Container size={'sm-min'}>
+      <Container size={'sm-slide'}>
         <div className={s['section-wrap']}>
           <div className={s['text-wrap']}>
-            <span className={s['text-top']}>구매 전에 꼭 확인하세요</span>
+            <span className={s['text-top']}>
+              구매 전에 <br className={s['text-top-br']} />꼭 확인하세요
+            </span>
           </div>
 
-          <div className={s['box-container']}>
+          <DraggableContainer className={s['box-container']}>
             <div className={s['box-wrap']}>
               <div className={s['box-img']}>
                 <div className={`${s['img-wrap']} img-wrap`}>
@@ -82,7 +86,7 @@ export default function Section_04() {
                 있으니까 덕분에 안심하고 구매할 수 있었어요!
               </span>
             </div>
-          </div>
+          </DraggableContainer>
         </div>
       </Container>
     </div>

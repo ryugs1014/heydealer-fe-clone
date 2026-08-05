@@ -9,7 +9,7 @@
     justify-items: center;
     text-align: center;
     gap: rem(16);
-    padding: rem(116) 0;
+    padding: rem(116) rem(32);
     box-sizing: border-box;
 
     > span {
@@ -18,6 +18,32 @@
 
     .text-top {
       color: var(--color-label-weak);
+    }
+
+    .mobile-br {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: rem(991)) {
+  .section-container {
+    .section-wrap {
+      justify-items: flex-start;
+      text-align: left;
+      padding: rem(72) rem(32);
+
+      > span {
+        @include font-style(18, 700, rem(28));
+      }
+
+      .slogan {
+        @include font-style(20, 700, rem(28));
+      }
+
+      .mobile-br {
+        display: block;
+      }
     }
   }
 }

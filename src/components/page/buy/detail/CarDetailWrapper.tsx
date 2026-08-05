@@ -1,7 +1,7 @@
 // src/components/page/buy/detail/CarDetailWrapper.tsx
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import s from './CarDetailWrapper.module.scss';
 import Image from 'next/image';
 
@@ -10,7 +10,6 @@ import DetailModal from './DetailModal';
 import Lightbox from './Lightbox';
 import DetailHeader from '@/components/atoms/detail/DetailHeader';
 import InfoRow from '@/components/atoms/detail/InfoRow';
-import FavoriteButton from '@/components/atoms/buttons/FavoriteButton';
 import InfoModalButton from '@/components/atoms/buttons/InfoModalButton';
 import DraggableCarousel from '@/components/atoms/detail/DraggableCarousel';
 import FaqAccordion from '@/components/atoms/detail/FaqAccordion';
@@ -22,16 +21,18 @@ import PurchaseReviewSection from '@/components/page/buy/detail/PurchaseReviewSe
 import EyeCertReport from '@/components/page/buy/detail/EyeCertReport';
 import ServiceSection from '@/components/page/buy/detail/ServiceSection';
 import RelatedCars from '@/components/page/buy/detail/RelatedCars';
+import PurchaseInfoPanel from '@/components/page/buy/detail/PurchaseInfoPanel';
 
 import EyeIcon from '/public/svg/eye-icon.svg';
 import SubActive from '/public/svg/sub-active.svg';
 import Chat from '/public/svg/chat.svg';
-import QR from '/public/svg/qr.svg';
-import ContactProfile from '/public/img/ui/manager-CgY0PyKE.png';
 
 import faqData from '@/data/detail/faq.json';
 import carReviewData from '@/data/detail/car_review.json';
 import purchaseReviewData from '@/data/detail/purchase_review.json';
+import Link from 'next/link';
+import ArrowLeft from '/public/svg/arrow-left-big.svg';
+import Arrow from '/public/svg/filter-arrow.svg';
 
 interface CarDetailWrapperProps {
   carData: any;
@@ -93,6 +94,10 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
   >('grid');
 
   const [viewType, setViewType] = useState<'grid' | 'list' | 'simple'>('grid');
+
+  const gridRef = useRef<HTMLDivElement>(null);
+  const [isMobileButtonActive, setIsMobileButtonActive] =
+    useState<boolean>(false);
 
   const info = carData?.detail_info;
   const detailImageUrls = info?.detail_image_urls || {};
@@ -172,6 +177,26 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
       window.removeEventListener('favorite_update', updateFavoriteList);
       window.removeEventListener('storage', updateFavoriteList);
     };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!gridRef.current) return;
+
+      const gridTop = gridRef.current.getBoundingClientRect().top;
+
+      if (gridTop <= 56) {
+        setIsMobileButtonActive(true);
+      } else {
+        setIsMobileButtonActive(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const favoriteCars = useMemo(() => {
@@ -259,7 +284,7 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
             )}
           </div>
 
-          <div className={s['grid-container']}>
+          <div className={s['grid-container']} ref={gridRef}>
             <div className={s['detail-container']}>
               <section className={s['section-info']}>
                 <DetailHeader
@@ -395,7 +420,7 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
                     <InfoRow value={`열선시트(앞좌석)`} />
                   </div>
 
-                  <span className={s['section-line']} />
+                  <span className={s['content-line']} />
 
                   <div className={s['sub-content']}>
                     <div className={s['sub-title']}>출고 정보</div>
@@ -499,8 +524,6 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
               <span className={s['section-line']} />
 
               <section className={`${s['section-info']} ${s['single']}`}>
-                <DetailHeader title={``} />
-
                 <div className={s['content-wrap']}>
                   <EyeCertReport />
                 </div>
@@ -560,7 +583,20 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
 
               <span className={s['section-line']} />
 
-              <section className={s['section-info']}>
+              <section className={`${s['section-info']} ${s['mobile']}`}>
+                <PurchaseInfoPanel
+                  carData={carData}
+                  carPrice={carPrice}
+                  factoryPrice={info?.factory_price}
+                  transferTotalFee={transferTotalFee}
+                  transferTooltipText={transferTooltipText}
+                  warrantyFee={warrantyFee}
+                  deliveryFee={deliveryFee}
+                  totalPurchasePrice={totalPurchasePrice}
+                />
+              </section>
+
+              <section className={`${s['section-info']} ${s['pc']}`}>
                 <DetailHeader
                   title={`${info?.model_name}`}
                   subtitle={`타 본 사람들 이야기`}
@@ -575,9 +611,9 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
                 </div>
               </section>
 
-              <span className={s['section-line']} />
+              <span className={`${s['section-line']} ${s['pc']}`} />
 
-              <section className={s['section-info']}>
+              <section className={`${s['section-info']} ${s['pc']}`}>
                 <DetailHeader title={`구매 후기`} />
 
                 <div className={s['content-wrap']}>
@@ -596,136 +632,18 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
               <span className={s['section-line']} />
             </div>
 
-            <div className={s['sticky-container']}>
+            <div className={`${s['sticky-container']} ${s['pc']}`}>
               <div className={s['sticky-wrap']}>
-                <div className={s['content-wrap']}>
-                  <div className={s['sticky-content']}>
-                    <div className={s['main-info']}>
-                      <div className={s['info-header']}>
-                        <div className={s['price']}>
-                          {carPrice.toLocaleString()}만원
-                        </div>
-
-                        <FavoriteButton
-                          hashId={carData?.hash_id}
-                          className={s['favorite-button-wrap']}
-                        />
-                      </div>
-
-                      <div className={s['origin-price']}>
-                        신차 {info?.factory_price?.toLocaleString()}
-                      </div>
-                    </div>
-
-                    <span className={s['section-line']} />
-
-                    <div className={s['detail-info']}>
-                      <div className={s['detail-price']}>
-                        <div className={s['detail-title']}>총 구매 비용</div>
-
-                        <ul className={s['price-list']}>
-                          <li className={s['list']}>
-                            <span className={s['label']}>차량가</span>
-                            <span className={s['price']}>
-                              {carPrice.toLocaleString()}만원
-                            </span>
-                          </li>
-
-                          <li className={s['list']}>
-                            <InfoRow
-                              label="이전관리지"
-                              labelTooltip={{
-                                text: transferTooltipText,
-                              }}
-                              small={true}
-                            />
-
-                            <span className={s['price']}>
-                              {transferTotalFee.toLocaleString()}만원
-                            </span>
-                          </li>
-
-                          <li className={s['list']}>
-                            <span className={s['label']}>보증 가입비</span>
-                            <span className={s['price']}>
-                              <del>{warrantyFee}만원</del>
-                              무료
-                            </span>
-                          </li>
-
-                          <li className={s['list']}>
-                            <span className={s['label']}>탁송비</span>
-                            <span className={s['price']}>
-                              <del>{deliveryFee}만원</del>
-                              무료
-                            </span>
-                          </li>
-                        </ul>
-
-                        <div className={s['total-price']}>
-                          {/* ⭐ 합산된 총 구매 비용 렌더링 */}
-                          <span>{totalPurchasePrice.toLocaleString()}만원</span>
-                        </div>
-                      </div>
-
-                      <InfoModalButton
-                        textBefore="단순 변심도"
-                        highlightText="무료 환불"
-                        textAfter="가능"
-                        // onClick={() => setIsInfoModalOpen(true)}
-                      />
-
-                      <div className={s['button-wrap']}>
-                        <button className={s['research-button']}>
-                          보험료 조회
-                        </button>
-                        <button className={s['research-button']}>
-                          할부한도 조회
-                        </button>
-                      </div>
-                    </div>
-
-                    <span className={s['section-line']} />
-
-                    <button className={s['reserve-button']}>
-                      <div className={s['svg-box']}></div>
-                      바로 구매예약
-                    </button>
-                  </div>
-
-                  <div className={s['qr-section']}>
-                    <div className={s['qr-text-info']}>
-                      <span className={s['app-guide-text']}>
-                        앱에서 [24서5560] 보기
-                      </span>
-
-                      <span className={s['qr-guide-text']}>
-                        휴대폰 카메라로 QR코드를
-                        <br /> 촬영해 보세요.
-                      </span>
-                    </div>
-
-                    <div className={s['svg-box']}>
-                      <QR width="100%" height="100%" viewBox="0 0 61 61" />
-                    </div>
-                  </div>
-
-                  <div className={s['chat-button-wrap']}>
-                    <button className={s['chat-contact']}>
-                      <div className={s['chat-profile-img']}>
-                        <div className={`${s['img-wrap']} img-wrap`}>
-                          <Image
-                            src={ContactProfile}
-                            alt={`star`}
-                            fill
-                            sizes="15vw"
-                          />
-                        </div>
-                      </div>
-                      채팅 문의
-                    </button>
-                  </div>
-                </div>
+                <PurchaseInfoPanel
+                  carData={carData}
+                  carPrice={carPrice}
+                  factoryPrice={info?.factory_price}
+                  transferTotalFee={transferTotalFee}
+                  transferTooltipText={transferTooltipText}
+                  warrantyFee={warrantyFee}
+                  deliveryFee={deliveryFee}
+                  totalPurchasePrice={totalPurchasePrice}
+                />
               </div>
             </div>
           </div>
@@ -804,6 +722,46 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
           <ResultList cars={sortedFavoriteCars} viewType={modalViewType} />
         </div>
       </Modal>
+
+      <div
+        className={`${s['mobile-button-wrap']} ${isMobileButtonActive ? s['active'] : ''}`}
+      >
+        <Link href="/" className={s['back-link']}>
+          <div className={s['back-box']}>
+            <ArrowLeft width="100%" height="100%" viewBox="0 0 24 24" />
+          </div>
+        </Link>
+      </div>
+
+      <div className={s['mobile-total-price-modal']}>
+        <div className={s['modal-button-wrap']}>
+          <button type="button" className={`${s['info-modal-button']}`}>
+            <div className={s['button-forward']}>
+              <div className={s['button-icon']}>👀</div>
+              <div className={s['button-text']}>이 차의 숨은이력까지 확인</div>
+            </div>
+
+            <div className={s['arrow-box']}>
+              앱으로
+              <div className={s['svg-box']}>
+                <Arrow width="100%" height="100%" viewBox="0 0 24 24" />
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div className={s['main-info']}>
+          <div className={s['info-header']}>
+            <div className={s['price']}>{carPrice.toLocaleString()}만원</div>
+
+            <div className={s['origin-price']}>
+              신차 {info?.factory_price?.toLocaleString()}
+            </div>
+          </div>
+
+          <button className={s['reserve-button']}>바로 구매예약</button>
+        </div>
+      </div>
     </>
   );
 }
