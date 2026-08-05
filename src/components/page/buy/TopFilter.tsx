@@ -160,6 +160,18 @@ export default function TopFilter({
     return () => document.removeEventListener('mousedown', handleOutsideClick);
   }, []);
 
+  useEffect(() => {
+    // 💡 isAllFilterOpen 뿐만 아니라 openedModal이 있을 때도 스크롤을 막습니다.
+    if (isAllFilterOpen || openedModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isAllFilterOpen, openedModal]);
+
   const currentSortLabel = useMemo(() => {
     return (
       SORT_OPTIONS.find((opt) => opt.value === sortBy)?.label || '최근등록순'
@@ -526,33 +538,29 @@ export default function TopFilter({
 
                       {openedModal === type && (
                         <>
-                          {openedModal && (
+                          <div className={s['pc-modal-only']}>
                             <div
-                              className={s['modal-overlay']}
-                              onClick={() => setOpenedModal(null)}
-                            />
-                          )}
-                          <div
-                            className={`${s['filter-modal-window']} ${openedModal && s['active']}`}
-                          >
-                            <div className={s['modal-body']}>
-                              {renderFilterContent(type)}
-                            </div>
-                            <div className={s['modal-footer']}>
-                              <button
-                                type="button"
-                                className={s['reset-btn']}
-                                onClick={() => handleResetLocal(type)}
-                              >
-                                초기화
-                              </button>
-                              <button
-                                type="button"
-                                className={s['submit-btn']}
-                                onClick={handleApply}
-                              >
-                                {previewCount.toLocaleString()}대 보기
-                              </button>
+                              className={`${s['filter-modal-window']} ${openedModal && s['active']}`}
+                            >
+                              <div className={s['modal-body']}>
+                                {renderFilterContent(type)}
+                              </div>
+                              <div className={s['modal-footer']}>
+                                <button
+                                  type="button"
+                                  className={s['reset-btn']}
+                                  onClick={() => handleResetLocal(type)}
+                                >
+                                  초기화
+                                </button>
+                                <button
+                                  type="button"
+                                  className={s['submit-btn']}
+                                  onClick={handleApply}
+                                >
+                                  {previewCount.toLocaleString()}대 보기
+                                </button>
+                              </div>
                             </div>
                           </div>
                         </>
@@ -734,6 +742,36 @@ export default function TopFilter({
           </div>
         </div>
       </div>
+
+      {openedModal && (
+        <div className={s['mobile-modal-only']}>
+          <div
+            className={s['modal-overlay']}
+            onClick={() => setOpenedModal(null)}
+          />
+          <div className={`${s['filter-modal-window']} ${s['active']}`}>
+            <div className={s['modal-body']}>
+              {renderFilterContent(openedModal as any)}
+            </div>
+            <div className={s['modal-footer']}>
+              <button
+                type="button"
+                className={s['reset-btn']}
+                onClick={() => handleResetLocal(openedModal as any)}
+              >
+                초기화
+              </button>
+              <button
+                type="button"
+                className={s['submit-btn']}
+                onClick={handleApply}
+              >
+                {previewCount.toLocaleString()}대 보기
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {toasts.length > 0 && (
         <div className={s['toast-container']}>

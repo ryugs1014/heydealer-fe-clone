@@ -25,6 +25,7 @@
 
   &::-webkit-scrollbar {
     height: auto;
+    width: 0;
   }
 
   &.fade-in {
@@ -113,7 +114,7 @@
   .modal-container {
     grid-template-columns: 100%;
     padding-left: rem(24);
-    padding-right: rem(4);
+    padding-right: rem(24);
     box-sizing: border-box;
   }
 

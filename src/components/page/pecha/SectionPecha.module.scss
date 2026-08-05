@@ -156,6 +156,8 @@
   max-width: rem(380);
   margin: 0 auto;
   z-index: 5;
+  user-select: none;
+  pointer-events: none;
 
   &.is-show {
     .fixed-button-activation {
@@ -249,6 +251,7 @@
   max-height: calc(100% - #{rem(24)});
   display: grid;
   grid-template-rows: 1fr auto;
+  overflow: hidden;
 
   transition: transform 0.15s linear;
 
@@ -304,12 +307,18 @@
     display: none;
   }
 
+  .section-bg {
+    display: none;
+  }
+
   .section-flex-wrap {
     width: 100%;
+    overflow: hidden;
   }
 
   .section-app-container {
     width: 100%;
+    overflow: hidden;
   }
 
   .fixed-button-container {

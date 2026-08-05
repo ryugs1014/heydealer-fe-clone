@@ -4,6 +4,7 @@ import s from '@/components/page/buy/BuySection.module.scss';
 import Container from '@/components/layout/Container';
 import CarDetailWrapper from '@/components/page/buy/detail/CarDetailWrapper';
 import type { Metadata } from 'next';
+import MobileTotalPriceModal from '@/components/page/buy/detail/MobileTotalPriceModal';
 
 interface DetailPageProps {
   params: {
@@ -67,10 +68,14 @@ export default async function CarDetailPage({ params }: DetailPageProps) {
   // const sampleVideoUrl = '/video/car-360.mp4';
 
   return (
-    <section className={s['buy-section']}>
-      <Container size={'detail'}>
-        <CarDetailWrapper carData={carData} />
-      </Container>
-    </section>
+    <>
+      <section className={s['buy-section']}>
+        <Container size={'detail'}>
+          <CarDetailWrapper carData={carData} />
+        </Container>
+      </section>
+
+      <MobileTotalPriceModal carData={carData} />
+    </>
   );
 }

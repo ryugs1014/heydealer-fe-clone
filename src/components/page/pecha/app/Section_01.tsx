@@ -2,6 +2,7 @@
 
 import React from 'react';
 import s from './Section_01.module.scss';
+import Link from 'next/link';
 import Logo from '/public/svg/clip0_169_521.svg';
 import PechaForm from '@/components/atoms/pecha/PechaForm';
 import type { Sido, Sigungu } from '@/types/location';
@@ -23,9 +24,11 @@ export default function Section_01(props: Section01Props) {
     <div className={s['section-container']}>
       <div className={s['content-wrap']}>
         <div className={s['section-header']}>
-          <div className={s['logo-box']}>
-            <Logo width="100%" height="100%" viewBox="0 0 108 17" />
-          </div>
+          <Link href="/" className={s['logo-link']}>
+            <div className={s['logo-box']}>
+              <Logo width="100%" height="100%" viewBox="0 0 108 17" />
+            </div>
+          </Link>
         </div>
 
         <div className={s['section-content']}>

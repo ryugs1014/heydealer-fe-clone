@@ -481,7 +481,23 @@
   }
 }
 
+.pc-modal-only {
+  display: block; // PC에서는 보이게
+}
+
+.mobile-modal-only {
+  display: none; // PC에서는 숨김
+}
+
 @media (max-width: rem(1500)) {
+  .pc-modal-only {
+    display: none; // 모바일에서는 PC용 팝업 렌더링 숨김
+  }
+
+  .mobile-modal-only {
+    display: block; // 모바일에서는 이걸 보여줌
+  }
+
   .top-filter {
     position: relative;
     z-index: 100;
@@ -604,7 +620,7 @@
     box-sizing: border-box;
     background-color: var(--color-token-white);
     box-shadow: 0 rem(2) rem(8) 0 rgb(0 0 0 / 12%);
-    z-index: 2;
+    z-index: 999999;
     animation: slideUpBottomSheet 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   }
 
@@ -615,7 +631,7 @@
     width: 100%;
     height: 100dvh;
     background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1;
+    z-index: 99999;
     display: flex;
     align-items: flex-end;
     opacity: 1;
@@ -627,6 +643,23 @@
     .modal-row {
       @include flexBox(flex, start, start, column, rem(16));
       margin-bottom: rem(20);
+
+      .modal-close-button {
+        @include flexBox(flex, center, center);
+        width: rem(40);
+        height: rem(40);
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: rgb(39, 46, 64);
+        margin: rem(-8);
+        padding: rem(8);
+
+        .svg-box {
+          @include svgBox(rem(24));
+          min-width: rem(24);
+        }
+      }
     }
   }
 
@@ -639,23 +672,6 @@
 
   .button-wrapper {
     @include flexBox(flex, start, center);
-  }
-
-  .modal-close-button {
-    @include flexBox(flex, center, center);
-    width: rem(40);
-    height: rem(40);
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: rgb(39, 46, 64);
-    margin: rem(-8);
-    padding: rem(8);
-
-    .svg-box {
-      @include svgBox(rem(24));
-      min-width: rem(24);
-    }
   }
 
   .modal-footer {

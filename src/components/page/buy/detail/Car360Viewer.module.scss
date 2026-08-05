@@ -180,12 +180,13 @@
   }
 
   .fullscreen-button {
-    width: rem(40);
-    height: rem(40);
-
-    .svg-box {
-      @include svgBox(rem(20));
-    }
+    display: none;
+    //width: rem(40);
+    //height: rem(40);
+    //
+    //.svg-box {
+    //  @include svgBox(rem(20));
+    //}
   }
 
   .type-button-wrap {

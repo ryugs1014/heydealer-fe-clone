@@ -45,7 +45,7 @@
   max-height: calc(100% - #{rem(24)});
   display: grid;
   grid-template-rows: 1fr auto;
-
+  overflow: hidden;
   transition: transform 0.15s linear;
 
   &.slide-right {
@@ -356,7 +356,6 @@
   box-sizing: border-box;
   display: grid;
   gap: rem(16);
-  background-color: var(--color-token-white);
 
   .info-text {
     @include font-style(14, 400, rem(24));

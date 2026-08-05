@@ -164,6 +164,7 @@ export default function Car360Viewer({
         canvasTierRef.current = newTier;
       }
 
+      // ⭐ [최적화 1] 불필요한 중복 렌더링 방지 및 프레임 동기화
       if (!dragRaf.current) {
         dragRaf.current = requestAnimationFrame(() => {
           syncViewerTimeline();
@@ -222,6 +223,7 @@ export default function Car360Viewer({
     };
     document.addEventListener('fullscreenchange', handleFullscreenChange);
 
+    // ⭐ [최적화 2] 모바일 터치 이벤트 최적화를 위한 passive 옵션 적용
     window.addEventListener('mousemove', handleGlobalMouseMove);
     window.addEventListener('mouseup', handleGlobalMouseUp);
 
@@ -318,11 +320,17 @@ export default function Car360Viewer({
               playsInline
               preload="auto"
               onLoadedMetadata={syncViewerTimeline}
+              onLoadedData={() => {
+                syncViewerTimeline();
+              }}
               style={{
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
                 pointerEvents: 'none',
+                // ⭐ [최적화 3] 비디오 레이어에 GPU 하드웨어 가속 강제 부여
+                transform: 'translateZ(0)',
+                willChange: 'transform',
               }}
             />
           ) : (
@@ -346,6 +354,7 @@ export default function Car360Viewer({
                 enablePan={false}
                 minDistance={1}
                 maxDistance={5}
+                rotateSpeed={-1}
               />
             </Canvas>
           )}

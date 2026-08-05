@@ -131,11 +131,11 @@ export default function Footer() {
                 개인정보 처리방침
               </button>
               <hr />
-              <span>사업자등록번호 : 565-86-03060</span>
+              <span>사업자등록번호 : 000-00-00000</span>
               <hr />
-              <span>1599-4783</span>
+              <span>0000-0000</span>
               <hr />
-              <span>대표자 : 박진우</span>
+              <span>대표자 : 홍길동</span>
               <hr />
               <span>인천광역시 서구 북항로32번길 47-15</span>
               <hr />
@@ -143,7 +143,7 @@ export default function Footer() {
             </div>
 
             <div className={s['info-bottom']}>
-              <span>통신판매번호 : 제2025-인천서구-3216호</span>
+              <span>통신판매번호 : 제2025-인천서구-0000호</span>
               <hr />
               <button className={s['company-info-button']}>
                 사업자정보확인

@@ -4,8 +4,10 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import s from './CarDetailWrapper.module.scss';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 
-import Car360Viewer from './Car360Viewer';
+// import Car360Viewer from './Car360Viewer';
+// import MobileCarViewer from '@/components/page/buy/detail/MobileCarViewer';
 import DetailModal from './DetailModal';
 import Lightbox from './Lightbox';
 import DetailHeader from '@/components/atoms/detail/DetailHeader';
@@ -33,6 +35,22 @@ import purchaseReviewData from '@/data/detail/purchase_review.json';
 import Link from 'next/link';
 import ArrowLeft from '/public/svg/arrow-left-big.svg';
 import Arrow from '/public/svg/filter-arrow.svg';
+
+const ViewerSkeleton = () => (
+  <div className={s['viewer-aspect']}>
+    <div className={s['video-element']} />
+  </div>
+);
+
+const MobileCarViewer = dynamic(() => import('./MobileCarViewer'), {
+  ssr: false,
+  loading: () => <ViewerSkeleton />,
+});
+
+const Car360Viewer = dynamic(() => import('./Car360Viewer'), {
+  ssr: false,
+  loading: () => <ViewerSkeleton />,
+});
 
 interface CarDetailWrapperProps {
   carData: any;
@@ -94,6 +112,12 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
   >('grid');
 
   const [viewType, setViewType] = useState<'grid' | 'list' | 'simple'>('grid');
+
+  const [isMobileScreen, setIsMobileScreen] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return false;
+
+    return window.matchMedia('(max-width: 1500px)').matches;
+  });
 
   const gridRef = useRef<HTMLDivElement>(null);
   const [isMobileButtonActive, setIsMobileButtonActive] =
@@ -182,21 +206,39 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
   useEffect(() => {
     const handleScroll = () => {
       if (!gridRef.current) return;
-
       const gridTop = gridRef.current.getBoundingClientRect().top;
 
-      if (gridTop <= 56) {
-        setIsMobileButtonActive(true);
-      } else {
-        setIsMobileButtonActive(false);
-      }
+      // 로직 축약 (gridTop이 56 이하이면 true, 아니면 false)
+      setIsMobileButtonActive(gridTop <= 56);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    // 💡 { capture: true } 옵션을 추가하여 스크롤 주체가 누구든 무조건 감지하게 만듭니다.
+    window.addEventListener('scroll', handleScroll, {
+      passive: true,
+      capture: true,
+    });
 
     handleScroll();
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      // 💡 remove 할 때도 반드시 동일한 옵션을 주어야 정상적으로 클린업됩니다.
+      window.removeEventListener('scroll', handleScroll, { capture: true });
+    };
+  }, []);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 1500px)');
+
+    const handleChange = (event: MediaQueryListEvent) => {
+      setIsMobileScreen(event.matches);
+    };
+
+    setIsMobileScreen(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
   }, []);
 
   const favoriteCars = useMemo(() => {
@@ -255,11 +297,19 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
       <div className={s['main-sticky-container']}>
         <div className={s['main-content']}>
           <div className={s['video-wrap']}>
-            <Car360Viewer
-              videoSrc={sampleVideoUrl}
-              carData={carData}
-              onThumbClick={() => setIsDetailOpen(true)}
-            />
+            {isMobileScreen ? (
+              <MobileCarViewer
+                videoSrc={sampleVideoUrl}
+                carData={carData}
+                onThumbClick={() => setIsDetailOpen(true)}
+              />
+            ) : (
+              <Car360Viewer
+                videoSrc={sampleVideoUrl}
+                carData={carData}
+                onThumbClick={() => setIsDetailOpen(true)}
+              />
+            )}
 
             {info?.tags && info.tags.length > 0 && (
               <div className={s['certification-bar']}>
@@ -733,35 +783,35 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
         </Link>
       </div>
 
-      <div className={s['mobile-total-price-modal']}>
-        <div className={s['modal-button-wrap']}>
-          <button type="button" className={`${s['info-modal-button']}`}>
-            <div className={s['button-forward']}>
-              <div className={s['button-icon']}>👀</div>
-              <div className={s['button-text']}>이 차의 숨은이력까지 확인</div>
-            </div>
+      {/*<div className={s['mobile-total-price-modal']}>*/}
+      {/*  <div className={s['modal-button-wrap']}>*/}
+      {/*    <button type="button" className={`${s['info-modal-button']}`}>*/}
+      {/*      <div className={s['button-forward']}>*/}
+      {/*        <div className={s['button-icon']}>👀</div>*/}
+      {/*        <div className={s['button-text']}>이 차의 숨은이력까지 확인</div>*/}
+      {/*      </div>*/}
 
-            <div className={s['arrow-box']}>
-              앱으로
-              <div className={s['svg-box']}>
-                <Arrow width="100%" height="100%" viewBox="0 0 24 24" />
-              </div>
-            </div>
-          </button>
-        </div>
+      {/*      <div className={s['arrow-box']}>*/}
+      {/*        앱으로*/}
+      {/*        <div className={s['svg-box']}>*/}
+      {/*          <Arrow width="100%" height="100%" viewBox="0 0 24 24" />*/}
+      {/*        </div>*/}
+      {/*      </div>*/}
+      {/*    </button>*/}
+      {/*  </div>*/}
 
-        <div className={s['main-info']}>
-          <div className={s['info-header']}>
-            <div className={s['price']}>{carPrice.toLocaleString()}만원</div>
+      {/*  <div className={s['main-info']}>*/}
+      {/*    <div className={s['info-header']}>*/}
+      {/*      <div className={s['price']}>{carPrice.toLocaleString()}만원</div>*/}
 
-            <div className={s['origin-price']}>
-              신차 {info?.factory_price?.toLocaleString()}
-            </div>
-          </div>
+      {/*      <div className={s['origin-price']}>*/}
+      {/*        신차 {info?.factory_price?.toLocaleString()}*/}
+      {/*      </div>*/}
+      {/*    </div>*/}
 
-          <button className={s['reserve-button']}>바로 구매예약</button>
-        </div>
-      </div>
+      {/*    <button className={s['reserve-button']}>바로 구매예약</button>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </>
   );
 }

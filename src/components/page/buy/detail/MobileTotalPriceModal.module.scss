@@ -1,0 +1,113 @@
+@use '@/styles/mixins/index' as *;
+@import '@/styles/rem';
+
+.mobile-total-price-modal {
+  display: none;
+}
+
+@media (max-width: rem(1500)) {
+  .mobile-total-price-modal {
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+    display: grid;
+    position: sticky;
+    bottom: calc(var(--safe-bottom) * -1);
+
+    padding-bottom: var(--safe-bottom);
+    z-index: 2;
+  }
+
+  .modal-button-wrap {
+    width: 100%;
+    padding: 0 rem(16) rem(12);
+    box-sizing: border-box;
+    z-index: 2;
+
+    .info-modal-button {
+      @include flexBox(flex, space-between, center);
+      width: 100%;
+      height: rem(40);
+      padding: 0 rem(16);
+      box-sizing: border-box;
+      border-radius: rem(4);
+      background-color: #f0f4ff;
+      transition: background-color 0.25s ease;
+
+      &:hover {
+        background-color: #d4d8e2;
+      }
+
+      .button-forward {
+        @include flexBox(flex, start, center, row, rem(8));
+      }
+
+      .button-icon {
+        @include font-style(13, 400, rem(18));
+      }
+
+      .button-text {
+        @include font-style(13, 700, rem(18));
+
+        > span {
+          color: var(--color-point-heydealer);
+        }
+      }
+
+      .arrow-box {
+        @include flexBox(flex, start, center, row, rem(4));
+        @include font-style(12, 400, rem(16));
+      }
+
+      .svg-box {
+        @include svgBox(rem(16));
+        color: var(--color-label-weak);
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  .main-info {
+    gap: rem(8);
+    padding: rem(16);
+    box-sizing: border-box;
+    @include flexBox(flex, space-between, center);
+    background-color: var(--color-token-white);
+    box-shadow:
+      0 rem(-4) rem(8) #272e400a,
+      0 rem(8) rem(16) #272e4014;
+    z-index: 2;
+
+    .info-header {
+      @include flexBox(flex, start, start, column, rem(4));
+
+      .price {
+        @include font-style(15, 700, rem(19));
+        text-decoration: underline;
+        text-underline-offset: rem(3);
+        color: var(--color-point-heydealer);
+      }
+
+      .origin-price {
+        @include font-style(12, 400, rem(16));
+      }
+    }
+
+    .reserve-button {
+      @include flexBox(flex, center, center);
+      @include font-style(15, 700, rem(22));
+      height: rem(52);
+      padding: 0 rem(24);
+      border: rem(1) solid var(--color-line-normal);
+      border-radius: rem(4);
+      box-sizing: border-box;
+      text-align: center;
+      background-color: var(--color-point-heydealer);
+      color: var(--color-token-white);
+      transition: background-color 0.25s ease;
+
+      &:hover {
+        background-color: #315dd4;
+      }
+    }
+  }
+}

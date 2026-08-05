@@ -27,10 +27,13 @@
   border: rem(1) solid rgb(204, 216, 232);
   border-radius: rem(4);
   box-sizing: border-box;
+  flex-wrap: wrap;
 
   .sign-up-text {
     @include font-style(12, 700, rem(20));
     color: rgb(65, 77, 107);
+    text-align: left;
+    word-break: keep-all;
   }
 
   .sign-up-button {
@@ -53,6 +56,11 @@
     flex-wrap: wrap;
     row-gap: 0;
     @include font-style(12, 400, rem(20));
+
+    a {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
   }
 
   .info-bottom {

@@ -1,6 +1,16 @@
 @use '@/styles/mixins/index' as *;
 @import '@/styles/rem';
 
+.viewer-aspect {
+  aspect-ratio: 21 / 9;
+
+  .video-element {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-token-black);
+  }
+}
+
 .certification-bar {
   @include flexBox(flex, start, center, row, rem(12));
   background-color: rgb(39, 46, 64);
@@ -586,6 +596,10 @@
 //}
 
 @media (max-width: rem(1500)) {
+  .viewer-aspect {
+    aspect-ratio: 1844 / 1229;
+  }
+
   .main-sticky-container {
     grid-template-columns: 1fr;
   }
@@ -601,10 +615,6 @@
     .detail-container {
       gap: rem(40);
     }
-  }
-
-  .connect-section {
-    padding: 0;
   }
 
   .section-info {
@@ -751,87 +761,6 @@
     }
   }
 
-  .mobile-total-price-modal {
-    display: grid;
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-    z-index: 2;
-  }
-
-  .modal-button-wrap {
-    width: 100%;
-    padding: 0 rem(16) rem(12);
-    box-sizing: border-box;
-    z-index: 2;
-
-    .info-modal-button {
-      @include flexBox(flex, space-between, center);
-      width: 100%;
-      height: rem(40);
-      padding: 0 rem(16);
-      box-sizing: border-box;
-      border-radius: rem(4);
-      background-color: #f0f4ff;
-
-      .button-forward {
-        @include flexBox(flex, start, center, row, rem(8));
-      }
-
-      .button-icon {
-        @include font-style(13, 400, rem(18));
-      }
-
-      .button-text {
-        @include font-style(13, 700, rem(18));
-
-        > span {
-          color: var(--color-point-heydealer);
-        }
-      }
-
-      .arrow-box {
-        @include flexBox(flex, start, center, row, rem(4));
-        @include font-style(12, 400, rem(16));
-      }
-
-      .svg-box {
-        @include svgBox(rem(16));
-        color: var(--color-label-weak);
-        transform: rotate(-90deg);
-      }
-    }
-  }
-
-  .main-info {
-    gap: rem(8);
-    padding: rem(16);
-    box-sizing: border-box;
-    @include flexBox(flex, space-between, center);
-    background-color: var(--color-token-white);
-    box-shadow:
-      0 rem(-4) rem(8) #272e400a,
-      0 rem(8) rem(16) #272e4014;
-    z-index: 2;
-
-    .info-header {
-      @include flexBox(flex, start, start, column, rem(4));
-
-      .price {
-        @include font-style(15, 700, rem(19));
-        text-decoration: underline;
-        text-underline-offset: rem(3);
-      }
-
-      .origin-price {
-        @include font-style(12, 400, rem(16));
-      }
-    }
-
-    .reserve-button {
-      padding: 0 rem(24);
-    }
-  }
   .mobile-button-wrap {
     display: block;
   }
