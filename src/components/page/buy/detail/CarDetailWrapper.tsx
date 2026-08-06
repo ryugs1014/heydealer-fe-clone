@@ -4,10 +4,9 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import s from './CarDetailWrapper.module.scss';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
 
-// import Car360Viewer from './Car360Viewer';
-// import MobileCarViewer from '@/components/page/buy/detail/MobileCarViewer';
+import Car360Viewer from './Car360Viewer';
+import MobileCarViewer from './MobileCarViewer';
 import DetailModal from './DetailModal';
 import Lightbox from './Lightbox';
 import DetailHeader from '@/components/atoms/detail/DetailHeader';
@@ -35,22 +34,6 @@ import purchaseReviewData from '@/data/detail/purchase_review.json';
 import Link from 'next/link';
 import ArrowLeft from '/public/svg/arrow-left-big.svg';
 import Arrow from '/public/svg/filter-arrow.svg';
-
-const ViewerSkeleton = () => (
-  <div className={s['viewer-aspect']}>
-    <div className={s['video-element']} />
-  </div>
-);
-
-const MobileCarViewer = dynamic(() => import('./MobileCarViewer'), {
-  ssr: false,
-  loading: () => <ViewerSkeleton />,
-});
-
-const Car360Viewer = dynamic(() => import('./Car360Viewer'), {
-  ssr: false,
-  loading: () => <ViewerSkeleton />,
-});
 
 interface CarDetailWrapperProps {
   carData: any;
@@ -98,6 +81,9 @@ const CARWASH_DATA = [
 ];
 
 export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
+  // 🌟 [수정 2] Hydration 에러 방지용 마운트 상태 추가
+  const [isMounted, setIsMounted] = useState<boolean>(false);
+
   const [isDetailOpen, setIsDetailOpen] = useState<boolean>(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [targetSection, setTargetSection] = useState<string | null>(null);
@@ -113,12 +99,7 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
 
   const [viewType, setViewType] = useState<'grid' | 'list' | 'simple'>('grid');
 
-  const [isMobileScreen, setIsMobileScreen] = useState<boolean>(() => {
-    if (typeof window === 'undefined') return false;
-
-    return window.matchMedia('(max-width: 1500px)').matches;
-  });
-
+  const [isMobileScreen, setIsMobileScreen] = useState<boolean>(false);
   const gridRef = useRef<HTMLDivElement>(null);
   const [isMobileButtonActive, setIsMobileButtonActive] =
     useState<boolean>(false);
@@ -138,7 +119,6 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
     (sec) => sec.id === 'outside' || sec.id === 'inside',
   );
   const scratchSection = DETAIL_SECTIONS.find((sec) => sec.id === 'scratch');
-
   const ALL_DETAIL_IMAGES = DETAIL_SECTIONS.flatMap(
     (section) => section.images,
   ) as string[];
@@ -207,12 +187,9 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
     const handleScroll = () => {
       if (!gridRef.current) return;
       const gridTop = gridRef.current.getBoundingClientRect().top;
-
-      // 로직 축약 (gridTop이 56 이하이면 true, 아니면 false)
       setIsMobileButtonActive(gridTop <= 56);
     };
 
-    // 💡 { capture: true } 옵션을 추가하여 스크롤 주체가 누구든 무조건 감지하게 만듭니다.
     window.addEventListener('scroll', handleScroll, {
       passive: true,
       capture: true,
@@ -221,19 +198,21 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
     handleScroll();
 
     return () => {
-      // 💡 remove 할 때도 반드시 동일한 옵션을 주어야 정상적으로 클린업됩니다.
       window.removeEventListener('scroll', handleScroll, { capture: true });
     };
   }, []);
 
+  // 🌟 [수정 3] 마운트 여부와 미디어쿼리 체크를 동시에 수행
   useEffect(() => {
+    setIsMounted(true); // 클라이언트 렌더링이 시작되었음을 표시
+
     const mediaQuery = window.matchMedia('(max-width: 1500px)');
+    setIsMobileScreen(mediaQuery.matches);
 
     const handleChange = (event: MediaQueryListEvent) => {
       setIsMobileScreen(event.matches);
     };
 
-    setIsMobileScreen(mediaQuery.matches);
     mediaQuery.addEventListener('change', handleChange);
 
     return () => {
@@ -274,22 +253,16 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
     return result;
   }, [favoriteCars, modalSortBy]);
 
-  // ⭐ 비용 계산 로직
   const carPrice = carData?.price || 0;
-
-  // 1. 이전관리지 (대략적인 실제 부대비용 계산)
-  const acquisitionTax = Math.floor(carPrice * 0.07); // 취등록세 (차량가의 약 7%)
-  const adminFee = 44; // 매도비 (통상 44만원 선)
-  const insuranceFee = 5; // 성능보증보험료 (임의 5만원 설정)
+  const acquisitionTax = Math.floor(carPrice * 0.07);
+  const adminFee = 44;
+  const insuranceFee = 5;
   const transferTotalFee = acquisitionTax + adminFee + insuranceFee;
 
   const transferTooltipText = `차를 구매할 때 발생하는 취등록 세금 등 구매 부대비용이에요. 예상 비용으로 정확한 금액은 명의이전시 알 수 있어요.\n차액은 이전 후 환급해드려요.\n\n[예상 비용]\n- 취등록세 : ${acquisitionTax.toLocaleString()}만원\n- 관리비용 : ${adminFee.toLocaleString()}만원\n- 성능보험료 : ${insuranceFee.toLocaleString()}만원`;
 
-  // 2. 탁송비 및 보증가입비 (무료지만 원래 가격 표시용)
   const warrantyFee = 50;
   const deliveryFee = 5;
-
-  // 3. 총 구매 비용 (차량가 + 이전관리지)
   const totalPurchasePrice = carPrice + transferTotalFee;
 
   return (
@@ -297,14 +270,15 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
       <div className={s['main-sticky-container']}>
         <div className={s['main-content']}>
           <div className={s['video-wrap']}>
-            {isMobileScreen ? (
-              <MobileCarViewer
+            {/* 🌟 [수정 4] dynamic 대신 직접 렌더링. 마운트 전에는 기본 뷰어(Car360Viewer)의 HTML을 미리 내려보내어 버튼이 처음부터 보이게 유지 */}
+            {!isMounted || !isMobileScreen ? (
+              <Car360Viewer
                 videoSrc={sampleVideoUrl}
                 carData={carData}
                 onThumbClick={() => setIsDetailOpen(true)}
               />
             ) : (
-              <Car360Viewer
+              <MobileCarViewer
                 videoSrc={sampleVideoUrl}
                 carData={carData}
                 onThumbClick={() => setIsDetailOpen(true)}
@@ -610,7 +584,6 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
                   <InfoModalButton
                     textBefore="모든 차량 1년"
                     highlightText="무료 보증"
-                    // onClick={() => setIsInfoModalOpen(true)}
                   />
                 </div>
               </section>
@@ -626,7 +599,6 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
                   <InfoModalButton
                     textBefore="25만원 상당"
                     highlightText="디테일링 세차 완료"
-                    // onClick={() => setIsInfoModalOpen(true)}
                   />
                 </div>
               </section>
@@ -782,36 +754,6 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
           </div>
         </Link>
       </div>
-
-      {/*<div className={s['mobile-total-price-modal']}>*/}
-      {/*  <div className={s['modal-button-wrap']}>*/}
-      {/*    <button type="button" className={`${s['info-modal-button']}`}>*/}
-      {/*      <div className={s['button-forward']}>*/}
-      {/*        <div className={s['button-icon']}>👀</div>*/}
-      {/*        <div className={s['button-text']}>이 차의 숨은이력까지 확인</div>*/}
-      {/*      </div>*/}
-
-      {/*      <div className={s['arrow-box']}>*/}
-      {/*        앱으로*/}
-      {/*        <div className={s['svg-box']}>*/}
-      {/*          <Arrow width="100%" height="100%" viewBox="0 0 24 24" />*/}
-      {/*        </div>*/}
-      {/*      </div>*/}
-      {/*    </button>*/}
-      {/*  </div>*/}
-
-      {/*  <div className={s['main-info']}>*/}
-      {/*    <div className={s['info-header']}>*/}
-      {/*      <div className={s['price']}>{carPrice.toLocaleString()}만원</div>*/}
-
-      {/*      <div className={s['origin-price']}>*/}
-      {/*        신차 {info?.factory_price?.toLocaleString()}*/}
-      {/*      </div>*/}
-      {/*    </div>*/}
-
-      {/*    <button className={s['reserve-button']}>바로 구매예약</button>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
     </>
   );
 }

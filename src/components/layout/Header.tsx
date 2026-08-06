@@ -71,24 +71,14 @@ export default function Header() {
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      // 💡 1. body와 html 모두 overflow 제어
       document.body.style.overflow = 'hidden';
-      document.documentElement.style.overflow = 'hidden';
-      // 💡 2. iOS 바운스(고무줄) 효과 차단
-      document.body.style.overscrollBehavior = 'none';
-      document.documentElement.style.overscrollBehavior = 'none';
     } else {
       document.body.style.overflow = '';
-      document.documentElement.style.overflow = '';
-      document.body.style.overscrollBehavior = '';
-      document.documentElement.style.overscrollBehavior = '';
     }
 
+    // 컴포넌트 언마운트 시 스타일 초기화 (안전장치)
     return () => {
       document.body.style.overflow = '';
-      document.documentElement.style.overflow = '';
-      document.body.style.overscrollBehavior = '';
-      document.documentElement.style.overscrollBehavior = '';
     };
   }, [isMobileMenuOpen]);
 

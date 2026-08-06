@@ -410,6 +410,10 @@
   .sub-img-wrap {
     max-width: rem(100);
   }
+
+  .info-container {
+    padding: rem(16) rem(16) rem(16);
+  }
 }
 
 @media (max-width: rem(991)) {

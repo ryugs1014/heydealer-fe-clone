@@ -395,7 +395,9 @@ export default function TopFilter({
               <div className={s['range-title']}>{FILTER_LABEL_MAP[type]}</div>
             </div>
 
-            <div className={s['range-title']}>{FILTER_LABEL_MAP[type]}</div>
+            <div className={`${s['range-title']} ${s['mobile-title']}`}>
+              {FILTER_LABEL_MAP[type]}
+            </div>
 
             <label className={s['range-display-text']}>
               {getRangeLabel(type)}
@@ -453,7 +455,9 @@ export default function TopFilter({
           <div className={s['range-title']}>{FILTER_LABEL_MAP[type]}</div>
         </div>
 
-        <div className={s['range-title']}>{FILTER_LABEL_MAP[type]}</div>
+        <div className={`${s['range-title']} ${s['mobile-title']}`}>
+          {FILTER_LABEL_MAP[type]}
+        </div>
 
         <div className={s['grid-selector-box']}>
           {CONSTANTS[type as 'fuel' | 'carShape'].map((opt) => {

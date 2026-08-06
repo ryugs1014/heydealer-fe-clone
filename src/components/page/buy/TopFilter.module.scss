@@ -366,6 +366,14 @@
 .grid-modal-container {
   display: grid;
   gap: rem(16);
+
+  .title-wrapper {
+    .button-wrapper {
+      .modal-close-button {
+        display: none;
+      }
+    }
+  }
 }
 
 .grid-selector-box {
@@ -410,6 +418,10 @@
 
 .range-title {
   @include font-style(15, 700, rem(22));
+
+  &.mobile-title {
+    display: none;
+  }
 }
 
 .range-display-text {
@@ -701,6 +713,35 @@
       box-sizing: border-box;
       @include font-style(15, 700, rem(18));
       height: rem(52);
+    }
+  }
+
+  .grid-modal-container {
+    .title-wrapper {
+      .button-wrapper {
+        .modal-close-button {
+          @include flexBox(flex, center, center);
+          width: rem(40);
+          height: rem(40);
+          background: none;
+          border: none;
+          cursor: pointer;
+          color: rgb(39, 46, 64);
+          margin: rem(-8);
+          padding: rem(8);
+
+          .svg-box {
+            @include svgBox(rem(24));
+            min-width: rem(24);
+          }
+        }
+      }
+    }
+  }
+
+  .range-title {
+    &.mobile-title {
+      display: block;
     }
   }
 }

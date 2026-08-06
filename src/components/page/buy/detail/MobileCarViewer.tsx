@@ -89,8 +89,12 @@ export default function MobileCarViewer({
     }
   };
 
+  // 🌟 [수정 완료] 제멋대로 재생되게 만드는 play() 호출을 제거하고, iOS 렌더링 강제를 위해 load()만 호출
   useEffect(() => {
-    syncViewerTimeline();
+    if (viewMode === 'video' && videoRef.current) {
+      videoRef.current.load();
+      syncViewerTimeline();
+    }
   }, [viewMode]);
 
   // 터치 시작
@@ -181,26 +185,31 @@ export default function MobileCarViewer({
             touchAction: viewMode === 'canvas' ? 'auto' : 'pan-y',
           }}
         >
-          {viewMode === 'video' ? (
-            <video
-              ref={videoRef}
-              src={videoSrc}
-              muted
-              playsInline
-              preload="auto"
-              onLoadedMetadata={syncViewerTimeline}
-              onLoadedData={syncViewerTimeline}
-              onCanPlayThrough={syncViewerTimeline}
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                pointerEvents: 'none',
-                transform: 'translateZ(0)',
-                willChange: 'transform',
-              }}
-            />
-          ) : (
+          {/* 🌟 [수정 완료] 조건부 렌더링 제거: video를 DOM에 항상 유지하고 display로 숨김 처리 */}
+          <video
+            ref={videoRef}
+            src={videoSrc}
+            muted
+            playsInline
+            preload="auto"
+            onLoadedMetadata={syncViewerTimeline}
+            onLoadedData={syncViewerTimeline}
+            onCanPlayThrough={syncViewerTimeline}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              pointerEvents: 'none',
+              transform: 'translateZ(0)',
+              willChange: 'transform',
+              display: viewMode === 'video' ? 'block' : 'none',
+            }}
+          />
+
+          {viewMode === 'canvas' && (
             <Canvas
               camera={{ position: [0, 1, 6], fov: 60 }}
               style={{

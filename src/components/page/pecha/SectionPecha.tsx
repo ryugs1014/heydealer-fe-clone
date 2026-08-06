@@ -114,24 +114,13 @@ export default function SectionPecha() {
 
   useEffect(() => {
     if (isPechaMounted || isDetailMounted || isLocationModalOpen) {
-      // 💡 1. body와 html 모두 overflow 제어
       document.body.style.overflow = 'hidden';
-      document.documentElement.style.overflow = 'hidden';
-      // 💡 2. iOS 바운스(고무줄) 효과 차단
-      document.body.style.overscrollBehavior = 'none';
-      document.documentElement.style.overscrollBehavior = 'none';
     } else {
-      document.body.style.overflow = '';
-      document.documentElement.style.overflow = '';
-      document.body.style.overscrollBehavior = '';
-      document.documentElement.style.overscrollBehavior = '';
+      document.body.style.overflow = 'unset';
     }
 
     return () => {
-      document.body.style.overflow = '';
-      document.documentElement.style.overflow = '';
-      document.body.style.overscrollBehavior = '';
-      document.documentElement.style.overscrollBehavior = '';
+      document.body.style.overflow = 'unset';
     };
   }, [isPechaMounted, isDetailMounted, isLocationModalOpen]);
 
