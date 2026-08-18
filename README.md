@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 헤이딜러 중고차 거래 플랫폼 프론트엔드 클론 코딩 (Heydealer Clone)
 
-## Getting Started
+실제 서비스 수준의 동적 데이터 렌더링, 3D 차량 뷰어 및 다중 필터링 시스템을 완벽하게 구현한 헤이딜러 프론트엔드 반응형 클론 코딩입니다.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 프로젝트 개요
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+국내 대표 중고차 거래 플랫폼 '헤이딜러'의 공식 웹사이트를 분석하여 UI와 레이아웃을 구현한 클론 코딩 프로젝트입니다. 원본 사이트의 실제 데이터를 활용하여 사용자 경험(UX)과 동적 렌더링을 정교하게 구현했으며, 반응형 웹 디자인 및 컴포넌트 구조화 역량을 검증하기 위해 진행했습니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **작업 기간**: 2026.05 ~ 2026.06
+* **참여 인원**: 개인 프로젝트
+* **담당 역할**: 퍼블리싱, 프론트엔드
+* **배포 링크**: [https://heydealer-fe-clone.vercel.app](https://heydealer-fe-clone.vercel.app)
+* **GitHub 저장소**: [https://github.com/ryugs1014/heydealer-fe-clone](https://github.com/ryugs1014/heydealer-fe-clone)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## 기술 스택
 
-To learn more about Next.js, take a look at the following resources:
+* **Frontend & Styling**: React, Next.js, TypeScript, Sass(SCSS)
+* **Library & Animation**: Swiper, Three.js, Framer-motion
+* **Version Control & Deployment**: GitHub, Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 주요 기능
 
-## Deploy on Vercel
+* **복합 조건에서의 검색 및 다중 필터링 기능 구현**
+    * 브랜드, 차종 등 여러 조건이 중첩되는 복합 검색 기능을 구현했습니다.
+    * 원본 사이트의 JSON 매물 데이터를 활용해, 사용자의 다중 선택 조건에 맞춰 데이터를 가공하고 일치하는 결과값을 동적으로 렌더링하는 프론트엔드 로직 처리에 집중했습니다.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* **Three.js 기반 360도 자동차 3D 뷰어 및 내부 렌더링**
+    * 비디오 소스를 활용하여 스크롤 및 마우스 드래그에 반응하는 3D 회전 인터랙션을 세팅했습니다.
+    * 실제 HTML5 Canvas와 Three.js를 결합해 차량 내부 3D 모델링 데이터를 삽입하고, 카메라 시점(카메라 위치 및 컨트롤러)을 자유롭게 조작하며 차량 내부를 둘러볼 수 있는 고급 렌더링 기능을 완성했습니다.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* **복합 UX/UI 레이아웃 클론 및 크로스 디바이스 반응형 최적화**
+    * 헤이딜러 웹사이트 특유의 복잡하지만 직관적인 UI/UX 뎁스를 분석하여 CSS와 컴포넌트 구조를 직접 재설계했습니다.
+    * 비효율적인 레거시는 모던 리액트 패턴으로 개선하고, 배울 점이 있는 최적화된 로직은 적극적으로 벤치마킹하여 PC, 태블릿, 모바일 환경을 완벽하게 지원하는 반응형 웹사이트를 구축했습니다.
