@@ -2,7 +2,7 @@
   "hash_id": "rWdrxZ",
   "name": "마세라티",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/58_0c90bff2-29f7-49bc-a507-8c16a573a31d.PNG",
-  "count": 1,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
@@ -51,7 +51,7 @@
     {
       "hash_id": "RManay",
       "name": "기블리",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {

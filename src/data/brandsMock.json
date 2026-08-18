@@ -8,11 +8,36 @@
     "is_domestic": true,
     "is_subscribed": false,
     "model_groups": [
-      { "hash_id": "relYKk", "name": "i30", "count": 3, "is_subscribed": false },
-      { "hash_id": "BkBn2k", "name": "i40", "count": 0, "is_subscribed": false },
-      { "hash_id": "avante7", "name": "아반떼", "count": 421, "is_subscribed": false },
-      { "hash_id": "grandeur", "name": "그랜저", "count": 512, "is_subscribed": false },
-      { "hash_id": "genesis", "name": "제네시스", "count": 3, "is_subscribed": false }
+      {
+        "hash_id": "relYKk",
+        "name": "i30",
+        "count": 3,
+        "is_subscribed": false
+      },
+      {
+        "hash_id": "BkBn2k",
+        "name": "i40",
+        "count": 0,
+        "is_subscribed": false
+      },
+      {
+        "hash_id": "avante7",
+        "name": "아반떼",
+        "count": 421,
+        "is_subscribed": false
+      },
+      {
+        "hash_id": "grandeur",
+        "name": "그랜저",
+        "count": 512,
+        "is_subscribed": false
+      },
+      {
+        "hash_id": "genesis",
+        "name": "제네시스",
+        "count": 3,
+        "is_subscribed": false
+      }
     ]
   },
   {
@@ -24,8 +49,18 @@
     "is_domestic": true,
     "is_subscribed": false,
     "model_groups": [
-      { "hash_id": "k5hash", "name": "K5", "count": 341, "is_subscribed": false },
-      { "hash_id": "sorento", "name": "쏘렌토", "count": 412, "is_subscribed": false }
+      {
+        "hash_id": "k5hash",
+        "name": "K5",
+        "count": 341,
+        "is_subscribed": false
+      },
+      {
+        "hash_id": "sorento",
+        "name": "쏘렌토",
+        "count": 412,
+        "is_subscribed": false
+      }
     ]
   }
 ]

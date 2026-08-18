@@ -2,14 +2,14 @@
   "hash_id": "NZONNo",
   "name": "혼다",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/45_2c166a1c-40e5-43ae-b7ff-041eacd6481c.PNG",
-  "count": 6,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
     {
       "hash_id": "VerOmk",
       "name": "CR-V",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -117,7 +117,7 @@
     {
       "hash_id": "Ae1N9k",
       "name": "어코드",
-      "count": 4,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -129,7 +129,7 @@
     {
       "hash_id": "VeJP1M",
       "name": "오딧세이",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {

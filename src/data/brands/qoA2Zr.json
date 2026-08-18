@@ -2,7 +2,7 @@
   "hash_id": "qoA2Zr",
   "name": "포르쉐",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/42_5493ee20-c6ce-4248-b776-6219cedb5495.PNG",
-  "count": 5,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
@@ -63,19 +63,19 @@
     {
       "hash_id": "8enR4e",
       "name": "카이엔",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "0yNDLk",
       "name": "타이칸",
-      "count": 3,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "lMg7PM",
       "name": "파나메라",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     }
   ]

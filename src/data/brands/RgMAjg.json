@@ -2,7 +2,7 @@
   "hash_id": "RgMAjg",
   "name": "아우디",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/56_cae46ff2-7b49-486e-b4a2-107c7a4a81c4.PNG",
-  "count": 74,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
@@ -33,25 +33,25 @@
     {
       "hash_id": "7MEgne",
       "name": "A3",
-      "count": 7,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "peqW1M",
       "name": "A4",
-      "count": 13,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "RyWgPy",
       "name": "A5",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "1yOgby",
       "name": "A6",
-      "count": 24,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -63,7 +63,7 @@
     {
       "hash_id": "8yAl7M",
       "name": "A8",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -75,31 +75,31 @@
     {
       "hash_id": "We6KZk",
       "name": "Q3",
-      "count": 3,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "Verm4y",
       "name": "Q4",
-      "count": 4,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "aMKvYk",
       "name": "Q5",
-      "count": 3,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "JyVWxe",
       "name": "Q7",
-      "count": 4,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "zMbaqk",
       "name": "Q8",
-      "count": 2,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -147,7 +147,7 @@
     {
       "hash_id": "XyQmGy",
       "name": "S3",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -183,7 +183,7 @@
     {
       "hash_id": "VerZpe",
       "name": "SQ5",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -231,7 +231,7 @@
     {
       "hash_id": "1yOP7e",
       "name": "Q6 e-트론",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -261,7 +261,7 @@
     {
       "hash_id": "7MEAzM",
       "name": "e-트론",
-      "count": 9,
+      "count": 0,
       "is_subscribed": false
     },
     {

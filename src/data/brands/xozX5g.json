@@ -2,38 +2,38 @@
   "hash_id": "xozX5g",
   "name": "테슬라",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/69_ecaec424-9d58-4639-aca9-8a6de18a94fc.PNG",
-  "count": 53,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
     {
       "hash_id": "Xev7lk",
       "name": "모델 3",
-      "count": 14,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "lkY5Kk",
       "name": "모델 S",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "0yN6zy",
       "name": "모델 X",
-      "count": 4,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "8enPWM",
       "name": "모델 Y",
-      "count": 33,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "2k3lXM",
       "name": "사이버트럭",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     }
   ]

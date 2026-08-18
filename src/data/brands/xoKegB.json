@@ -2,14 +2,14 @@
   "hash_id": "xoKegB",
   "name": "현대",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/28_22fc7550-6cfd-4576-9c60-7c69eec0451d.PNG",
-  "count": 1294,
+  "count": 3,
   "is_domestic": true,
   "is_subscribed": false,
   "model_groups": [
     {
       "hash_id": "relYKk",
       "name": "i30",
-      "count": 3,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -33,7 +33,7 @@
     {
       "hash_id": "rk0Jmy",
       "name": "그랜저",
-      "count": 186,
+      "count": 1,
       "is_subscribed": false
     },
     {
@@ -45,7 +45,7 @@
     {
       "hash_id": "BkBrWk",
       "name": "넥쏘",
-      "count": 10,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -69,19 +69,19 @@
     {
       "hash_id": "Xkomgy",
       "name": "맥스크루즈",
-      "count": 6,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "Ok4W5e",
       "name": "베뉴",
-      "count": 12,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "9kzK6M",
       "name": "베라크루즈",
-      "count": 2,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -93,7 +93,7 @@
     {
       "hash_id": "peqJbk",
       "name": "벨로스터",
-      "count": 12,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -105,19 +105,19 @@
     {
       "hash_id": "XkoNPe",
       "name": "스타리아",
-      "count": 6,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "Vy2n5y",
       "name": "스타렉스",
-      "count": 2,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "zeXDJe",
       "name": "싼타페",
-      "count": 251,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -129,7 +129,7 @@
     {
       "hash_id": "Ne8v1M",
       "name": "쏘나타",
-      "count": 78,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -147,19 +147,19 @@
     {
       "hash_id": "XyQ1gy",
       "name": "아반떼",
-      "count": 224,
+      "count": 1,
       "is_subscribed": false
     },
     {
       "hash_id": "VeJ25e",
       "name": "아슬란",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "2k3daM",
       "name": "아이오닉",
-      "count": 18,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -171,13 +171,13 @@
     {
       "hash_id": "8yAWLk",
       "name": "에쿠스",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "RMa72e",
       "name": "엑센트",
-      "count": 6,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -195,19 +195,19 @@
     {
       "hash_id": "We6v5e",
       "name": "제네시스",
-      "count": 4,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "zeXXQe",
       "name": "캐스퍼",
-      "count": 164,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "8enjZe",
       "name": "코나",
-      "count": 69,
+      "count": 1,
       "is_subscribed": false
     },
     {
@@ -237,7 +237,7 @@
     {
       "hash_id": "Ae1PAy",
       "name": "투싼",
-      "count": 113,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -267,7 +267,7 @@
     {
       "hash_id": "EMpA6y",
       "name": "팰리세이드",
-      "count": 112,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -279,13 +279,13 @@
     {
       "hash_id": "7MEG0e",
       "name": "포터II",
-      "count": 8,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "Verw4k",
       "name": "포터II 일렉트릭",
-      "count": 6,
+      "count": 0,
       "is_subscribed": false
     }
   ]

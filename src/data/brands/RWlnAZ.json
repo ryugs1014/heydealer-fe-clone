@@ -2,14 +2,14 @@
   "hash_id": "RWlnAZ",
   "name": "폴스타",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/70_7e92178b-ce63-4893-9a85-93341d62f89a.PNG",
-  "count": 7,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
     {
       "hash_id": "2k3wXk",
       "name": "폴스타2",
-      "count": 7,
+      "count": 0,
       "is_subscribed": false
     },
     {

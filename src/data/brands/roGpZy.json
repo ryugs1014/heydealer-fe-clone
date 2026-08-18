@@ -2,14 +2,14 @@
   "hash_id": "roGpZy",
   "name": "캐딜락",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/36_623305e5-4f5a-4fe2-93f7-36b39fabfce8.PNG",
-  "count": 3,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
     {
       "hash_id": "RyW1jk",
       "name": "ATS",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -27,7 +27,7 @@
     {
       "hash_id": "qM7KaM",
       "name": "CT4",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -105,7 +105,7 @@
     {
       "hash_id": "YyGjdM",
       "name": "리릭",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {

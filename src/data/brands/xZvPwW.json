@@ -2,7 +2,7 @@
   "hash_id": "xZvPwW",
   "name": "BYD",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2025/07/02/78_b00f5ad3-6bd4-4dfe-8fb9-07205762b887.png",
-  "count": 3,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
@@ -15,7 +15,7 @@
     {
       "hash_id": "8yApbM",
       "name": "아토3",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -27,7 +27,7 @@
     {
       "hash_id": "VerRqe",
       "name": "SEALION 7",
-      "count": 2,
+      "count": 0,
       "is_subscribed": false
     }
   ]

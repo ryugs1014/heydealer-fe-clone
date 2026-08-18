@@ -2,14 +2,14 @@
   "hash_id": "2oV0gK",
   "name": "기아",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/33_f0bef190-ec47-471f-8c3d-ff436a0e44a2.PNG",
-  "count": 1260,
+  "count": 2,
   "is_domestic": true,
   "is_subscribed": false,
   "model_groups": [
     {
       "hash_id": "rk03Be",
       "name": "EV3",
-      "count": 5,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -21,49 +21,49 @@
     {
       "hash_id": "OyZqgM",
       "name": "EV5",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "Vy2pJk",
       "name": "EV6",
-      "count": 18,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "XyQ6qe",
       "name": "EV9",
-      "count": 5,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "VMjJGM",
       "name": "K3",
-      "count": 39,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "EMpDLM",
       "name": "K5",
-      "count": 100,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "XevRae",
       "name": "K7",
-      "count": 57,
+      "count": 1,
       "is_subscribed": false
     },
     {
       "hash_id": "YyLY2e",
       "name": "K8",
-      "count": 36,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "Vy2aDM",
       "name": "K9",
-      "count": 6,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -81,13 +81,13 @@
     {
       "hash_id": "lkY2AM",
       "name": "니로",
-      "count": 32,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "bePjqM",
       "name": "레이",
-      "count": 249,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -105,7 +105,7 @@
     {
       "hash_id": "8yAA6y",
       "name": "로체",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -129,13 +129,13 @@
     {
       "hash_id": "VeJZme",
       "name": "모닝",
-      "count": 195,
+      "count": 1,
       "is_subscribed": false
     },
     {
       "hash_id": "lMgGzM",
       "name": "모하비",
-      "count": 14,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -171,7 +171,7 @@
     {
       "hash_id": "8enKZk",
       "name": "셀토스",
-      "count": 112,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -183,13 +183,13 @@
     {
       "hash_id": "zeXgDy",
       "name": "스토닉",
-      "count": 10,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "relN2M",
       "name": "스팅어",
-      "count": 13,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -201,7 +201,7 @@
     {
       "hash_id": "relJ0M",
       "name": "스포티지",
-      "count": 75,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -213,13 +213,13 @@
     {
       "hash_id": "peqowM",
       "name": "쏘렌토",
-      "count": 164,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "7MEJWy",
       "name": "쏘울",
-      "count": 7,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -255,7 +255,7 @@
     {
       "hash_id": "2k3aEy",
       "name": "카니발",
-      "count": 97,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -273,7 +273,7 @@
     {
       "hash_id": "EMpVbe",
       "name": "타스만",
-      "count": 5,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -285,13 +285,13 @@
     {
       "hash_id": "YyLR6k",
       "name": "포르테",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "Ne8VWM",
       "name": "프라이드",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -345,13 +345,13 @@
     {
       "hash_id": "8yAGXk",
       "name": "봉고3",
-      "count": 8,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "aMKl2y",
       "name": "봉고3 EV",
-      "count": 9,
+      "count": 0,
       "is_subscribed": false
     }
   ]

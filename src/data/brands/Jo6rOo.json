@@ -75,7 +75,7 @@
     {
       "hash_id": "KM5VJy",
       "name": "S60",
-      "count": 7,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -93,7 +93,7 @@
     {
       "hash_id": "lkY35y",
       "name": "S90",
-      "count": 3,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -111,7 +111,7 @@
     {
       "hash_id": "0yNNgy",
       "name": "V60",
-      "count": 7,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -129,13 +129,13 @@
     {
       "hash_id": "zyx6mk",
       "name": "XC40",
-      "count": 25,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "VMjr8M",
       "name": "XC60",
-      "count": 13,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -147,7 +147,7 @@
     {
       "hash_id": "bePLbe",
       "name": "XC90",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     }
   ]

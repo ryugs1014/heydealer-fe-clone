@@ -1,10 +1,6 @@
 @use '@/styles/mixins/index' as *;
 @import '@/styles/rem';
 
-.mobile-filter-open-btn {
-  display: none;
-}
-
 .top-filter {
   position: relative;
   z-index: 100;
@@ -25,6 +21,10 @@
   .option-filter-wrap {
     @include flexBox(flex, start, center, row, rem(8));
     flex-wrap: wrap;
+
+    .mobile-filter-open-btn {
+      display: none;
+    }
   }
 
   .clear-all-pill-btn {
@@ -570,6 +570,10 @@
       > * {
         flex-shrink: 0;
       }
+
+      .mobile-filter-open-btn {
+        display: flex;
+      }
     }
 
     .modal-trigger-wrapper {
@@ -578,10 +582,6 @@
 
     .filter-btn-main {
       display: none;
-    }
-
-    .mobile-filter-open-btn {
-      display: flex;
     }
 
     .line {

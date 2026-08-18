@@ -2,50 +2,50 @@
   "hash_id": "vgm7Do",
   "name": "제네시스",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/68_30f8c57c-ede2-44bc-b8ef-20018c3e573b.PNG",
-  "count": 202,
+  "count": 0,
   "is_domestic": true,
   "is_subscribed": false,
   "model_groups": [
     {
       "hash_id": "Ae1E8e",
       "name": "EQ900",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "YyGdqe",
       "name": "G70",
-      "count": 36,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "zMbV3M",
       "name": "G80",
-      "count": 69,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "1yOqjk",
       "name": "G90",
-      "count": 9,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "rk0bBy",
       "name": "GV60",
-      "count": 4,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "peqqRe",
       "name": "GV70",
-      "count": 38,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "7MEA9M",
       "name": "GV80",
-      "count": 45,
+      "count": 0,
       "is_subscribed": false
     }
   ]

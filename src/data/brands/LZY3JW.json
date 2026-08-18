@@ -2,14 +2,14 @@
   "hash_id": "LZY3JW",
   "name": "폭스바겐",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2025/10/31/63_2f0b4b49-3e9f-4e94-b8d9-f3460fc883f7.png",
-  "count": 68,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
     {
       "hash_id": "KM5WJe",
       "name": "CC",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -27,13 +27,13 @@
     {
       "hash_id": "aMKz2k",
       "name": "ID.4",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "aMKVXk",
       "name": "골프",
-      "count": 7,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -69,7 +69,7 @@
     {
       "hash_id": "KkmVVM",
       "name": "제타",
-      "count": 14,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -87,19 +87,19 @@
     {
       "hash_id": "7MElYk",
       "name": "티구안",
-      "count": 24,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "Kkm7Qy",
       "name": "티록",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "VMjL8e",
       "name": "파사트",
-      "count": 6,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -111,19 +111,19 @@
     {
       "hash_id": "0yNOge",
       "name": "폴로",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "OyZ5mM",
       "name": "아테온",
-      "count": 12,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "Ver3ok",
       "name": "아틀라스",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     }
   ]

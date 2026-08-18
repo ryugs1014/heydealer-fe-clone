@@ -114,6 +114,14 @@
           gap: rem(20);
         }
 
+        .desktop-link {
+          display: flex;
+        }
+
+        .mobile-link {
+          display: none;
+        }
+
         &:hover {
           background-color: var(--color-line-divider);
         }

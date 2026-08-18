@@ -2,56 +2,56 @@
   "hash_id": "xgrX7o",
   "name": "르노코리아(삼성)",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2025/07/24/55_a3e9caea-41ed-4619-81e7-a0b3e7b0778d.png",
-  "count": 150,
+  "count": 1,
   "is_domestic": true,
   "is_subscribed": false,
   "model_groups": [
     {
       "hash_id": "9kzmge",
       "name": "QM3",
-      "count": 7,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "Ne8wLy",
       "name": "QM5",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "DydEVe",
       "name": "QM6",
-      "count": 50,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "RMapak",
       "name": "SM3",
-      "count": 6,
+      "count": 1,
       "is_subscribed": false
     },
     {
       "hash_id": "XevEJy",
       "name": "SM5",
-      "count": 6,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "zeX2YM",
       "name": "SM6",
-      "count": 16,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "rk0mPM",
       "name": "SM7",
-      "count": 2,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "1yRqnM",
       "name": "그랑 콜레오스",
-      "count": 17,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -69,13 +69,13 @@
     {
       "hash_id": "XevKVk",
       "name": "아르카나",
-      "count": 6,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "Ae1BQk",
       "name": "XM3",
-      "count": 37,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -93,13 +93,13 @@
     {
       "hash_id": "Verd4M",
       "name": "캡처",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "gMDj1e",
       "name": "클리오",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {

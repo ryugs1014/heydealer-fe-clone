@@ -2,7 +2,7 @@
   "hash_id": "7gReZz",
   "name": "토요타",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/39_1739f424-a7b0-436c-a97d-2c142192b7de.PNG",
-  "count": 13,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
@@ -45,7 +45,7 @@
     {
       "hash_id": "BkBd1y",
       "name": "RAV4",
-      "count": 5,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -273,7 +273,7 @@
     {
       "hash_id": "lkYJ8M",
       "name": "크라운",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {

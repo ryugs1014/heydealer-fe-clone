@@ -1,5 +1,105 @@
 [
   {
+    "hash_id": "vpWOnp",
+    "brand_id": "xoKegB",
+    "model_id": "8enjZe",
+    "price": 1610,
+    "previous_price": null,
+    "savings_total": 30,
+    "sale_status": "listed",
+    "detail_info": {
+      "model_name": "코나",
+      "model_part_name": "코나",
+      "grade_part_name": "1.6 터보 2WD",
+      "grade_name": "1.6",
+      "detail_name": "프리미엄",
+      "initial_registration_date": "2016-12-15 00:00:00",
+      "year": 2018,
+      "mileage": 90644,
+      "factory_price": 1369,
+      "recommendation_comment": "・ 1인 소유 차량이에요.\n・ 앞좌석 열선 시트 탑재.",
+      "offered_at": "2026-05-15 19:19:34",
+      "image_urls": [
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/07/28/f2b425e6-8b7e-4d4a-8715-28e3cc2f73bc.png",
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b89a6cac-ec4e-45b3-ac77-9e1dc08f40ac.jpeg"
+      ],
+      "detail_image_urls": {
+        "outside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8a2ad708-ec54-4bb8-96f7-80c4f50451a5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/37c1b2fe-ed81-4306-90e9-741f8d75cc67.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9a4c485f-c26d-4445-9f42-325db406b67f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/faa9cc8c-66cc-4c93-83c8-792d42146d45.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e73635b6-1334-4332-88c4-22933bdc38e5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c49b6c41-8127-4aed-950a-44e80297dadd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/ecf58873-86d9-4ab5-8fa6-6a760f7088c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f4e2ea8f-94db-484a-8271-c197c3f2d56c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cfdd5e67-7cf2-4f78-a926-e1ce068d8505.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f61e5b00-ae7c-4ef0-8ed7-2e831e61981e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/dde87512-b7f7-4088-b85a-c0c2a0bece74.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b4fb6293-cbb9-4c99-8544-ffcce90d9edd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4ae30472-1b63-4f61-a4ab-98da67dceb61.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/693e6961-ebf6-4499-88e6-207bab3b4375.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cc45a5e0-4776-4b43-9d11-ac4b7265b604.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7cd19340-0ba8-4bf6-a586-9511982fac92.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/57ec7a3c-bd2f-4493-8387-8a379a79c8b4.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d4332269-f07a-4613-8086-b2e4b949a2c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/259477d6-2f3f-42b3-8bf2-6be2f200a332.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/5b532134-5e72-4bdd-8c4e-2d2b624e07cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cab0c803-dbb9-45ba-b9f6-28d7a957e770.jpeg"
+        ],
+        "inside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b89a6cac-ec4e-45b3-ac77-9e1dc08f40ac.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/86d61f90-4f72-4388-b421-0cede457e4bc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8574c2f9-1b54-498e-9f45-8f302409c7fe.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/3a275d9f-8dfa-4403-9d9c-058a079ecfeb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fc20d1c5-a50c-4c3d-88a3-255ef3ef933a.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8006eb0-f6e8-4ccd-b4de-01ee4657ebc7.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55573699-0b2a-49bb-aabd-d62fd32481a6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/938f91e7-8131-40c9-af48-6ace74ee90d9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d58f643f-1002-466d-80c9-78d2dddcf2cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e2bd0b93-86a6-4a92-bffb-ec83aa8ff9c9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/23a3f55b-45ae-4a83-bd8f-46714254fadc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55757312-07f3-4598-9543-9aeb0472c9b1.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c2e6fb96-3558-4bbc-a9e5-81df432062fc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8d3a8f6-1c46-455b-a2a1-4248f1597560.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/132ff23e-7d45-44ff-8018-1b02a1d1d453.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9e5a6333-e829-44c8-b74c-194636ed92e6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/43657b9b-188c-4075-9b8a-9305c7a6dbb0.jpeg"
+        ],
+        "scratch": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/96f8c4ef-b7d0-4287-95ea-24b943dbbb2f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4834228d-7a72-41ad-9068-83d2b3c353df.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/0526e9e8-a81c-423e-86a6-71727497c833.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/bb5d58c7-fc23-43a3-8705-779cf82c3f8e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c82f5ce9-cd83-44eb-9d87-05b3e6c96b1c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/a81fa6fb-1e57-4d52-9128-880381f4436d.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fb88d8ef-bf1e-4a7f-b785-103ca55dbf27.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d7d9fde8-8aa3-4b13-8ef1-7392db6f7d97.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/382c3822-1cbc-4fef-b932-1cf993c89637.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7c1f7a4a-8dad-427a-9080-922390632366.jpeg"
+        ],
+        "underbody": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fa5f75b0-f129-47eb-903d-2fab538aee43.JPEG"
+        ]
+      },
+      "tags": [
+        {
+          "text": "단순교환 무사고",
+          "style": "gray"
+        },
+        {
+          "text": "1년 보증",
+          "style": "gray"
+        },
+        {
+          "text": "eye 인증",
+          "style": "gray"
+        }
+      ]
+    },
+    "location": "인천"
+  },
+  {
     "hash_id": "zlD8Dalx",
     "brand_id": "Lgyakg",
     "model_id": "XkoPoM",
@@ -25,22 +125,61 @@
       ],
       "detail_image_urls": {
         "outside": [
-          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/9eb7911a-388f-486c-a5c0-cd8c37acf216.png",
-          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8a2ad708-ec54-4bb8-96f7-80c4f50451a5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/37c1b2fe-ed81-4306-90e9-741f8d75cc67.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9a4c485f-c26d-4445-9f42-325db406b67f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/faa9cc8c-66cc-4c93-83c8-792d42146d45.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e73635b6-1334-4332-88c4-22933bdc38e5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c49b6c41-8127-4aed-950a-44e80297dadd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/ecf58873-86d9-4ab5-8fa6-6a760f7088c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f4e2ea8f-94db-484a-8271-c197c3f2d56c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cfdd5e67-7cf2-4f78-a926-e1ce068d8505.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f61e5b00-ae7c-4ef0-8ed7-2e831e61981e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/dde87512-b7f7-4088-b85a-c0c2a0bece74.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b4fb6293-cbb9-4c99-8544-ffcce90d9edd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4ae30472-1b63-4f61-a4ab-98da67dceb61.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/693e6961-ebf6-4499-88e6-207bab3b4375.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cc45a5e0-4776-4b43-9d11-ac4b7265b604.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7cd19340-0ba8-4bf6-a586-9511982fac92.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/57ec7a3c-bd2f-4493-8387-8a379a79c8b4.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d4332269-f07a-4613-8086-b2e4b949a2c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/259477d6-2f3f-42b3-8bf2-6be2f200a332.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/5b532134-5e72-4bdd-8c4e-2d2b624e07cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cab0c803-dbb9-45ba-b9f6-28d7a957e770.jpeg"
         ],
         "inside": [
-          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/9eb7911a-388f-486c-a5c0-cd8c37acf216.png",
-          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b89a6cac-ec4e-45b3-ac77-9e1dc08f40ac.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/86d61f90-4f72-4388-b421-0cede457e4bc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8574c2f9-1b54-498e-9f45-8f302409c7fe.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/3a275d9f-8dfa-4403-9d9c-058a079ecfeb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fc20d1c5-a50c-4c3d-88a3-255ef3ef933a.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8006eb0-f6e8-4ccd-b4de-01ee4657ebc7.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55573699-0b2a-49bb-aabd-d62fd32481a6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/938f91e7-8131-40c9-af48-6ace74ee90d9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d58f643f-1002-466d-80c9-78d2dddcf2cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e2bd0b93-86a6-4a92-bffb-ec83aa8ff9c9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/23a3f55b-45ae-4a83-bd8f-46714254fadc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55757312-07f3-4598-9543-9aeb0472c9b1.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c2e6fb96-3558-4bbc-a9e5-81df432062fc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8d3a8f6-1c46-455b-a2a1-4248f1597560.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/132ff23e-7d45-44ff-8018-1b02a1d1d453.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9e5a6333-e829-44c8-b74c-194636ed92e6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/43657b9b-188c-4075-9b8a-9305c7a6dbb0.jpeg"
         ],
         "scratch": [
-          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/9eb7911a-388f-486c-a5c0-cd8c37acf216.png",
-          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/9eb7911a-388f-486c-a5c0-cd8c37acf216.png",
-          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/9eb7911a-388f-486c-a5c0-cd8c37acf216.png",
-          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/96f8c4ef-b7d0-4287-95ea-24b943dbbb2f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4834228d-7a72-41ad-9068-83d2b3c353df.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/0526e9e8-a81c-423e-86a6-71727497c833.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/bb5d58c7-fc23-43a3-8705-779cf82c3f8e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c82f5ce9-cd83-44eb-9d87-05b3e6c96b1c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/a81fa6fb-1e57-4d52-9128-880381f4436d.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fb88d8ef-bf1e-4a7f-b785-103ca55dbf27.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d7d9fde8-8aa3-4b13-8ef1-7392db6f7d97.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/382c3822-1cbc-4fef-b932-1cf993c89637.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7c1f7a4a-8dad-427a-9080-922390632366.jpeg"
         ],
         "underbody": [
-          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/9eb7911a-388f-486c-a5c0-cd8c37acf216.png",
-          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fa5f75b0-f129-47eb-903d-2fab538aee43.JPEG"
         ]
       },
       "tags": [
@@ -84,6 +223,65 @@
         "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/ca0a72af-3f22-4c2a-b87a-77528e8c8bad.png",
         "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/bccb666b-3658-44b3-aae1-ba72a5bb4d4c.jpeg"
       ],
+      "detail_image_urls": {
+        "outside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8a2ad708-ec54-4bb8-96f7-80c4f50451a5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/37c1b2fe-ed81-4306-90e9-741f8d75cc67.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9a4c485f-c26d-4445-9f42-325db406b67f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/faa9cc8c-66cc-4c93-83c8-792d42146d45.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e73635b6-1334-4332-88c4-22933bdc38e5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c49b6c41-8127-4aed-950a-44e80297dadd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/ecf58873-86d9-4ab5-8fa6-6a760f7088c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f4e2ea8f-94db-484a-8271-c197c3f2d56c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cfdd5e67-7cf2-4f78-a926-e1ce068d8505.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f61e5b00-ae7c-4ef0-8ed7-2e831e61981e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/dde87512-b7f7-4088-b85a-c0c2a0bece74.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b4fb6293-cbb9-4c99-8544-ffcce90d9edd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4ae30472-1b63-4f61-a4ab-98da67dceb61.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/693e6961-ebf6-4499-88e6-207bab3b4375.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cc45a5e0-4776-4b43-9d11-ac4b7265b604.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7cd19340-0ba8-4bf6-a586-9511982fac92.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/57ec7a3c-bd2f-4493-8387-8a379a79c8b4.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d4332269-f07a-4613-8086-b2e4b949a2c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/259477d6-2f3f-42b3-8bf2-6be2f200a332.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/5b532134-5e72-4bdd-8c4e-2d2b624e07cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cab0c803-dbb9-45ba-b9f6-28d7a957e770.jpeg"
+        ],
+        "inside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b89a6cac-ec4e-45b3-ac77-9e1dc08f40ac.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/86d61f90-4f72-4388-b421-0cede457e4bc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8574c2f9-1b54-498e-9f45-8f302409c7fe.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/3a275d9f-8dfa-4403-9d9c-058a079ecfeb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fc20d1c5-a50c-4c3d-88a3-255ef3ef933a.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8006eb0-f6e8-4ccd-b4de-01ee4657ebc7.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55573699-0b2a-49bb-aabd-d62fd32481a6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/938f91e7-8131-40c9-af48-6ace74ee90d9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d58f643f-1002-466d-80c9-78d2dddcf2cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e2bd0b93-86a6-4a92-bffb-ec83aa8ff9c9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/23a3f55b-45ae-4a83-bd8f-46714254fadc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55757312-07f3-4598-9543-9aeb0472c9b1.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c2e6fb96-3558-4bbc-a9e5-81df432062fc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8d3a8f6-1c46-455b-a2a1-4248f1597560.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/132ff23e-7d45-44ff-8018-1b02a1d1d453.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9e5a6333-e829-44c8-b74c-194636ed92e6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/43657b9b-188c-4075-9b8a-9305c7a6dbb0.jpeg"
+        ],
+        "scratch": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/96f8c4ef-b7d0-4287-95ea-24b943dbbb2f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4834228d-7a72-41ad-9068-83d2b3c353df.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/0526e9e8-a81c-423e-86a6-71727497c833.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/bb5d58c7-fc23-43a3-8705-779cf82c3f8e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c82f5ce9-cd83-44eb-9d87-05b3e6c96b1c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/a81fa6fb-1e57-4d52-9128-880381f4436d.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fb88d8ef-bf1e-4a7f-b785-103ca55dbf27.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d7d9fde8-8aa3-4b13-8ef1-7392db6f7d97.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/382c3822-1cbc-4fef-b932-1cf993c89637.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7c1f7a4a-8dad-427a-9080-922390632366.jpeg"
+        ],
+        "underbody": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fa5f75b0-f129-47eb-903d-2fab538aee43.JPEG"
+        ]
+      },
       "tags": [
         {
           "text": "완전무사고",
@@ -125,6 +323,65 @@
         "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/eee8ae71-d40a-46c9-ad33-15de9ed71b89.png",
         "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/d50bd370-9a98-4ce6-b8f6-d4e5b3b68640.jpeg"
       ],
+      "detail_image_urls": {
+        "outside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8a2ad708-ec54-4bb8-96f7-80c4f50451a5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/37c1b2fe-ed81-4306-90e9-741f8d75cc67.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9a4c485f-c26d-4445-9f42-325db406b67f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/faa9cc8c-66cc-4c93-83c8-792d42146d45.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e73635b6-1334-4332-88c4-22933bdc38e5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c49b6c41-8127-4aed-950a-44e80297dadd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/ecf58873-86d9-4ab5-8fa6-6a760f7088c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f4e2ea8f-94db-484a-8271-c197c3f2d56c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cfdd5e67-7cf2-4f78-a926-e1ce068d8505.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f61e5b00-ae7c-4ef0-8ed7-2e831e61981e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/dde87512-b7f7-4088-b85a-c0c2a0bece74.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b4fb6293-cbb9-4c99-8544-ffcce90d9edd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4ae30472-1b63-4f61-a4ab-98da67dceb61.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/693e6961-ebf6-4499-88e6-207bab3b4375.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cc45a5e0-4776-4b43-9d11-ac4b7265b604.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7cd19340-0ba8-4bf6-a586-9511982fac92.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/57ec7a3c-bd2f-4493-8387-8a379a79c8b4.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d4332269-f07a-4613-8086-b2e4b949a2c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/259477d6-2f3f-42b3-8bf2-6be2f200a332.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/5b532134-5e72-4bdd-8c4e-2d2b624e07cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cab0c803-dbb9-45ba-b9f6-28d7a957e770.jpeg"
+        ],
+        "inside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b89a6cac-ec4e-45b3-ac77-9e1dc08f40ac.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/86d61f90-4f72-4388-b421-0cede457e4bc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8574c2f9-1b54-498e-9f45-8f302409c7fe.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/3a275d9f-8dfa-4403-9d9c-058a079ecfeb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fc20d1c5-a50c-4c3d-88a3-255ef3ef933a.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8006eb0-f6e8-4ccd-b4de-01ee4657ebc7.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55573699-0b2a-49bb-aabd-d62fd32481a6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/938f91e7-8131-40c9-af48-6ace74ee90d9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d58f643f-1002-466d-80c9-78d2dddcf2cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e2bd0b93-86a6-4a92-bffb-ec83aa8ff9c9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/23a3f55b-45ae-4a83-bd8f-46714254fadc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55757312-07f3-4598-9543-9aeb0472c9b1.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c2e6fb96-3558-4bbc-a9e5-81df432062fc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8d3a8f6-1c46-455b-a2a1-4248f1597560.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/132ff23e-7d45-44ff-8018-1b02a1d1d453.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9e5a6333-e829-44c8-b74c-194636ed92e6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/43657b9b-188c-4075-9b8a-9305c7a6dbb0.jpeg"
+        ],
+        "scratch": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/96f8c4ef-b7d0-4287-95ea-24b943dbbb2f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4834228d-7a72-41ad-9068-83d2b3c353df.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/0526e9e8-a81c-423e-86a6-71727497c833.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/bb5d58c7-fc23-43a3-8705-779cf82c3f8e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c82f5ce9-cd83-44eb-9d87-05b3e6c96b1c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/a81fa6fb-1e57-4d52-9128-880381f4436d.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fb88d8ef-bf1e-4a7f-b785-103ca55dbf27.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d7d9fde8-8aa3-4b13-8ef1-7392db6f7d97.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/382c3822-1cbc-4fef-b932-1cf993c89637.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7c1f7a4a-8dad-427a-9080-922390632366.jpeg"
+        ],
+        "underbody": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fa5f75b0-f129-47eb-903d-2fab538aee43.JPEG"
+        ]
+      },
       "tags": [
         {
           "text": "단순교환 무사고",
@@ -140,7 +397,7 @@
         }
       ]
     },
-    "location": null
+    "location": "경기"
   },
   {
     "hash_id": "Vym1K7y6",
@@ -164,8 +421,67 @@
       "offered_at": "2026-03-04 14:19:14",
       "image_urls": [
         "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/03/04/2b5ea235-bad8-4d31-8a28-47d43af8b974.png",
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/03/03/11d7658d-05b4-4282-bbf1-df8b0d4cafc4.JPEG"
       ],
+      "detail_image_urls": {
+        "outside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8a2ad708-ec54-4bb8-96f7-80c4f50451a5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/37c1b2fe-ed81-4306-90e9-741f8d75cc67.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9a4c485f-c26d-4445-9f42-325db406b67f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/faa9cc8c-66cc-4c93-83c8-792d42146d45.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e73635b6-1334-4332-88c4-22933bdc38e5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c49b6c41-8127-4aed-950a-44e80297dadd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/ecf58873-86d9-4ab5-8fa6-6a760f7088c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f4e2ea8f-94db-484a-8271-c197c3f2d56c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cfdd5e67-7cf2-4f78-a926-e1ce068d8505.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f61e5b00-ae7c-4ef0-8ed7-2e831e61981e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/dde87512-b7f7-4088-b85a-c0c2a0bece74.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b4fb6293-cbb9-4c99-8544-ffcce90d9edd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4ae30472-1b63-4f61-a4ab-98da67dceb61.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/693e6961-ebf6-4499-88e6-207bab3b4375.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cc45a5e0-4776-4b43-9d11-ac4b7265b604.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7cd19340-0ba8-4bf6-a586-9511982fac92.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/57ec7a3c-bd2f-4493-8387-8a379a79c8b4.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d4332269-f07a-4613-8086-b2e4b949a2c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/259477d6-2f3f-42b3-8bf2-6be2f200a332.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/5b532134-5e72-4bdd-8c4e-2d2b624e07cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cab0c803-dbb9-45ba-b9f6-28d7a957e770.jpeg"
+        ],
+        "inside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b89a6cac-ec4e-45b3-ac77-9e1dc08f40ac.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/86d61f90-4f72-4388-b421-0cede457e4bc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8574c2f9-1b54-498e-9f45-8f302409c7fe.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/3a275d9f-8dfa-4403-9d9c-058a079ecfeb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fc20d1c5-a50c-4c3d-88a3-255ef3ef933a.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8006eb0-f6e8-4ccd-b4de-01ee4657ebc7.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55573699-0b2a-49bb-aabd-d62fd32481a6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/938f91e7-8131-40c9-af48-6ace74ee90d9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d58f643f-1002-466d-80c9-78d2dddcf2cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e2bd0b93-86a6-4a92-bffb-ec83aa8ff9c9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/23a3f55b-45ae-4a83-bd8f-46714254fadc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55757312-07f3-4598-9543-9aeb0472c9b1.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c2e6fb96-3558-4bbc-a9e5-81df432062fc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8d3a8f6-1c46-455b-a2a1-4248f1597560.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/132ff23e-7d45-44ff-8018-1b02a1d1d453.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9e5a6333-e829-44c8-b74c-194636ed92e6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/43657b9b-188c-4075-9b8a-9305c7a6dbb0.jpeg"
+        ],
+        "scratch": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/96f8c4ef-b7d0-4287-95ea-24b943dbbb2f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4834228d-7a72-41ad-9068-83d2b3c353df.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/0526e9e8-a81c-423e-86a6-71727497c833.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/bb5d58c7-fc23-43a3-8705-779cf82c3f8e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c82f5ce9-cd83-44eb-9d87-05b3e6c96b1c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/a81fa6fb-1e57-4d52-9128-880381f4436d.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fb88d8ef-bf1e-4a7f-b785-103ca55dbf27.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d7d9fde8-8aa3-4b13-8ef1-7392db6f7d97.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/382c3822-1cbc-4fef-b932-1cf993c89637.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7c1f7a4a-8dad-427a-9080-922390632366.jpeg"
+        ],
+        "underbody": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fa5f75b0-f129-47eb-903d-2fab538aee43.JPEG"
+        ]
+      },
       "tags": [
         {
           "text": "완전무사고",
@@ -181,32 +497,91 @@
         }
       ]
     },
-    "location": null
+    "location": "부산"
   },
   {
-    "hash_id": "Vym1K7y1",
-    "brand_id": "Lgyakg",
-    "model_id": "XkoPoM",
-    "price": 630,
-    "previous_price": 670,
+    "hash_id": "7lb3KPyX",
+    "brand_id": "xgrX7o",
+    "model_id": "RMapak",
+    "price": 650,
+    "previous_price": null,
     "savings_total": 63,
     "sale_status": "listed",
     "detail_info": {
-      "model_name": "더 넥스트 스파크",
-      "model_part_name": "더 넥스트 스파크",
-      "grade_part_name": "LT 플러스",
-      "grade_name": "LT",
-      "detail_name": "플러스",
-      "initial_registration_date": "2016-04-08 00:00:00",
-      "year": 2016,
-      "mileage": 49111,
-      "factory_price": 1370,
-      "recommendation_comment": "・ 입고 후 정기 검사를 완료한 차량이에요.\n\n・ 운전자의 주행 편의성을 더해주는 애프터마켓 내비게이션과 후방 카메라가 장착되어 있어요.\n\n・ 앞좌석 열선 시트 탑재로 겨울철 탑승 편의성을 높였어요.",
-      "offered_at": "2026-03-04 14:19:14",
+      "model_name": "SM3 네오",
+      "model_part_name": "SM3 네오",
+      "grade_part_name": "SE",
+      "grade_name": "SE",
+      "detail_name": null,
+      "initial_registration_date": "2018-10-31 00:00:00",
+      "year": 2018,
+      "mileage": 60965,
+      "factory_price": 1635,
+      "recommendation_comment": "・ 신차 출고 후 소유자 변경 이력이 없는 1인 소유 차량이에요.\n\n・ 우수한 트레드 상태로 타이어 교체 비용을 절감할 수 있는 차량이에요.\n\n・ 앞좌석 열선 시트 탑재로 겨울철 탑승 편의성을 높였어요.",
+      "offered_at": "2026-05-15 19:09:13",
       "image_urls": [
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/03/04/2b5ea235-bad8-4d31-8a28-47d43af8b974.png",
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/a8bce253-e283-41ec-b9ee-95f716053535.png",
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/04/6f509d3a-862a-47d8-933a-5ae8a731b1d8.jpeg"
       ],
+      "detail_image_urls": {
+        "outside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8a2ad708-ec54-4bb8-96f7-80c4f50451a5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/37c1b2fe-ed81-4306-90e9-741f8d75cc67.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9a4c485f-c26d-4445-9f42-325db406b67f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/faa9cc8c-66cc-4c93-83c8-792d42146d45.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e73635b6-1334-4332-88c4-22933bdc38e5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c49b6c41-8127-4aed-950a-44e80297dadd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/ecf58873-86d9-4ab5-8fa6-6a760f7088c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f4e2ea8f-94db-484a-8271-c197c3f2d56c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cfdd5e67-7cf2-4f78-a926-e1ce068d8505.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f61e5b00-ae7c-4ef0-8ed7-2e831e61981e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/dde87512-b7f7-4088-b85a-c0c2a0bece74.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b4fb6293-cbb9-4c99-8544-ffcce90d9edd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4ae30472-1b63-4f61-a4ab-98da67dceb61.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/693e6961-ebf6-4499-88e6-207bab3b4375.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cc45a5e0-4776-4b43-9d11-ac4b7265b604.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7cd19340-0ba8-4bf6-a586-9511982fac92.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/57ec7a3c-bd2f-4493-8387-8a379a79c8b4.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d4332269-f07a-4613-8086-b2e4b949a2c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/259477d6-2f3f-42b3-8bf2-6be2f200a332.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/5b532134-5e72-4bdd-8c4e-2d2b624e07cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cab0c803-dbb9-45ba-b9f6-28d7a957e770.jpeg"
+        ],
+        "inside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b89a6cac-ec4e-45b3-ac77-9e1dc08f40ac.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/86d61f90-4f72-4388-b421-0cede457e4bc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8574c2f9-1b54-498e-9f45-8f302409c7fe.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/3a275d9f-8dfa-4403-9d9c-058a079ecfeb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fc20d1c5-a50c-4c3d-88a3-255ef3ef933a.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8006eb0-f6e8-4ccd-b4de-01ee4657ebc7.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55573699-0b2a-49bb-aabd-d62fd32481a6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/938f91e7-8131-40c9-af48-6ace74ee90d9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d58f643f-1002-466d-80c9-78d2dddcf2cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e2bd0b93-86a6-4a92-bffb-ec83aa8ff9c9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/23a3f55b-45ae-4a83-bd8f-46714254fadc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55757312-07f3-4598-9543-9aeb0472c9b1.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c2e6fb96-3558-4bbc-a9e5-81df432062fc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8d3a8f6-1c46-455b-a2a1-4248f1597560.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/132ff23e-7d45-44ff-8018-1b02a1d1d453.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9e5a6333-e829-44c8-b74c-194636ed92e6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/43657b9b-188c-4075-9b8a-9305c7a6dbb0.jpeg"
+        ],
+        "scratch": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/96f8c4ef-b7d0-4287-95ea-24b943dbbb2f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4834228d-7a72-41ad-9068-83d2b3c353df.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/0526e9e8-a81c-423e-86a6-71727497c833.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/bb5d58c7-fc23-43a3-8705-779cf82c3f8e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c82f5ce9-cd83-44eb-9d87-05b3e6c96b1c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/a81fa6fb-1e57-4d52-9128-880381f4436d.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fb88d8ef-bf1e-4a7f-b785-103ca55dbf27.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d7d9fde8-8aa3-4b13-8ef1-7392db6f7d97.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/382c3822-1cbc-4fef-b932-1cf993c89637.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7c1f7a4a-8dad-427a-9080-922390632366.jpeg"
+        ],
+        "underbody": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fa5f75b0-f129-47eb-903d-2fab538aee43.JPEG"
+        ]
+      },
       "tags": [
         {
           "text": "완전무사고",
@@ -222,32 +597,91 @@
         }
       ]
     },
-    "location": null
+    "location": "대구"
   },
   {
-    "hash_id": "Vym1K7y2",
-    "brand_id": "Lgyakg",
-    "model_id": "XkoPoM",
-    "price": 630,
-    "previous_price": 670,
+    "hash_id": "2yMYGayW",
+    "brand_id": "2oV0gK",
+    "model_id": "XevRae",
+    "price": 2190,
+    "previous_price": null,
     "savings_total": 63,
     "sale_status": "listed",
     "detail_info": {
-      "model_name": "더 넥스트 스파크",
-      "model_part_name": "더 넥스트 스파크",
-      "grade_part_name": "LT 플러스",
-      "grade_name": "LT",
-      "detail_name": "플러스",
-      "initial_registration_date": "2016-04-08 00:00:00",
-      "year": 2016,
-      "mileage": 49111,
-      "factory_price": 1370,
-      "recommendation_comment": "・ 입고 후 정기 검사를 완료한 차량이에요.\n\n・ 운전자의 주행 편의성을 더해주는 애프터마켓 내비게이션과 후방 카메라가 장착되어 있어요.\n\n・ 앞좌석 열선 시트 탑재로 겨울철 탑승 편의성을 높였어요.",
-      "offered_at": "2026-03-04 14:19:14",
+      "model_name": "K7 프리미어",
+      "model_part_name": "K7 프리미어",
+      "grade_part_name": "2.5 GDI X 에디션",
+      "grade_name": "2.5 GDI X 에디션",
+      "detail_name": null,
+      "initial_registration_date": "2020-06-05 00:00:00",
+      "year": 2020,
+      "mileage": 73849,
+      "factory_price": 3875,
+      "recommendation_comment": "・ 입고 후 전륜 타이어를 신품으로 교체하여 추가적인 타이어 교체 비용 부담을 줄인 차량이에요.\n\n・ 스마트 크루즈 컨트롤과 헤드업 디스플레이 등 주행 편의성을 더해주는 옵션들이 적용되어 있어요.\n\n・ 앞좌석 열선/통풍 시트와 뒷좌석 열선 시트 적용으로 탑승 편의성을 높였어요.",
+      "offered_at": "2026-05-15 19:08:09",
       "image_urls": [
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/03/04/2b5ea235-bad8-4d31-8a28-47d43af8b974.png",
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/15/163292df-7751-4e6e-8d8a-fdf71bebe415.png",
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/8a6940ff-5819-48fd-8ad0-bd8979383ddb.jpeg"
       ],
+      "detail_image_urls": {
+        "outside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8a2ad708-ec54-4bb8-96f7-80c4f50451a5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/37c1b2fe-ed81-4306-90e9-741f8d75cc67.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9a4c485f-c26d-4445-9f42-325db406b67f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/faa9cc8c-66cc-4c93-83c8-792d42146d45.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e73635b6-1334-4332-88c4-22933bdc38e5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c49b6c41-8127-4aed-950a-44e80297dadd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/ecf58873-86d9-4ab5-8fa6-6a760f7088c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f4e2ea8f-94db-484a-8271-c197c3f2d56c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cfdd5e67-7cf2-4f78-a926-e1ce068d8505.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f61e5b00-ae7c-4ef0-8ed7-2e831e61981e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/dde87512-b7f7-4088-b85a-c0c2a0bece74.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b4fb6293-cbb9-4c99-8544-ffcce90d9edd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4ae30472-1b63-4f61-a4ab-98da67dceb61.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/693e6961-ebf6-4499-88e6-207bab3b4375.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cc45a5e0-4776-4b43-9d11-ac4b7265b604.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7cd19340-0ba8-4bf6-a586-9511982fac92.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/57ec7a3c-bd2f-4493-8387-8a379a79c8b4.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d4332269-f07a-4613-8086-b2e4b949a2c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/259477d6-2f3f-42b3-8bf2-6be2f200a332.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/5b532134-5e72-4bdd-8c4e-2d2b624e07cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cab0c803-dbb9-45ba-b9f6-28d7a957e770.jpeg"
+        ],
+        "inside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b89a6cac-ec4e-45b3-ac77-9e1dc08f40ac.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/86d61f90-4f72-4388-b421-0cede457e4bc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8574c2f9-1b54-498e-9f45-8f302409c7fe.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/3a275d9f-8dfa-4403-9d9c-058a079ecfeb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fc20d1c5-a50c-4c3d-88a3-255ef3ef933a.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8006eb0-f6e8-4ccd-b4de-01ee4657ebc7.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55573699-0b2a-49bb-aabd-d62fd32481a6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/938f91e7-8131-40c9-af48-6ace74ee90d9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d58f643f-1002-466d-80c9-78d2dddcf2cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e2bd0b93-86a6-4a92-bffb-ec83aa8ff9c9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/23a3f55b-45ae-4a83-bd8f-46714254fadc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55757312-07f3-4598-9543-9aeb0472c9b1.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c2e6fb96-3558-4bbc-a9e5-81df432062fc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8d3a8f6-1c46-455b-a2a1-4248f1597560.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/132ff23e-7d45-44ff-8018-1b02a1d1d453.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9e5a6333-e829-44c8-b74c-194636ed92e6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/43657b9b-188c-4075-9b8a-9305c7a6dbb0.jpeg"
+        ],
+        "scratch": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/96f8c4ef-b7d0-4287-95ea-24b943dbbb2f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4834228d-7a72-41ad-9068-83d2b3c353df.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/0526e9e8-a81c-423e-86a6-71727497c833.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/bb5d58c7-fc23-43a3-8705-779cf82c3f8e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c82f5ce9-cd83-44eb-9d87-05b3e6c96b1c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/a81fa6fb-1e57-4d52-9128-880381f4436d.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fb88d8ef-bf1e-4a7f-b785-103ca55dbf27.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d7d9fde8-8aa3-4b13-8ef1-7392db6f7d97.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/382c3822-1cbc-4fef-b932-1cf993c89637.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7c1f7a4a-8dad-427a-9080-922390632366.jpeg"
+        ],
+        "underbody": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fa5f75b0-f129-47eb-903d-2fab538aee43.JPEG"
+        ]
+      },
       "tags": [
         {
           "text": "완전무사고",
@@ -263,35 +697,94 @@
         }
       ]
     },
-    "location": null
+    "location": "대전"
   },
   {
-    "hash_id": "Vym1K7y3",
-    "brand_id": "Lgyakg",
-    "model_id": "XkoPoM",
-    "price": 630,
-    "previous_price": 670,
+    "hash_id": "2yMwDbQW",
+    "brand_id": "2oV0gK",
+    "model_id": "VeJZme",
+    "price": 420,
+    "previous_price": null,
     "savings_total": 63,
     "sale_status": "listed",
     "detail_info": {
-      "model_name": "더 넥스트 스파크",
-      "model_part_name": "더 넥스트 스파크",
-      "grade_part_name": "LT 플러스",
-      "grade_name": "LT",
-      "detail_name": "플러스",
-      "initial_registration_date": "2016-04-08 00:00:00",
-      "year": 2016,
-      "mileage": 49111,
-      "factory_price": 1370,
-      "recommendation_comment": "・ 입고 후 정기 검사를 완료한 차량이에요.\n\n・ 운전자의 주행 편의성을 더해주는 애프터마켓 내비게이션과 후방 카메라가 장착되어 있어요.\n\n・ 앞좌석 열선 시트 탑재로 겨울철 탑승 편의성을 높였어요.",
-      "offered_at": "2026-03-04 14:19:14",
+      "model_name": "올 뉴 모닝",
+      "model_part_name": "올 뉴 모닝",
+      "grade_part_name": "럭셔리",
+      "grade_name": "럭셔리",
+      "detail_name": null,
+      "initial_registration_date": "2014-06-16 00:00:00",
+      "year": 2015,
+      "mileage": 125705,
+      "factory_price": 1391,
+      "recommendation_comment": "・ 다양한 경차 혜택으로 유지비 부담이 적은 경제적인 차량이에요.\n\n・ 안전한 주차를 돕는 후방 주차 감지 센서가 장착되어 있어요.\n\n・ 열선 핸들과 풀오토 에어컨이 포함된 컨비니언스 옵션을 적용해 탑승자의 편의성을 높였어요.",
+      "offered_at": "2026-05-15 15:00:38",
       "image_urls": [
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/03/04/2b5ea235-bad8-4d31-8a28-47d43af8b974.png",
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/05/14/81c98bd3-1367-4b5c-8256-3eda6f7cf1eb.png",
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/14/160bb46a-c05a-4164-a0d4-702230f89187.jpeg"
       ],
+      "detail_image_urls": {
+        "outside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8a2ad708-ec54-4bb8-96f7-80c4f50451a5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/37c1b2fe-ed81-4306-90e9-741f8d75cc67.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9a4c485f-c26d-4445-9f42-325db406b67f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/faa9cc8c-66cc-4c93-83c8-792d42146d45.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e73635b6-1334-4332-88c4-22933bdc38e5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c49b6c41-8127-4aed-950a-44e80297dadd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/ecf58873-86d9-4ab5-8fa6-6a760f7088c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f4e2ea8f-94db-484a-8271-c197c3f2d56c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cfdd5e67-7cf2-4f78-a926-e1ce068d8505.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f61e5b00-ae7c-4ef0-8ed7-2e831e61981e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/dde87512-b7f7-4088-b85a-c0c2a0bece74.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b4fb6293-cbb9-4c99-8544-ffcce90d9edd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4ae30472-1b63-4f61-a4ab-98da67dceb61.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/693e6961-ebf6-4499-88e6-207bab3b4375.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cc45a5e0-4776-4b43-9d11-ac4b7265b604.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7cd19340-0ba8-4bf6-a586-9511982fac92.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/57ec7a3c-bd2f-4493-8387-8a379a79c8b4.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d4332269-f07a-4613-8086-b2e4b949a2c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/259477d6-2f3f-42b3-8bf2-6be2f200a332.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/5b532134-5e72-4bdd-8c4e-2d2b624e07cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cab0c803-dbb9-45ba-b9f6-28d7a957e770.jpeg"
+        ],
+        "inside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b89a6cac-ec4e-45b3-ac77-9e1dc08f40ac.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/86d61f90-4f72-4388-b421-0cede457e4bc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8574c2f9-1b54-498e-9f45-8f302409c7fe.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/3a275d9f-8dfa-4403-9d9c-058a079ecfeb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fc20d1c5-a50c-4c3d-88a3-255ef3ef933a.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8006eb0-f6e8-4ccd-b4de-01ee4657ebc7.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55573699-0b2a-49bb-aabd-d62fd32481a6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/938f91e7-8131-40c9-af48-6ace74ee90d9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d58f643f-1002-466d-80c9-78d2dddcf2cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e2bd0b93-86a6-4a92-bffb-ec83aa8ff9c9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/23a3f55b-45ae-4a83-bd8f-46714254fadc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55757312-07f3-4598-9543-9aeb0472c9b1.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c2e6fb96-3558-4bbc-a9e5-81df432062fc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8d3a8f6-1c46-455b-a2a1-4248f1597560.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/132ff23e-7d45-44ff-8018-1b02a1d1d453.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9e5a6333-e829-44c8-b74c-194636ed92e6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/43657b9b-188c-4075-9b8a-9305c7a6dbb0.jpeg"
+        ],
+        "scratch": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/96f8c4ef-b7d0-4287-95ea-24b943dbbb2f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4834228d-7a72-41ad-9068-83d2b3c353df.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/0526e9e8-a81c-423e-86a6-71727497c833.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/bb5d58c7-fc23-43a3-8705-779cf82c3f8e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c82f5ce9-cd83-44eb-9d87-05b3e6c96b1c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/a81fa6fb-1e57-4d52-9128-880381f4436d.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fb88d8ef-bf1e-4a7f-b785-103ca55dbf27.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d7d9fde8-8aa3-4b13-8ef1-7392db6f7d97.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/382c3822-1cbc-4fef-b932-1cf993c89637.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7c1f7a4a-8dad-427a-9080-922390632366.jpeg"
+        ],
+        "underbody": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fa5f75b0-f129-47eb-903d-2fab538aee43.JPEG"
+        ]
+      },
       "tags": [
         {
-          "text": "완전무사고",
+          "text": "단순교환 무사고",
           "style": "gray"
         },
         {
@@ -304,32 +797,91 @@
         }
       ]
     },
-    "location": null
+    "location": "광주"
   },
   {
-    "hash_id": "Vym1K7y4",
-    "brand_id": "Lgyakg",
-    "model_id": "XkoPoM",
-    "price": 630,
-    "previous_price": 670,
-    "savings_total": 63,
+    "hash_id": "KlGD5xyO",
+    "brand_id": "BZpxvZ",
+    "model_id": "XevVVe",
+    "price": 12460,
+    "previous_price": 13900,
+    "savings_total": 135,
     "sale_status": "listed",
     "detail_info": {
-      "model_name": "더 넥스트 스파크",
-      "model_part_name": "더 넥스트 스파크",
-      "grade_part_name": "LT 플러스",
-      "grade_name": "LT",
-      "detail_name": "플러스",
-      "initial_registration_date": "2016-04-08 00:00:00",
-      "year": 2016,
-      "mileage": 49111,
-      "factory_price": 1370,
-      "recommendation_comment": "・ 입고 후 정기 검사를 완료한 차량이에요.\n\n・ 운전자의 주행 편의성을 더해주는 애프터마켓 내비게이션과 후방 카메라가 장착되어 있어요.\n\n・ 앞좌석 열선 시트 탑재로 겨울철 탑승 편의성을 높였어요.",
-      "offered_at": "2026-03-04 14:19:14",
+      "model_name": "에미라",
+      "model_part_name": "로터스 에미라",
+      "grade_part_name": "3.5 퍼스트 에디션",
+      "grade_name": "3.5 퍼스트 에디션",
+      "detail_name": null,
+      "initial_registration_date": "2024-09-03 00:00:00",
+      "year": 2024,
+      "mileage": 6342,
+      "factory_price": 15220,
+      "recommendation_comment": "・ 공격적이고 스포티한 외관 디자인을 연출해 주는 프론트 립과 리어 스포일러가 장착되어 있습니다.\n\n・ 경쾌한 가속감을 느낄 수 있는 미드십 V6 슈퍼차저 엔진과 즉각적인 변속이 가능한 마그네틱 패들 쉬프트가 장착되어 있어 뛰어난 운전의 재미를 선사하는 차량입니다.\n\n・ 액티브 크루즈 컨트롤, 사각지대 경고, 전자식 계기판 등 운전자의 주행 편의성을 더해주는 옵션들이 적용되어 있습니다.",
+      "offered_at": "2025-07-25 13:55:40",
       "image_urls": [
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/03/04/2b5ea235-bad8-4d31-8a28-47d43af8b974.png",
-        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/05/15/03c95787-f89a-4d2b-8669-2e6920c23939.jpeg"
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2025/07/11/1374a2e9-a533-4e98-b74f-23c0e51ed0a7.png",
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2025/06/25/640c0b02-4927-40c8-ac35-0de727976ca4.JPEG"
       ],
+      "detail_image_urls": {
+        "outside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8a2ad708-ec54-4bb8-96f7-80c4f50451a5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/37c1b2fe-ed81-4306-90e9-741f8d75cc67.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9a4c485f-c26d-4445-9f42-325db406b67f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/faa9cc8c-66cc-4c93-83c8-792d42146d45.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e73635b6-1334-4332-88c4-22933bdc38e5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c49b6c41-8127-4aed-950a-44e80297dadd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/ecf58873-86d9-4ab5-8fa6-6a760f7088c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f4e2ea8f-94db-484a-8271-c197c3f2d56c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cfdd5e67-7cf2-4f78-a926-e1ce068d8505.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f61e5b00-ae7c-4ef0-8ed7-2e831e61981e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/dde87512-b7f7-4088-b85a-c0c2a0bece74.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b4fb6293-cbb9-4c99-8544-ffcce90d9edd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4ae30472-1b63-4f61-a4ab-98da67dceb61.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/693e6961-ebf6-4499-88e6-207bab3b4375.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cc45a5e0-4776-4b43-9d11-ac4b7265b604.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7cd19340-0ba8-4bf6-a586-9511982fac92.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/57ec7a3c-bd2f-4493-8387-8a379a79c8b4.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d4332269-f07a-4613-8086-b2e4b949a2c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/259477d6-2f3f-42b3-8bf2-6be2f200a332.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/5b532134-5e72-4bdd-8c4e-2d2b624e07cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cab0c803-dbb9-45ba-b9f6-28d7a957e770.jpeg"
+        ],
+        "inside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b89a6cac-ec4e-45b3-ac77-9e1dc08f40ac.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/86d61f90-4f72-4388-b421-0cede457e4bc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8574c2f9-1b54-498e-9f45-8f302409c7fe.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/3a275d9f-8dfa-4403-9d9c-058a079ecfeb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fc20d1c5-a50c-4c3d-88a3-255ef3ef933a.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8006eb0-f6e8-4ccd-b4de-01ee4657ebc7.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55573699-0b2a-49bb-aabd-d62fd32481a6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/938f91e7-8131-40c9-af48-6ace74ee90d9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d58f643f-1002-466d-80c9-78d2dddcf2cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e2bd0b93-86a6-4a92-bffb-ec83aa8ff9c9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/23a3f55b-45ae-4a83-bd8f-46714254fadc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55757312-07f3-4598-9543-9aeb0472c9b1.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c2e6fb96-3558-4bbc-a9e5-81df432062fc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8d3a8f6-1c46-455b-a2a1-4248f1597560.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/132ff23e-7d45-44ff-8018-1b02a1d1d453.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9e5a6333-e829-44c8-b74c-194636ed92e6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/43657b9b-188c-4075-9b8a-9305c7a6dbb0.jpeg"
+        ],
+        "scratch": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/96f8c4ef-b7d0-4287-95ea-24b943dbbb2f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4834228d-7a72-41ad-9068-83d2b3c353df.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/0526e9e8-a81c-423e-86a6-71727497c833.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/bb5d58c7-fc23-43a3-8705-779cf82c3f8e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c82f5ce9-cd83-44eb-9d87-05b3e6c96b1c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/a81fa6fb-1e57-4d52-9128-880381f4436d.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fb88d8ef-bf1e-4a7f-b785-103ca55dbf27.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d7d9fde8-8aa3-4b13-8ef1-7392db6f7d97.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/382c3822-1cbc-4fef-b932-1cf993c89637.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7c1f7a4a-8dad-427a-9080-922390632366.jpeg"
+        ],
+        "underbody": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fa5f75b0-f129-47eb-903d-2fab538aee43.JPEG"
+        ]
+      },
       "tags": [
         {
           "text": "완전무사고",
@@ -338,13 +890,201 @@
         {
           "text": "1년 보증",
           "style": "gray"
+        }
+      ]
+    },
+    "location": "울산"
+  },
+  {
+    "hash_id": "Yn3mVklp",
+    "brand_id": "0W5AWm",
+    "model_id": "peqdBy",
+    "price": 12210,
+    "previous_price": 12700,
+    "savings_total": 135,
+    "sale_status": "listed",
+    "detail_info": {
+      "model_name": "X7 (G07)",
+      "model_part_name": "BMW X7 (G07)",
+      "grade_part_name": "xDrive 40i M 스포츠",
+      "grade_name": "xDrive 40i M 스포츠",
+      "detail_name": null,
+      "initial_registration_date": "2023-10-26 00:00:00",
+      "year": 2024,
+      "mileage": 16351,
+      "factory_price": 15300,
+      "recommendation_comment": "・ 뛰어난 개방감과 고급스러운 실내 분위기를 연출해 주는 스카이 라운지 파노라마 선루프가 장착되어 있습니다.\n\n・ 이그제큐티브 드라이브 프로, 뒷바퀴 조향, M 스포츠 브레이크 등 안정적이고 편안한 주행을 도와주는 다양한 옵션들이 적용되어 있습니다.\n\n・ 소프트 클로징 기능과 1열 냉온 컵홀더, 하만카돈 사운드 시스템 등 풍부한 편의 옵션이 장착되어 있어 탑승객 모두 쾌적하고 즐거운 드라이빙이 가능한 차량입니다.",
+      "offered_at": "2025-08-05 16:00:35",
+      "image_urls": [
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2025/07/30/0be92a73-45a7-4db9-b86a-0b4808cabf1b.png",
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2025/07/30/a3a4fcd1-5e83-4355-8298-05c2679a27e3.JPEG"
+      ],
+      "detail_image_urls": {
+        "outside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8a2ad708-ec54-4bb8-96f7-80c4f50451a5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/37c1b2fe-ed81-4306-90e9-741f8d75cc67.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9a4c485f-c26d-4445-9f42-325db406b67f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/faa9cc8c-66cc-4c93-83c8-792d42146d45.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e73635b6-1334-4332-88c4-22933bdc38e5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c49b6c41-8127-4aed-950a-44e80297dadd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/ecf58873-86d9-4ab5-8fa6-6a760f7088c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f4e2ea8f-94db-484a-8271-c197c3f2d56c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cfdd5e67-7cf2-4f78-a926-e1ce068d8505.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f61e5b00-ae7c-4ef0-8ed7-2e831e61981e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/dde87512-b7f7-4088-b85a-c0c2a0bece74.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b4fb6293-cbb9-4c99-8544-ffcce90d9edd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4ae30472-1b63-4f61-a4ab-98da67dceb61.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/693e6961-ebf6-4499-88e6-207bab3b4375.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cc45a5e0-4776-4b43-9d11-ac4b7265b604.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7cd19340-0ba8-4bf6-a586-9511982fac92.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/57ec7a3c-bd2f-4493-8387-8a379a79c8b4.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d4332269-f07a-4613-8086-b2e4b949a2c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/259477d6-2f3f-42b3-8bf2-6be2f200a332.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/5b532134-5e72-4bdd-8c4e-2d2b624e07cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cab0c803-dbb9-45ba-b9f6-28d7a957e770.jpeg"
+        ],
+        "inside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b89a6cac-ec4e-45b3-ac77-9e1dc08f40ac.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/86d61f90-4f72-4388-b421-0cede457e4bc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8574c2f9-1b54-498e-9f45-8f302409c7fe.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/3a275d9f-8dfa-4403-9d9c-058a079ecfeb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fc20d1c5-a50c-4c3d-88a3-255ef3ef933a.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8006eb0-f6e8-4ccd-b4de-01ee4657ebc7.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55573699-0b2a-49bb-aabd-d62fd32481a6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/938f91e7-8131-40c9-af48-6ace74ee90d9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d58f643f-1002-466d-80c9-78d2dddcf2cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e2bd0b93-86a6-4a92-bffb-ec83aa8ff9c9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/23a3f55b-45ae-4a83-bd8f-46714254fadc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55757312-07f3-4598-9543-9aeb0472c9b1.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c2e6fb96-3558-4bbc-a9e5-81df432062fc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8d3a8f6-1c46-455b-a2a1-4248f1597560.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/132ff23e-7d45-44ff-8018-1b02a1d1d453.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9e5a6333-e829-44c8-b74c-194636ed92e6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/43657b9b-188c-4075-9b8a-9305c7a6dbb0.jpeg"
+        ],
+        "scratch": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/96f8c4ef-b7d0-4287-95ea-24b943dbbb2f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4834228d-7a72-41ad-9068-83d2b3c353df.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/0526e9e8-a81c-423e-86a6-71727497c833.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/bb5d58c7-fc23-43a3-8705-779cf82c3f8e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c82f5ce9-cd83-44eb-9d87-05b3e6c96b1c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/a81fa6fb-1e57-4d52-9128-880381f4436d.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fb88d8ef-bf1e-4a7f-b785-103ca55dbf27.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d7d9fde8-8aa3-4b13-8ef1-7392db6f7d97.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/382c3822-1cbc-4fef-b932-1cf993c89637.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7c1f7a4a-8dad-427a-9080-922390632366.jpeg"
+        ],
+        "underbody": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fa5f75b0-f129-47eb-903d-2fab538aee43.JPEG"
+        ]
+      },
+      "tags": [
+        {
+          "text": "완전무사고",
+          "style": "gray"
         },
         {
-          "text": "eye 인증",
+          "text": "1년 보증",
           "style": "gray"
         }
       ]
     },
-    "location": null
+    "location": "제주"
+  },
+  {
+    "hash_id": "Gn7Z9vy0",
+    "brand_id": "lgBNgw",
+    "model_id": "gMDb6e",
+    "price": 10210,
+    "previous_price": 12490,
+    "savings_total": 135,
+    "sale_status": "listed",
+    "detail_info": {
+      "model_name": "GLE클래스 (V167)",
+      "model_part_name": "벤츠 GLE클래스 (V167)",
+      "grade_part_name": "GLE450 4MATIC",
+      "grade_name": "GLE450 4MATIC",
+      "detail_name": null,
+      "initial_registration_date": "2024-03-27 00:00:00",
+      "year": 2024,
+      "mileage": 9594,
+      "factory_price": 13430,
+      "recommendation_comment": "・ 안정적인 주행감과 편안한 승차감을 선사하는 에어 서스펜션이 장착되어 있습니다.\n\n・ 360도 서라운드 뷰, 헤드업 디스플레이 등 주행 편의성과 안전성을 높여주는 옵션들이 적용되어 있습니다.\n\n・ 고급스러운 실내와 풍부한 편의 옵션으로 탑승객 모두 쾌적한 주행이 가능한 차량입니다.",
+      "offered_at": "2025-04-15 19:25:08",
+      "image_urls": [
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/liveview/2026/04/21/a03f9401-6f42-4109-8aec-c1aa6cee65cb.png",
+        "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2025/03/14/f12bae76-77e7-4f3d-9a35-cd186cd967d2.JPEG"
+      ],
+      "detail_image_urls": {
+        "outside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8a2ad708-ec54-4bb8-96f7-80c4f50451a5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/37c1b2fe-ed81-4306-90e9-741f8d75cc67.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9a4c485f-c26d-4445-9f42-325db406b67f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/faa9cc8c-66cc-4c93-83c8-792d42146d45.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e73635b6-1334-4332-88c4-22933bdc38e5.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c49b6c41-8127-4aed-950a-44e80297dadd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/ecf58873-86d9-4ab5-8fa6-6a760f7088c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f4e2ea8f-94db-484a-8271-c197c3f2d56c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cfdd5e67-7cf2-4f78-a926-e1ce068d8505.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/f61e5b00-ae7c-4ef0-8ed7-2e831e61981e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/dde87512-b7f7-4088-b85a-c0c2a0bece74.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b4fb6293-cbb9-4c99-8544-ffcce90d9edd.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4ae30472-1b63-4f61-a4ab-98da67dceb61.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/693e6961-ebf6-4499-88e6-207bab3b4375.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cc45a5e0-4776-4b43-9d11-ac4b7265b604.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7cd19340-0ba8-4bf6-a586-9511982fac92.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/57ec7a3c-bd2f-4493-8387-8a379a79c8b4.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d4332269-f07a-4613-8086-b2e4b949a2c0.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/259477d6-2f3f-42b3-8bf2-6be2f200a332.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/5b532134-5e72-4bdd-8c4e-2d2b624e07cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/cab0c803-dbb9-45ba-b9f6-28d7a957e770.jpeg"
+        ],
+        "inside": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b89a6cac-ec4e-45b3-ac77-9e1dc08f40ac.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/86d61f90-4f72-4388-b421-0cede457e4bc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/8574c2f9-1b54-498e-9f45-8f302409c7fe.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/3a275d9f-8dfa-4403-9d9c-058a079ecfeb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fc20d1c5-a50c-4c3d-88a3-255ef3ef933a.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8006eb0-f6e8-4ccd-b4de-01ee4657ebc7.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55573699-0b2a-49bb-aabd-d62fd32481a6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/938f91e7-8131-40c9-af48-6ace74ee90d9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d58f643f-1002-466d-80c9-78d2dddcf2cb.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/e2bd0b93-86a6-4a92-bffb-ec83aa8ff9c9.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/23a3f55b-45ae-4a83-bd8f-46714254fadc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/55757312-07f3-4598-9543-9aeb0472c9b1.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c2e6fb96-3558-4bbc-a9e5-81df432062fc.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/b8d3a8f6-1c46-455b-a2a1-4248f1597560.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/132ff23e-7d45-44ff-8018-1b02a1d1d453.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/9e5a6333-e829-44c8-b74c-194636ed92e6.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/43657b9b-188c-4075-9b8a-9305c7a6dbb0.jpeg"
+        ],
+        "scratch": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/96f8c4ef-b7d0-4287-95ea-24b943dbbb2f.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/4834228d-7a72-41ad-9068-83d2b3c353df.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/0526e9e8-a81c-423e-86a6-71727497c833.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/bb5d58c7-fc23-43a3-8705-779cf82c3f8e.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/c82f5ce9-cd83-44eb-9d87-05b3e6c96b1c.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/a81fa6fb-1e57-4d52-9128-880381f4436d.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fb88d8ef-bf1e-4a7f-b785-103ca55dbf27.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/d7d9fde8-8aa3-4b13-8ef1-7392db6f7d97.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/382c3822-1cbc-4fef-b932-1cf993c89637.jpeg",
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/7c1f7a4a-8dad-427a-9080-922390632366.jpeg"
+        ],
+        "underbody": [
+          "https://prnd-car-purchase.s3.ap-northeast-2.amazonaws.com/media/cars/carmediafile/2026/07/28/fa5f75b0-f129-47eb-903d-2fab538aee43.JPEG"
+        ]
+      },
+      "tags": [
+        {
+          "text": "완전무사고",
+          "style": "gray"
+        },
+        {
+          "text": "1년 보증",
+          "style": "gray"
+        }
+      ]
+    },
+    "location": "강원"
   }
 ]

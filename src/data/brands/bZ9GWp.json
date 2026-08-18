@@ -2,14 +2,14 @@
   "hash_id": "bZ9GWp",
   "name": "KG모빌리티(쌍용)",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2025/07/24/3_572edeba-e71f-4168-8810-52579454d72e.png",
-  "count": 189,
+  "count": 0,
   "is_domestic": true,
   "is_subscribed": false,
   "model_groups": [
     {
       "hash_id": "relpeK",
       "name": "렉스턴",
-      "count": 52,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -27,13 +27,13 @@
     {
       "hash_id": "bePrMz",
       "name": "무쏘",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "0yNAMx",
       "name": "액티언",
-      "count": 9,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -45,7 +45,7 @@
     {
       "hash_id": "We6Qyv",
       "name": "체어맨",
-      "count": 2,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -57,7 +57,7 @@
     {
       "hash_id": "dM9OeO",
       "name": "코란도",
-      "count": 19,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -69,13 +69,13 @@
     {
       "hash_id": "XMwpGy",
       "name": "토레스",
-      "count": 50,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "peqLyE",
       "name": "티볼리",
-      "count": 56,
+      "count": 0,
       "is_subscribed": false
     }
   ]

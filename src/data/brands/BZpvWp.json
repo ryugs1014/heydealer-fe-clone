@@ -2,7 +2,7 @@
   "hash_id": "BZpvWp",
   "name": "인피니티",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/16_55a0817e-ba06-4385-bb94-e0bcab01b0fd.PNG",
-  "count": 4,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
@@ -57,13 +57,13 @@
     {
       "hash_id": "YyLPwy",
       "name": "Q30",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "KM5mEM",
       "name": "Q50",
-      "count": 2,
+      "count": 0,
       "is_subscribed": false
     },
     {

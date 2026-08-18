@@ -2,7 +2,7 @@
   "hash_id": "6gakoO",
   "name": "지프",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/20_3003cf94-16a1-489e-9fe8-ddcdca9ae8ea.PNG",
-  "count": 17,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
@@ -21,13 +21,13 @@
     {
       "hash_id": "KM5OEe",
       "name": "랭글러",
-      "count": 10,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "KkmRDM",
       "name": "레니게이드",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -39,7 +39,7 @@
     {
       "hash_id": "0yNWoe",
       "name": "체로키",
-      "count": 5,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -51,7 +51,7 @@
     {
       "hash_id": "Xkog1k",
       "name": "컴패스",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {

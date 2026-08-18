@@ -2,7 +2,7 @@
   "hash_id": "Rg07Z0",
   "name": "미니",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/29_7e2d24ce-80e6-476b-b656-759ae8ee41ed.PNG",
-  "count": 87,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
@@ -21,31 +21,31 @@
     {
       "hash_id": "OyZzEy",
       "name": "에이스맨",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "EMp5my",
       "name": "컨트리맨",
-      "count": 20,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "zMbOqy",
       "name": "일렉트릭",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "XMwzXk",
       "name": "쿠퍼",
-      "count": 40,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "JyVDPk",
       "name": "쿠퍼 컨버터블",
-      "count": 4,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -57,7 +57,7 @@
     {
       "hash_id": "aMKWjM",
       "name": "클럽맨",
-      "count": 21,
+      "count": 0,
       "is_subscribed": false
     },
     {

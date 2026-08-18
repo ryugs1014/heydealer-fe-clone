@@ -2,7 +2,7 @@
   "hash_id": "nWPkgx",
   "name": "링컨",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/22_164e9a86-ddb9-45fc-a444-b42e968af405.PNG",
-  "count": 12,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
@@ -33,7 +33,7 @@
     {
       "hash_id": "zyxr8k",
       "name": "MKX",
-      "count": 2,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -51,13 +51,13 @@
     {
       "hash_id": "gMDE1y",
       "name": "노틸러스",
-      "count": 3,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "Ne83vy",
       "name": "에비에이터",
-      "count": 5,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -69,7 +69,7 @@
     {
       "hash_id": "aMKP2y",
       "name": "코세어",
-      "count": 2,
+      "count": 0,
       "is_subscribed": false
     },
     {

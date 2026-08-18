@@ -2,7 +2,7 @@
   "hash_id": "Lgyakg",
   "name": "쉐보레(GM대우)",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/44_90ba72fc-6815-4adc-94ad-a8c15cc9c546.PNG",
-  "count": 287,
+  "count": 2,
   "is_domestic": true,
   "is_subscribed": false,
   "model_groups": [
@@ -57,13 +57,13 @@
     {
       "hash_id": "VerPPM",
       "name": "마티즈",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "bePZVM",
       "name": "말리부",
-      "count": 13,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -87,13 +87,13 @@
     {
       "hash_id": "gMDm5y",
       "name": "볼트 EUV",
-      "count": 5,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "peqLBy",
       "name": "볼트 EV",
-      "count": 3,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -135,7 +135,7 @@
     {
       "hash_id": "XkoPoM",
       "name": "스파크",
-      "count": 173,
+      "count": 2,
       "is_subscribed": false
     },
     {
@@ -177,7 +177,7 @@
     {
       "hash_id": "dM94Vk",
       "name": "올란도",
-      "count": 2,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -189,13 +189,13 @@
     {
       "hash_id": "Vy28qk",
       "name": "이쿼녹스",
-      "count": 3,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "lkYXLe",
       "name": "임팔라",
-      "count": 4,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -225,13 +225,13 @@
     {
       "hash_id": "JyVd2k",
       "name": "캡티바",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "BkBKWM",
       "name": "콜로라도",
-      "count": 2,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -243,7 +243,7 @@
     {
       "hash_id": "Ok4m6M",
       "name": "크루즈",
-      "count": 6,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -261,19 +261,19 @@
     {
       "hash_id": "zeXaDk",
       "name": "트래버스",
-      "count": 7,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "VerPmM",
       "name": "트랙스",
-      "count": 44,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "8yArde",
       "name": "트레일 블레이저",
-      "count": 23,
+      "count": 0,
       "is_subscribed": false
     },
     {

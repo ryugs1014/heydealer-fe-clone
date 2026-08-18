@@ -2,7 +2,7 @@
   "hash_id": "eo7QgO",
   "name": "피아트",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/8_d5aaa711-bf56-41f5-bd58-7058cff785fc.PNG",
-  "count": 1,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
@@ -21,7 +21,7 @@
     {
       "hash_id": "zyx2rk",
       "name": "500X",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {

@@ -2,20 +2,20 @@
   "hash_id": "KWnXZB",
   "name": "재규어",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2024/01/05/32_ec06d5c4-8b8c-417d-9ca7-914f8c030fcf.PNG",
-  "count": 6,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
     {
       "hash_id": "RyWW9y",
       "name": "E-PACE",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "OyZ1mM",
       "name": "F-PACE",
-      "count": 3,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -39,13 +39,13 @@
     {
       "hash_id": "DydANe",
       "name": "XE",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
       "hash_id": "VMjgGy",
       "name": "XF",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {

@@ -2,7 +2,7 @@
   "hash_id": "6gaGko",
   "name": "닛산",
   "image_url": "https://heydealer-api.s3.amazonaws.com/media/car_meta/brand/2025/10/31/64_e02312d2-7f2e-4bb9-874d-9f237fe2432b.png",
-  "count": 6,
+  "count": 0,
   "is_domestic": false,
   "is_subscribed": false,
   "model_groups": [
@@ -171,7 +171,7 @@
     {
       "hash_id": "7MEVYy",
       "name": "알티마",
-      "count": 5,
+      "count": 0,
       "is_subscribed": false
     },
     {
@@ -213,7 +213,7 @@
     {
       "hash_id": "1yOdne",
       "name": "큐브",
-      "count": 1,
+      "count": 0,
       "is_subscribed": false
     },
     {
