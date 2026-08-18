@@ -270,7 +270,6 @@ export default function CarDetailWrapper({ carData }: CarDetailWrapperProps) {
       <div className={s['main-sticky-container']}>
         <div className={s['main-content']}>
           <div className={s['video-wrap']}>
-            {/* 🌟 [수정 4] dynamic 대신 직접 렌더링. 마운트 전에는 기본 뷰어(Car360Viewer)의 HTML을 미리 내려보내어 버튼이 처음부터 보이게 유지 */}
             {!isMounted || !isMobileScreen ? (
               <Car360Viewer
                 videoSrc={sampleVideoUrl}
