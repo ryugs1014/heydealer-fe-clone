@@ -44,6 +44,21 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'src')],
   },
 
+  // 검색 엔진 접근 원천 차단 헤더 설정 추가
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow, nosnippet, noarchive',
+          },
+        ],
+      },
+    ];
+  },
+
   webpack(config) {
     // SVG React 컴포넌트 사용
     config.module.rules.push({
